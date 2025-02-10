@@ -1,0 +1,214 @@
+<section id="amenities" class="amenities-section py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 reveal-up">Premium Amenities</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                Everything you need for a productive and comfortable workspace experience
+            </p>
+        </div>
+
+        <!-- Amenities Grid -->
+        <div class="row g-4">
+            <!-- High-Speed Internet -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4>High-Speed Internet</h4>
+                    <p>1 GBPS dedicated leased line with backup connection</p>
+                    <ul class="amenity-features">
+                        <li>Dual ISP backup</li>
+                        <li>Secure network</li>
+                        <li>24/7 IT support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Meeting Rooms -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="100">
+                    <div class="amenity-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Meeting Rooms</h4>
+                    <p>Professional meeting spaces for your team and clients</p>
+                    <ul class="amenity-features">
+                        <li>Video conferencing</li>
+                        <li>Smart displays</li>
+                        <li>Whiteboard walls</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cafeteria -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="200">
+                    <div class="amenity-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h4>Cafeteria</h4>
+                    <p>Complimentary beverages and fresh snacks</p>
+                    <ul class="amenity-features">
+                        <li>Gourmet coffee</li>
+                        <li>Health snacks</li>
+                        <li>Fresh fruits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 24/7 Access -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="300">
+                    <div class="amenity-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>24/7 Access</h4>
+                    <p>Work whenever you want with secure access</p>
+                    <ul class="amenity-features">
+                        <li>Biometric entry</li>
+                        <li>CCTV surveillance</li>
+                        <li>Security personnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Parking -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="400">
+                    <div class="amenity-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h4>Parking Space</h4>
+                    <p>Dedicated parking for cars and two-wheelers</p>
+                    <ul class="amenity-features">
+                        <li>Reserved spots</li>
+                        <li>EV charging</li>
+                        <li>24/7 access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Print & Scan -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="500">
+                    <div class="amenity-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h4>Print & Scan</h4>
+                    <p>Professional printing and scanning services</p>
+                    <ul class="amenity-features">
+                        <li>Color printing</li>
+                        <li>Cloud scanning</li>
+                        <li>Document binding</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Lounge Area -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="600">
+                    <div class="amenity-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h4>Lounge Area</h4>
+                    <p>Comfortable spaces for breaks and casual meetings</p>
+                    <ul class="amenity-features">
+                        <li>Ergonomic seating</li>
+                        <li>Entertainment zone</li>
+                        <li>Reading corner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mail Handling -->
+            <div class="col-md-4 col-lg-3">
+                <div class="amenity-card reveal-up" data-delay="700">
+                    <div class="amenity-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Mail Handling</h4>
+                    <p>Professional business address and mail services</p>
+                    <ul class="amenity-features">
+                        <li>Mail reception</li>
+                        <li>Package handling</li>
+                        <li>Mail forwarding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Amenities Toggle -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary" id="showMoreAmenities">
+                Show More Amenities
+                <i class="fas fa-chevron-down ms-2"></i>
+            </button>
+        </div>
+
+        <!-- Hidden Amenities Section -->
+        <div class="row g-4 mt-4 hidden-amenities" style="display: none;">
+            <!-- Additional amenity cards can be added here -->
+        </div>
+    </div>
+
+    <!-- Amenities Showcase -->
+    <div class="amenities-showcase mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="showcase-content reveal-left">
+                        <h3 class="mb-4">Experience Premium Workspace</h3>
+                        <p class="mb-4">Our thoughtfully designed workspaces combine comfort with functionality to enhance your productivity. Every detail is crafted to provide the best coworking experience.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tourModal">
+                            Schedule a Tour
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="showcase-gallery reveal-right">
+                        <!-- Gallery images will be dynamically loaded -->
+                        <div class="gallery-grid" id="amenitiesGallery"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Show More Amenities functionality
+    document.getElementById('showMoreAmenities')?.addEventListener('click', function() {
+        const hiddenAmenities = document.querySelector('.hidden-amenities');
+        const button = this;
+        
+        if (hiddenAmenities.style.display === 'none') {
+            hiddenAmenities.style.display = 'flex';
+            button.innerHTML = 'Show Less <i class="fas fa-chevron-up ms-2"></i>';
+        } else {
+            hiddenAmenities.style.display = 'none';
+            button.innerHTML = 'Show More Amenities <i class="fas fa-chevron-down ms-2"></i>';
+        }
+    });
+
+    // Initialize amenities gallery
+    const galleryImages = [
+        '/assets/images/amenities/workspace.jpg',
+        '/assets/images/amenities/meeting-room.jpg',
+        '/assets/images/amenities/cafeteria.jpg',
+        '/assets/images/amenities/lounge.jpg'
+    ];
+
+    const gallery = document.getElementById('amenitiesGallery');
+    if (gallery) {
+        galleryImages.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.alt = 'Amenity Preview';
+            img.className = 'gallery-item';
+            gallery.appendChild(img);
+        });
+    }
+</script>

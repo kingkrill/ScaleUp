@@ -1,0 +1,326 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+            <img src="/assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
+            <img src="/assets/images/logo-dark.png" alt="ScaleUp Logo" class="logo-dark">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <div class="nav-actions d-flex align-items-center">
+            <!-- Theme Toggle - Mobile -->
+            <button class="theme-toggle d-lg-none me-3" id="themeToggleMobile" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <!-- Features -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/#features">
+                        <i class="fas fa-star-half-alt d-lg-none me-2"></i>
+                        Features
+                    </a>
+                </li>
+
+                <!-- Locations Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="locationsDropdown" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-map-marker-alt d-lg-none me-2"></i>
+                        Locations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="locationsDropdown">
+                        <div class="dropdown-header d-lg-none">Our Spaces</div>
+                        
+                        <!-- Deccan Office -->
+                        <a class="dropdown-item" href="/locations/deccan-office.html">
+                            <div class="location-preview">
+                                <img src="/assets/images/deccan/thumbnail.jpg" alt="Deccan Office" class="location-thumbnail">
+                                <div class="location-info">
+                                    <h6>Deccan Office</h6>
+                                    <p class="text-muted mb-0">FC Road, Pune</p>
+                                    <span class="badge bg-primary">Popular</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Law College Office -->
+                        <a class="dropdown-item" href="/locations/law-college-office.html">
+                            <div class="location-preview">
+                                <img src="/assets/images/law-college/thumbnail.jpg" alt="Law College Office" class="location-thumbnail">
+                                <div class="location-info">
+                                    <h6>Law College Road Office</h6>
+                                    <p class="text-muted mb-0">Law College Road, Pune</p>
+                                    <span class="badge bg-success">New</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-primary" href="/#locations">
+                            View All Locations
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Plans -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/#plans">
+                        <i class="fas fa-tags d-lg-none me-2"></i>
+                        Plans
+                    </a>
+                </li>
+
+                <!-- Amenities -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/#amenities">
+                        <i class="fas fa-coffee d-lg-none me-2"></i>
+                        Amenities
+                    </a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/#contact">
+                        <i class="fas fa-envelope d-lg-none me-2"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="nav-right d-flex align-items-center">
+                <!-- Theme Toggle - Desktop -->
+                <button class="theme-toggle d-none d-lg-block me-3" id="themeToggleDesktop" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Contact Number -->
+                <a href="tel:+919876543210" class="nav-phone d-none d-lg-flex align-items-center me-4">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    <span>98765 43210</span>
+                </a>
+
+                <!-- CTA Buttons -->
+                <div class="nav-cta">
+                    <button class="btn btn-outline-primary me-2 d-none d-lg-inline-block" 
+                            data-bs-toggle="modal" data-bs-target="#contactModal">
+                        Contact Us
+                    </button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tourModal">
+                        Book a Tour
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: var(--bg-card);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-brand img {
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    margin-top: 1rem;
+    background-color: var(--bg-card);
+}
+
+.dropdown-header {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    color: var(--text-primary);
+}
+
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+/* Location Preview in Dropdown */
+.location-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.location-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.location-info h6 {
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+}
+
+/* Phone Number */
+.nav-phone {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-phone:hover {
+    color: var(--primary);
+}
+
+/* Mobile Styles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--bg-card);
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .dropdown-menu {
+        box-shadow: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-cta {
+        padding: 1rem;
+        border-top: 1px solid var(--border-light);
+        margin-top: 1rem;
+    }
+
+    .nav-cta .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+</style>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Theme toggle functionality
+const themeToggles = document.querySelectorAll('.theme-toggle');
+themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update toggle icons
+        const icons = document.querySelectorAll('.theme-toggle i');
+        icons.forEach(icon => {
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navbar = document.querySelector('.navbar-collapse');
+    const toggleButton = document.querySelector('.navbar-toggler');
+    
+    if (navbar.classList.contains('show') && 
+        !navbar.contains(e.target) && 
+        !toggleButton.contains(e.target)) {
+        navbar.classList.remove('show');
+    }
+});
+</script>

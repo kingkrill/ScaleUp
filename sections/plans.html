@@ -1,0 +1,274 @@
+<section id="plans" class="plans-section py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 reveal-up">Flexible Plans for Everyone</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                Choose the perfect plan that matches your needs with our flexible pricing options
+            </p>
+            
+            <!-- Plan Duration Toggle -->
+            <div class="plan-duration-toggle mt-4 reveal-up" data-delay="200">
+                <span class="me-3 duration-label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="planDurationToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="ms-3 duration-label">Annual</span>
+                <span class="save-badge ms-2">Save 20%</span>
+            </div>
+        </div>
+
+        <!-- Plans Grid -->
+        <div class="row g-4 plans-grid">
+            <!-- Hot Desk Plan -->
+            <div class="col-lg-4">
+                <div class="plan-card reveal-up" data-delay="300">
+                    <div class="plan-header">
+                        <div class="plan-name">
+                            <h3>Hot Desk</h3>
+                            <span class="badge bg-primary">Starter</span>
+                        </div>
+                        <p class="text-muted">Perfect for freelancers and individuals</p>
+                        <div class="plan-price">
+                            <div class="monthly-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">7,999</span>
+                                <span class="duration">/month</span>
+                            </div>
+                            <div class="annual-price" style="display: none;">
+                                <span class="currency">₹</span>
+                                <span class="amount">6,399</span>
+                                <span class="duration">/month</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Flexible seating</span>
+                                <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" title="Work from any available desk"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>High-speed internet</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Access to common areas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>8 hrs/day access</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>2 meeting room hrs/month</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Basic amenities</span>
+                            </li>
+                            <li class="unavailable">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Storage locker</span>
+                            </li>
+                            <li class="unavailable">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Business address</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-footer">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#tourModal">
+                            Schedule a Visit
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dedicated Desk Plan -->
+            <div class="col-lg-4">
+                <div class="plan-card featured reveal-up" data-delay="400">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <div class="plan-name">
+                            <h3>Dedicated Desk</h3>
+                            <span class="badge bg-primary">Professional</span>
+                        </div>
+                        <p class="text-muted">Ideal for growing startups and small teams</p>
+                        <div class="plan-price">
+                            <div class="monthly-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">12,999</span>
+                                <span class="duration">/month</span>
+                            </div>
+                            <div class="annual-price" style="display: none;">
+                                <span class="currency">₹</span>
+                                <span class="amount">10,399</span>
+                                <span class="duration">/month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-features">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Fixed desk space</span>
+                                <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" title="Your own dedicated workspace"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 access</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Storage locker</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>5 meeting room hrs/month</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Mail handling</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Business address</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium amenities</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Community events</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-footer">
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#tourModal">
+                            Schedule a Visit
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Private Office Plan -->
+            <div class="col-lg-4">
+                <div class="plan-card reveal-up" data-delay="500">
+                    <div class="plan-header">
+                        <div class="plan-name">
+                            <h3>Private Office</h3>
+                            <span class="badge bg-primary">Enterprise</span>
+                        </div>
+                        <p class="text-muted">Perfect for established teams and companies</p>
+                        <div class="plan-price">
+                            <div class="monthly-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">24,999</span>
+                                <span class="duration">/month</span>
+                            </div>
+                            <div class="annual-price" style="display: none;">
+                                <span class="currency">₹</span>
+                                <span class="amount">19,999</span>
+                                <span class="duration">/month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-features">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Private office space</span>
+                                <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" title="Fully furnished private office"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 access</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>10 meeting room hrs/month</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Customizable space</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>All premium amenities</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dedicated support</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Business address & mail</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Branding opportunities</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-footer">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#tourModal">
+                            Schedule a Visit
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Plans -->
+        <div class="custom-plans text-center mt-5 reveal-up" data-delay="600">
+            <h3>Need a Custom Solution?</h3>
+            <p class="text-muted mb-4">We can create a tailored package that perfectly fits your requirements</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                Contact Sales
+                <i class="fas fa-phone ms-2"></i>
+            </button>
+        </div>
+
+        <!-- Plan Comparison -->
+        <div class="plan-comparison mt-5">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#planComparisonModal">
+                Compare All Features
+                <i class="fas fa-table ms-2"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Plan duration toggle functionality
+    document.getElementById('planDurationToggle')?.addEventListener('change', function() {
+        const monthlyPrices = document.querySelectorAll('.monthly-price');
+        const annualPrices = document.querySelectorAll('.annual-price');
+        
+        if (this.checked) {
+            monthlyPrices.forEach(price => price.style.display = 'none');
+            annualPrices.forEach(price => price.style.display = 'block');
+        } else {
+            monthlyPrices.forEach(price => price.style.display = 'block');
+            annualPrices.forEach(price => price.style.display = 'none');
+        }
+    });
+
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+</script>
