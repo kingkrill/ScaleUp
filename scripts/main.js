@@ -947,3 +947,47 @@ class MainApp {
             const app = new MainApp();
             window.app = app; // Make app instance available globally if needed
         });
+// WhatsApp Dialog functionality
+function showWhatsAppDialog() {
+    // Get the modal element
+    const modalElement = document.getElementById('whatsappModal');
+    
+    // Check if modal exists
+    if (modalElement) {
+        // Create new modal instance
+        const modal = new bootstrap.Modal(modalElement);
+        modal.show();
+    } else {
+        console.error('WhatsApp modal element not found');
+    }
+}
+
+// Initialize all modals and add copy functionality when document is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap modals
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        new bootstrap.Modal(modal);
+    });
+
+    // Add copy functionality
+    const numberDisplay = document.querySelector('.number-display');
+    if(numberDisplay) {
+        numberDisplay.addEventListener('click', function() {
+            const text = this.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = this.innerHTML;
+                this.innerHTML = 'Copied! ✓';
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                }, 1500);
+            });
+        });
+    }
+});
+
+// For debugging
+function checkModalExists() {
+    const modal = document.getElementById('whatsappModal');
+    console.log('Modal element:', modal);
+}

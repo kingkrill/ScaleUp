@@ -1873,3 +1873,222 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(1px);
     }
 }
+/* Base viewport settings */
+@viewport {
+    width: device-width;
+    initial-scale: 1;
+    maximum-scale: 1;
+    user-scalable: no;
+}
+
+/* Enhanced mobile viewport optimizations */
+@media screen and (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        -webkit-text-size-adjust: 100% !important;
+    }
+
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Specific device breakpoints */
+/* iPhone SE, 5S, 5 */
+@media screen and (max-width: 320px) {
+    .hero-stats {
+        padding: 0.5rem !important;
+    }
+
+    .stat-card {
+        padding: 0.5rem !important;
+    }
+
+    .stat-card h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .stat-card p {
+        font-size: 0.75rem !important;
+    }
+
+    .hero-title {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* iPhone 6, 7, 8, X, 12 Mini */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .hero-stats {
+        padding: 0.75rem !important;
+    }
+
+    .stat-card h3 {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* iPhone 6+, 7+, 8+, XR, 11, 12, 13 */
+@media screen and (min-width: 376px) and (max-width: 428px) {
+    .hero-stats {
+        padding: 1rem !important;
+    }
+
+    .stat-card h3 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    .hero-section, 
+    .locations-section,
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left)) !important;
+        padding-right: max(15px, env(safe-area-inset-right)) !important;
+        padding-top: max(20px, env(safe-area-inset-top)) !important;
+    }
+}
+
+/* Fix for landscape mode */
+@media screen and (max-height: 428px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto !important;
+        padding: 60px 0 30px !important;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Fix for devices with notches */
+.notch-devices {
+    padding-top: constant(safe-area-inset-top) !important;
+    padding-top: env(safe-area-inset-top) !important;
+    padding-bottom: constant(safe-area-inset-bottom) !important;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+}
+/* Fix for hero buttons */
+.hero-buttons {
+    display: flex !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 500px !important; /* Limit maximum width */
+}
+
+.hero-buttons .btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem 2rem !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+}
+
+.hero-buttons .btn i {
+    margin-left: 0.5rem !important;
+}
+
+/* Fix for hero title */
+.hero-title {
+    font-size: 4rem !important;
+    line-height: 1.1 !important;
+    max-width: 800px !important;
+    word-spacing: -0.1em !important; /* Adjust word spacing */
+    hyphens: none !important;
+    white-space: normal !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column !important;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+        word-break: keep-all !important;
+    }
+}
+
+/* Smaller devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+}
+.number-display {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.number-display i {
+    color: #25D366; /* WhatsApp green color */
+    font-size: 1.2rem;
+}
+
+/* Optional: Add hover effect */
+.number-display:hover {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: text;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .number-display {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+}
+.whatsapp-number {
+    text-align: center;
+    padding: 1rem;
+}
+
+.number-display {
+    background: rgba(37, 211, 102, 0.1);
+    border: 2px solid #25D366;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #25D366;
+    user-select: all;
+}
+
+/* Modal customization */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.modal-header .fab {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
