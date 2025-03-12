@@ -2794,43 +2794,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* FAQ Section Styles */
 .faq-accordion .accordion-item {
-    margin-bottom: 1rem;
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius-lg);
+    margin-bottom: 1px; /* Reduce the gap between items to 1px */
+    border: none; /* Remove borders */
+    border-radius: 0; /* Remove border radius */
     overflow: hidden;
-    background-color: var(--bg-card);
+    background-color: #1a2942; /* Dark blue background color matching the image */
 }
 
 .faq-accordion .accordion-button {
     padding: 1.25rem 1.5rem;
     font-weight: 500;
     font-size: 1.1rem;
-    color: var(--text-primary);
-    background-color: var(--bg-card);
+    color: #ffffff; /* White text color */
+    background-color: #1a2942; /* Dark blue background */
     border: none;
     box-shadow: none;
     position: relative;
 }
 
 .faq-accordion .accordion-button:not(.collapsed) {
-    color: var(--primary);
-    background-color: rgba(59, 130, 246, 0.05);
+    color: #ffffff; /* Keep text white when expanded */
+    background-color: #1a2942; /* Keep background dark blue when expanded */
 }
 
 .faq-accordion .accordion-button:focus {
     box-shadow: none;
-    border-color: var(--primary);
+    border-color: transparent;
 }
 
 /* Plus/Minus Icons */
 .faq-accordion .accordion-button .fa-plus {
     display: inline-block;
-    color: var(--primary);
+    color: #3b82f6; /* Blue color for the plus icon */
+    font-size: 1rem;
 }
 
 .faq-accordion .accordion-button .fa-minus {
     display: none;
-    color: var(--primary);
+    color: #3b82f6; /* Blue color for the minus icon */
+    font-size: 1rem;
 }
 
 .faq-accordion .accordion-button:not(.collapsed) .fa-plus {
@@ -2843,42 +2845,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-accordion .accordion-body {
     padding: 1.5rem;
-    background-color: var(--bg-card);
-    color: var(--text-secondary);
+    background-color: #1a2942; /* Dark blue background */
+    color: #94a3b8; /* Light gray text for the content */
 }
 
-.faq-accordion .accordion-body p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+/* Add a thin border between accordion items */
+.faq-accordion .accordion-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.faq-accordion .accordion-body ul {
-    padding-left: 1.25rem;
-    margin-bottom: 1rem;
+/* Add background to the entire section */
+#faq {
+    background-color: #0f172a; /* Darker blue background for the section */
 }
 
-.faq-accordion .accordion-body li {
-    margin-bottom: 0.5rem;
+/* Make the title white */
+#faq .section-title {
+    color: #ffffff;
 }
 
-/* Hover effect */
-.faq-accordion .accordion-button:hover {
-    background-color: rgba(59, 130, 246, 0.05);
-}
-
-/* Add animation */
-.faq-accordion .accordion-collapse {
-    transition: all 0.3s ease-out;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .faq-accordion .accordion-button {
-        padding: 1rem;
-        font-size: 1rem;
-    }
-    
-    .faq-accordion .accordion-body {
-        padding: 1rem;
-    }
+/* Adjust the container for better spacing */
+#faq .container {
+    max-width: 900px;
 }
