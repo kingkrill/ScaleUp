@@ -170,7 +170,6 @@
         </section>
     
         <!-- Workspace Options -->
-        <!-- Workspace Options -->
 <section class="workspaces-section py-5 bg-secondary">
     <div class="container">
         <div class="text-center mb-5">
@@ -178,7 +177,7 @@
             <p class="section-subtitle">Choose the perfect workspace that suits your needs</p>
         </div>
         
-        <div class="workspace-grid">
+        <div class="workspace-grid" style="max-width: 1100px; margin: 0 auto;">
             <!-- Hot Desk -->
             <div class="workspace-card">
                 <h3>Hot Desk</h3>
@@ -186,11 +185,11 @@
                 <ul class="features-list">
                     <li><i class="fas fa-check-circle"></i> Flexible seating</li>
                     <li><i class="fas fa-check-circle"></i> High-speed internet</li>
-                    <li><i class="fas fa-check-circle"></i> Basic amenities</li>
-                    <li><i class="fas fa-check-circle"></i> Community access</li>
-                    <li><i class="fas fa-check-circle"></i> 8 hrs/day access</li>
+                    <li><i class="fas fa-check-circle"></i> Extended work hours</li>
+                    <li><i class="fas fa-check-circle"></i> Storage space</li>
+                    <li><i class="fas fa-check-circle"></i> Café lounge access</li>
                 </ul>
-                <div class="price">₹6,999 /month</div>
+                <div class="price">₹7,500 /month</div>
                 <a href="../contact.html?location=law-college" class="btn-book">Book a Tour</a>
             </div>
 
@@ -201,32 +200,74 @@
                 <p class="subtitle">Your own fixed desk with storage</p>
                 <ul class="features-list">
                     <li><i class="fas fa-check-circle"></i> Fixed desk</li>
-                    <li><i class="fas fa-check-circle"></i> 24/7 access</li>
-                    <li><i class="fas fa-check-circle"></i> Storage locker</li>
-                    <li><i class="fas fa-check-circle"></i> Mail handling</li>
+                    <li><i class="fas fa-check-circle"></i> Extended work hours</li>
+                    <li><i class="fas fa-check-circle"></i> Storage space</li>
+                    <li><i class="fas fa-check-circle"></i> Café lounge access</li>
                     <li><i class="fas fa-check-circle"></i> All amenities</li>
                 </ul>
-                <div class="price">₹11,999 /month</div>
+                <div class="price">₹9,900 /month</div>
                 <a href="../contact.html?location=law-college" class="btn-book">Book a Tour</a>
             </div>
 
             <!-- Private Office -->
             <div class="workspace-card">
-                <h3>Private Office</h3>
+                <h3>Private Dedicated Space</h3>
                 <p class="subtitle">Enclosed office space for teams</p>
                 <ul class="features-list">
                     <li><i class="fas fa-check-circle"></i> Private space</li>
-                    <li><i class="fas fa-check-circle"></i> Custom branding</li>
-                    <li><i class="fas fa-check-circle"></i> Premium amenities</li>
-                    <li><i class="fas fa-check-circle"></i> Reception service</li>
-                    <li><i class="fas fa-check-circle"></i> Meeting credits</li>
+                    <li><i class="fas fa-check-circle"></i> Extended work hours</li>
+                    <li><i class="fas fa-check-circle"></i> Café lounge access</li>
+                    <li><i class="fas fa-check-circle"></i> Storage space</li>
+                    <li><i class="fas fa-check-circle"></i> Print credits</li>
                 </ul>
-                <div class="price">₹22,999 /month</div>
+                <div class="price">₹29,999 /month</div>
                 <a href="../contact.html?location=law-college" class="btn-book">Book a Tour</a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Add this style section to the head of your document -->
+<style>
+    /* Center the workspace grid and improve spacing */
+    .workspace-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    /* Ensure cards have equal height */
+    .workspace-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 992px) {
+        .workspace-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .workspace-grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 700px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .workspace-grid {
+            grid-template-columns: 1fr;
+            max-width: 350px;
+        }
+    }
+</style>
     
         <!-- Amenities Section -->
         <section class="amenities-section py-5 fade-in">
@@ -276,49 +317,55 @@
             </div>
         </section>
             <!-- Location & Access -->
-    <section class="location-section py-5 bg-secondary fade-in">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="location-info">
-                        <h2 class="mb-4">Location & Access</h2>
-                        <div class="location-detail mb-4">
-                            <h4>Address</h4>
-                            <p>456 Law College Road, Erandwane,<br>Pune, Maharashtra 411004</p>
-                        </div>
-                        <div class="location-detail mb-4">
-                            <h4>Nearby Landmarks</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-landmark me-2"></i> ILS Law College</li>
-                                <li><i class="fas fa-shopping-bag me-2"></i> City Pride Mall</li>
-                                <li><i class="fas fa-bus me-2"></i> Law College Bus Stop</li>
-                            </ul>
-                        </div>
-                        <div class="location-detail">
-                            <h4>Getting Here</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-car me-2"></i> Basement parking available</li>
-                                <li><i class="fas fa-bus me-2"></i> Multiple bus routes</li>
-                                <li><i class="fas fa-taxi me-2"></i> Easy cab access</li>
-                            </ul>
-                        </div>
+<section class="location-section py-5 bg-secondary fade-in">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="location-info">
+                    <h2 class="mb-4">Location & Access</h2>
+                    <div class="location-detail mb-4">
+                        <h4>Address</h4>
+                        <p>2nd floor, Pardeep Chambers,<br>Bhandarkar & Law College Road signal,<br>Pune 411004</p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="location-map">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4!2d73.8317!3d18.5104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzM3LjQiTiA3M8KwNDknNTQuMiJF!5e0!3m2!1sen!2sin!4v1629890000000!5m2!1sen!2sin"
-                            width="100%" 
-                            height="450" 
-                            style="border:0; border-radius: 12px;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
+                    <div class="location-detail mb-4">
+                        <h4>Nearby Landmarks</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-landmark me-2"></i> ILS Law College</li>
+                            <li><i class="fas fa-shopping-bag me-2"></i> Bhandarkar Road</li>
+                            <li><i class="fas fa-bus me-2"></i> Law College Road Signal</li>
+                        </ul>
+                    </div>
+                    <div class="location-detail">
+                        <h4>Getting Here</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-car me-2"></i> Parking available nearby</li>
+                            <li><i class="fas fa-bus me-2"></i> Multiple bus routes</li>
+                            <li><i class="fas fa-taxi me-2"></i> Easy cab access</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.212454430026!2d73.8305343!3d18.519299000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf40b4035e73%3A0x82dbd2fed36783c!2sPradeep%20Chambers!5e0!3m2!1sen!2sin!4v1742122626001!5m2!1sen!2sin"
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="https://maps.app.goo.gl/fyJCB6jZy2mzsBFr6?g_st=awb" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-directions me-2"></i> Get Directions
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Gallery Section -->
     <section class="gallery-section py-5 fade-in">
