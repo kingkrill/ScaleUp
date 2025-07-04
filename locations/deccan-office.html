@@ -34,6 +34,17 @@
     <link href="../assets/css/theme.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/animations.css" rel="stylesheet">
+    <!-- Fix scrollbar/modal jitter -->
+    <style>
+      html, body { overflow-y: scroll !important; }
+      body.modal-open { padding-right: 0 !important; }
+      /* Performance: Smoother hover/scale transitions */
+      .workspace-card, .feature-card, .gallery-item img { will-change: transform; }
+      /* Reduce box-shadow on large/fixed overlays if any */
+      .custom-gallery-modal { box-shadow: none !important; }
+      /* Remove backdrop-filter from overlays for performance */
+      .custom-gallery-modal, .loading-overlay { backdrop-filter: none !important; }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -62,9 +73,9 @@
                             Locations
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="deccan-office.html">Deccan Office</a></li>
-                            <li><a class="dropdown-item" href="law-college-office.html">Law College Office</a></li>
                             <li><a class="dropdown-item" href="baner-office.html">Baner Office</a></li>
+                            <li><a class="dropdown-item" href="law-college-office.html">Law College Office</a></li>
+                            <li><a class="dropdown-item active" href="deccan-office.html">Deccan Office</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
