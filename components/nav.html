@@ -142,7 +142,10 @@
 
 /* Logo */
 .navbar-brand img {
-    height: 40px;
+    height: 120px; /* Allow the image to scale naturally */
+    max-height: 80px; /* Restrict maximum height to maintain navbar size */
+    width: 100px; /* Maintain aspect ratio */
+    padding: 0; /* Remove any padding */
     transition: all 0.3s ease;
 }
 

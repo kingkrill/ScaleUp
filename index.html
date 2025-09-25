@@ -139,6 +139,27 @@
     <link href="assets/css/theme.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/animations.css" rel="stylesheet">
+    <style>
+        .navbar {
+            height: 80px; /* Set the original height of the navbar */
+            display: flex;
+            align-items: center; /* Center the logo vertically */
+        }
+        .navbar-brand img {
+            height: auto;
+            max-height: 80px;
+            width: auto;
+            max-width: 120px;
+        }
+        @media (max-width: 768px) {
+        .navbar {
+            height: auto; /* Allow the navbar to adjust height dynamically */
+            padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+        }
+        .navbar-brand img {
+            max-height: 60px; /* Reduce logo size for mobile */
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -149,7 +170,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="assets/images/logo-light.png" alt="ScaleUp Logo" height="40">
+                <img src="assets/images/logo-light.png" alt="ScaleUp Logo" style="height: auto; max-height: 80px; width: auto; max-width: 120px;">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
