@@ -77,7 +77,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
-                <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" height="40">
+                <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -89,17 +89,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#features">Features</a>
                     </li>
+                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="locationsDropdown" 
+                        <a class="nav-link dropdown-toggle" href="#" id="locationsDropdown" 
                            data-bs-toggle="dropdown">
                             Locations
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="deccan-hub.html">Deccan Hub</a></li>
                             <li><a class="dropdown-item" href="law-college-office.html">Law College Office</a></li>
-                            <li><a class="dropdown-item active" href="deccan-office.html">Deccan Office</a></li>
-                            <li><a class="dropdown-item" href="baner-office.html">Baner Office</a></li>
                         </ul>
                     </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="leasedDropdown" 
+                           data-bs-toggle="dropdown">
+                            Currently Full
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="baner-office.html">Baner Office</a></li>
+                            <li><a class="dropdown-item active" href="deccan-office.html">Deccan Office</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#plans">Plans</a>
                     </li>
@@ -107,10 +119,10 @@
                         <a class="nav-link" href="../index.html#amenities">Amenities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                        <a class="nav-link" href="../contact.html">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a href="../contact.html?location=deccan" class="btn btn-primary">
+                        <a href="../contact.html" class="btn btn-primary">
                             Book a Tour
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>

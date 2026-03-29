@@ -6,28 +6,23 @@
     <meta name="description" content="Premium coworking spaces in Pune with state-of-the-art facilities and vibrant community">
     <meta name="theme-color" content="#0f172a">
     <meta name="color-scheme" content="dark">
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FD2T97P');</script>
-    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>ScaleUp - Premium Coworking Spaces in Pune</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
-    <!-- Meta Tags -->
     <meta property="og:title" content="ScaleUp - Premium Coworking Spaces in Pune">
     <meta property="og:description" content="Experience modern coworking at its finest in the heart of Pune">
     <meta property="og:image" content="assets/images/og-image.jpg">
-    <!-- Basic Meta Tags -->
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="description" content="Premium coworking spaces in Pune with flexible options for freelancers, startups, and enterprise teams. Book a tour today and experience modern workspaces designed for productivity.">
 <meta name="keywords" content="coworking Pune, office space Pune, shared workspace, flexible office, startup space, meeting rooms, hot desk, dedicated desk, private office, business center Pune, Deccan Gymkhana, Law College Road">
@@ -37,7 +32,6 @@
 <meta name="revisit-after" content="7 days">
 <meta name="theme-color" content="#3b82f6">
 
-<!-- Open Graph Meta Tags (for social sharing) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://scaleupcoworking.com/">
 <meta property="og:title" content="ScaleUp - Premium Coworking Spaces in Pune">
@@ -47,7 +41,6 @@
 <meta property="og:site_name" content="ScaleUp Coworking">
 <meta property="og:locale" content="en_IN">
 
-<!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@scaleupcowork">
 <meta name="twitter:title" content="ScaleUp - Premium Coworking Spaces in Pune">
@@ -55,22 +48,18 @@
 <meta name="twitter:image" content="https://scaleupcoworking.com/assets/images/twitter-card.jpg">
 <meta name="twitter:image:alt" content="ScaleUp Coworking Space Interior">
 
-<!-- Geo Meta Tags -->
 <meta name="geo.region" content="IN-MH">
 <meta name="geo.placename" content="Pune">
 <meta name="geo.position" content="18.5204;73.8567">
 <meta name="ICBM" content="18.5204, 73.8567">
 
-<!-- Canonical URL -->
 <meta rel="canonical" href="https://scaleupcoworking.com/">
 
-<!-- App Links -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ScaleUp Coworking">
 <meta name="application-name" content="ScaleUp">
 
-<!-- Additional SEO-focused Meta Tags -->
 <meta name="format-detection" content="telephone=no">
 <meta property="business:contact_data:street_address" content="FC Road, Deccan Gymkhana">
 <meta property="business:contact_data:locality" content="Pune">
@@ -83,7 +72,6 @@
 <meta property="business:hours:start" content="09:00">
 <meta property="business:hours:end" content="18:00">
 
-<!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,45 +120,57 @@
 }
 </script>
 
-    <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css?v=2" rel="stylesheet">
     <link href="assets/css/animations.css" rel="stylesheet">
+
     <style>
+        /* Skim the padding off the top and bottom of the navbar */
         .navbar {
-            height: 80px; /* Set the original height of the navbar */
-            display: flex;
-            align-items: center; /* Center the logo vertically */
+            padding-top: 0.2rem !important;
+            padding-bottom: 0.2rem !important;
         }
-        .navbar-brand img {
-            height: auto;
-            max-height: 80px;
-            width: auto;
-            max-width: 120px;
+
+        .navbar-brand {
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center !important;
         }
+        
+        /* Targets the image regardless of what other files try to do */
+        .navbar-brand img,
+        .navbar-brand img.logo-light,
+        .navbar-brand img.logo-dark {
+            height: 60px !important; /* Slightly reduced from 75px to fit slimmer navbar */
+            max-height: 60px !important;
+            width: auto !important;
+            max-width: 300px !important;
+            object-fit: contain !important;
+            margin: 2px 0 !important; /* Reduced margin */
+        }
+
+        /* Keep it proportionate on mobile screens */
         @media (max-width: 768px) {
-        .navbar {
-            height: auto; /* Allow the navbar to adjust height dynamically */
-            padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
-        }
-        .navbar-brand img {
-            max-height: 60px; /* Reduce logo size for mobile */
+            .navbar-brand img,
+            .navbar-brand img.logo-light,
+            .navbar-brand img.logo-dark {
+                height: 45px !important;
+                max-height: 45px !important;
+                max-width: 200px !important;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FD2T97P"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FD2T97P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="assets/images/logo-light.png" alt="ScaleUp Logo" style="height: auto; max-height: 80px; width: auto; max-width: 120px;">
+                <img src="assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -182,17 +182,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="locationsDropdown" 
                            data-bs-toggle="dropdown">
                             Locations
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="locations/deccan-hub.html">Deccan Hub</a></li>
                             <li><a class="dropdown-item" href="locations/law-college-office.html">Law College Office</a></li>
-                            <li><a class="dropdown-item" href="locations/deccan-office.html">Deccan Office</a></li>
-                            <li><a class="dropdown-item" href="locations/baner-office.html">Baner Office</a></li>
                         </ul>
                     </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="leasedDropdown" 
+                           data-bs-toggle="dropdown">
+                            Currently Full
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="locations/baner-office.html">Baner Office</a></li>
+                            <li><a class="dropdown-item" href="locations/deccan-office.html">Deccan Office</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#amenities">Amenities</a>
                     </li>
@@ -207,9 +219,7 @@
         </div>
     </nav>
 
-<!-- Hero Section -->
 <section class="hero-section">
-    <!-- Dynamic background elements remain the same -->
     <div class="dynamic-bg" style="opacity: 0.6;">
         <div class="gradient-sphere"></div>
         <div class="gradient-sphere-2"></div>
@@ -218,7 +228,6 @@
         <div class="glow-overlay"></div>
     </div>
     
-    <!-- Image slider remains the same -->
     <div class="office-images-slider">
         <div class="image-slide" style="background-image: url('assets/images/law-college/gallery-1.jpg');"></div>
         <div class="image-slide" style="background-image: url('assets/images/law-college/gallery-2.jpg');"></div>
@@ -270,7 +279,6 @@
         </div>
     </div>
 </section>
-<!-- Features Section -->
 <section id="features" class="section-padding">
     <div class="container">
         <div class="text-center mb-5 fade-in">
@@ -308,9 +316,7 @@
         </div>
     </div>
 </section>
-<!-- Who is this for Section -->
 <section id="who-for" class="section-padding bg-secondary position-relative overflow-hidden">
-    <!-- Animated Background -->
     <div class="sliding-bg"></div>
     <div class="sliding-bg sliding-bg2"></div>
     <div class="sliding-bg sliding-bg3"></div>
@@ -323,7 +329,6 @@
         </div>
         
         <div class="row g-4 stagger-fade-in">
-            <!-- Freelancers -->
             <div class="col-lg-4">
                 <div class="target-audience-card hover-lift">
                     <div class="audience-image">
@@ -338,7 +343,6 @@
                 </div>
             </div>
             
-            <!-- Startups/SMEs -->
             <div class="col-lg-4">
                 <div class="target-audience-card hover-lift">
                     <div class="audience-image">
@@ -353,7 +357,6 @@
                 </div>
             </div>
             
-            <!-- Enterprise Teams -->
             <div class="col-lg-4">
                 <div class="target-audience-card hover-lift">
                     <div class="audience-image">
@@ -377,7 +380,6 @@
         </div>
     </div>
 </section>
-<!-- Tailored Office Plans Section -->
 <section id="office-plans" class="section-padding">
     <div class="container">
         <div class="text-center mb-5 fade-in">
@@ -389,7 +391,6 @@
         </div>
         
         <div class="row g-4 mt-4">
-            <!-- Row 1 -->
             <div class="col-md-4">
                 <div class="plan-option-card fade-in" data-delay="100">
                     <div class="plan-icon">
@@ -429,7 +430,6 @@
                 </div>
             </div>
             
-            <!-- Row 2 -->
             <div class="col-md-4">
                 <div class="plan-option-card fade-in" data-delay="400">
                     <div class="plan-icon">
@@ -450,7 +450,7 @@
                     </div>
                     <h3 class="plan-title">Dedicated Desk</h3>
                     <p class="plan-description">
-                        Enjoy the benefits of a private office at an affordable price, with exclusive access to personal storage, a café lounge, and additional premium amenities.
+                        Enjoy the benefits of a private office at an affordable price, with exclusive access to personal storage, a café lounge, and additional premium amenities.
                     </p>
                     <a href="contact.html" class="btn btn-outline-primary btn-sm mt-3">Learn More</a>
                 </div>
@@ -487,7 +487,6 @@
         
         <div class="locations-grid">
             
-            <!-- Law College Office -->
             <div class="location-card">
                 <div class="location-image">
                     <span class="badge-new">New Location</span>
@@ -520,10 +519,9 @@
                 </div>
             </div>
 
-            <!-- Baner Office -->
             <div class="location-card">
                 <div class="location-image">
-                    <span class="badge-new">New Location</span>
+                    <span class="badge-new">100% Leased</span>
                     <img src="assets/images/baner/hero.jpg" alt="Baner Office">
                 </div>
                 <div class="location-content">
@@ -546,16 +544,16 @@
                         </div>
                     </div>
                     <div class="location-actions">
-                        <a href="locations/baner-office.html" class="btn btn-outline-primary">
-                            Explore Space
+                        <a href="locations/baner-office.html" class="btn btn-outline-secondary">
+                            View Space
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Deccan Office -->
             <div class="location-card">
                 <div class="location-image">
+                    <span class="badge-new">100% Leased</span>
                     <img src="assets/images/deccan/hero.jpg" alt="Deccan Office">
                 </div>
                 <div class="location-content">
@@ -578,8 +576,8 @@
                         </div>
                     </div>
                     <div class="location-actions">
-                        <a href="locations/deccan-office.html" class="btn btn-outline-primary">
-                            Explore Space
+                        <a href="locations/deccan-office.html" class="btn btn-outline-secondary">
+                            View Space
                         </a>
                     </div>
                 </div>
@@ -588,15 +586,13 @@
     </div>
 </section>
                 
-                    <!-- Amenities Section -->
-<section id="amenities" class="section-padding">
+                    <section id="amenities" class="section-padding">
     <div class="container">
         <div class="text-center mb-5 fade-in">
             <h2 class="section-title">Premium Amenities</h2>
             <p class="section-subtitle">Everything you need for a productive workday</p>
         </div>
         <div class="row g-4 stagger-fade-in">
-            <!-- On-site Support Team -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -607,7 +603,6 @@
                 </div>
             </div>
             
-            <!-- 24x7 Availability -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -618,7 +613,6 @@
                 </div>
             </div>
             
-            <!-- High-speed WiFi -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -629,7 +623,6 @@
                 </div>
             </div>
             
-            <!-- Facilities and Utilities -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -640,7 +633,6 @@
                 </div>
             </div>
             
-            <!-- Ergonomic Furniture -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -651,7 +643,6 @@
                 </div>
             </div>
             
-            <!-- Discussion Rooms -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -662,7 +653,6 @@
                 </div>
             </div>
             
-            <!-- Managed Desks -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -673,7 +663,6 @@
                 </div>
             </div>
             
-            <!-- Hot Desk -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -684,7 +673,6 @@
                 </div>
             </div>
             
-            <!-- Power Backup -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -695,7 +683,6 @@
                 </div>
             </div>
             
-            <!-- Pantry -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -706,7 +693,6 @@
                 </div>
             </div>
             
-            <!-- Housekeeping -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -717,7 +703,6 @@
                 </div>
             </div>
             
-            <!-- Security -->
             <div class="col-md-3 col-6">
                 <div class="amenity-card text-center hover-lift">
                     <div class="amenity-icon">
@@ -730,9 +715,7 @@
         </div>
     </div>
 </section>
-<!-- Business Services Section -->
 <section id="business-services" class="section-padding position-relative overflow-hidden">
-    <!-- Animated Background -->
     <div class="services-animated-bg"></div>
     
     <div class="container position-relative">
@@ -784,7 +767,6 @@
         </div>
     </div>
 </section>
-<!-- FAQ Section -->
 <section id="faq" class="section-padding">
     <div class="container">
         <div class="text-center mb-5 fade-in">
@@ -795,7 +777,6 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="accordion faq-accordion" id="faqAccordion">
-                    <!-- Question 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -811,7 +792,6 @@
                         </div>
                     </div>
                     
-                    <!-- Question 2 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -837,8 +817,6 @@
                         </div>
                     </div>
                     
-                    <!-- Remaining questions follow the same pattern... -->
-                    <!-- Question 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -855,7 +833,6 @@
                         </div>
                     </div>
                     
-                    <!-- Question 4 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -872,7 +849,6 @@
                         </div>
                     </div>
                     
-                    <!-- Question 5 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -889,7 +865,6 @@
                         </div>
                     </div>
                     
-                    <!-- Question 6 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -916,7 +891,6 @@
                         </div>
                     </div>
                     
-                    <!-- Question 7 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSeven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -947,10 +921,8 @@
     </div>
 </section>
                 
-                    <!-- Reviews Slider -->
                     <div class="reviews-slider-container">
                         <div class="reviews-track">
-                            <!-- Original reviews -->
                             <div class="review-item">
                                 <img src="assets/images/testimonials/author-1.jpg" alt="Reviewer" class="review-img">
                                 <div class="review-content">
@@ -972,7 +944,6 @@
                                     <small>Amit Patel - Freelancer</small>
                                 </div>
                             </div>
-                            <!-- Duplicated for continuous scroll -->
                             <div class="review-item">
                                 <img src="assets/images/testimonials/author-1.jpg" alt="Reviewer" class="review-img">
                                 <div class="review-content">
@@ -997,13 +968,12 @@
                         </div>
                     </div>
                 
-                    <!-- Footer -->
                     <footer class="footer bg-dark text-white">
                         <div class="container py-5">
                             <div class="row g-4">
                                 <div class="col-lg-4">
-                                    <img src="assets/images/logo-light.png" alt="ScaleUp Logo" height="40" class="mb-4">
-                                    <p class="mb-4">Discover Pune's best coworking office space that fits your budget without compromising on quality. Our state-of-the-art facilities and dynamic community make it the ideal workspace for freelancers, startups, remote workers, independent professionals, solo entrepreneurs, enterprise teams, and businesses. Experience smart, flexible, and affordable office solutions designed to inspire productivity and growth.</p>
+                                    <img src="assets/images/logo-light.png" alt="ScaleUp Logo" style="height: 75px; width: auto; max-width: 280px; object-fit: contain;">
+                                    <p class="mb-4">Discover Pune's best coworking office space that fits your budget without compromising on quality. Our state-of-the-art facilities and dynamic community make it the ideal workspace for freelancers, startups, remote workers, independent professionals, solo entrepreneurs, enterprise teams, and businesses. Experience smart, flexible, and affordable office solutions designed to inspire productivity and growth.</p>
                                     <div class="social-links">
                                         <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
                                         <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
@@ -1066,12 +1036,10 @@
                             </div>
                         </div>
                     </footer>
-                        <!-- Back to Top Button -->
-    <button id="backToTop" class="btn btn-primary back-to-top">
+                        <button id="backToTop" class="btn btn-primary back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Booking Modal -->
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1143,7 +1111,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/main.js"></script>

@@ -141,12 +141,33 @@
 }
 
 /* Logo */
+/* Logo Overrides */
+.navbar-brand {
+    padding: 0 !important; /* Strips away Bootstrap's default padding that squishes the logo */
+    margin-right: 2rem; 
+    display: flex;
+    align-items: center;
+}
+
 .navbar-brand img {
-    height: 120px; /* Allow the image to scale naturally */
-    max-height: 80px; /* Restrict maximum height to maintain navbar size */
-    width: 100px; /* Maintain aspect ratio */
-    padding: 0; /* Remove any padding */
+    height: 75px !important; /* Forces the logo to be much taller */
+    width: auto !important; /* Maintains the perfect aspect ratio */
+    max-width: 320px !important; /* Gives it plenty of room to stretch sideways */
+    object-fit: contain;
     transition: all 0.3s ease;
+}
+
+/* Make the logo shrink slightly when the user scrolls down */
+.navbar.scrolled .navbar-brand img {
+    height: 55px !important; 
+}
+
+/* Mobile responsiveness so it doesn't break phone screens */
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 50px !important; 
+        max-width: 220px !important;
+    }
 }
 
 .logo-light {
