@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ScaleUp Deccan Hub - Our largest, premium coworking ecosystem at Kshitij Business Center, Pune. Custom enterprise suites, private cabins, and flexible desks.">
+    <meta name="description" content="ScaleUp Co Work KBC - Premium coworking space in Deccan, Pune. 160+ seats, 15 cabins, 2 floors. Prime location, peaceful vibe, zero hidden costs.">
     <meta name="theme-color" content="#0f172a">
     <meta name="color-scheme" content="dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -15,35 +15,31 @@
     })(window,document,'script','dataLayer','GTM-5FD2T97P');</script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Deccan Hub - Premium Enterprise & Coworking Space in Pune</title>
+    <title>ScaleUp KBC Deccan | Premium Coworking Flagship</title>
 
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
 
-    <meta property="og:title" content="Deccan Hub - Premium Coworking Space in Pune">
-    <meta property="og:description" content="Position your team in Pune's most comprehensive workspace. Engineered for scale with custom enterprise suites and private cabins.">
-    <meta property="og:image" content="../assets/images/deccan/hero.jpg">
-
+    <!-- Theme Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="../assets/css/theme.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/animations.css" rel="stylesheet">
     
     <style>
-      html, body { overflow-y: scroll !important; }
+      html, body { overflow-x: hidden; }
       body.modal-open { padding-right: 0 !important; }
-      /* Performance: Smoother hover/scale transitions */
       .workspace-card, .feature-card, .gallery-item img { will-change: transform; }
-      .custom-gallery-modal { box-shadow: none !important; }
-      .custom-gallery-modal, .loading-overlay { backdrop-filter: none !important; }
       
-      /* Navbar Logo Overrides */
       .navbar {
           height: 80px;
           display: flex;
           align-items: center;
+          background: rgba(15, 23, 42, 0.95);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid rgba(255,255,255,0.05);
       }
       .navbar-brand img {
           height: auto;
@@ -59,6 +55,77 @@
           .navbar-brand img {
               max-height: 60px;
           }
+      }
+
+      /* Walkthrough Video Container */
+      .walkthrough-video-wrapper {
+          position: relative;
+          border-radius: var(--border-radius-xl);
+          overflow: hidden;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+          background: #000;
+          border: 1px solid rgba(255,255,255,0.1);
+      }
+      .walkthrough-video-wrapper video {
+          width: 100%;
+          height: 100%;
+          max-height: 70vh;
+          object-fit: cover;
+          display: block;
+      }
+
+      /* Custom Strikethrough for dark theme pricing */
+      .strikethrough {
+          text-decoration: line-through;
+          color: var(--text-muted);
+          font-size: 1.1rem;
+      }
+
+      /* Rounded corners for split images */
+      .split-image {
+          border-radius: var(--border-radius-xl);
+          box-shadow: var(--shadow-lg);
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          min-height: 400px;
+          border: 1px solid rgba(255,255,255,0.05);
+      }
+
+      /* Enhancing the grid for workspaces */
+      .workspace-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          max-width: 1100px;
+          margin: 0 auto;
+          justify-content: center;
+      }
+      @media (min-width: 992px) { .workspace-grid { grid-template-columns: repeat(3, 1fr); } }
+
+      /* Hero Stats Row */
+      .hero-stats-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          margin: 0 auto;
+          max-width: 800px;
+      }
+      @media (min-width: 768px) {
+          .hero-stats-row {
+              grid-template-columns: repeat(4, 1fr);
+          }
+      }
+      
+      /* Interactive Blueprint Nav */
+      .nav-pills .nav-link {
+          color: var(--text-primary);
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+      }
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+          color: #fff;
+          background-color: var(--primary);
       }
     </style>
 </head>
@@ -82,19 +149,17 @@
                     </li>
                     
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="locationsDropdown" 
-                           data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="locationsDropdown" data-bs-toggle="dropdown">
                             Locations
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="deccan-hub.html">Deccan Hub</a></li>
+                            <li><a class="dropdown-item active" href="deccan-hub.html">Deccan Hub (KBC)</a></li>
                             <li><a class="dropdown-item" href="law-college-office.html">Law College Office</a></li>
                         </ul>
                     </li>
                     
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="leasedDropdown" 
-                           data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="leasedDropdown" data-bs-toggle="dropdown">
                             Currently Full
                         </a>
                         <ul class="dropdown-menu">
@@ -113,7 +178,7 @@
                         <a class="nav-link" href="../contact.html">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a href="../contact.html" class="btn btn-primary">
+                        <a href="../contact.html?location=deccan-hub" class="btn btn-primary rounded-pill">
                             Book a Tour
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>
@@ -123,24 +188,58 @@
         </div>
     </nav>
 
-    <section class="location-hero deccan-hub-hero">
-        <div class="aurora-bg">
-            <div class="aurora-blob aurora-blob1"></div>
-            <div class="aurora-blob aurora-blob2"></div>
-            <div class="aurora-blob aurora-blob3"></div>
-            <div class="aurora-blob aurora-blob4"></div>
-            <div class="aurora-blob aurora-blob5"></div>
+    <section class="hero-section position-relative d-flex align-items-center" style="min-height: 85vh; padding-top: 120px; overflow: hidden;">
+        <!-- Restored Dynamic Background -->
+        <div class="dynamic-bg" style="opacity: 0.6;">
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere-2"></div>
+            <div class="animated-grid"></div>
+            <div class="floating-particles"></div>
+            <div class="glow-overlay"></div>
         </div>
-        <div class="container">
-            <div class="row min-vh-60 align-items-center">
-                <div class="col-lg-6">
-                    <div class="location-hero-content fade-in mt-5">
-                        <div class="badge bg-primary mb-3">Our Largest Campus Yet</div>
-                        <h1 class="display-4 fw-bold animated-gradient-text mb-4">Deccan Hub Ecosystem</h1>
-                        <p class="lead text-white mb-4">Position your team in Pune's most comprehensive workspace. Located at the prestigious Kshitij Business Center, the Deccan Hub is engineered for scale—featuring custom enterprise suites, expansive collaborative zones, and our full suite of in-house business support services.</p>
-                        <div class="d-flex gap-3">
-                            <a href="../contact.html?location=deccan-hub" class="btn btn-primary btn-lg">
-                                Schedule a Visit
+        
+        <!-- Cross-fading Image Slider using your actual photos -->
+        <div class="office-images-slider">
+            <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/firstfloorcoworking.jpeg');"></div>
+            <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/cabinfront.jpeg');"></div>
+            <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/meetingroom.jpeg');"></div>
+            <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/largecabin.jpeg');"></div>
+            <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/cabinside.jpeg');"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
+
+        <div class="container position-relative z-2">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-10">
+                    <div class="location-hero-content fade-in mt-4">
+                        <div class="badge bg-primary mb-3 px-3 py-2 text-uppercase letter-spacing-1 rounded-pill">Scale Up KBC - Law College Road</div>
+                        <h1 class="display-3 fw-bold text-white mb-4" style="line-height: 1.1;">Prime Location.<br><span class="text-primary">Peaceful Vibe.</span><br>Zero Hassles.</h1>
+                        <p class="lead text-light mb-5 opacity-75 fw-normal mx-auto" style="max-width: 700px;">Are you tired of juggling utility bills, slow internet, and noisy coffee shops? Step into a workspace designed for creators, thinkers, and achievers.</p>
+                        
+                        <div class="hero-stats-row mb-5">
+                            <div class="p-3 border border-secondary rounded-3 bg-dark bg-opacity-75 h-100 text-center" style="backdrop-filter: blur(10px);">
+                                <h4 class="text-white fw-bold mb-1">160+</h4>
+                                <p class="text-primary small mb-0 text-uppercase fw-bold">Seating Capacity</p>
+                            </div>
+                            <div class="p-3 border border-secondary rounded-3 bg-dark bg-opacity-75 h-100 text-center" style="backdrop-filter: blur(10px);">
+                                <h4 class="text-white fw-bold mb-1">15+</h4>
+                                <p class="text-primary small mb-0 text-uppercase fw-bold">Private Cabins</p>
+                            </div>
+                            <div class="p-3 border border-secondary rounded-3 bg-dark bg-opacity-75 h-100 text-center" style="backdrop-filter: blur(10px);">
+                                <h4 class="text-white fw-bold mb-1">2</h4>
+                                <p class="text-primary small mb-0 text-uppercase fw-bold">Conf. Rooms</p>
+                            </div>
+                            <div class="p-3 border border-secondary rounded-3 bg-dark bg-opacity-75 h-100 text-center" style="backdrop-filter: blur(10px);">
+                                <h4 class="text-white fw-bold mb-1"><i class="fas fa-mug-hot"></i></h4>
+                                <p class="text-primary small mb-0 text-uppercase fw-bold">Premium Beans</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="../contact.html?location=deccan-hub" class="btn btn-primary btn-lg rounded-pill px-5 shadow">
+                                Claim Launch Offer
                                 <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                         </div>
@@ -150,297 +249,536 @@
         </div>
     </section>
 
-    <section class="stats-section py-4 bg-primary">
-        <div class="container">
-            <div class="row text-center text-white g-4">
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <h3 class="h2 fw-bold mb-1">Massive</h3>
-                        <p class="mb-0">Seating Capacity</p>
+    <section class="py-5 border-bottom border-secondary bg-primary-dark fade-in" style="background-color: var(--bg-primary);">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 order-lg-2">
+                    <div class="walkthrough-video-wrapper text-center mx-auto" style="max-width: 380px;">
+                        <video src="../assets/images/deccan-hub/Walkthrough.mp4" autoplay loop muted playsinline poster="../assets/images/deccan-hub/firstfloorcoworking.jpeg"></video>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <h3 class="h2 fw-bold mb-1">Premium</h3>
-                        <p class="mb-0">Enterprise Suites</p>
+                <div class="col-lg-7 order-lg-1">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 text-uppercase letter-spacing-1 rounded-pill">Phase 1 Now Open</span>
+                    <h2 class="display-5 fw-bold mb-4 text-white">Explore The First Floor of Our Two-Story Ecosystem</h2>
+                    <p class="text-muted fs-5 mb-4">Take a virtual stroll through Phase 1 of our massive new Deccan Hub. We are expanding across two entire floors at the Kshitij Business Center to bring you unparalleled scale and community.</p>
+                    
+                    <ul class="list-unstyled mb-5">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
+                            <span class="text-light fs-5">Immaculate lighting and modern aesthetics</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
+                            <span class="text-light fs-5">Spacious walkways and breathing room</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
+                            <span class="text-light fs-5">Phase 2 expansion coming soon</span>
+                        </li>
+                    </ul>
+
+                    <a href="#plans" class="btn btn-outline-light btn-lg rounded-pill px-4">View Launch Pricing <i class="fas fa-chevron-down ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark border-bottom border-secondary fade-in">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase letter-spacing-1 d-block mb-2">Campus Layout</span>
+                <h2 class="display-5 fw-bold text-white mb-3">Two Floors of Premium Workspace</h2>
+                <p class="text-muted fs-5 max-w-md mx-auto">Navigate through our meticulously planned ecosystems, designed to optimize your team's workflow and comfort.</p>
+            </div>
+
+            <!-- Blueprint Tabs -->
+            <style>
+                /* Interactive Blueprint Styles */
+                .interactive-blueprint {
+                    background: #0f172a;
+                    border-radius: 16px;
+                    padding: 1.5rem;
+                    border: 1px solid rgba(255,255,255,0.1);
+                    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+                }
+                .bp-group { cursor: pointer; }
+                .bp-zone {
+                    fill: rgba(30, 41, 59, 0.8);
+                    stroke: #475569;
+                    stroke-width: 2;
+                    transition: all 0.3s ease;
+                    stroke-linejoin: round;
+                }
+                .bp-group:hover .bp-zone, .bp-group.active .bp-zone {
+                    fill: rgba(59, 130, 246, 0.25);
+                    stroke: #3b82f6;
+                    stroke-width: 3;
+                }
+                .bp-text {
+                    fill: #94a3b8;
+                    font-weight: 600;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 14px;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    text-anchor: middle;
+                    dominant-baseline: middle;
+                }
+                .bp-group:hover .bp-text, .bp-group.active .bp-text {
+                    fill: #ffffff;
+                    font-size: 15px;
+                }
+                .blueprint-list-item {
+                    transition: all 0.3s ease;
+                    border: 1px solid transparent;
+                    border-radius: 12px;
+                    padding: 12px 16px;
+                    cursor: pointer;
+                    margin-left: -16px;
+                    margin-right: -16px;
+                }
+                .blueprint-list-item:hover, .blueprint-list-item.active {
+                    background: rgba(59, 130, 246, 0.1);
+                    border-color: rgba(59, 130, 246, 0.3);
+                    transform: translateX(10px);
+                }
+                .blueprint-list-item.active .text-white {
+                    color: #3b82f6 !important;
+                }
+                .blueprint-list-item.active i {
+                    transform: scale(1.1);
+                }
+            </style>
+
+            <ul class="nav nav-pills mb-4 justify-content-center gap-3" id="floorPlanTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active rounded-pill px-4 py-2" id="ground-tab" data-bs-toggle="pill" data-bs-target="#ground-plan" type="button" role="tab" aria-controls="ground-plan" aria-selected="true">Ground Floor</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4 py-2" id="first-tab" data-bs-toggle="pill" data-bs-target="#first-plan" type="button" role="tab" aria-controls="first-plan" aria-selected="false">First Floor</button>
+                </li>
+            </ul>
+
+            <!-- Blueprint Tab Content -->
+            <div class="tab-content" id="floorPlanTabsContent">
+                <!-- Ground Floor Pane -->
+                <div class="tab-pane fade show active" id="ground-plan" role="tabpanel" aria-labelledby="ground-tab">
+                    <div class="row align-items-center g-5 bg-secondary p-4 rounded-4 border border-dark">
+                        <div class="col-lg-7">
+                            <div class="interactive-blueprint w-100">
+                                <svg viewBox="0 0 800 500" class="w-100 h-100" style="min-height: 350px;">
+                                    <!-- Background/Outer walls -->
+                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#334155" stroke-width="6" rx="8"/>
+                                    
+                                    <!-- Washrooms -->
+                                    <g class="bp-group" data-zone="washrooms">
+                                        <rect class="bp-zone" x="20" y="20" width="100" height="200" rx="6"/>
+                                        <text class="bp-text" x="70" y="120" transform="rotate(-90 70,120)">Washrooms</text>
+                                    </g>
+                                    
+                                    <!-- Pantry -->
+                                    <g class="bp-group" data-zone="pantry">
+                                        <rect class="bp-zone" x="20" y="230" width="100" height="250" rx="6"/>
+                                        <text class="bp-text" x="70" y="355" transform="rotate(-90 70,355)">Pantry</text>
+                                    </g>
+                                    
+                                    <!-- Cabins 01-03 -->
+                                    <g class="bp-group" data-zone="cabins">
+                                        <rect class="bp-zone" x="130" y="20" width="380" height="150" rx="6"/>
+                                        <text class="bp-text" x="320" y="95">Cabins 01-03</text>
+                                        <!-- Cabins 04-05 -->
+                                        <rect class="bp-zone" x="520" y="20" width="260" height="150" rx="6"/>
+                                        <text class="bp-text" x="650" y="95">Cabins 04-05</text>
+                                    </g>
+                                    
+                                    <!-- Coworking Space -->
+                                    <g class="bp-group" data-zone="coworking">
+                                        <rect class="bp-zone" x="130" y="180" width="250" height="300" rx="6"/>
+                                        <text class="bp-text" x="255" y="330">Coworking Space</text>
+                                    </g>
+                                    
+                                    <!-- Giant Cabin -->
+                                    <g class="bp-group" data-zone="giant-cabin">
+                                        <rect class="bp-zone" x="390" y="180" width="220" height="300" rx="6"/>
+                                        <text class="bp-text" x="500" y="330">Giant Cabin</text>
+                                    </g>
+                                    
+                                    <!-- Conference Room -->
+                                    <g class="bp-group" data-zone="conf">
+                                        <rect class="bp-zone" x="620" y="180" width="160" height="300" rx="6"/>
+                                        <text class="bp-text" x="700" y="330">Conf. Room</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <h3 class="fw-bold text-white mb-4">Ground Floor Highlights</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="coworking">
+                                    <i class="fas fa-desktop text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Coworking Space</span>
+                                        <span class="text-muted small">Open Desks Near Pantry</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="giant-cabin">
+                                    <i class="fas fa-door-open text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Giant Cabin</span>
+                                        <span class="text-muted small">Expansive Central Office Space</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="cabins">
+                                    <i class="fas fa-door-closed text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">5 Private Cabins</span>
+                                        <span class="text-muted small">Configurations for 6-8 pax</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="conf">
+                                    <i class="fas fa-users text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Conference Room</span>
+                                        <span class="text-muted small">Spacious 11'9" x 9'7" Layout</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="pantry">
+                                    <i class="fas fa-coffee text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Pantry Area</span>
+                                        <span class="text-muted small">Refreshments & Coffee</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center blueprint-list-item" data-zone="washrooms">
+                                    <i class="fas fa-restroom text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Washrooms</span>
+                                        <span class="text-muted small">Dedicated Restrooms</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <h3 class="h2 fw-bold mb-1">Complete</h3>
-                        <p class="mb-0">Business Ecosystem</p>
+
+                <!-- First Floor Pane -->
+                <div class="tab-pane fade" id="first-plan" role="tabpanel" aria-labelledby="first-tab">
+                    <div class="row align-items-center g-5 bg-secondary p-4 rounded-4 border border-dark">
+                        <div class="col-lg-7">
+                            <div class="interactive-blueprint w-100">
+                                <svg viewBox="0 0 800 500" class="w-100 h-100" style="min-height: 350px;">
+                                    <!-- Background/Outer walls -->
+                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#334155" stroke-width="6" rx="8"/>
+                                    
+                                    <!-- Washrooms Top Left & Right -->
+                                    <g class="bp-group" data-zone="washrooms">
+                                        <rect class="bp-zone" x="20" y="20" width="100" height="200" rx="6"/>
+                                        <text class="bp-text" x="70" y="120" transform="rotate(-90 70,120)">Washrooms</text>
+                                        <rect class="bp-zone" x="620" y="20" width="160" height="150" rx="6"/>
+                                        <text class="bp-text" x="700" y="95">Washrooms</text>
+                                    </g>
+                                    
+                                    <!-- Large Pantry -->
+                                    <g class="bp-group" data-zone="pantry">
+                                        <rect class="bp-zone" x="20" y="230" width="140" height="250" rx="6"/>
+                                        <text class="bp-text" x="90" y="355">Large Pantry</text>
+                                    </g>
+                                    
+                                    <!-- Cabins -->
+                                    <g class="bp-group" data-zone="cabins">
+                                        <!-- Cabin 04 Top Left -->
+                                        <rect class="bp-zone" x="130" y="20" width="120" height="150" rx="6"/>
+                                        <text class="bp-text" x="190" y="95">Cabin 04</text>
+                                        <!-- Cabins 03/08 Right -->
+                                        <rect class="bp-zone" x="620" y="180" width="160" height="300" rx="6"/>
+                                        <text class="bp-text" x="700" y="330">Cabins 03/08</text>
+                                    </g>
+                                    
+                                    <!-- Conf Room & Cabin 02 -->
+                                    <g class="bp-group" data-zone="conf">
+                                        <rect class="bp-zone" x="170" y="320" width="300" height="160" rx="6"/>
+                                        <text class="bp-text" x="320" y="400">Conf. Room & Cabin 02</text>
+                                    </g>
+                                    
+                                    <!-- Coworking Space -->
+                                    <g class="bp-group" data-zone="coworking">
+                                        <polygon class="bp-zone" points="260,20 610,20 610,480 480,480 480,310 170,310 170,180 260,180" />
+                                        <text class="bp-text" x="435" y="165">71 Dedicated Desks</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <h3 class="fw-bold text-white mb-4">First Floor Highlights</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="coworking">
+                                    <i class="fas fa-desktop text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">71 Seats</span>
+                                        <span class="text-muted small">Spacious Dedicated Workstations</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="cabins">
+                                    <i class="fas fa-door-closed text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">4 Private Cabins</span>
+                                        <span class="text-muted small">Premium enclosed team spaces</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="conf">
+                                    <i class="fas fa-users text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Conference Room</span>
+                                        <span class="text-muted small">Executive 11' x 7'6" Layout</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="pantry">
+                                    <i class="fas fa-coffee text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Large Pantry</span>
+                                        <span class="text-muted small">Spacious 9'2" x 14'7" Refreshment Area</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center blueprint-list-item" data-zone="washrooms">
+                                    <i class="fas fa-restroom text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <div>
+                                        <span class="text-white fw-bold d-block fs-5 transition">Washrooms</span>
+                                        <span class="text-muted small">Multiple Restroom Facilities</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <h3 class="h2 fw-bold mb-1">24/7</h3>
-                        <p class="mb-0">Access & Security</p>
+            </div>
+            
+            <!-- Hover Logic Script -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const setupInteractivity = (floor) => {
+                        const groups = document.querySelectorAll(`#${floor}-plan .bp-group`);
+                        const listItems = document.querySelectorAll(`#${floor}-plan .blueprint-list-item`);
+
+                        const clearActive = () => {
+                            groups.forEach(g => g.classList.remove('active'));
+                            listItems.forEach(li => li.classList.remove('active'));
+                        };
+
+                        const setActive = (zoneId) => {
+                            clearActive();
+                            const targetGroup = document.querySelector(`#${floor}-plan .bp-group[data-zone="${zoneId}"]`);
+                            const targetList = document.querySelector(`#${floor}-plan .blueprint-list-item[data-zone="${zoneId}"]`);
+                            if (targetGroup) targetGroup.classList.add('active');
+                            if (targetList) targetList.classList.add('active');
+                        };
+
+                        groups.forEach(group => {
+                            group.addEventListener('mouseenter', () => setActive(group.dataset.zone));
+                            group.addEventListener('mouseleave', clearActive);
+                        });
+
+                        listItems.forEach(li => {
+                            li.addEventListener('mouseenter', () => setActive(li.dataset.zone));
+                            li.addEventListener('mouseleave', clearActive);
+                        });
+                    };
+
+                    setupInteractivity('ground');
+                    setupInteractivity('first');
+                });
+            </script>
+        </div>
+    </section>
+
+    <section class="py-5 fade-in" style="background-color: #b0b8c4;">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="Peaceful Workspace" class="split-image border-0 shadow-lg">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <span class="text-primary fw-bold text-uppercase letter-spacing-1 mb-2 d-block">The Oasis</span>
+                    <h2 class="display-5 fw-bold mb-4 text-black">The Perfect Blend of Connectivity and Calm</h2>
+                    <p class="text-dark fs-5 mb-5 fw-medium">Finding a workspace that is both centrally located and peaceful is rare—but we’ve nailed it.</p>
+                    
+                    <div class="d-flex mb-4 align-items-start">
+                        <div class="me-4 mt-1"><i class="fas fa-map-marker-alt fa-2x text-primary drop-shadow"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-black mb-2">Prime & Accessible</h4>
+                            <p class="text-dark fw-medium">Situated in Deccan, keeping you connected to the pulse of the city while tucked away from main road chaos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4 align-items-start">
+                        <div class="me-4 mt-1"><i class="fas fa-car fa-2x text-primary drop-shadow"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-black mb-2">Ample Parking</h4>
+                            <p class="text-dark fw-medium">Say goodbye to parking woes. We offer spacious, dedicated parking for both 2-wheelers and 4-wheelers.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="me-4 mt-1"><i class="fas fa-store fa-2x text-primary drop-shadow"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-black mb-2">Neighborhood Conveniences</h4>
+                            <p class="text-dark fw-medium">Steps away from local cafes, tea shops, medical stores, groceries, a hospital, and a police station.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="workspaces-section py-5 bg-secondary">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Workspace Options & Pricing</h2>
-                <p class="section-subtitle">Choose the perfect workspace and plan for your team</p>
-            </div>
-            <div class="workspace-grid" style="max-width: 1100px; margin: 0 auto;">
-                <div class="workspace-card popular">
-                    <span class="popular-badge">Most Popular</span>
-                    <h3>Dedicated Desk</h3>
-                    <p class="subtitle">Reserved seat for monthly use</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Fully furnished IT layout</li>
-                        <li><i class="fas fa-check-circle"></i> Plug-and-play setup</li>
-                        <li><i class="fas fa-check-circle"></i> Biometric 24x7 access</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Tea/Coffee</li>
-                        <li><i class="fas fa-check-circle"></i> Power backup</li>
-                    </ul>
-                    <div class="price">₹7,950 – ₹9,000 /month</div>
-                    <p class="price-subtitle">per person</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
+    <section class="py-5 bg-primary-dark fade-in" style="background-color: var(--bg-primary);">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="../assets/images/deccan-hub/coffeemachine.jpeg" alt="Premium Pantry and Coffee" class="split-image">
                 </div>
-                <div class="workspace-card">
-                    <h3>Hot Desk</h3>
-                    <p class="subtitle">Flexible shared seating</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Access to all amenities</li>
-                        <li><i class="fas fa-check-circle"></i> Flexible hours</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
-                        <li><i class="fas fa-check-circle"></i> Cafe Lounge access</li>
-                    </ul>
-                    <div class="price">₹6,900 – ₹7,950 /month</div>
-                    <p class="price-subtitle">per person</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
-                </div>
-                <div class="workspace-card">
-                    <h3>Private Cabin</h3>
-                    <p class="subtitle">Enclosed cabin for teams</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Team privacy</li>
-                        <li><i class="fas fa-check-circle"></i> Custom layout options</li>
-                        <li><i class="fas fa-check-circle"></i> Power backup & AC</li>
-                        <li><i class="fas fa-check-circle"></i> Meeting room access</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Tea/Coffee</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
-                    </ul>
-                    <div class="price">₹9,950 – ₹12,000 /month</div>
-                    <p class="price-subtitle">per person</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
-                </div>
-                <div class="workspace-card">
-                    <h3>Daily Pass</h3>
-                    <p class="subtitle">One-day access with basic amenities</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> All-day access (9:30 – 6:30)</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
-                        <li><i class="fas fa-check-circle"></i> Cafe Lounge</li>
-                    </ul>
-                    <div class="price">₹495 – ₹750 /day</div>
-                    <p class="price-subtitle">per person</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
-                </div>
-                <div class="workspace-card">
-                    <h3>Meeting Room</h3>
-                    <p class="subtitle">Hourly booking</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Projector Add-on</li>
-                        <li><i class="fas fa-check-circle"></i> Large TV screen</li>
-                        <li><i class="fas fa-check-circle"></i> Conference setup</li>
-                        <li><i class="fas fa-check-circle"></i> Whiteboard</li>
-                    </ul>
-                    <div class="price">₹195 /person/hour</div>
-                    <p class="price-subtitle">per room</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
-                </div>
-                <div class="workspace-card">
-                    <h3>Conference Room</h3>
-                    <p class="subtitle">Projector, A/V facilities included</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> 12–18 PAX</li>
-                        <li><i class="fas fa-check-circle"></i> Large TV Screen</li>
-                        <li><i class="fas fa-check-circle"></i> White board</li>
-                        <li><i class="fas fa-check-circle"></i> Writing Pens</li>
-                        <li><i class="fas fa-check-circle"></i> A/V & Projector Add-on</li>
-                        <li><i class="fas fa-check-circle"></i> Flexible booking</li>
-                        <li><i class="fas fa-check-circle"></i> Minimum booking 2Hrs</li>
-                    </ul>
-                    <div class="price">₹195 /person/hour</div>
-                    <p class="price-subtitle">per room</p>
-                    <a href="../contact.html?location=deccan-hub" class="btn-book">Book a Tour</a>
+                <div class="col-lg-6">
+                    <span class="text-primary fw-bold text-uppercase letter-spacing-1 mb-2 d-block">Plug & Play</span>
+                    <h2 class="display-5 fw-bold mb-4 text-white">Everything Taken Care Of. Just Focus.</h2>
+                    <p class="text-muted fs-5 mb-5">We handle the logistics so you can focus entirely on growing your business. No separate electricity bills or hidden maintenance fees.</p>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-4"><i class="fas fa-network-wired fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-white mb-2">Tech-Ready Infrastructure</h4>
+                            <p class="text-muted">Blazing-fast high-speed internet with Static IP availability for seamless digital operations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-4"><i class="fas fa-mug-hot fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-white mb-2">Proper Bean Coffee</h4>
+                            <p class="text-muted">Fuel your day with premium, freshly brewed bean coffee and unlimited tea in our fully equipped pantry featuring a fridge and microwave.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="me-4"><i class="fas fa-broom fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="h5 fw-bold text-white mb-2">Immaculate Environment</h4>
+                            <p class="text-muted">Spotless desks, pristine washrooms, regular housekeeping, and professional conference rooms.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
-        /* Center the workspace grid and improve spacing */
-        .workspace-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            justify-content: center;
-        }
-        .workspace-card {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: space-between;
-        }
-        @media (min-width: 992px) { .workspace-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (min-width: 768px) and (max-width: 991px) {
-            .workspace-grid { grid-template-columns: repeat(2, 1fr); max-width: 700px; }
-        }
-        @media (max-width: 767px) {
-            .workspace-grid { grid-template-columns: 1fr; max-width: 350px; }
-        }
-    </style>
-
-    <section class="amenities-section py-5 bg-secondary fade-in">
-        <div class="container">
+    <section id="plans" class="workspaces-section py-5 bg-secondary">
+        <div class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="section-title">Amenities & Infrastructure</h2>
-                <p class="section-subtitle">Everything you need for a productive workday</p>
+                <span class="badge bg-danger mb-3 px-3 py-2 text-uppercase letter-spacing-1 shadow rounded-pill">🔥 Limited Time Launch Offer</span>
+                <h2 class="display-5 fw-bold text-white mb-3">Flexible Plans Tailored For You</h2>
+                <p class="lead text-muted max-w-md mx-auto">Experience the premium ScaleUp lifestyle for less. Introductory pricing is strictly limited to early adopters.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-paint-roller"></i>
+
+            <div class="workspace-grid">
+                <!-- Day Pass -->
+                <div class="workspace-card bg-dark rounded-4 p-4 border border-secondary shadow-lg d-flex flex-column h-100 position-relative hover-lift">
+                    <div>
+                        <h3 class="fw-bold text-white mb-1">Day Pass</h3>
+                        <p class="text-muted small mb-4">Perfect for quick focus sessions.</p>
+                        
+                        <div class="mb-2">
+                            <span class="strikethrough">₹650</span>
                         </div>
-                        <h4>Modern Interior</h4>
-                        <p>Contemporary, inspiring design</p>
+                        <div class="price text-white mb-4 display-5 fw-bold">₹590 <span class="fs-6 fw-normal text-muted">/day</span></div>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-speed Wi-Fi access</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Unlimited bean coffee & tea</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Clean, unreserved desk</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Full pantry access</span></li>
+                        </ul>
                     </div>
+                    <a href="../contact.html?location=deccan-hub" class="btn btn-outline-primary w-100 rounded-pill mt-auto fw-bold">Book a Desk</a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-road"></i>
+
+                <!-- Dedicated Desk -->
+                <div class="workspace-card bg-primary-dark rounded-4 p-4 border border-primary shadow-lg d-flex flex-column h-100 position-relative hover-lift" style="transform: scale(1.05); z-index: 2; background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);">
+                    <div class="position-absolute top-0 start-50 translate-middle-x bg-primary text-white px-3 py-1 rounded-bottom fw-bold text-uppercase" style="font-size: 0.75rem;">Launch Offer</div>
+                    <div class="mt-3">
+                        <h3 class="fw-bold text-white mb-1">Dedicated Desk</h3>
+                        <p class="text-primary small mb-4">Your permanent productivity zone.</p>
+                        
+                        <div class="mb-2">
+                            <span class="strikethrough opacity-50">₹7,980</span>
                         </div>
-                        <h4>Prime Deccan Location</h4>
-                        <p>Accessible commercial hub</p>
+                        <div class="price text-primary mb-4 display-5 fw-bold">₹7,500 <span class="fs-6 fw-normal text-muted">/month</span></div>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">1 Dedicated seat in shared space</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light fw-bold text-white">Zero hidden utility costs</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Static IP availability</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Conference room access</span></li>
+                        </ul>
                     </div>
+                    <a href="../contact.html?location=deccan-hub" class="btn btn-primary w-100 rounded-pill mt-auto fw-bold shadow">Reserve Now</a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h4>Events</h4>
-                        <p>Workshops & networking events</p>
+
+                <!-- Private Cabin -->
+                <div class="workspace-card bg-dark rounded-4 p-4 border border-secondary shadow-lg d-flex flex-column h-100 position-relative hover-lift">
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge bg-warning text-dark rounded-pill">15+ Cabins</span>
                     </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4>Meeting Rooms</h4>
-                        <p>Flexible, tech-enabled spaces</p>
+                    <div>
+                        <h3 class="fw-bold text-white mb-1">Private Cabin</h3>
+                        <p class="text-muted small mb-4">Enclosed spaces for scaling teams.</p>
+                        
+                        <div class="price text-white mb-4 display-6 fw-bold mt-4 pt-2">Custom Pricing <span class="fs-6 fw-normal text-muted d-block mt-1">Based on team size</span></div>
+                        
+                        <ul class="list-unstyled mb-4 mt-4">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Fully private & lockable</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">All-inclusive utilities</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Customizable layouts</span></li>
+                        </ul>
                     </div>
+                    <a href="../contact.html?location=deccan-hub" class="btn btn-outline-primary w-100 rounded-pill mt-auto fw-bold">Inquire Now</a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Networking Lounge</h4>
-                        <p>Connect & collaborate</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4>Vibrant Community</h4>
-                        <p>Dynamic, growth-focused members</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <h4>High-Speed Internet</h4>
-                        <p>Reliable, fast connectivity</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <h4>Cafe Lounge</h4>
-                        <p>Refreshments & snacks</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-parking"></i>
-                        </div>
-                        <h4>Parking</h4>
-                        <p>Cars & 2 Wheelers</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="amenity-card text-center">
-                        <div class="amenity-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h4>Private Lockers</h4>
-                        <p>Secure personal storage</p>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                 <p class="text-muted fs-6 mb-0">We also offer highly flexible <strong>Weekly Passes</strong>, Long-Term <strong>Yearly Agreements</strong>, and <strong>Virtual Office</strong> Solutions for remote businesses.</p>
             </div>
         </div>
     </section>
 
     <section class="location-section py-5 fade-in">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
+        <div class="container py-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
                     <div class="location-info">
-                        <h2 class="mb-4">Location & Access</h2>
-                        <div class="location-detail mb-4">
-                            <h4>Address</h4>
-                            <p class="mb-2">ScaleUp Deccan Hub</p>
-                            <p class="mb-2">Kshitij Business Center,</p>
-                            <p class="mb-2">Deccan Gymkhana, Pune, Maharashtra 411004</p>
-                        </div>
-                        <div class="location-detail mb-4">
-                            <h4>Strategic Location Benefits</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt me-2"></i> Heart of Deccan's commercial district</li>
-                                <li><i class="fas fa-train me-2"></i> Walking distance to Deccan Metro Station</li>
-                                <li><i class="fas fa-road me-2"></i> Seamless connectivity to FC Road and Shivajinagar</li>
-                                <li><i class="fas fa-utensils me-2"></i> Surrounded by Pune's top restaurants and cafes</li>
-                            </ul>
+                        <h2 class="display-6 fw-bold text-white mb-4">Location & Access</h2>
+                        <div class="location-detail mb-4 p-4 bg-secondary rounded-4 border border-dark">
+                            <h4 class="text-primary h5 mb-3"><i class="fas fa-map-marker-alt me-2"></i> Address</h4>
+                            <p class="mb-1 text-white fs-5">ScaleUp CoWork KBC</p>
+                            <p class="mb-1 text-muted">Kshitij Business Center, Law College Road,</p>
+                            <p class="mb-3 text-muted">Deccan, Pune, Maharashtra 411004</p>
+                            <a href="https://maps.app.goo.gl/5eG1dtd8T3e59eeq6" class="btn btn-outline-primary rounded-pill mt-2" target="_blank">
+                                Open in Google Maps <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
                         </div>
                         <div class="location-detail">
-                            <h4>Getting Here</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-parking me-2"></i> Cars & 2 Wheelers</li>
-                                <li><i class="fas fa-bus me-2"></i> Multiple bus routes available</li>
-                                <li><i class="fas fa-taxi me-2"></i> Easy cab access</li>
+                            <h4 class="text-white h5 mb-3">Strategic Benefits</h4>
+                            <ul class="list-unstyled text-muted">
+                                <li class="mb-3 d-flex"><i class="fas fa-map-marker-alt me-3 text-primary mt-1"></i> <span>Heart of Deccan's commercial district</span></li>
+                                <li class="mb-3 d-flex"><i class="fas fa-train me-3 text-primary mt-1"></i> <span>Walking distance to Deccan Metro Station</span></li>
+                                <li class="mb-3 d-flex"><i class="fas fa-road me-3 text-primary mt-1"></i> <span>Seamless connectivity to FC Road</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="location-map">
+                <div class="col-lg-7">
+                    <div class="location-map rounded-4 overflow-hidden border border-secondary shadow-lg">
                         <iframe 
-                            src="https://maps.app.goo.gl/Sae3TB6rbioAKKr58?g_st=awb"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.210419578373!2d73.830545!3d18.519390999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf74f6c9af7f%3A0x40da4c03be215851!2sScaleUp%20CoWork%20Bhandarkar-LawCollege%20Road%20Pune!5e0!3m2!1sen!2sin!4v1741801249009!5m2!1sen!2sin"
                             width="100%" 
                             height="450" 
-                            style="border:0; border-radius: 12px;" 
+                            style="border:0; filter: invert(90%) hue-rotate(180deg);" 
                             allowfullscreen="" 
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -452,104 +790,59 @@
     </section>
 
     <section class="gallery-section py-5 bg-secondary fade-in">
-        <div class="container">
+        <div class="container py-4">
             <div class="text-center mb-5">
-                <h2 class="section-title">Workspace Gallery</h2>
-                <p class="section-subtitle">Take a peek at our massive new workspace</p>
+                <h2 class="display-6 fw-bold text-white mb-2">Workspace Gallery</h2>
+                <p class="text-muted">Take a peek at our brand new Phase 1 ecosystem.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-1.jpg', 'Reception Area')">
-                        <img src="../assets/images/deccan/gallery-1.jpg" alt="Reception Area" class="img-fluid">
-                        <div class="gallery-overlay"><span>Reception Area</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-2.jpg', 'Coworking Space')">
-                        <img src="../assets/images/deccan/gallery-2.jpg" alt="Coworking Space" class="img-fluid">
-                        <div class="gallery-overlay"><span>Coworking Space</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-3.jpg', 'Meeting Room')">
-                        <img src="../assets/images/deccan/gallery-3.jpg" alt="Meeting Room" class="img-fluid">
-                        <div class="gallery-overlay"><span>Meeting Room</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-4.jpg', 'Cafe Area')">
-                        <img src="../assets/images/deccan/gallery-4.jpg" alt="Cafe Area" class="img-fluid">
-                        <div class="gallery-overlay"><span>Cafe Area</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-5.jpg', 'Private Office')">
-                        <img src="../assets/images/deccan/gallery-5.jpg" alt="Private Office" class="img-fluid">
-                        <div class="gallery-overlay"><span>Private Office</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/deccan/gallery-6.jpg', 'Lounge Area')">
-                        <img src="../assets/images/deccan/gallery-6.jpg" alt="Lounge Area" class="img-fluid">
-                        <div class="gallery-overlay"><span>Lounge Area</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section py-5 fade-in">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">What Our Members Say</h2>
-                <p class="section-subtitle">Hear from our community members</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4">"The Deccan Hub is the perfect blend of modern design and massive scale. The custom enterprise wing is exactly what we needed."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h5>Ritika Jain</h5>
-                                    <p>Enterprise Director</p>
-                                </div>
-                            </div>
+                <!-- Row 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/firstfloorcoworking.jpeg', 'Phase 1 First Floor Setup')">
+                        <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="Workspace Setup" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Phase 1 Setup</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4">"Upgrading our team to the Deccan Hub was seamless. The amenities and central location are just unparalleled in Pune."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h5>Arjun Mehta</h5>
-                                    <p>Startup Founder</p>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabinfront.jpeg', 'Premium Private Cabin Front')">
+                        <img src="../assets/images/deccan-hub/cabinfront.jpeg" alt="Private Cabin" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Cabin Front View</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4">"The business support services available right here at the Deccan campus have saved us so much operational headache."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h5>Priya Singh</h5>
-                                    <p>SME Owner</p>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabinside.jpeg', 'Premium Private Cabin Interior')">
+                        <img src="../assets/images/deccan-hub/cabinside.jpeg" alt="Private Cabin Inside" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Cabin Interior</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/largecabin.jpeg', 'Large Team Enclosure')">
+                        <img src="../assets/images/deccan-hub/largecabin.jpeg" alt="Large Team Cabin" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Large Team Suite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/meetingroom.jpeg', 'Professional Meeting Space')">
+                        <img src="../assets/images/deccan-hub/meetingroom.jpeg" alt="Meeting Room" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Meeting Room</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabin2.jpeg', 'Additional Private Space')">
+                        <img src="../assets/images/deccan-hub/cabin2.jpeg" alt="Cabin Option 2" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                            <span class="text-white fw-bold">Private Cabin Variant</span>
                         </div>
                     </div>
                 </div>
@@ -558,14 +851,14 @@
     </section>
 
     <section class="cta-section py-5 bg-primary text-white">
-        <div class="container">
+        <div class="container py-4">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Ready to experience our Deccan Hub?</h2>
-                    <p class="lead mb-lg-0">Join our vibrant community and enjoy premium amenities in our largest campus yet.</p>
+                <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="display-6 fw-bold mb-3 text-white">Ready to claim your launch offer?</h2>
+                    <p class="lead mb-0 text-white opacity-75">Join our vibrant community and enjoy premium amenities in our newest campus.</p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="../contact.html?location=deccan-hub" class="btn btn-light btn-lg">
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="../contact.html?location=deccan-hub" class="btn btn-light btn-lg rounded-pill px-5 text-primary fw-bold shadow">
                         Book a Tour Now
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
@@ -574,72 +867,74 @@
         </div>
     </section>
 
-    <footer class="footer bg-dark text-white">
-        <div class="container py-5">
-            <div class="row g-4">
+    <footer class="footer bg-dark text-white pt-5">
+        <div class="container py-4">
+            <div class="row g-4 border-bottom border-secondary pb-5">
                 <div class="col-lg-4">
                     <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" height="40" class="mb-4">
-                    <p class="mb-4">Experience modern coworking at its finest with our state-of-the-art facilities and vibrant community in the heart of Pune.</p>
-                    <div class="social-links">
-                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <p class="text-muted mb-4">Experience modern coworking at its finest with our state-of-the-art facilities and vibrant community in the heart of Pune.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h5 class="mb-4">Quick Links</h5>
+                    <h5 class="mb-4 text-white">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="../index.html#features">Features</a></li>
-                        <li class="mb-2"><a href="../index.html#plans">Plans</a></li>
-                        <li class="mb-2"><a href="../index.html#amenities">Amenities</a></li>
-                        <li class="mb-2"><a href="../contact.html">Contact</a></li>
+                        <li class="mb-2"><a href="../index.html#features" class="text-muted text-decoration-none hover-white">Features</a></li>
+                        <li class="mb-2"><a href="../index.html#plans" class="text-muted text-decoration-none hover-white">Plans</a></li>
+                        <li class="mb-2"><a href="../index.html#amenities" class="text-muted text-decoration-none hover-white">Amenities</a></li>
+                        <li class="mb-2"><a href="../contact.html" class="text-muted text-decoration-none hover-white">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h5 class="mb-4">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <i class="fas fa-phone me-2"></i> +91 98222 68333
+                    <h5 class="mb-4 text-white">Contact Info</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2 text-primary"></i> +91 98222 68333
                         </li>
-                        <li class="mb-2">
-                            <i class="fas fa-envelope me-2"></i> scaleup.cowork@gmail.com
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2 text-primary"></i> scaleup.cowork@gmail.com
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h5 class="mb-4">Locations</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Deccan Hub</li>
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Law College Road</li>
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Baner Center</li>
+                    <h5 class="mb-4 text-white">Locations</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3">
+                            <a href="deccan-hub.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Deccan Hub (KBC)</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="law-college-office.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Law College Road</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="baner-office.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Baner Center</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom py-3 border-top border-secondary">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0">© 2025 ScaleUp Coworking. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <a href="#" class="text-white me-3">Privacy Policy</a>
-                        <a href="#" class="text-white">Terms of Service</a>
-                    </div>
+            <div class="row pt-4 pb-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">© 2026 ScaleUp Coworking. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <button id="backToTop" class="btn btn-primary back-to-top">
+    <!-- Back to Top -->
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow position-fixed bottom-0 end-0 m-4" style="display: none; width: 45px; height: 45px; z-index: 1000;">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../scripts/main.js"></script>
     
+    <!-- Custom Gallery Modal -->
     <div id="galleryModal" class="custom-gallery-modal" style="display:none;">
         <span class="gallery-modal-close" onclick="closeGalleryModal()">×</span>
         <div class="gallery-modal-content">
@@ -738,15 +1033,30 @@
             if (e.target === this) closeGalleryModal();
         });
 
-        // Gallery Image lazy load handler
-        document.addEventListener('DOMContentLoaded', () => {
-            const galleryImages = document.querySelectorAll('.gallery-item img');
-            galleryImages.forEach(img => {
-                img.addEventListener('load', () => {
-                    img.parentElement.classList.add('loaded');
-                });
+        // Hover Overlay Interaction for Gallery
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const overlay = item.querySelector('.gallery-overlay');
+                if(overlay) overlay.style.opacity = '1';
+            });
+            item.addEventListener('mouseleave', () => {
+                const overlay = item.querySelector('.gallery-overlay');
+                if(overlay) overlay.style.opacity = '0';
             });
         });
+
+        // Scroll to top visibility
+        window.onscroll = function() {
+            var backToTop = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
     </script>
 </body>
 </html>
