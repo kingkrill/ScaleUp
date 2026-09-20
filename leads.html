@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScaleUp CoWork — Live Leads & Google Sheets Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+        .leads-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+        .table-leads th {
+            background: rgba(30, 41, 59, 0.9);
+            color: #38bdf8;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 1rem;
+        }
+        .table-leads td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            vertical-align: middle;
+            color: #e2e8f0;
+        }
+        .instruction-box {
+            background: rgba(30, 58, 138, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 14px;
+            padding: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top unified-navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="index.html" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                    <i class="fas fa-arrow-left me-1"></i> Back to Website
+                </a>
+                <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill px-3 fw-bold">
+                    <i class="fas fa-phone-alt me-1"></i> 9822268333
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <!-- Header -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+            <div>
+                <span class="badge bg-primary px-3 py-1 rounded-pill mb-2">
+                    <i class="fas fa-database me-1"></i> Real-Time Lead Hub
+                </span>
+                <h1 class="h3 fw-bold text-white mb-1">ScaleUp Lead Management & Google Sheets Sync</h1>
+                <p class="text-muted small mb-0">Every center visit, dedicated desk, and cabin inquiry logged live</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button onclick="exportLeadsCSV()" class="btn btn-success rounded-pill px-4 fw-bold shadow">
+                    <i class="fas fa-file-excel me-2"></i> Export to Excel (CSV)
+                </button>
+                <button onclick="clearAllLeads()" class="btn btn-outline-danger rounded-pill px-3 small">
+                    <i class="fas fa-trash-alt me-1"></i> Clear Log
+                </button>
+            </div>
+        </div>
+
+        <!-- Google Sheet Webhook Config -->
+        <div class="leads-card mb-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h5 class="fw-bold text-white mb-0">
+                    <i class="fab fa-google-drive text-success me-2"></i> Live Google Sheet Webhook Sync
+                </h5>
+                <span class="badge bg-success bg-opacity-20 text-success border border-success px-3 py-1 rounded-pill" id="syncStatusBadge">
+                    Active & Ready
+                </span>
+            </div>
+
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-9">
+                    <div class="input-group">
+                        <span class="input-group-text bg-dark border-secondary text-primary"><i class="fas fa-link"></i></span>
+                        <input type="url" id="webhookUrlInput" class="form-control bg-dark text-white border-secondary" placeholder="Paste your Google Apps Script Web App URL (https://script.google.com/macros/s/.../exec)">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button onclick="saveAndTestWebhook()" class="btn btn-primary w-100 rounded-pill fw-bold">
+                        <i class="fas fa-save me-1"></i> Save & Test Sync
+                    </button>
+                </div>
+            </div>
+
+            <div class="instruction-box mt-3 small text-light">
+                <div class="fw-bold text-info mb-1"><i class="fas fa-info-circle me-1"></i> 2-Minute Google Sheet Setup:</div>
+                <ol class="mb-0 ps-3">
+                    <li>Create a Google Sheet at <a href="https://sheets.new" target="_blank" class="text-primary fw-bold">sheets.new</a>.</li>
+                    <li>Click <strong>Extensions > Apps Script</strong>, paste the code from <code class="text-warning">google-sheets-script.js</code> in your project, and click <strong>Deploy > New deployment > Web app</strong> (Who has access: <strong>Anyone</strong>).</li>
+                    <li>Paste that deployed Web app URL above and click <strong>Save & Test Sync</strong>. Done! Every lead will instantly write to your Google Sheet!</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Live Leads Table -->
+        <div class="leads-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-white mb-0">
+                    <i class="fas fa-users text-primary me-2"></i> Captured Leads Log (<span id="leadsCount">0</span>)
+                </h5>
+                <button onclick="renderLeadsTable()" class="btn btn-outline-secondary btn-sm rounded-pill text-light">
+                    <i class="fas fa-sync-alt me-1"></i> Refresh
+                </button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-dark table-leads mb-0">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Visitor Name</th>
+                            <th>Phone Number</th>
+                            <th>Interested Workspace</th>
+                            <th>Preferred Date</th>
+                            <th>Source</th>
+                            <th>Quick Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTableBody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/lead-capture.js"></script>
+    <script>
+        // Init input value from storage or script
+        document.addEventListener('DOMContentLoaded', function() {
+            const webhookInput = document.getElementById('webhookUrlInput');
+            const saved = localStorage.getItem('scaleup_sheet_webhook') || (typeof GOOGLE_SHEET_WEBAPP_URL !== 'undefined' ? GOOGLE_SHEET_WEBAPP_URL : '');
+            if (webhookInput && saved && !saved.includes('placeholder-url')) {
+                webhookInput.value = saved;
+            }
+            renderLeadsTable();
+        });
+
+        function saveAndTestWebhook() {
+            const input = document.getElementById('webhookUrlInput');
+            const url = input ? input.value.trim() : '';
+
+            if (!url.startsWith('https://script.google.com')) {
+                alert('Please enter a valid Google Apps Script Web App URL starting with https://script.google.com');
+                return;
+            }
+
+            localStorage.setItem('scaleup_sheet_webhook', url);
+            GOOGLE_SHEET_WEBAPP_URL = url;
+
+            // Send test lead
+            const testLead = {
+                name: 'ScaleUp Test Lead',
+                phone: '+91 98222 68333',
+                workspace: 'Test Workspace Sync',
+                visitDate: 'Immediate',
+                source: 'Leads Dashboard Test Button'
+            };
+
+            sendLeadToGoogleSheet(testLead).then(() => {
+                alert('Test lead successfully dispatched to your Google Sheet! Check your Google Sheet now to see the new row.');
+                renderLeadsTable();
+            });
+        }
+
+        function renderLeadsTable() {
+            const tbody = document.getElementById('leadsTableBody');
+            const countEl = document.getElementById('leadsCount');
+            const leads = JSON.parse(localStorage.getItem('scaleup_leads_log') || '[]');
+
+            if (countEl) countEl.textContent = leads.length;
+
+            if (leads.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="text-center py-5 text-muted">
+                            <i class="fas fa-inbox display-6 mb-3 d-block opacity-50"></i>
+                            No leads recorded yet. Use the "Schedule Visit" button on the website to submit your first lead!
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = leads.map(l => {
+                const cleanPhone = String(l.phone).replace(/[^0-9]/g, '');
+                const waNumber = cleanPhone.length === 10 ? '91' + cleanPhone : cleanPhone;
+                return `
+                    <tr>
+                        <td class="small text-info">${l.timestamp || 'Just now'}</td>
+                        <td class="fw-bold text-white">${l.name || 'Anonymous'}</td>
+                        <td>
+                            <a href="tel:${l.phone}" class="text-light text-decoration-none fw-semibold">
+                                <i class="fas fa-phone-alt text-primary me-1 small"></i> ${l.phone}
+                            </a>
+                        </td>
+                        <td><span class="badge bg-primary bg-opacity-25 text-primary border border-primary">${l.workspace || 'General'}</span></td>
+                        <td class="small text-muted">${l.visitDate || 'Flexible'}</td>
+                        <td class="small text-muted">${l.source || 'Website'}</td>
+                        <td>
+                            <div class="d-flex gap-2">
+                                <a href="https://wa.me/${waNumber}?text=Hi%20${encodeURIComponent(l.name || '')}%2C%20this%20is%20ScaleUp%20CoWork%20Pune.%20We%20received%20your%20inquiry%20for%20${encodeURIComponent(l.workspace || 'workspace')}." target="_blank" class="btn btn-success btn-sm rounded-pill px-2" title="WhatsApp Lead">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="tel:${l.phone}" class="btn btn-primary btn-sm rounded-pill px-2" title="Call Lead">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function exportLeadsCSV() {
+            const leads = JSON.parse(localStorage.getItem('scaleup_leads_log') || '[]');
+            if (leads.length === 0) {
+                alert('No leads to export yet!');
+                return;
+            }
+
+            let csv = 'Timestamp,Full Name,Phone Number,Interested Workspace,Preferred Visit Date,Source\n';
+            leads.forEach(l => {
+                const row = [
+                    `"${l.timestamp || ''}"`,
+                    `"${(l.name || '').replace(/"/g, '""')}"`,
+                    `"${(l.phone || '').replace(/"/g, '""')}"`,
+                    `"${(l.workspace || '').replace(/"/g, '""')}"`,
+                    `"${(l.visitDate || '').replace(/"/g, '""')}"`,
+                    `"${(l.source || '').replace(/"/g, '""')}"`
+                ];
+                csv += row.join(',') + '\n';
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ScaleUp_Leads_${new Date().toISOString().slice(0,10)}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function clearAllLeads() {
+            if (confirm('Are you sure you want to clear the local leads log? This cannot be undone.')) {
+                localStorage.removeItem('scaleup_leads_log');
+                renderLeadsTable();
+            }
+        }
+    </script>
+</body>
+</html>

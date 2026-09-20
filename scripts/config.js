@@ -85,63 +85,124 @@ const config = {
         }
     },
 
-    // Pricing Plans
+    // Pricing Plans (Uniform across centers)
     plans: {
-        hotDesk: {
-            id: 'hot-desk',
-            name: 'Hot Desk',
-            price: 6999,
-            duration: 'month',
+        privateOffice: {
+            id: 'private-office',
+            name: 'Private Office',
+            price: 10900,
+            duration: 'seat / month',
             features: [
-                'Flexible seating',
-                'High-speed internet',
-                'Access to common areas',
-                '8 hrs/day access',
-                '2 meeting room hrs/month'
+                'Private lockable office space',
+                '24/7 access & biometric entry',
+                'Conference room hours included',
+                'Customizable layouts & branding',
+                'All premium utilities & high-speed internet'
             ]
         },
         dedicatedDesk: {
             id: 'dedicated-desk',
-            name: 'Dedicated Desk',
-            price: 11999,
-            duration: 'month',
+            name: 'Dedicated Cowork Desk',
+            price: 7950,
+            duration: 'seat / month',
             features: [
-                'Fixed desk space',
-                '24/7 access',
-                'Storage locker',
-                '5 meeting room hrs/month',
-                'Mail handling'
+                'Fixed reserved desk space',
+                '24/7 access & locker storage',
+                'High-speed internet with static IP options',
+                'Conference room credits',
+                'Unlimited artisan bean coffee & tea'
             ]
         },
-        privateOffice: {
-            id: 'private-office',
-            name: 'Private Office',
-            price: 21999,
-            duration: 'month',
+        hybridCowork: {
+            id: 'hybrid-cowork',
+            name: 'Hybrid Cowork',
+            price: 5850,
+            duration: 'seat / month (12 days/mo)',
             features: [
-                'Private office space',
-                '24/7 access',
-                '10 meeting room hrs/month',
-                'Customizable space',
-                'All premium amenities'
+                '12 days flexible access per month',
+                'Ergonomic workstation seating',
+                'High-speed Wi-Fi & power backup',
+                'Full pantry & café lounge access',
+                'Meeting room access at member rates'
+            ]
+        },
+        dayPass: {
+            id: 'day-pass',
+            name: 'Day Pass',
+            price: 590,
+            duration: 'day',
+            features: [
+                'Single-day flexible desk access',
+                'Ultra-fast Wi-Fi access',
+                'Complimentary bean coffee & tea',
+                'Pantry & lounge access'
+            ]
+        },
+        meetingSpace: {
+            id: 'meeting-space',
+            name: 'Meeting Space',
+            price: 150,
+            duration: 'seat / hour (min 4 seats)',
+            features: [
+                'High-res presentation display',
+                'Whiteboard & stationery',
+                'High-speed conference internet',
+                'Beverage service'
+            ]
+        },
+        meetingRoom4: {
+            id: 'meeting-room-4',
+            name: '4 Seater Meeting Room',
+            price: 3900,
+            duration: 'day',
+            features: [
+                'Full day booking for up to 4 guests',
+                '4K display & presentation setup',
+                'Whiteboard & high-speed Wi-Fi',
+                'Beverage and pantry support'
+            ]
+        },
+        meetingRoom9: {
+            id: 'meeting-room-9',
+            name: '9 Seater Meeting Room',
+            price: 7950,
+            duration: 'day (₹4,500 half day)',
+            features: [
+                'Full executive conference suite',
+                'A/V presentation facilities',
+                'High-speed fiber connectivity',
+                'Full day or half day flexibility'
+            ]
+        },
+        virtualOffice: {
+            id: 'virtual-office',
+            name: 'Virtual Office',
+            price: 2490,
+            duration: 'month (paid annually in advance)',
+            features: [
+                'Prime Pune business address for GST & ROC',
+                'Mail & courier handling',
+                'Client greeting at reception',
+                'Discounted meeting room access'
             ]
         }
     },
 
     // Contact Information
     contact: {
-        phone: '+91 98765 43210',
-        email: 'hello@scaleup.com',
-        support: 'support@scaleup.com',
+        phone: '+91 98222 68333',
+        whatsapp: '+91 98222 68333',
+        email: 'scaleup.cowork@gmail.com',
+        support: 'scaleup.cowork@gmail.com',
         workingHours: {
-            weekdays: '9:00 AM - 6:00 PM',
-            weekends: 'Closed'
+            weekdays: '9:00 AM - 7:00 PM',
+            weekends: '10:00 AM - 5:00 PM'
         },
         social: {
-            facebook: 'https://facebook.com/scaleup',
-            twitter: 'https://twitter.com/scaleup',
-            instagram: 'https://instagram.com/scaleup',
-            linkedin: 'https://linkedin.com/company/scaleup'
+            facebook: 'https://facebook.com/scaleupcoworking',
+            twitter: 'https://twitter.com/scaleupcowork',
+            instagram: 'https://instagram.com/scaleupcoworking',
+            linkedin: 'https://linkedin.com/company/scaleupcoworking'
         }
     },
 
@@ -236,9 +297,9 @@ const config = {
 
     // Development Settings
     development: {
-        debug: process.env.NODE_ENV !== 'production',
-        apiMock: process.env.NODE_ENV === 'development',
-        logLevel: process.env.NODE_ENV === 'production' ? 'error' : 'debug'
+        debug: false,
+        apiMock: false,
+        logLevel: 'error'
     }
 };
 
