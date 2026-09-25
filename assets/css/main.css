@@ -3110,17 +3110,17 @@ h1, h2, h3, h4, h5, h6 {
    UNIFIED HIGH-CONVERSION NAVBAR ACROSS ALL PAGES
 ============================================================= */
 .unified-navbar {
-    height: 78px;
-    background: rgba(15, 23, 42, 0.94);
+    height: 72px;
+    background: rgba(15, 23, 42, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     z-index: 1060;
 }
 
 .unified-navbar.scrolled {
-    height: 68px;
+    height: 72px;
     background: rgba(15, 23, 42, 0.98);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     border-bottom-color: rgba(59, 130, 246, 0.35);
@@ -3133,17 +3133,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .unified-navbar .navbar-brand img {
-    height: 56px !important;
-    max-height: 56px !important;
+    height: 50px !important;
+    max-height: 50px !important;
     width: auto !important;
     max-width: 240px !important;
     object-fit: contain !important;
-    transition: height 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .unified-navbar.scrolled .navbar-brand img {
-    height: 48px !important;
-    max-height: 48px !important;
+    height: 50px !important;
+    max-height: 50px !important;
 }
 
 .unified-navbar .nav-link {
@@ -3157,6 +3157,67 @@ h1, h2, h3, h4, h5, h6 {
 .unified-navbar .nav-link:hover,
 .unified-navbar .nav-link.active {
     color: #38bdf8 !important;
+}
+
+/* Dropdown Menu Styles with High Contrast */
+.unified-navbar .dropdown-menu {
+    background: #0f172a !important;
+    border: 1px solid rgba(59, 130, 246, 0.35) !important;
+    border-radius: 14px !important;
+    padding: 0.5rem !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.1) !important;
+}
+
+.unified-navbar .dropdown-item {
+    color: #f1f5f9 !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.unified-navbar .dropdown-item:hover,
+.unified-navbar .dropdown-item:focus {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #38bdf8 !important;
+}
+
+.unified-navbar .dropdown-item.active {
+    background: rgba(59, 130, 246, 0.25) !important;
+    color: #ffffff !important;
+    border-left: 3px solid #38bdf8;
+}
+
+/* Refined Highlighted Contact / Book Tour Navigation Button (Clean & Subtle) */
+.unified-navbar .nav-link.nav-btn-highlight {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: #e2e8f0 !important;
+    border-radius: 9999px !important;
+    padding: 0.32rem 0.85rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.unified-navbar .nav-link.nav-btn-highlight:hover {
+    background: rgba(56, 189, 248, 0.12) !important;
+    border-color: rgba(56, 189, 248, 0.45) !important;
+    color: #38bdf8 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.unified-navbar .nav-link.nav-btn-highlight.active {
+    background: rgba(56, 189, 248, 0.15) !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    color: #38bdf8 !important;
+    box-shadow: none !important;
 }
 
 .nav-conversion-btn {

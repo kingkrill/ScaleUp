@@ -32,6 +32,37 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/animations.css" rel="stylesheet">
     <style>
+        .contact-section {
+            padding-top: 130px !important;
+        }
+        .contact-lead-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2.2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .contact-lead-card .form-control, 
+        .contact-lead-card .form-select {
+            background-color: rgba(30, 41, 59, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+        }
+        .contact-lead-card .form-control:focus, 
+        .contact-lead-card .form-select:focus {
+            background-color: rgba(30, 41, 59, 0.95);
+            border-color: #38bdf8;
+            color: #fff;
+            box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+        }
+        .contact-lead-card .form-select option {
+            background-color: #0f172a;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -89,13 +120,18 @@
                             All Centers
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg">
-                            <li><a class="dropdown-item fw-bold text-primary" href="locations/deccan-hub.html"><i class="fas fa-crown text-warning me-2"></i>Deccan Hub (KBC Flagship)</a></li>
+                            <li><a class="dropdown-item fw-bold text-white d-flex align-items-center justify-content-between" href="locations/deccan-hub.html"><span><i class="fas fa-crown text-warning me-2"></i>Deccan Hub (KBC Flagship)</span> <span class="badge bg-warning text-dark ms-2" style="font-size: 0.7rem;">Flagship</span></a></li>
                             <li><a class="dropdown-item" href="locations/law-college-office.html"><i class="fas fa-map-pin text-success me-2"></i>Law College Road Office</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header text-muted">Currently 100% Leased</h6></li>
                             <li><a class="dropdown-item text-muted" href="locations/baner-office.html">Baner Office</a></li>
                             <li><a class="dropdown-item text-muted" href="locations/deccan-office.html">Deccan Gymkhana Office</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item ms-xl-2 my-2 my-xl-0">
+                        <a class="nav-link nav-btn-highlight active" href="contact.html">
+                            <i class="fas fa-calendar-check me-1"></i> Book Tour / Contact
+                        </a>
                     </li>
                 </ul>
                 
@@ -110,6 +146,11 @@
                         <div class="col-6">
                             <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
                                 <i class="fab fa-whatsapp me-1"></i> WhatsApp
+                            </a>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <a href="contact.html" class="btn btn-outline-info w-100 rounded-pill py-2 fw-semibold text-center">
+                                <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
                             </a>
                         </div>
                         <div class="col-12 mt-2">
@@ -149,14 +190,88 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mb-5">
-                    <h1 class="section-title">Book a Tour</h1>
-                    <p class="section-subtitle">Experience our workspace firsthand - Schedule a visit today</p>
+                    <h1 class="section-title">Schedule a Tour & Claim Free Day Pass</h1>
+                    <p class="section-subtitle">Experience our premium workspaces firsthand in Central Pune — Deccan Hub (KBC) & Law College Road</p>
                 </div>
             </div>
 
             <div class="row g-4">
-                <!-- Contact Methods Column -->
+                <!-- Main Form & Contact Methods Column -->
                 <div class="col-lg-8">
+                    <!-- Interactive Booking Form Card -->
+                    <div class="contact-lead-card mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+                            <div>
+                                <h3 class="fw-bold text-white mb-1"><i class="fas fa-calendar-check text-primary me-2"></i>Schedule Your Visit</h3>
+                                <p class="text-light opacity-75 small mb-0">Claim a Free 1-Day Trial Pass or explore dedicated desks & private cabins</p>
+                            </div>
+                            <span class="badge bg-success bg-opacity-25 text-success border border-success px-3 py-2 rounded-pill">
+                                <i class="fas fa-bolt me-1"></i> Instant Live Booking
+                            </span>
+                        </div>
+                        
+                        <form id="contactPageForm" onsubmit="handleContactPageSubmit(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Your Full Name *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-dark border-secondary text-secondary"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="contactName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Phone / WhatsApp Number *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-dark border-secondary text-secondary">+91</span>
+                                        <input type="tel" id="contactPhone" class="form-control" placeholder="98222 XXXXX" pattern="[0-9]{10}" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Select Center *</label>
+                                    <select id="contactCenter" class="form-select" required>
+                                        <option value="Deccan Hub (KBC Prime - Flagship)" selected>Deccan Hub (KBC Prime - Flagship, Dani Rd)</option>
+                                        <option value="Law College Road Office">Law College Road Office (Erandwane)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Workspace Requirement *</label>
+                                    <select id="contactWorkspace" class="form-select" required>
+                                        <option value="Free 1-Day Trial Pass" selected>Free 1-Day Trial Pass (Exclusive Launch Offer)</option>
+                                        <option value="3-Seater Private Cabin (Law College Rd)">3-Seater Private Cabin (Law College Rd)</option>
+                                        <option value="Private Cabin (Deccan Hub)">Private Cabin (Deccan Hub)</option>
+                                        <option value="Dedicated Cowork Desk">Dedicated Cowork Desk</option>
+                                        <option value="Flexi / Hot Desk">Flexi / Hot Desk</option>
+                                        <option value="Virtual Office (from ₹2,970/mo)">Virtual Office (from ₹2,970/mo)</option>
+                                        <option value="Conference / Meeting Room">Conference / Meeting Room</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Preferred Visit Date</label>
+                                    <input type="date" id="contactVisitDate" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white small fw-semibold">Team Size</label>
+                                    <select id="contactTeamSize" class="form-select">
+                                        <option value="1 person">1 Person (Solo / Freelancer)</option>
+                                        <option value="2-4 people">2 - 4 People (Small Team / Cabin)</option>
+                                        <option value="5-10 people">5 - 10 People (Growing Startup)</option>
+                                        <option value="10+ people">10+ People (Enterprise)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-white small fw-semibold">Special Notes / Requirements (Optional)</label>
+                                    <textarea id="contactNotes" class="form-control" rows="2" placeholder="Tell us about your timing, specific move-in date, or setup needs..."></textarea>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <button type="submit" id="contactSubmitBtn" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-lg fs-6">
+                                        <i class="fas fa-paper-plane me-2"></i> Confirm Visit & Claim Free Day Pass
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="contactFormSuccess" class="d-none text-center py-4"></div>
+                    </div>
+
                     <div class="contact-methods">
                         <div class="contact-method-card">
                             <i class="fas fa-calendar-alt"></i>
@@ -386,6 +501,91 @@
                 }
             }
         });
+
+        // Pre-fill from URL parameters (e.g., ?location=law-college)
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const locationParam = params.get('location');
+            const centerSelect = document.getElementById('contactCenter');
+            if (locationParam === 'law-college' && centerSelect) {
+                centerSelect.value = 'Law College Road Office';
+            }
+            const planParam = params.get('plan');
+            const workspaceSelect = document.getElementById('contactWorkspace');
+            if (planParam && workspaceSelect) {
+                if (planParam.includes('cabin') || planParam.includes('3seater')) {
+                    workspaceSelect.value = '3-Seater Private Cabin (Law College Rd)';
+                } else if (planParam.includes('virtual')) {
+                    workspaceSelect.value = 'Virtual Office (from ₹2,970/mo)';
+                } else if (planParam.includes('desk')) {
+                    workspaceSelect.value = 'Dedicated Cowork Desk';
+                }
+            }
+        });
+
+        // Contact Page Form Submission Handler
+        async function handleContactPageSubmit(event) {
+            event.preventDefault();
+
+            const btn = document.getElementById('contactSubmitBtn');
+            const name = document.getElementById('contactName').value.trim();
+            const phone = document.getElementById('contactPhone').value.trim();
+            const center = document.getElementById('contactCenter').value;
+            const workspace = document.getElementById('contactWorkspace').value;
+            const visitDate = document.getElementById('contactVisitDate').value || "Flexible";
+            const teamSize = document.getElementById('contactTeamSize').value;
+            const notes = document.getElementById('contactNotes').value.trim();
+
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Confirming & Dispatching...';
+            }
+
+            const workspaceDetail = `${center} | ${workspace} | Team: ${teamSize}${notes ? ' | Note: ' + notes : ''}`;
+
+            if (typeof sendLeadToGoogleSheet === 'function') {
+                await sendLeadToGoogleSheet({
+                    name: name,
+                    phone: phone,
+                    workspace: workspaceDetail,
+                    visitDate: visitDate,
+                    source: "Contact Page Form - " + center
+                });
+            }
+
+            const formElement = document.getElementById('contactPageForm');
+            const successDiv = document.getElementById('contactFormSuccess');
+
+            const waMessage = encodeURIComponent(
+                `Hi ScaleUp! I just submitted a visit request:\n• Name: ${name}\n• Phone: ${phone}\n• Center: ${center}\n• Plan: ${workspace}\n• Team Size: ${teamSize}\n• Preferred Date: ${visitDate}${notes ? '\n• Note: ' + notes : ''}`
+            );
+
+            if (formElement && successDiv) {
+                formElement.classList.add('d-none');
+                successDiv.classList.remove('d-none');
+                successDiv.innerHTML = `
+                    <div class="py-3">
+                        <div class="mb-3">
+                            <span class="badge bg-success bg-opacity-25 text-success border border-success px-4 py-2 rounded-pill fs-6">
+                                <i class="fas fa-check-circle me-1"></i> Visit Request Logged Successfully
+                            </span>
+                        </div>
+                        <h3 class="text-white fw-bold">Thank you, ${name}!</h3>
+                        <p class="text-light opacity-75 mb-4">
+                            Your booking has been saved to our live sheet. Our community manager will call you at <strong class="text-white">${phone}</strong> shortly to confirm your visit for <strong class="text-primary">${center}</strong>.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="https://wa.me/919822268333?text=${waMessage}" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-4 py-3 fw-bold shadow-lg">
+                                <i class="fab fa-whatsapp me-2"></i> Instant WhatsApp Confirmation
+                            </a>
+                            <a href="tel:+919822268333" class="btn btn-outline-primary rounded-pill px-4 py-3 fw-bold">
+                                <i class="fas fa-phone-alt me-2"></i> Call 9822268333
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
     </script>
 
     <!-- Floating Quick Contact Dock -->

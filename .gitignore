@@ -1,0 +1,7 @@
+# GitHub Pages - Clean deploy ignore list
+digest.txt
+leads.html
+google-sheets-script.js
+.DS_Store
+Thumbs.db
+*.log

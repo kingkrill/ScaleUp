@@ -28,28 +28,6 @@
     <link href="../assets/css/theme.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/animations.css" rel="stylesheet">
-    <style>
-    .navbar {
-        height: 80px; /* Set the original height of the navbar */
-        display: flex;
-        align-items: center; /* Center the logo vertically */
-    }
-    .navbar-brand img {
-        height: auto;
-        max-height: 80px;
-        width: auto;
-        max-width: 120px;
-    }
-    @media (max-width: 768px) {
-        .navbar {
-            height: auto; /* Allow the navbar to adjust height dynamically */
-            padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
-        }
-        .navbar-brand img {
-            max-height: 60px; /* Reduce logo size for mobile */
-        }
-    }
-</style>
 </head>
 <body>
 
@@ -103,13 +81,18 @@
                             All Centers
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg">
-                            <li><a class="dropdown-item fw-bold text-primary" href="deccan-hub.html"><i class="fas fa-crown text-warning me-2"></i>Deccan Hub (KBC Flagship)</a></li>
+                            <li><a class="dropdown-item fw-bold text-white d-flex align-items-center justify-content-between" href="deccan-hub.html"><span><i class="fas fa-crown text-warning me-2"></i>Deccan Hub (KBC Flagship)</span> <span class="badge bg-warning text-dark ms-2" style="font-size: 0.7rem;">Flagship</span></a></li>
                             <li><a class="dropdown-item" href="law-college-office.html"><i class="fas fa-map-pin text-success me-2"></i>Law College Road Office</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header text-muted">Currently 100% Leased</h6></li>
                             <li><a class="dropdown-item active text-muted" href="baner-office.html">Baner Office</a></li>
                             <li><a class="dropdown-item text-muted" href="deccan-office.html">Deccan Gymkhana Office</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item ms-xl-2 my-2 my-xl-0">
+                        <a class="nav-link nav-btn-highlight" href="../contact.html">
+                            <i class="fas fa-calendar-check me-1"></i> Book Tour / Contact
+                        </a>
                     </li>
                 </ul>
                 
@@ -124,6 +107,11 @@
                         <div class="col-6">
                             <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
                                 <i class="fab fa-whatsapp me-1"></i> WhatsApp
+                            </a>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <a href="../contact.html" class="btn btn-outline-info w-100 rounded-pill py-2 fw-semibold text-center">
+                                <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
                             </a>
                         </div>
                         <div class="col-12 mt-2">
@@ -219,90 +207,130 @@
     <!-- Workspace Options -->
     <section class="workspaces-section py-5 bg-secondary">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Workspace Options & Pricing</h2>
-                <p class="section-subtitle">Choose the perfect workspace and plan for your team</p>
+            <div class="text-center mb-4">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+                    <i class="fas fa-info-circle me-1"></i> CURRENT STATUS: 100% LEASED • WAITLIST OPEN
+                </span>
+                <h2 class="section-title">Baner Workspace Options</h2>
+                <p class="section-subtitle">Golden Empire, Baner Main Road (Opposite DMart)</p>
             </div>
-            <div class="workspace-grid">
+
+            <!-- Banner directing immediate availability to Deccan Hub (KBC) -->
+            <div class="alert alert-dark border-primary text-center p-3 mb-5 mx-auto rounded-3 shadow-sm" style="max-width: 900px; background: rgba(30, 41, 59, 0.85);">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-start">
+                    <div>
+                        <h5 class="text-white mb-1"><i class="fas fa-crown text-warning me-2"></i>Looking for Immediate Desk or Cabin Availability?</h5>
+                        <p class="text-light mb-0 small">Our flagship <strong>Deccan Hub at KBC (Dani Road, Erandwane)</strong> is open with 140+ seats, 10+ cabins, and walking distance from 3 metros.</p>
+                    </div>
+                    <a href="deccan-hub.html" class="btn btn-warning fw-bold rounded-pill text-nowrap px-4 py-2 text-dark shadow">
+                        Explore Deccan Hub <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="workspace-grid" style="max-width: 1100px; margin: 0 auto;">
                 <!-- Day Pass -->
                 <div class="workspace-card">
                     <h3>Day Pass</h3>
                     <p class="subtitle">Single-day access for individuals & travelers</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Flexible seating</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed internet</li>
-                        <li><i class="fas fa-check-circle"></i> Complimentary coffee & tea</li>
-                        <li><i class="fas fa-check-circle"></i> Lounge access</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Flexible seating</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> High-speed internet</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Complimentary coffee & tea</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Lounge access</li>
                     </ul>
-                    <div class="price">₹590 /day</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">₹590 <span class="fs-6 text-muted">/day</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-phone-alt me-1"></i> Inquire</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20Day%20Pass%20waitlist%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Dedicated Cowork Desk -->
                 <div class="workspace-card popular">
-                    <span class="popular-badge">Most Popular</span>
+                    <span class="popular-badge">High Demand</span>
                     <h3>Dedicated Cowork Desk</h3>
                     <p class="subtitle">Reserved seat for monthly use</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Reserved workstation</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 access & security</li>
-                        <li><i class="fas fa-check-circle"></i> Private storage</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed internet</li>
-                        <li><i class="fas fa-check-circle"></i> Meeting room credits</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Reserved workstation</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> 24/7 access & security</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Private storage</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> High-speed internet</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Meeting room credits</li>
                     </ul>
-                    <div class="price">₹7,950 /seat /month</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">₹7,950 <span class="fs-6 text-muted">/seat /mo</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-phone-alt me-1"></i> Join Waitlist</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20Dedicated%20Desk%20waitlist%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Hybrid Cowork -->
                 <div class="workspace-card">
                     <h3>Hybrid Cowork</h3>
                     <p class="subtitle">Flexible 12 days a month</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> 12 days access / month</li>
-                        <li><i class="fas fa-check-circle"></i> Ergonomic workstations</li>
-                        <li><i class="fas fa-check-circle"></i> High-speed internet</li>
-                        <li><i class="fas fa-check-circle"></i> Cafe lounge access</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> 12 days access / month</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Ergonomic workstations</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> High-speed internet</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cafe lounge access</li>
                     </ul>
-                    <div class="price">₹5,850 /seat /month (12 days)</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">₹5,850 <span class="fs-6 text-muted">/12 days</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-phone-alt me-1"></i> Inquire</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20Hybrid%20Cowork%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Private Office -->
                 <div class="workspace-card">
-                    <h3>Private Office</h3>
+                    <h3>Private Office Suite</h3>
                     <p class="subtitle">Enclosed lockable office for teams</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Lockable private cabin</li>
-                        <li><i class="fas fa-check-circle"></i> Custom layout options</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 access & power backup</li>
-                        <li><i class="fas fa-check-circle"></i> Meeting room access</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Lockable private cabin</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Custom layout options</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> 24/7 access & power backup</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Meeting room access</li>
                     </ul>
-                    <div class="price">₹10,900 /seat /month</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">₹10,900 <span class="fs-6 text-muted">/seat /mo</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-phone-alt me-1"></i> Join Waitlist</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20Private%20Office%20waitlist%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Meeting Rooms -->
                 <div class="workspace-card">
                     <h3>Meeting Rooms & Spaces</h3>
                     <p class="subtitle">Tech-enabled collaborative spaces</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Hourly:</strong> ₹150 /seat /hr (min 4 seats)</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>4-Seater:</strong> ₹3,900 /day</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>9-Seater:</strong> ₹7,950 /day (₹4,500 half day)</li>
-                        <li><i class="fas fa-check-circle"></i> Display screens & whiteboard</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Hourly:</strong> ₹150 /seat /hr (min 4 seats)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>4-Seater:</strong> ₹3,900 /day</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>9-Seater:</strong> ₹7,950 /day</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Display screens & whiteboard</li>
                     </ul>
-                    <div class="price">From ₹150 /seat /hr</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">From ₹150 <span class="fs-6 text-muted">/seat /hr</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-phone-alt me-1"></i> Book Room</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20a%20Meeting%20Room%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Virtual Office -->
                 <div class="workspace-card">
                     <h3>Virtual Office</h3>
                     <p class="subtitle">Business address in Pune</p>
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> GST & ROC registration address</li>
-                        <li><i class="fas fa-check-circle"></i> Courier & mail handling</li>
-                        <li><i class="fas fa-check-circle"></i> Professional business image</li>
-                        <li><i class="fas fa-check-circle"></i> Meeting room discounts</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> GST & ROC registration address</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Courier & mail handling</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Professional business image</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Meeting room discounts</li>
                     </ul>
-                    <div class="price">₹2,490 /month (annual advance)</div>
-                    <a href="tel:+919822268333" class="btn-book"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
+                    <div class="price">₹2,490 <span class="fs-6 text-muted">/mo (annual)</span></div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="../contact.html?location=baner&plan=virtual" class="btn btn-primary w-100 rounded-pill"><i class="fas fa-id-card me-1"></i> Register</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20Virtual%20Office%20at%20ScaleUp%20Baner" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-circle p-2" title="WhatsApp"><i class="fab fa-whatsapp fs-5"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
