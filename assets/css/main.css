@@ -3111,19 +3111,24 @@ h1, h2, h3, h4, h5, h6 {
 ============================================================= */
 .unified-navbar {
     height: 72px;
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1060;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    z-index: 1030;
+}
+
+.modal {
+    z-index: 1070 !important;
+}
+.modal-backdrop {
+    z-index: 1065 !important;
 }
 
 .unified-navbar.scrolled {
     height: 72px;
-    background: rgba(15, 23, 42, 0.98);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    border-bottom-color: rgba(59, 130, 246, 0.35);
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    border-bottom-color: #cbd5e1;
 }
 
 .unified-navbar .navbar-brand {
@@ -3147,125 +3152,134 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .unified-navbar .nav-link {
-    color: #cbd5e1;
-    font-weight: 500;
-    font-size: 0.92rem;
-    padding: 0.5rem 0.85rem;
+    color: #1e293b !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.5rem 0.65rem;
+    white-space: nowrap !important;
+    display: inline-flex;
+    align-items: center;
     transition: color 0.2s ease;
+}
+
+@media (min-width: 1400px) {
+    .unified-navbar .nav-link {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.92rem;
+    }
 }
 
 .unified-navbar .nav-link:hover,
 .unified-navbar .nav-link.active {
-    color: #38bdf8 !important;
+    color: #0284c7 !important;
 }
 
 /* Dropdown Menu Styles with High Contrast */
 .unified-navbar .dropdown-menu {
-    background: #0f172a !important;
-    border: 1px solid rgba(59, 130, 246, 0.35) !important;
-    border-radius: 14px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
     padding: 0.5rem !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
 }
 
 .unified-navbar .dropdown-item {
-    color: #f1f5f9 !important;
-    padding: 0.6rem 1rem !important;
+    color: #1e293b !important;
+    padding: 0.6rem 0.9rem !important;
     border-radius: 8px !important;
     font-weight: 500;
+    font-size: 0.88rem;
     transition: all 0.2s ease;
 }
 
 .unified-navbar .dropdown-item:hover,
 .unified-navbar .dropdown-item:focus {
-    background: rgba(59, 130, 246, 0.2) !important;
-    color: #38bdf8 !important;
+    background: #f1f5f9 !important;
+    color: #0284c7 !important;
 }
 
 .unified-navbar .dropdown-item.active {
-    background: rgba(59, 130, 246, 0.25) !important;
+    background: #f1f5f9 !important;
+    color: #0284c7 !important;
+    font-weight: 600;
+}
+
+/* High-Conversion "Book a Tour" CTA Pill Button */
+.btn-nav-book-tour {
+    background: #0284c7 !important;
+    border: 1px solid #0284c7 !important;
     color: #ffffff !important;
-    border-left: 3px solid #38bdf8;
-}
-
-/* Refined Highlighted Contact / Book Tour Navigation Button (Clean & Subtle) */
-.unified-navbar .nav-link.nav-btn-highlight {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.16) !important;
-    color: #e2e8f0 !important;
     border-radius: 9999px !important;
-    padding: 0.32rem 0.85rem !important;
-    font-size: 0.88rem !important;
-    font-weight: 500 !important;
-    transition: all 0.2s ease;
-    box-shadow: none !important;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1.4;
-    vertical-align: middle;
+    padding: 0.42rem 1.1rem !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.28) !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    line-height: 1.4 !important;
 }
-
-.unified-navbar .nav-link.nav-btn-highlight:hover {
-    background: rgba(56, 189, 248, 0.12) !important;
-    border-color: rgba(56, 189, 248, 0.45) !important;
-    color: #38bdf8 !important;
-    box-shadow: none !important;
-    transform: none !important;
-}
-
-.unified-navbar .nav-link.nav-btn-highlight.active {
-    background: rgba(56, 189, 248, 0.15) !important;
-    border-color: rgba(56, 189, 248, 0.5) !important;
-    color: #38bdf8 !important;
-    box-shadow: none !important;
+.btn-nav-book-tour:hover {
+    background: #0369a1 !important;
+    border-color: #0369a1 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38) !important;
 }
 
 .nav-conversion-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.45rem 1rem;
+    gap: 0.4rem;
+    padding: 0.42rem 0.9rem;
     border-radius: 9999px;
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
     white-space: nowrap;
+    line-height: 1.4;
 }
 
 .btn-nav-location {
-    background: rgba(255, 255, 255, 0.08);
-    color: #e2e8f0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: #f8fafc;
+    color: #1e293b !important;
+    border: 1px solid #cbd5e1;
 }
 .btn-nav-location:hover {
-    background: rgba(59, 130, 246, 0.15);
-    border-color: #3b82f6;
-    color: #ffffff !important;
-    transform: translateY(-2px);
+    background: #f1f5f9;
+    color: #0284c7 !important;
+    border-color: #94a3b8;
+    transform: translateY(-1px);
 }
 
 .btn-nav-whatsapp {
-    background: #25d366;
+    background: #22c55e;
     color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    border: 1px solid #16a34a;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
 }
 .btn-nav-whatsapp:hover {
-    background: #20ba5a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+    background: #16a34a;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
 }
 
 .btn-nav-call {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: #0284c7;
     color: #ffffff !important;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-    animation: pulse-glow-nav 2.5s infinite;
+    border: 1px solid #0369a1;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
 }
 .btn-nav-call:hover {
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.55);
+    background: #0369a1;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
 }
 
 @keyframes pulse-glow-nav {

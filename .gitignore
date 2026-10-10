@@ -5,3 +5,6 @@ google-sheets-script.js
 .DS_Store
 Thumbs.db
 *.log
+scratch_*
+antigravity_assets/
+index_backup.html

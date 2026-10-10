@@ -33,29 +33,7 @@
       body.modal-open { padding-right: 0 !important; }
       .workspace-card, .feature-card, .gallery-item img { will-change: transform; }
       
-      .navbar {
-          height: 80px;
-          display: flex;
-          align-items: center;
-          background: rgba(15, 23, 42, 0.95);
-          backdrop-filter: blur(10px);
-          border-bottom: 1px solid rgba(255,255,255,0.05);
-      }
-      .navbar-brand img {
-          height: auto;
-          max-height: 80px;
-          width: auto;
-          max-width: 120px;
-      }
-      @media (max-width: 768px) {
-          .navbar {
-              height: auto;
-              padding: 0.5rem 1rem;
-          }
-          .navbar-brand img {
-              max-height: 60px;
-          }
-      }
+      /* Unified navbar styling loaded from main.css */
 
       /* Walkthrough Video Container */
       .walkthrough-video-wrapper {
@@ -137,9 +115,9 @@
          Always Available & Fixed on Top While Viewer Scrolls
     ========================================================================= -->
     <nav class="navbar navbar-expand-xl fixed-top unified-navbar">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container-fluid px-3 px-xl-4 px-xxl-5 d-flex align-items-center justify-content-between">
             <!-- 1. Logo (ScaleUp branding linked to home) -->
-            <a class="navbar-brand" href="../index.html" aria-label="ScaleUp Coworking Space Pune">
+            <a class="navbar-brand me-2 me-xl-4" href="../index.html" aria-label="ScaleUp Coworking Space Pune">
                 <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
             </a>
 
@@ -151,16 +129,16 @@
                 <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill px-3 fw-bold" title="Call Now">
                     <i class="fas fa-phone-alt me-1"></i> Call
                 </a>
-                <button class="navbar-toggler border-0 p-1 text-white ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars fs-4"></i>
+                <button class="navbar-toggler border-0 p-1 text-dark ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fs-4 text-dark"></i>
                 </button>
             </div>
 
             <!-- Navbar Links & Dropdowns -->
             <div class="collapse navbar-collapse justify-content-center" id="mainNavbarCollapse">
-                <ul class="navbar-nav mb-2 mb-xl-0">
+                <ul class="navbar-nav align-items-center mb-2 mb-xl-0 gap-xl-1 gap-xxl-2">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold text-primary" href="deccan-hub.html"><i class="fas fa-crown text-warning me-1"></i> Deccan Hub (KBC)</a>
+                        <a class="nav-link active fw-bold text-primary" href="deccan-hub.html"><i class="fas fa-crown text-warning me-1"></i> Deccan Hub</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#walkthrough">Campus Tour</a>
@@ -179,20 +157,20 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="centersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            All Centers
+                            Centres
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg">
-                            <li><a class="dropdown-item active fw-bold text-white d-flex align-items-center justify-content-between" href="deccan-hub.html"><span><i class="fas fa-crown text-warning me-2"></i>Deccan Hub (KBC Flagship)</span> <span class="badge bg-warning text-dark ms-2" style="font-size: 0.7rem;">Flagship</span></a></li>
-                            <li><a class="dropdown-item" href="law-college-office.html"><i class="fas fa-map-pin text-success me-2"></i>Law College Road Office</a></li>
+                        <ul class="dropdown-menu border shadow-lg">
+                            <li><a class="dropdown-item active fw-bold text-dark d-flex align-items-center justify-content-between" href="deccan-hub.html"><span><i class="fas fa-crown text-warning me-2"></i>Deccan Hub Flagship Centre</span> <span class="badge bg-warning text-dark ms-2" style="font-size: 0.7rem;">Flagship</span></a></li>
+                            <li><a class="dropdown-item" href="law-college-office.html"><i class="fas fa-map-pin text-success me-2"></i>Law College Road Centre</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header text-muted">Currently 100% Leased</h6></li>
-                            <li><a class="dropdown-item text-muted" href="baner-office.html">Baner Office</a></li>
-                            <li><a class="dropdown-item text-muted" href="deccan-office.html">Deccan Gymkhana Office</a></li>
+                            <li><a class="dropdown-item text-muted" href="baner-office.html">Baner Centre</a></li>
+                            <li><a class="dropdown-item text-muted" href="deccan-office.html">Deccan Gymkhana Centre</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-xl-2 my-2 my-xl-0">
-                        <a class="nav-link nav-btn-highlight" href="../contact.html?location=deccan">
-                            <i class="fas fa-calendar-check me-1"></i> Book Tour / Contact
+                        <a class="btn-nav-book-tour text-decoration-none" href="../contact.html?location=deccan">
+                            <i class="fas fa-calendar-check me-1"></i> Book a Tour
                         </a>
                     </li>
                 </ul>
@@ -217,7 +195,7 @@
                         </div>
                         <div class="col-12 mt-2">
                             <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light w-100 rounded-pill py-2 small fw-semibold text-center">
-                                <i class="fas fa-map-marker-alt text-danger me-1"></i> Deccan Hub Map (Dani Road, KBC)
+                                <i class="fas fa-map-marker-alt text-danger me-1"></i> Deccan Hub Map (Dani Road, Deccan)
                             </a>
                         </div>
                     </div>
@@ -226,10 +204,10 @@
 
             <!-- 2, 3, 4. Desktop Google Ads Conversion Actions: Location, WhatsApp, Call -->
             <div class="d-none d-xl-flex align-items-center gap-2 nav-actions-desktop">
-                <!-- Location Link (KBC Deccan Hub Google Maps) -->
+                <!-- Location Link (Deccan Hub Google Maps) -->
                 <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="nav-conversion-btn btn-nav-location" title="View Deccan Hub on Google Maps">
                     <i class="fas fa-map-marker-alt text-danger"></i>
-                    <span>Dani Rd, KBC</span>
+                    <span>Dani Rd, Deccan</span>
                 </a>
 
                 <!-- WhatsApp Link -->
@@ -905,7 +883,7 @@
                         <h3 class="fw-bold text-white mb-1">Virtual Office</h3>
                         <p class="text-muted small mb-4">Prestigious Pune business registration address.</p>
                         
-                        <div class="price text-white mb-1 display-5 fw-bold">₹2,490 <span class="fs-6 fw-normal text-muted">/month</span></div>
+                        <div class="price text-white mb-1 display-5 fw-bold">₹2,970 <span class="fs-6 fw-normal text-muted">/month</span></div>
                         <p class="text-warning small mb-3"><i class="fas fa-info-circle me-1"></i> Paid annually in advance only</p>
                         
                         <ul class="list-unstyled mb-4">
@@ -1087,7 +1065,7 @@
                     <h5 class="mb-4 text-white">Locations</h5>
                     <ul class="list-unstyled text-muted">
                         <li class="mb-3">
-                            <a href="deccan-hub.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Deccan Hub (KBC)</a>
+                            <a href="deccan-hub.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Deccan Hub</a>
                         </li>
                         <li class="mb-3">
                             <a href="law-college-office.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Law College Road</a>
