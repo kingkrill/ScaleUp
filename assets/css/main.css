@@ -3342,3 +3342,64 @@ h1, h2, h3, h4, h5, h6 {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
+
+/* =========================================================================
+   STICKY MOBILE BOTTOM ACTION BAR (Direct Calls & WhatsApp CRO)
+========================================================================= */
+.mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background: rgba(15, 23, 42, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6);
+    padding: 10px 16px;
+    gap: 12px;
+}
+.mobile-sticky-bar .btn-sticky-call {
+    background: rgba(30, 41, 59, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.mobile-sticky-bar .btn-sticky-call:hover,
+.mobile-sticky-bar .btn-sticky-call:active {
+    background: rgba(56, 189, 248, 0.15);
+    color: #7dd3fc;
+    border-color: #38bdf8;
+}
+.mobile-sticky-bar .btn-sticky-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 10px 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    transition: all 0.2s ease;
+}
+.mobile-sticky-bar .btn-sticky-whatsapp:hover,
+.mobile-sticky-bar .btn-sticky-whatsapp:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+@media (max-width: 767.98px) {
+    body {
+        padding-bottom: 70px !important;
+    }
+}
+body.modal-open .mobile-sticky-bar {
+    display: none !important;
+}
