@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#061122">
     <meta name="color-scheme" content="dark">
     
     <!-- Google Tag Manager -->
@@ -44,9 +44,10 @@
     <meta name="geo.position" content="18.5194;73.8305">
     <meta name="ICBM" content="18.5194, 73.8305">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <!-- ScaleUp Arrow Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
     <!-- Schema.org JSON-LD Structured Data for LocalBusiness / CoworkingSpace / SEO -->
     <script type="application/ld+json">
@@ -211,6 +212,45 @@
             z-index: 1030;
         }
 
+        /* Animated Gradient Underline: 4px Eternal Loading Bar Stream */
+        .unified-navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px !important;
+            background: linear-gradient(
+                90deg,
+                #0D81CA 0%,
+                #38bdf8 20%,
+                #4CB37C 40%,
+                #7AB944 60%,
+                #f59e0b 80%,
+                #0D81CA 100%
+            ) !important;
+            background-size: 450px 100% !important;
+            animation: navbarEternalLoader 2s linear infinite !important;
+            box-shadow: 0 2px 10px rgba(13, 129, 202, 0.45), 0 0 5px rgba(76, 179, 124, 0.35);
+            z-index: 1035;
+            pointer-events: none;
+        }
+
+        @keyframes navbarEternalLoader {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 450px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .unified-navbar::after {
+                animation: none;
+            }
+        }
+
         /* Ensure Modals always appear cleanly in front of navbar */
         .modal {
             z-index: 1070 !important;
@@ -277,7 +317,7 @@
 
         .unified-navbar .nav-link:hover,
         .unified-navbar .nav-link.active {
-            color: #0284c7 !important;
+            color: #0D81CA !important;
         }
 
         /* Centres dropdown menu in white with crisp shadow */
@@ -299,7 +339,7 @@
         .unified-navbar .dropdown-item:hover,
         .unified-navbar .dropdown-item.active {
             background: #f1f5f9 !important;
-            color: #0284c7 !important;
+            color: #0D81CA !important;
         }
         .unified-navbar .dropdown-header {
             color: #64748b !important;
@@ -311,8 +351,8 @@
 
         /* High-Conversion "Book a Tour" CTA Pill Button */
         .btn-nav-book-tour {
-            background: #0284c7 !important;
-            border: 1px solid #0284c7 !important;
+            background: #0D81CA !important;
+            border: 1px solid #0D81CA !important;
             color: #ffffff !important;
             border-radius: 9999px !important;
             padding: 0.42rem 1.1rem !important;
@@ -322,17 +362,17 @@
             display: inline-flex !important;
             align-items: center !important;
             gap: 0.4rem !important;
-            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.28) !important;
+            box-shadow: 0 2px 8px rgba(13, 129, 202, 0.28) !important;
             transition: all 0.2s ease !important;
             cursor: pointer !important;
             line-height: 1.4 !important;
         }
         .btn-nav-book-tour:hover {
-            background: #0369a1 !important;
-            border-color: #0369a1 !important;
+            background: #072B69 !important;
+            border-color: #072B69 !important;
             color: #ffffff !important;
             transform: translateY(-1px) !important;
-            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38) !important;
+            box-shadow: 0 4px 14px rgba(7, 43, 105, 0.38) !important;
         }
 
         /* Nav conversion action pills */
@@ -372,38 +412,42 @@
         }
         .btn-nav-location:hover {
             background: #f1f5f9;
-            color: #0284c7 !important;
+            color: #0D81CA !important;
             border-color: #94a3b8;
             transform: translateY(-1px);
         }
 
         .btn-nav-whatsapp {
-            background: #22c55e;
+            background: linear-gradient(135deg, #4CB37C, #25D366);
             color: #ffffff !important;
-            border: 1px solid #16a34a;
-            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+            border: 1px solid #4CB37C;
+            box-shadow: 0 2px 8px rgba(76, 179, 124, 0.3);
         }
         .btn-nav-whatsapp:hover {
-            background: #16a34a;
+            background: linear-gradient(135deg, #3ea56f, #20b85c);
             color: #ffffff !important;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+            box-shadow: 0 4px 12px rgba(76, 179, 124, 0.4);
         }
 
         .btn-nav-call {
-            background: #0284c7;
+            background: #0D81CA;
             color: #ffffff !important;
-            border: 1px solid #0369a1;
-            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+            border: 1px solid #072B69;
+            box-shadow: 0 2px 8px rgba(13, 129, 202, 0.28);
         }
         .btn-nav-call:hover {
-            background: #0369a1;
+            background: #072B69;
             color: #ffffff !important;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+            box-shadow: 0 4px 12px rgba(7, 43, 105, 0.38);
         }
 
-        /* Mobile drawer styling */
+        /* Fast mobile drawer & instant dropdown styling */
+        .collapsing {
+            transition: height 0.12s cubic-bezier(0, 0, 0.2, 1) !important;
+            will-change: height;
+        }
         @media (max-width: 1199.98px) {
             .unified-navbar .navbar-collapse {
                 background: #ffffff !important;
@@ -411,7 +455,7 @@
                 border-radius: 16px !important;
                 padding: 1.25rem 1rem !important;
                 margin-top: 0.75rem !important;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14) !important;
             }
             .unified-navbar .navbar-collapse .navbar-nav {
                 align-items: flex-start !important;
@@ -419,14 +463,43 @@
             .unified-navbar .navbar-collapse .nav-link {
                 color: #1e293b !important;
                 font-size: 1rem !important;
+                font-weight: 600 !important;
                 padding: 0.65rem 0.85rem !important;
                 border-radius: 8px !important;
                 width: 100% !important;
+                transition: background 0.1s ease;
             }
             .unified-navbar .navbar-collapse .nav-link:hover,
             .unified-navbar .navbar-collapse .nav-link.active {
                 background: #f1f5f9 !important;
-                color: #0284c7 !important;
+                color: #0D81CA !important;
+            }
+            .unified-navbar .navbar-collapse .dropdown-menu {
+                background: #ffffff !important;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 12px !important;
+                margin: 0.25rem 0.5rem !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+                transition: none !important;
+                animation: none !important;
+            }
+            .unified-navbar .navbar-collapse .dropdown-menu.show {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+                animation: none !important;
+            }
+            .unified-navbar .navbar-collapse .dropdown-item {
+                color: #1e293b !important;
+                padding: 0.55rem 0.85rem !important;
+                font-weight: 500;
+                transition: background 0.1s ease;
+            }
+            .unified-navbar .navbar-collapse .dropdown-item:hover,
+            .unified-navbar .navbar-collapse .dropdown-item:active {
+                background: #f1f5f9 !important;
+                color: #0D81CA !important;
             }
         }
 
@@ -482,7 +555,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 30% 30%, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.95) 75%);
+            background: radial-gradient(circle at 30% 30%, rgba(13, 129, 202, 0.15) 0%, rgba(7, 43, 105, 0.6) 45%, rgba(6, 17, 34, 0.95) 85%);
             z-index: 1;
             pointer-events: none;
         }
@@ -505,30 +578,28 @@
             transform: none !important;
         }
 
-        /* Antigravity Inspired Glassmorphic Stat Tile */
+        /* Solid Stat Tile with Rich Midnight Background */
         .antigravity-stat-tile {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 1px solid rgba(56, 189, 248, 0.35);
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.3);
+            border-top: 3px solid #0D81CA;
             border-radius: 14px;
             padding: 1rem 0.75rem;
             text-align: center;
             transition: all 0.25s ease;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5);
         }
         .antigravity-stat-tile:hover {
             transform: translateY(-4px);
-            border-color: rgba(56, 189, 248, 0.6);
-            border-top-color: #38bdf8;
-            box-shadow: 0 14px 32px rgba(56, 189, 248, 0.2);
-            background: rgba(15, 23, 42, 0.9);
+            border-color: rgba(76, 179, 124, 0.6);
+            border-top-color: #4CB37C;
+            box-shadow: 0 14px 32px rgba(13, 129, 202, 0.35);
+            background: #0e2448 !important;
         }
 
         /* Gradient Headline */
         .text-gradient {
-            background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #a855f7 100%);
+            background: linear-gradient(135deg, #0D81CA 0%, #38bdf8 45%, #4CB37C 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -573,9 +644,9 @@
            ANIMATED BACKGROUND 1: CAMPUS TOUR (ARCHITECTURAL BLUEPRINT GRID)
         ============================================================= */
         .walkthrough-animated-section {
-            background: radial-gradient(circle at 85% 20%, rgba(30, 58, 138, 0.35) 0%, rgba(15, 23, 42, 0.98) 70%), #070d1a;
-            border-top: 1px solid rgba(59, 130, 246, 0.2);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            background: radial-gradient(circle at 85% 20%, rgba(13, 129, 202, 0.22) 0%, rgba(7, 43, 105, 0.5) 45%, #061122 80%), #061122;
+            border-top: 1px solid rgba(13, 129, 202, 0.25);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
             position: relative;
             overflow: hidden;
         }
@@ -621,7 +692,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(13, 129, 202, 0.25) 0%, transparent 70%);
             border-radius: 50%;
             top: 5%;
             right: -8%;
@@ -672,34 +743,30 @@
         }
 
         .tour-feature-card {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-left: 4px solid #38bdf8;
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.25);
+            border-left: 4px solid #0D81CA;
             border-radius: 14px;
             padding: 1rem 1.25rem;
             margin-bottom: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(6, 17, 34, 0.5);
         }
         .tour-feature-card:hover {
-            background: rgba(30, 41, 59, 0.85);
-            border-color: rgba(56, 189, 248, 0.4);
-            border-left-color: #3b82f6;
+            background: #0e2448 !important;
+            border-color: rgba(76, 179, 124, 0.4);
+            border-left-color: #4CB37C;
             transform: translateX(6px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 12px 28px rgba(6, 17, 34, 0.6), 0 0 20px rgba(13, 129, 202, 0.2);
         }
 
-        /* =============================================================
-           ANIMATED BACKGROUND 2: PLANS & PRICING (COSMIC NEBULA & CYBER MATRIX)
-        ============================================================= */
         /* =============================================================
            PLANS & PRICING (TONED DOWN, COHESIVE, ELEGANT DARK THEME)
         ============================================================= */
         .pricing-animated-section {
-            background: radial-gradient(circle at 50% 10%, rgba(30, 58, 138, 0.12) 0%, rgba(15, 23, 42, 0.98) 75%), #080d1a;
-            border-top: 1px solid rgba(59, 130, 246, 0.15);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+            background: radial-gradient(circle at 50% 10%, rgba(13, 129, 202, 0.18) 0%, rgba(7, 43, 105, 0.45) 50%, #061122 85%), #061122;
+            border-top: 1px solid rgba(13, 129, 202, 0.2);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.2);
             position: relative;
             overflow: hidden;
         }
@@ -725,47 +792,47 @@
         }
 
         .pricing-plan-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.25);
             border-radius: 18px;
             padding: 2rem 1.6rem;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 10px 28px rgba(6, 17, 34, 0.6);
         }
 
         .pricing-plan-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.35);
-            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5);
-            background: rgba(23, 37, 84, 0.55);
+            border-color: rgba(13, 129, 202, 0.45);
+            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.7);
+            background: #0e2448 !important;
         }
 
         /* Subtle, Toned-Down Highlight for Dedicated Desk */
         .pricing-plan-card.highlight-blue {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1.5px solid rgba(59, 130, 246, 0.45);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 15px rgba(59, 130, 246, 0.1);
+            background: #0a1c38 !important;
+            border: 1.5px solid rgba(13, 129, 202, 0.8) !important;
+            box-shadow: 0 12px 30px rgba(6, 17, 34, 0.6), 0 0 15px rgba(13, 129, 202, 0.2);
         }
         .pricing-plan-card.highlight-blue:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.2);
+            background: #0e2448 !important;
+            border-color: #0D81CA !important;
+            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.8), 0 0 20px rgba(13, 129, 202, 0.35);
         }
 
         /* Subtle, Toned-Down Highlight for Private Office Suite */
         .pricing-plan-card.highlight-amber {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1.5px solid rgba(245, 158, 11, 0.45);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 15px rgba(245, 158, 11, 0.1);
+            background: #0a1c38 !important;
+            border: 1.5px solid rgba(245, 158, 11, 0.8) !important;
+            box-shadow: 0 12px 30px rgba(6, 17, 34, 0.6), 0 0 15px rgba(245, 158, 11, 0.15);
         }
         .pricing-plan-card.highlight-amber:hover {
-            border-color: #f59e0b;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.2);
+            background: #0e2448 !important;
+            border-color: #f59e0b !important;
+            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
         }
 
         .pricing-cost {
@@ -786,11 +853,11 @@
            ANIMATED BACKGROUND 3: LOCATION (SATELLITE RADAR PULSE)
         ============================================================= */
         .location-animated-section {
-            background: radial-gradient(circle at 20% 50%, rgba(30, 58, 138, 0.25) 0%, rgba(15, 23, 42, 0.98) 75%), #080d1a;
+            background: radial-gradient(circle at 20% 50%, rgba(13, 129, 202, 0.22) 0%, rgba(7, 43, 105, 0.5) 45%, #061122 85%), #061122;
             position: relative;
             overflow: hidden;
-            border-top: 1px solid rgba(59, 130, 246, 0.2);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            border-top: 1px solid rgba(13, 129, 202, 0.25);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
         }
 
         .radar-ping-ring {
@@ -814,28 +881,27 @@
            AMENITIES: TASTEFULLY COLORFUL YET SOPHISTICATED CARDS
         ============================================================= */
         .amenities-animated-section {
-            background: linear-gradient(180deg, #090e1a 0%, #0f172a 50%, #0a1122 100%);
+            background: linear-gradient(180deg, #061122 0%, #0a1c38 50%, #061122 100%);
             position: relative;
             overflow: hidden;
-            border-top: 1px solid rgba(59, 130, 246, 0.15);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+            border-top: 1px solid rgba(13, 129, 202, 0.2);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.2);
         }
 
         .amenity-card-glass {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.25);
             border-radius: 18px;
             padding: 1.75rem 1.25rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 28px rgba(6, 17, 34, 0.5);
         }
         .amenity-card-glass:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+            background: #0e2448 !important;
+            box-shadow: 0 16px 36px rgba(6, 17, 34, 0.7);
         }
 
         .amenity-icon-glow {
@@ -850,74 +916,64 @@
             font-size: 1.5rem;
         }
 
-        /* Distinct Tasteful Color Accents for Amenities */
-        .amenity-theme-cyan .amenity-icon-glow { background: rgba(6, 182, 212, 0.14); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.3); }
-        .amenity-theme-cyan:hover { border-color: rgba(6, 182, 212, 0.45); }
-        .amenity-theme-cyan:hover .amenity-icon-glow { background: #06b6d4; color: #ffffff; box-shadow: 0 0 18px rgba(6, 182, 212, 0.4); }
+        /* ScaleUp Constituent Color Accents for Amenities (Google-style card accents) */
+        .amenity-theme-azure { border-top: 3px solid #0D81CA !important; }
+        .amenity-theme-azure .amenity-icon-glow { background: rgba(13, 129, 202, 0.16); color: #38bdf8; border: 1px solid rgba(13, 129, 202, 0.4); }
+        .amenity-theme-azure:hover { border-color: rgba(13, 129, 202, 0.6) !important; box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important; }
+        .amenity-theme-azure:hover .amenity-icon-glow { background: #0D81CA; color: #ffffff; box-shadow: 0 0 20px rgba(13, 129, 202, 0.55); }
 
-        .amenity-theme-amber .amenity-icon-glow { background: rgba(245, 158, 11, 0.14); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
-        .amenity-theme-amber:hover { border-color: rgba(245, 158, 11, 0.45); }
-        .amenity-theme-amber:hover .amenity-icon-glow { background: #f59e0b; color: #ffffff; box-shadow: 0 0 18px rgba(245, 158, 11, 0.4); }
+        .amenity-theme-emerald { border-top: 3px solid #4CB37C !important; }
+        .amenity-theme-emerald .amenity-icon-glow { background: rgba(76, 179, 124, 0.16); color: #4CB37C; border: 1px solid rgba(76, 179, 124, 0.4); }
+        .amenity-theme-emerald:hover { border-color: rgba(76, 179, 124, 0.6) !important; box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important; }
+        .amenity-theme-emerald:hover .amenity-icon-glow { background: #4CB37C; color: #ffffff; box-shadow: 0 0 20px rgba(76, 179, 124, 0.55); }
 
-        .amenity-theme-yellow .amenity-icon-glow { background: rgba(234, 179, 8, 0.14); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.3); }
-        .amenity-theme-yellow:hover { border-color: rgba(234, 179, 8, 0.45); }
-        .amenity-theme-yellow:hover .amenity-icon-glow { background: #eab308; color: #000000; box-shadow: 0 0 18px rgba(234, 179, 8, 0.4); }
+        .amenity-theme-lime { border-top: 3px solid #7AB944 !important; }
+        .amenity-theme-lime .amenity-icon-glow { background: rgba(122, 185, 68, 0.16); color: #a3e635; border: 1px solid rgba(122, 185, 68, 0.4); }
+        .amenity-theme-lime:hover { border-color: rgba(122, 185, 68, 0.6) !important; box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important; }
+        .amenity-theme-lime:hover .amenity-icon-glow { background: #7AB944; color: #ffffff; box-shadow: 0 0 20px rgba(122, 185, 68, 0.55); }
 
-        .amenity-theme-green .amenity-icon-glow { background: rgba(16, 185, 129, 0.14); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
-        .amenity-theme-green:hover { border-color: rgba(16, 185, 129, 0.45); }
-        .amenity-theme-green:hover .amenity-icon-glow { background: #10b981; color: #ffffff; box-shadow: 0 0 18px rgba(16, 185, 129, 0.4); }
+        .amenity-theme-amber { border-top: 3px solid #f59e0b !important; }
+        .amenity-theme-amber .amenity-icon-glow { background: rgba(245, 158, 11, 0.16); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .amenity-theme-amber:hover { border-color: rgba(245, 158, 11, 0.6) !important; box-shadow: 0 16px 36px rgba(245, 158, 11, 0.25) !important; }
+        .amenity-theme-amber:hover .amenity-icon-glow { background: #f59e0b; color: #ffffff; box-shadow: 0 0 20px rgba(245, 158, 11, 0.55); }
 
-        .amenity-theme-purple .amenity-icon-glow { background: rgba(139, 92, 246, 0.14); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3); }
-        .amenity-theme-purple:hover { border-color: rgba(139, 92, 246, 0.45); }
-        .amenity-theme-purple:hover .amenity-icon-glow { background: #8b5cf6; color: #ffffff; box-shadow: 0 0 18px rgba(139, 92, 246, 0.4); }
-
-        .amenity-theme-rose .amenity-icon-glow { background: rgba(244, 63, 94, 0.14); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); }
-        .amenity-theme-rose:hover { border-color: rgba(244, 63, 94, 0.45); }
-        .amenity-theme-rose:hover .amenity-icon-glow { background: #f43f5e; color: #ffffff; box-shadow: 0 0 18px rgba(244, 63, 94, 0.4); }
-
-        .amenity-theme-teal .amenity-icon-glow { background: rgba(20, 184, 166, 0.14); color: #14b8a6; border: 1px solid rgba(20, 184, 166, 0.3); }
-        .amenity-theme-teal:hover { border-color: rgba(20, 184, 166, 0.45); }
-        .amenity-theme-teal:hover .amenity-icon-glow { background: #14b8a6; color: #ffffff; box-shadow: 0 0 18px rgba(20, 184, 166, 0.4); }
-
-        .amenity-theme-blue .amenity-icon-glow { background: rgba(59, 130, 246, 0.14); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); }
-        .amenity-theme-blue:hover { border-color: rgba(59, 130, 246, 0.45); }
-        .amenity-theme-blue:hover .amenity-icon-glow { background: #3b82f6; color: #ffffff; box-shadow: 0 0 18px rgba(59, 130, 246, 0.4); }
+        .amenity-theme-cyan { border-top: 3px solid #38bdf8 !important; }
+        .amenity-theme-cyan .amenity-icon-glow { background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+        .amenity-theme-cyan:hover { border-color: rgba(56, 189, 248, 0.6) !important; box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25) !important; }
+        .amenity-theme-cyan:hover .amenity-icon-glow { background: #38bdf8; color: #ffffff; box-shadow: 0 0 20px rgba(56, 189, 248, 0.55); }
 
         /* =============================================================
            SEO AUTHORITY PILLAR SECTION
         ============================================================= */
         .seo-authority-section {
-            background: radial-gradient(circle at 50% 10%, rgba(30, 58, 138, 0.25) 0%, rgba(15, 23, 42, 0.98) 75%), #060a14;
-            border-top: 1px solid rgba(59, 130, 246, 0.2);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            background: radial-gradient(circle at 50% 10%, rgba(13, 129, 202, 0.2) 0%, rgba(7, 43, 105, 0.45) 50%, #061122 85%), #061122;
+            border-top: 1px solid rgba(13, 129, 202, 0.25);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
             position: relative;
             overflow: hidden;
         }
 
         .seo-content-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.25);
             border-radius: 18px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(6, 17, 34, 0.6);
         }
 
         .seo-comparison-table {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(59, 130, 246, 0.25);
+            background: #0a1c38 !important;
+            border: 1px solid rgba(13, 129, 202, 0.3);
             border-radius: 18px;
             overflow: hidden;
         }
         .seo-comparison-table th {
-            background: rgba(30, 41, 59, 0.9);
+            background: #0e2448 !important;
             color: #38bdf8;
             font-weight: 700;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            border-bottom: 1px solid rgba(13, 129, 202, 0.35);
         }
         .seo-comparison-table td {
             padding: 1rem 1.25rem;
@@ -932,7 +988,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(15, 23, 42, 0.97);
+            background: rgba(6, 17, 34, 0.97);
             backdrop-filter: blur(16px);
             padding: 0.65rem 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -1126,50 +1182,50 @@
                     </p>
 
                     <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-subway text-warning me-1"></i> Walking distance to 3 Metro (Garware College, Deccan, Nal Stop SNDT)
+                        <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
+                            <i class="fas fa-subway me-1"></i> Walking distance to 3 Metro (Garware College, Deccan, Nal Stop SNDT)
                         </span>
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-bolt text-warning me-1"></i> High-Quality UPS Backup
+                        <span class="badge chip-brand-lime px-3 py-2 rounded-pill small">
+                            <i class="fas fa-bolt me-1"></i> High-Quality UPS Backup
                         </span>
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-users text-info me-1"></i> Business networking with Vibrant community
+                        <span class="badge chip-brand-emerald px-3 py-2 rounded-pill small">
+                            <i class="fas fa-users me-1"></i> Business networking with Vibrant community
                         </span>
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-shield-alt text-success me-1"></i> Minimum 3 months refundable deposit
+                        <span class="badge chip-brand-cyan px-3 py-2 rounded-pill small">
+                            <i class="fas fa-shield-alt me-1"></i> Minimum 3 months refundable deposit
                         </span>
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-receipt text-success me-1"></i> Zero Hidden Utility Costs
+                        <span class="badge chip-brand-emerald px-3 py-2 rounded-pill small">
+                            <i class="fas fa-receipt me-1"></i> Zero Hidden Utility Costs
                         </span>
-                        <span class="badge bg-dark bg-opacity-75 text-light border border-secondary px-3 py-2 rounded-pill small">
-                            <i class="fas fa-mug-hot text-danger me-1"></i> Fresh Artisan Coffee
+                        <span class="badge chip-brand-amber px-3 py-2 rounded-pill small">
+                            <i class="fas fa-mug-hot me-1"></i> Fresh Artisan Coffee
                         </span>
                     </div>
 
-                    <!-- Antigravity Solid Stat Tiles -->
+                    <!-- Antigravity Solid Stat Tiles (Constituent 4-Color Theme) -->
                     <div class="row g-2 mb-4 text-start">
                         <div class="col-6 col-md-3">
-                            <div class="antigravity-stat-tile">
+                            <div class="antigravity-stat-tile stat-tile-azure">
                                 <div class="fw-bold text-white fs-4"><span class="counter-num" data-target="140">140</span>+</div>
-                                <div class="text-primary small fw-bold">Seats Capacity</div>
+                                <div class="stat-label small fw-bold">Seats Capacity</div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3">
-                            <div class="antigravity-stat-tile">
+                            <div class="antigravity-stat-tile stat-tile-emerald">
                                 <div class="fw-bold text-white fs-4"><span class="counter-num" data-target="10">10</span>+</div>
-                                <div class="text-primary small fw-bold">Private Cabins</div>
+                                <div class="stat-label small fw-bold">Private Cabins</div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3">
-                            <div class="antigravity-stat-tile">
+                            <div class="antigravity-stat-tile stat-tile-lime">
                                 <div class="fw-bold text-white fs-4"><span class="counter-num" data-target="2">2</span></div>
-                                <div class="text-primary small fw-bold">Conf. Rooms</div>
+                                <div class="stat-label small fw-bold">Conf. Rooms</div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3">
-                            <div class="antigravity-stat-tile">
+                            <div class="antigravity-stat-tile stat-tile-navy">
                                 <div class="fw-bold text-white fs-4"><i class="fas fa-car-side"></i></div>
-                                <div class="text-primary small fw-bold">Ample Parking</div>
+                                <div class="stat-label small fw-bold">Ample Parking</div>
                             </div>
                         </div>
                     </div>
@@ -1242,9 +1298,9 @@
                     </p>
 
                     <div class="tour-feature-list mb-4">
-                        <div class="tour-feature-card">
+                        <div class="tour-feature-card tour-card-azure">
                             <div class="d-flex align-items-start">
-                                <i class="fas fa-layer-group text-primary fs-4 me-3 mt-1"></i>
+                                <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-layer-group"></i></div>
                                 <div>
                                     <strong class="text-white">Expansive Workspaces & 15+ Private Cabins:</strong>
                                     <span class="text-light opacity-75 d-block small">Spacious walkways, ergonomic chairs, and customizable team suites for 4 to 30+ members.</span>
@@ -1252,9 +1308,9 @@
                             </div>
                         </div>
 
-                        <div class="tour-feature-card">
+                        <div class="tour-feature-card tour-card-lime">
                             <div class="d-flex align-items-start">
-                                <i class="fas fa-bolt text-primary fs-4 me-3 mt-1"></i>
+                                <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-bolt"></i></div>
                                 <div>
                                     <strong class="text-white">Dual High-Speed Fiber Internet & Static IP:</strong>
                                     <span class="text-light opacity-75 d-block small">Zero downtime with high-quality UPS power backup and tech-ready connectivity for software development.</span>
@@ -1262,9 +1318,9 @@
                             </div>
                         </div>
 
-                        <div class="tour-feature-card">
+                        <div class="tour-feature-card tour-card-amber">
                             <div class="d-flex align-items-start">
-                                <i class="fas fa-mug-hot text-primary fs-4 me-3 mt-1"></i>
+                                <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-mug-hot"></i></div>
                                 <div>
                                     <strong class="text-white">Unlimited Fresh Bean-to-Cup Coffee & Café Lounge:</strong>
                                     <span class="text-light opacity-75 d-block small">Artisan bean-to-cup coffee machines, assorted teas, refrigerator, and microwave in our large lounge.</span>
@@ -1272,9 +1328,9 @@
                             </div>
                         </div>
 
-                        <div class="tour-feature-card">
+                        <div class="tour-feature-card tour-card-emerald">
                             <div class="d-flex align-items-start">
-                                <i class="fas fa-parking text-primary fs-4 me-3 mt-1"></i>
+                                <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-parking"></i></div>
                                 <div>
                                     <strong class="text-white">Dedicated 2-Wheeler & 4-Wheeler Parking:</strong>
                                     <span class="text-light opacity-75 d-block small">Hassle-free parking right on campus in central Deccan — rare for prime Pune commercial locations.</span>
@@ -1317,16 +1373,16 @@
 
             <div class="uniform-pricing-grid">
                 <!-- 1. Day Pass -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-azure">
                     <h3 class="fw-bold text-white mb-1 fs-4">Day Pass</h3>
                     <p class="text-muted small mb-2">Ideal for freelancers, travelers & single-day sprints</p>
                     <div class="pricing-cost">₹590 <span class="pricing-cost-unit">/ day</span></div>
                     
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Flexible unreserved ergonomic seating</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> High-speed Wi-Fi internet access</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Unlimited fresh bean coffee & tea</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Full pantry & café lounge access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Flexible unreserved ergonomic seating</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed Wi-Fi internet access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited fresh bean coffee & tea</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full pantry & café lounge access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1336,39 +1392,39 @@
                 </div>
 
                 <!-- 2. Dedicated Cowork Desk -->
-                <div class="pricing-plan-card highlight-blue">
-                    <div class="badge bg-primary text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold">MOST POPULAR</div>
+                <div class="pricing-plan-card pricing-card-emerald">
+                    <div class="badge text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: linear-gradient(135deg, #4CB37C, #25D366); box-shadow: 0 4px 12px rgba(76, 179, 124, 0.4);">MOST POPULAR</div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Dedicated Cowork Desk</h3>
-                    <p class="text-primary small mb-2">Your permanent personal workspace with storage</p>
-                    <div class="pricing-cost text-primary">₹7,950 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
-                    <div class="badge bg-success text-white mb-2 py-1"><i class="fas fa-tags me-1"></i> Special deals on 2+ desks</div>
+                    <p class="text-light opacity-75 small mb-2">Your permanent personal workspace with storage</p>
+                    <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
+                    <div class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 mb-2 py-1"><i class="fas fa-tags me-1"></i> Special deals on 2+ desks</div>
 
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Dedicated permanent reserved desk</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> 24/7 access & zero hidden electricity costs</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Personal lockable storage locker</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Meeting room credits included monthly</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Static IP option & dual internet backup</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated permanent reserved desk</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access & zero hidden electricity costs</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Personal lockable storage locker</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Meeting room credits included monthly</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Static IP option & dual internet backup</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold shadow"><i class="fas fa-phone-alt me-1"></i> Call to Reserve</a>
+                        <a href="tel:+919822268333" class="btn btn-success w-100 rounded-pill fw-bold shadow" style="background: linear-gradient(135deg, #4CB37C, #25D366); border: none;"><i class="fas fa-phone-alt me-1"></i> Call to Reserve</a>
                         <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20reserve%20a%20Dedicated%20Cowork%20Desk%20at%20KBC%20Deccan" class="btn btn-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 3. Hybrid Cowork -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-lime">
                     <h3 class="fw-bold text-white mb-1 fs-4">Hybrid Cowork</h3>
                     <p class="text-muted small mb-2">Designed for hybrid teams & flexible schedules</p>
                     <div class="pricing-cost">₹5,850 <span class="pricing-cost-unit">/ seat / month</span></div>
-                    <div class="text-info small mb-2 fw-semibold"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</div>
+                    <div class="text-light opacity-75 small mb-2 fw-semibold" style="color: #a3e635 !important;"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</div>
 
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> 12 days access anytime across the month</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Ergonomic workstations & power sockets</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> High-speed dual fiber internet</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Unlimited hot coffee & tea pantry access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 12 days access anytime across the month</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Ergonomic workstations & power sockets</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed dual fiber internet</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited hot coffee & tea pantry access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1378,18 +1434,18 @@
                 </div>
 
                 <!-- 4. Private Office -->
-                <div class="pricing-plan-card highlight-amber">
+                <div class="pricing-plan-card pricing-card-amber">
                     <div class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold">EXECUTIVE SUITE</div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Private Office Cabin</h3>
                     <p class="text-light opacity-75 small mb-2">Secure lockable cabins for teams of 4 to 30+</p>
-                    <div class="pricing-cost text-warning">₹10,900 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
+                    <div class="pricing-cost">₹10,900 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
                     
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Fully furnished enclosed private suite</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> 24/7 access with biometric security</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> All utilities, air conditioning & cleaning included</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Executive meeting room allocation</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Company branding on cabin door</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Fully furnished enclosed private suite</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access with biometric security</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> All utilities, air conditioning & cleaning included</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Executive meeting room allocation</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Company branding on cabin door</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1399,17 +1455,17 @@
                 </div>
 
                 <!-- 5. Meeting Space (Hourly) -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-azure">
                     <h3 class="fw-bold text-white mb-1 fs-4">Meeting Space</h3>
                     <p class="text-muted small mb-2">On-demand hourly rooms for pitches & reviews</p>
                     <div class="pricing-cost">₹150 <span class="pricing-cost-unit">/ seat / hour</span></div>
                     <div class="text-warning small mb-2"><i class="fas fa-users me-1"></i> Minimum 4 seats booking</div>
 
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> High-definition presentation TV & HDMI</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Whiteboards, markers & stationery</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> High-speed video conference internet</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Complimentary coffee & tea service</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-definition presentation TV & HDMI</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Whiteboards, markers & stationery</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed video conference internet</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Complimentary coffee & tea service</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1419,16 +1475,16 @@
                 </div>
 
                 <!-- 6. 4-Seater Meeting Room -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-emerald">
                     <h3 class="fw-bold text-white mb-1 fs-4">4-Seater Meeting Room</h3>
                     <p class="text-muted small mb-2">Private room for interviews, audits & discussions</p>
                     <div class="pricing-cost">₹3,900 <span class="pricing-cost-unit">/ full day</span></div>
 
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Full day private access for up to 4 guests</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> 4K presentation display screen</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Sound-damped acoustic privacy</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Reception support & visitor greeting</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full day private access for up to 4 guests</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 4K presentation display screen</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Sound-damped acoustic privacy</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Reception support & visitor greeting</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1438,17 +1494,17 @@
                 </div>
 
                 <!-- 7. 9-Seater Executive Room -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-lime">
                     <h3 class="fw-bold text-white mb-1 fs-4">9-Seater Boardroom</h3>
                     <p class="text-muted small mb-2">Executive conference room for client presentations</p>
                     <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit">/ day</span></div>
                     <div class="text-info small mb-2"><i class="fas fa-clock me-1"></i> Half-day available at ₹4,500</div>
 
                     <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Executive boardroom table for 9 participants</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Large presentation monitor & conference setup</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Half day (₹4,500) or Full day (₹7,950) options</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Dedicated tea, coffee & hospitality support</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Executive boardroom table for 9 participants</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Large presentation monitor & conference setup</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Half day (₹4,500) or Full day (₹7,950) options</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated tea, coffee & hospitality support</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1458,7 +1514,7 @@
                 </div>
 
                 <!-- 8. Virtual Office -->
-                <div class="pricing-plan-card">
+                <div class="pricing-plan-card pricing-card-cyan">
                     <div class="badge bg-warning text-dark mb-2 py-1 px-3 rounded-pill fw-bold"><i class="fas fa-certificate me-1"></i> LAUNCH OFFER INCLUDED</div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Virtual Office</h3>
                     <p class="text-muted small mb-2">Prestigious Pune business registration address</p>
@@ -1470,10 +1526,10 @@
                     </div>
 
                     <ul class="list-unstyled my-3 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Prime commercial address for GST & ROC in Pune</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Professional mail receiving & courier handling</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Front desk client greeting & reception representation</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Exclusive discounted physical conference room access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Prime commercial address for GST & ROC in Pune</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Professional mail receiving & courier handling</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Front desk client greeting & reception representation</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Exclusive discounted physical conference room access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
@@ -1484,7 +1540,8 @@
             </div>
 
             <!-- High-Conversion Lead Magnet: Free 1-Day Trial Pass (Wired to Schedule Visit Form) -->
-            <div class="free-day-pass-banner mt-5 p-4 rounded-4 position-relative overflow-hidden shadow-lg border" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.95) 100%); border-color: rgba(59, 130, 246, 0.35) !important;">
+            <div class="free-day-pass-banner mt-5 p-4 rounded-4 position-relative overflow-hidden shadow-lg border" style="background: linear-gradient(135deg, rgba(7, 43, 105, 0.45) 0%, rgba(6, 17, 34, 0.95) 100%); border-color: rgba(13, 129, 202, 0.35) !important;">
+                <div class="brand-stripe position-absolute top-0 start-0"></div>
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8">
                         <div class="d-flex align-items-center gap-2 mb-2">
@@ -1512,9 +1569,10 @@
             </div>
 
             <!-- Interactive Workspace Savings Calculator (Comprehensive Traditional Breakdown) -->
-            <div class="calculator-container mt-5 p-4 p-md-5 rounded-4 border shadow-lg position-relative" style="background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); border-color: rgba(59, 130, 246, 0.25) !important;">
+            <div class="calculator-container mt-5 p-4 p-md-5 rounded-4 border shadow-lg position-relative overflow-hidden" style="background: #0a1c38 !important; border-color: rgba(13, 129, 202, 0.35) !important;">
+                <div class="brand-stripe position-absolute top-0 start-0"></div>
                 <div class="text-center mb-4">
-                    <span class="badge bg-primary px-3 py-1 rounded-pill mb-2"><i class="fas fa-calculator me-1"></i> Comprehensive Cost Comparison</span>
+                    <span class="badge chip-brand-azure px-3 py-1 rounded-pill mb-2"><i class="fas fa-calculator me-1"></i> Comprehensive Cost Comparison</span>
                     <h3 class="h3 text-white fw-bold mb-2">Calculate Your Team's Monthly Workspace Savings</h3>
                     <p class="text-light opacity-75 small max-w-md mx-auto" style="max-width: 650px;">
                         Traditional commercial leases in Central Pune force you to pay for interiors, maintenance, housekeeping, electricity, AC, internet, and pantry separately. See how ScaleUp's all-inclusive pricing eliminates overhead.
@@ -1526,7 +1584,7 @@
                         <div class="p-4 rounded-4 bg-dark bg-opacity-60 border border-secondary mb-3">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <label for="calcTeamSize" class="text-white fw-bold mb-0">Select Team Size (Seats):</label>
-                                <span class="badge bg-primary fs-6 px-3 py-1 rounded-pill" id="calcTeamDisplay">6 Seats</span>
+                                <span class="badge fs-6 px-3 py-1 rounded-pill" style="background: #0D81CA; color: white;" id="calcTeamDisplay">6 Seats</span>
                             </div>
                             <input type="range" class="form-range" min="1" max="40" value="6" id="calcTeamSize">
                             <div class="d-flex justify-content-between text-muted small mt-1">
@@ -1548,7 +1606,7 @@
                                 </div>
                                 <div class="col-6">
                                     <input type="radio" class="btn-check" name="calcPlanType" id="calcTypePrivate" value="private">
-                                    <label class="btn btn-outline-warning w-100 py-2 small fw-bold" for="calcTypePrivate">
+                                    <label class="btn btn-outline-success w-100 py-2 small fw-bold" style="border-color: #4CB37C; color: #4CB37C;" for="calcTypePrivate">
                                         Private Cabin (₹10,900)
                                     </label>
                                 </div>
@@ -1559,20 +1617,20 @@
                         <div class="p-3 rounded-4 bg-dark bg-opacity-40 border border-secondary border-opacity-50">
                             <div class="text-muted small fw-bold text-uppercase mb-2"><i class="fas fa-receipt text-warning me-1"></i> Factored Traditional Office Overheads (Pune Commercial Rates):</div>
                             <div class="row g-2 text-light small" style="font-size: 0.82rem;">
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> Interior fit-out & furniture amortization</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> Building maintenance & CAM charges</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> Commercial AC & electricity consumption</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> Dedicated daily housekeeping staff</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> Dual high-speed business fiber internet</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle text-primary me-1"></i> & pantry hospitality services</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Interior fit-out & furniture amortization</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Building maintenance & CAM charges</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Commercial AC & electricity consumption</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Dedicated daily housekeeping staff</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Dual high-speed business fiber internet</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> & pantry hospitality services</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
-                        <div class="p-4 rounded-4 border text-center shadow-lg" style="background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); border-color: rgba(59, 130, 246, 0.3) !important;">
+                        <div class="p-4 rounded-4 text-center shadow-lg calc-summary-card">
                             <div class="text-muted small text-uppercase fw-semibold mb-1">ScaleUp All-Inclusive Monthly Cost</div>
-                            <div class="h2 text-white fw-extrabold mb-3" id="calcScaleupCost">₹47,700 <span class="fs-6 text-muted fw-normal">/ month</span></div>
+                            <div class="h2 text-white fw-extrabold mb-3 calc-cost-azure" id="calcScaleupCost">₹47,700 <span class="fs-6 text-muted fw-normal">/ month</span></div>
 
                             <div class="d-flex justify-content-between text-light small py-2 border-top border-secondary opacity-85">
                                 <span>Traditional Rent + All Hidden Overheads:</span>
@@ -1580,15 +1638,15 @@
                             </div>
                             <div class="d-flex justify-content-between text-light small py-2 border-top border-secondary opacity-85">
                                 <span>Interior Fit-Out & Deposit Saved:</span>
-                                <span class="text-success fw-bold" id="calcDepositSaved">₹3,50,000+</span>
+                                <span class="fw-bold calc-saved-emerald" id="calcDepositSaved">₹3,50,000+</span>
                             </div>
 
-                            <div class="d-flex justify-content-between align-items-center py-2 px-3 my-3 rounded-3 bg-dark border border-secondary">
+                            <div class="d-flex justify-content-between align-items-center py-2 px-3 my-3 rounded-3 bg-dark border" style="border-color: rgba(122, 185, 68, 0.4) !important;">
                                 <span class="text-white small fw-bold">Net Monthly Overhead Saved:</span>
-                                <span class="h4 text-primary fw-bold mb-0" id="calcSavings">₹36,300 / mo (43%)</span>
+                                <span class="h4 fw-bold mb-0 calc-saved-lime" id="calcSavings">₹36,300 / mo (43%)</span>
                             </div>
 
-                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20used%20the%20savings%20calculator%20for%206%20seats%20and%20want%20to%20lock%20in%20pricing" id="calcCtaWhatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold mb-2 shadow">
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20used%20the%20savings%20calculator%20for%206%20seats%20and%20want%20to%20lock%20in%20pricing" id="calcCtaWhatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold mb-2 shadow" style="background: linear-gradient(135deg, #4CB37C, #25D366); border: none;">
                                 <i class="fab fa-whatsapp me-1"></i> Lock In Proposal on WhatsApp
                             </a>
                             <a href="tel:+919822268333" class="btn btn-outline-primary w-100 rounded-pill py-2 small fw-bold">
@@ -1726,7 +1784,7 @@
 
             <div class="row g-4">
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-cyan h-100">
+                    <div class="amenity-card-glass amenity-theme-azure h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-wifi"></i></div>
                         <h4 class="h6 text-white mb-1">Dual Fiber Wi-Fi</h4>
                         <p class="text-light opacity-75 small mb-0">High-speed dual internet with static IP options</p>
@@ -1740,42 +1798,42 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-yellow h-100">
+                    <div class="amenity-card-glass amenity-theme-lime h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-bolt"></i></div>
                         <h4 class="h6 text-white mb-1">High-Quality UPS Backup</h4>
                         <p class="text-light opacity-75 small mb-0">Continuous uninterrupted UPS power backup for zero downtime</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-green h-100">
+                    <div class="amenity-card-glass amenity-theme-emerald h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-parking"></i></div>
                         <h4 class="h6 text-white mb-1">Spacious Parking</h4>
                         <p class="text-light opacity-75 small mb-0">Ample dedicated 2 & 4 wheeler slots on campus</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-purple h-100">
+                    <div class="amenity-card-glass amenity-theme-azure h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-users"></i></div>
                         <h4 class="h6 text-white mb-1">Meeting Rooms</h4>
                         <p class="text-light opacity-75 small mb-0">4K displays, whiteboards & video conferencing</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-rose h-100">
+                    <div class="amenity-card-glass amenity-theme-emerald h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-shield-alt"></i></div>
                         <h4 class="h6 text-white mb-1">24/7 Security</h4>
                         <p class="text-light opacity-75 small mb-0">Biometric access control & round-the-clock CCTV</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-teal h-100">
+                    <div class="amenity-card-glass amenity-theme-lime h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-broom"></i></div>
-                        <h4 class="h6 text-white mb-1">Vibrant Community Networking</h4>
+                        <h4 class="h6 text-white mb-1">Vibrant Community</h4>
                         <p class="text-light opacity-75 small mb-0">Sanitized workstations, clean restrooms & cafe</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-blue h-100">
+                    <div class="amenity-card-glass amenity-theme-cyan h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-network-wired"></i></div>
                         <h4 class="h6 text-white mb-1">Static IP Support</h4>
                         <p class="text-light opacity-75 small mb-0">Secure enterprise VPN & dev firewall setup</p>
@@ -1802,10 +1860,10 @@
             </div>
 
             <div class="row g-4">
-                <!-- SEO Pillar 1 -->
+                <!-- SEO Pillar 1: Royal Azure Blue -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card h-100">
-                        <div class="text-primary fs-3 mb-3"><i class="fas fa-building"></i></div>
+                    <div class="seo-content-card seo-card-azure h-100">
+                        <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-building"></i></div>
                         <h3 class="h5 text-white fw-bold mb-3">Coworking Space in Pune – Deccan, Law College & FC Road</h3>
                         <p class="text-light opacity-75 small mb-3">
                             Finding the right <strong>coworking space in Pune</strong> is critical for productivity and recruitment. Located at Kshitij Business Centre (KBC) on Dani Road, Next to ICICI bank - Law College Road, ScaleUp offers an unbeatable strategic address.
@@ -1819,10 +1877,10 @@
                     </div>
                 </div>
 
-                <!-- SEO Pillar 2 -->
+                <!-- SEO Pillar 2: Growth Emerald Green -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card h-100">
-                        <div class="text-primary fs-3 mb-3"><i class="fas fa-handshake"></i></div>
+                    <div class="seo-content-card seo-card-emerald h-100">
+                        <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-handshake"></i></div>
                         <h3 class="h5 text-white fw-bold mb-3">On-Demand Meeting Rooms & Conference Rooms in Pune</h3>
                         <p class="text-light opacity-75 small mb-3">
                             Need a professional venue to host investors, conduct client pitches, or interview talent? Our <strong>meeting rooms</strong> and executive <strong>conferences rooms</strong> in Pune are fully equipped with 4K interactive presentation screens, high-speed Wi-Fi, and beverage service.
@@ -1830,16 +1888,16 @@
                         <p class="text-light opacity-75 small mb-4">
                             Book hourly meeting space from ₹150/seat/hour (min 4 seats), a 4-seater meeting room for ₹3,900/day, or our flagship 9-seater boardroom for ₹7,950/day (₹4,500 half day).
                         </p>
-                        <a href="tel:+919822268333" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold">
+                        <a href="tel:+919822268333" class="btn btn-outline-success btn-sm rounded-pill fw-semibold" style="border-color: #4CB37C; color: #4CB37C;">
                             <i class="fas fa-calendar-check me-1"></i> Book Meeting Room
                         </a>
                     </div>
                 </div>
 
-                <!-- SEO Pillar 3 -->
+                <!-- SEO Pillar 3: Momentum Lime Green -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card h-100">
-                        <div class="text-primary fs-3 mb-3"><i class="fas fa-stamp"></i></div>
+                    <div class="seo-content-card seo-card-lime h-100">
+                        <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-stamp"></i></div>
                         <h3 class="h5 text-white fw-bold mb-3">Official Virtual Offices in Pune for GST & ROC Compliance</h3>
                         <p class="text-light opacity-75 small mb-3">
                             Establishing a corporate presence in Maharashtra? Our <strong>virtual offices in Pune</strong> offer a legitimate prime commercial address at Deccan Hub for just ₹2,970/month (paid annually in advance).
@@ -2040,9 +2098,9 @@
             </div>
 
             <div class="row g-4">
-                <!-- Center 1: Deccan Hub (Flagship) -->
+                <!-- Center 1: Deccan Hub (Flagship - Royal Azure Blue) -->
                 <div class="col-lg-6">
-                    <div class="p-4 bg-dark rounded-4 border border-primary h-100 shadow-lg position-relative" style="box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2) !important;">
+                    <div class="p-4 bg-dark rounded-4 border location-card-azure h-100 shadow-lg position-relative">
                         <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill fw-bold"><i class="fas fa-crown text-warning me-1"></i> FLAGSHIP • OPEN</span>
                         <h3 class="h4 text-white fw-bold mb-1">Deccan Hub</h3>
                         <p class="text-primary small mb-3"><i class="fas fa-map-marker-alt me-1"></i> Kshitij Business Centre, Dani Road, Next to ICICI bank - Law College Road, Deccan, Pune 411004</p>
@@ -2054,23 +2112,23 @@
                     </div>
                 </div>
 
-                <!-- Center 2: Law College Road -->
+                <!-- Center 2: Law College Road (Growth Emerald Green) -->
                 <div class="col-lg-6">
-                    <div class="p-4 bg-dark rounded-4 border border-secondary h-100 shadow-lg position-relative">
+                    <div class="p-4 bg-dark rounded-4 border location-card-emerald h-100 shadow-lg position-relative">
                         <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill fw-bold">ACTIVE • NEW</span>
                         <h3 class="h4 text-white fw-bold mb-1">Law College Road Centre</h3>
                         <p class="text-success small mb-3"><i class="fas fa-map-marker-alt me-1"></i> 456 Law College Road, Erandwane, Pune</p>
                         <p class="text-light opacity-75 small mb-4">Boutique modern layout with panoramic views, cafe lounge, dedicated workstations, private cabins, and meeting rooms.</p>
                         <div class="d-flex gap-2">
-                            <a href="locations/law-college-office.html" class="btn btn-outline-light btn-sm rounded-pill w-100 fw-semibold">Center Details</a>
+                            <a href="locations/law-college-office.html" class="btn btn-outline-success btn-sm rounded-pill w-100 fw-semibold" style="border-color: #4CB37C; color: #4CB37C;">Center Details</a>
                             <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill w-100 fw-bold"><i class="fas fa-phone-alt me-1"></i> Call 9822268333</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center 3: Baner (100% Leased) -->
+                <!-- Center 3: Baner (Momentum Lime Green) -->
                 <div class="col-lg-6">
-                    <div class="p-3 bg-dark rounded-4 border border-secondary opacity-75">
+                    <div class="p-3 bg-dark rounded-4 border location-card-lime opacity-85">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h4 class="h6 text-white mb-0">Baner Centre - Golden Empire</h4>
@@ -2081,9 +2139,9 @@
                     </div>
                 </div>
 
-                <!-- Center 4: Deccan Office (100% Leased) -->
+                <!-- Center 4: Deccan Office (Sky Cyan) -->
                 <div class="col-lg-6">
-                    <div class="p-3 bg-dark rounded-4 border border-secondary opacity-75">
+                    <div class="p-3 bg-dark rounded-4 border location-card-cyan opacity-85">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h4 class="h6 text-white mb-0">Deccan Gymkhana Centre</h4>
@@ -2096,6 +2154,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Brand Accent Line -->
+    <div class="brand-stripe"></div>
 
     <!-- =========================================================================
          FOOTER
@@ -2265,11 +2326,11 @@
          FLOATING QUICK CONTACT DOCK (High-Conversion Lead Magnet for Desktop & Tablets)
     ========================================================================= -->
     <div class="floating-quick-dock d-none d-md-flex flex-column align-items-end gap-2" style="position: fixed; bottom: 25px; right: 25px; z-index: 1050;">
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45) !important;">
+        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: linear-gradient(135deg, #4CB37C, #25D366); box-shadow: 0 8px 25px rgba(76, 179, 124, 0.45) !important;">
             <i class="fab fa-whatsapp fs-5"></i>
             <span>Chat on WhatsApp</span>
         </a>
-        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0284c7; box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45) !important;">
+        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0D81CA; box-shadow: 0 8px 25px rgba(13, 129, 202, 0.45) !important;">
             <i class="fas fa-phone-alt fs-6"></i>
             <span>Call 9822268333</span>
         </a>
@@ -2337,8 +2398,17 @@
                     this.density = (Math.random() * 25) + 5;
                     this.vx = (Math.random() - 0.5) * 0.8;
                     this.vy = (Math.random() - 0.5) * 0.8;
-                    this.color = Math.random() > 0.3 ? 'rgba(59, 130, 246,' : 'rgba(168, 85, 247,';
-                    this.alpha = Math.random() * 0.5 + 0.3;
+                    // ScaleUp logo inspired colors: Royal Azure, Growth Emerald, Momentum Lime, Sky Blue
+                    const logoPalettes = [
+                        { color: 'rgba(13, 129, 202,', shadow: '#0D81CA' },  // Royal Azure
+                        { color: 'rgba(76, 179, 124,', shadow: '#4CB37C' },  // Growth Emerald
+                        { color: 'rgba(122, 185, 68,', shadow: '#7AB944' },  // Momentum Lime
+                        { color: 'rgba(56, 189, 248,', shadow: '#38bdf8' }   // Cyan Accent
+                    ];
+                    const chosen = logoPalettes[Math.floor(Math.random() * logoPalettes.length)];
+                    this.color = chosen.color;
+                    this.shadow = chosen.shadow;
+                    this.alpha = Math.random() * 0.5 + 0.35;
                 }
 
                 draw() {
@@ -2346,7 +2416,7 @@
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                     ctx.fillStyle = this.color + this.alpha + ')';
                     ctx.shadowBlur = 8;
-                    ctx.shadowColor = '#38bdf8';
+                    ctx.shadowColor = this.shadow;
                     ctx.fill();
                     ctx.shadowBlur = 0;
                 }
@@ -2395,7 +2465,7 @@
 
                         if (distance < 110) {
                             let opacity = 1 - (distance / 110);
-                            ctx.strokeStyle = `rgba(56, 189, 248, ${opacity * 0.18})`;
+                            ctx.strokeStyle = `rgba(13, 129, 202, ${opacity * 0.22})`;
                             ctx.lineWidth = 0.8;
                             ctx.beginPath();
                             ctx.moveTo(particles[a].x, particles[a].y);

@@ -2284,14 +2284,14 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 0;
     }
     3%, 17% { 
-        opacity: 1;
+        opacity: 0.2;
     }
     20% { 
         opacity: 0;
     }
 }
 
-/* Hero Overlay */
+/* Hero Overlay - Rich Midnight Dark Base to Prevent Transparency Issues */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -2299,10 +2299,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        to right,
-        rgba(15, 23, 42, 0.85) 0%,
-        rgba(15, 23, 42, 0.75) 50%,
-        rgba(15, 23, 42, 0.6) 100%
+        180deg,
+        rgba(6, 17, 34, 0.94) 0%,
+        rgba(8, 22, 44, 0.92) 50%,
+        rgba(6, 17, 34, 0.97) 100%
     );
     z-index: 1;
 }
@@ -2523,13 +2523,9 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: auto;
     }
     
-    /* Add a semi-transparent overlay for better text visibility */
+    /* Add a deep solid gradient overlay for crisp text visibility */
     .hero-overlay {
-        background: linear-gradient(
-            to right,
-            rgba(15, 23, 42, 0.8),
-            rgba(15, 23, 42, 0.8)
-        );
+        background: linear-gradient(180deg, rgba(6, 17, 34, 0.94) 0%, rgba(8, 22, 44, 0.92) 50%, rgba(6, 17, 34, 0.97) 100%) !important;
     }
 }
 
@@ -3200,14 +3196,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .unified-navbar .dropdown-item.active {
     background: #f1f5f9 !important;
-    color: #0284c7 !important;
+    color: #0D81CA !important;
     font-weight: 600;
 }
 
 /* High-Conversion "Book a Tour" CTA Pill Button */
 .btn-nav-book-tour {
-    background: #0284c7 !important;
-    border: 1px solid #0284c7 !important;
+    background: #0D81CA !important;
+    border: 1px solid #0D81CA !important;
     color: #ffffff !important;
     border-radius: 9999px !important;
     padding: 0.42rem 1.1rem !important;
@@ -3217,17 +3213,17 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex !important;
     align-items: center !important;
     gap: 0.4rem !important;
-    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.28) !important;
+    box-shadow: 0 2px 8px rgba(13, 129, 202, 0.28) !important;
     transition: all 0.2s ease !important;
     cursor: pointer !important;
     line-height: 1.4 !important;
 }
 .btn-nav-book-tour:hover {
-    background: #0369a1 !important;
-    border-color: #0369a1 !important;
+    background: #072B69 !important;
+    border-color: #072B69 !important;
     color: #ffffff !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38) !important;
+    box-shadow: 0 4px 14px rgba(7, 43, 105, 0.38) !important;
 }
 
 .nav-conversion-btn {
@@ -3251,13 +3247,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-nav-location:hover {
     background: #f1f5f9;
-    color: #0284c7 !important;
+    color: #0D81CA !important;
     border-color: #94a3b8;
     transform: translateY(-1px);
 }
 
 .btn-nav-whatsapp {
-    background: #22c55e;
+    background: linear-gradient(135deg, #4CB37C, #25D366);
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(76, 179, 124, 0.35);
+}
+.btn-nav-whatsapp:hover {
+    background: linear-gradient(135deg, #3ea56f, #20b85c);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 179, 124, 0.45);
+}
+
+.btn-nav-call {
+    background: #0D81CA;
     color: #ffffff !important;
     border: 1px solid #16a34a;
     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
@@ -3288,6 +3296,12 @@ h1, h2, h3, h4, h5, h6 {
     100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
 
+/* High-speed collapse & dropdown for mobile */
+.collapsing {
+    transition: height 0.12s cubic-bezier(0, 0, 0.2, 1) !important;
+    will-change: height;
+}
+
 @media (max-width: 1199.98px) {
     .unified-navbar {
         height: auto !important;
@@ -3299,47 +3313,66 @@ h1, h2, h3, h4, h5, h6 {
         height: 44px !important;
     }
     .unified-navbar .navbar-collapse {
-        background: #090e1a !important;
-        background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(9, 14, 26, 0.99) 100%) !important;
-        backdrop-filter: blur(28px) !important;
-        -webkit-backdrop-filter: blur(28px) !important;
-        border: 1px solid rgba(59, 130, 246, 0.35) !important;
-        border-radius: 18px !important;
-        padding: 1.25rem 1.15rem !important;
-        margin-top: 0.85rem !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+        padding: 1.25rem 1rem !important;
+        margin-top: 0.75rem !important;
         margin-bottom: 0.75rem !important;
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(56, 189, 248, 0.15) !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14) !important;
     }
     .unified-navbar .navbar-collapse .navbar-nav {
         display: flex;
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.35rem;
+        align-items: flex-start !important;
     }
     .unified-navbar .navbar-collapse .nav-link {
-        color: #f1f5f9 !important;
-        font-size: 1.02rem !important;
+        color: #1e293b !important;
+        font-size: 1rem !important;
         font-weight: 600 !important;
-        padding: 0.75rem 1rem !important;
-        border-radius: 10px;
-        transition: all 0.2s ease;
+        padding: 0.65rem 0.85rem !important;
+        border-radius: 8px !important;
+        width: 100% !important;
+        transition: background 0.1s ease;
     }
     .unified-navbar .navbar-collapse .nav-link:hover,
     .unified-navbar .navbar-collapse .nav-link.active {
-        color: #38bdf8 !important;
-        background: rgba(59, 130, 246, 0.18) !important;
-        padding-left: 1.25rem !important;
+        color: #0D81CA !important;
+        background: #f1f5f9 !important;
+        padding-left: 1rem !important;
     }
     .unified-navbar .navbar-collapse .dropdown-menu {
-        background: rgba(15, 23, 42, 0.95) !important;
-        border: 1px solid rgba(59, 130, 246, 0.25) !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
         border-radius: 12px !important;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin: 0.25rem 0.5rem !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+        transition: none !important;
+        animation: none !important;
+    }
+    .unified-navbar .navbar-collapse .dropdown-menu.show {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    .unified-navbar .navbar-collapse .dropdown-item {
+        color: #1e293b !important;
+        padding: 0.55rem 0.85rem !important;
+        font-weight: 500;
+        transition: background 0.1s ease;
+    }
+    .unified-navbar .navbar-collapse .dropdown-item:hover,
+    .unified-navbar .navbar-collapse .dropdown-item:active {
+        background: #f1f5f9 !important;
+        color: #0D81CA !important;
     }
     .mobile-quick-actions {
         margin-top: 1.25rem;
         padding-top: 1.25rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -3352,17 +3385,17 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 1040;
-    background: rgba(15, 23, 42, 0.94);
+    background: rgba(6, 17, 34, 0.96);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-top: 1px solid rgba(56, 189, 248, 0.25);
-    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(13, 129, 202, 0.35);
+    box-shadow: 0 -8px 25px rgba(6, 17, 34, 0.7);
     padding: 10px 16px;
     gap: 12px;
 }
 .mobile-sticky-bar .btn-sticky-call {
-    background: rgba(30, 41, 59, 0.85);
-    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: rgba(10, 28, 56, 0.85);
+    border: 1px solid rgba(13, 129, 202, 0.5);
     color: #38bdf8;
     font-size: 0.95rem;
     font-weight: 600;
@@ -3373,12 +3406,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-sticky-bar .btn-sticky-call:hover,
 .mobile-sticky-bar .btn-sticky-call:active {
-    background: rgba(56, 189, 248, 0.15);
+    background: rgba(13, 129, 202, 0.2);
     color: #7dd3fc;
-    border-color: #38bdf8;
+    border-color: #0D81CA;
 }
 .mobile-sticky-bar .btn-sticky-whatsapp {
-    background: linear-gradient(135deg, #25D366, #128C7E);
+    background: linear-gradient(135deg, #4CB37C, #25D366);
     border: none;
     color: #ffffff;
     font-size: 0.95rem;
@@ -3386,13 +3419,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 9999px;
     padding: 10px 16px;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    box-shadow: 0 4px 15px rgba(76, 179, 124, 0.4);
     transition: all 0.2s ease;
 }
 .mobile-sticky-bar .btn-sticky-whatsapp:hover,
 .mobile-sticky-bar .btn-sticky-whatsapp:active {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 20px rgba(76, 179, 124, 0.55);
     color: #ffffff;
 }
 @media (max-width: 767.98px) {
@@ -3402,4 +3435,505 @@ h1, h2, h3, h4, h5, h6 {
 }
 body.modal-open .mobile-sticky-bar {
     display: none !important;
+}
+
+/* =========================================================================
+   SCALEUP 4-COLOR CONSTITUENT ELEMENT ACCENTS (GOOGLE-INSPIRED HARMONY)
+   Tasteful, subtle, and high-conversion without being an eyesore
+========================================================================= */
+
+/* Brand Accent Stripe (Google-style multi-color bar) */
+.brand-stripe {
+    height: 3px;
+    background: linear-gradient(90deg, #0D81CA 0%, #072B69 33%, #4CB37C 66%, #7AB944 100%);
+    width: 100%;
+}
+
+/* Animated Gradient Underline: 4px Eternal Loading Bar Stream */
+.unified-navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px !important;
+    background: linear-gradient(
+        90deg,
+        #0D81CA 0%,
+        #38bdf8 20%,
+        #4CB37C 40%,
+        #7AB944 60%,
+        #f59e0b 80%,
+        #0D81CA 100%
+    ) !important;
+    background-size: 450px 100% !important;
+    animation: navbarEternalLoader 2s linear infinite !important;
+    box-shadow: 0 2px 10px rgba(13, 129, 202, 0.45), 0 0 5px rgba(76, 179, 124, 0.35);
+    z-index: 1035;
+    pointer-events: none;
+}
+
+@keyframes navbarEternalLoader {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 450px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .unified-navbar::after {
+        animation: none;
+    }
+}
+
+/* 1. Hero Stat Tiles with 4 Constituent Color Identity - Solid Midnight Background */
+.stat-tile-azure {
+    border: 1px solid rgba(13, 129, 202, 0.35) !important;
+    border-top: 3px solid #0D81CA !important;
+    background: #0a1c38 !important;
+}
+.stat-tile-azure .stat-label {
+    color: #38bdf8 !important;
+}
+.stat-tile-azure:hover {
+    border-color: #0D81CA !important;
+    background: #0e2448 !important;
+    box-shadow: 0 12px 28px rgba(13, 129, 202, 0.35) !important;
+    transform: translateY(-4px);
+}
+
+.stat-tile-emerald {
+    border: 1px solid rgba(76, 179, 124, 0.35) !important;
+    border-top: 3px solid #4CB37C !important;
+    background: #0a1c38 !important;
+}
+.stat-tile-emerald .stat-label {
+    color: #4CB37C !important;
+}
+.stat-tile-emerald:hover {
+    border-color: #4CB37C !important;
+    background: #0e2448 !important;
+    box-shadow: 0 12px 28px rgba(76, 179, 124, 0.35) !important;
+    transform: translateY(-4px);
+}
+
+.stat-tile-lime {
+    border: 1px solid rgba(122, 185, 68, 0.35) !important;
+    border-top: 3px solid #7AB944 !important;
+    background: #0a1c38 !important;
+}
+.stat-tile-lime .stat-label {
+    color: #a3e635 !important;
+}
+.stat-tile-lime:hover {
+    border-color: #7AB944 !important;
+    background: #0e2448 !important;
+    box-shadow: 0 12px 28px rgba(122, 185, 68, 0.35) !important;
+    transform: translateY(-4px);
+}
+
+.stat-tile-navy {
+    border: 1px solid rgba(56, 189, 248, 0.35) !important;
+    border-top: 3px solid #38bdf8 !important;
+    background: #0a1c38 !important;
+}
+.stat-tile-navy .stat-label {
+    color: #7dd3fc !important;
+}
+.stat-tile-navy:hover {
+    border-color: #38bdf8 !important;
+    background: #0e2448 !important;
+    box-shadow: 0 12px 28px rgba(56, 189, 248, 0.35) !important;
+    transform: translateY(-4px);
+}
+
+/* 2. Hero Feature Pills / Chips - Solid Midnight with Crisp Border Accents */
+.chip-brand-azure {
+    background: #0a1c38 !important;
+    border: 1.5px solid #0D81CA !important;
+    color: #e0f2fe !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+.chip-brand-azure i { color: #38bdf8 !important; }
+
+.chip-brand-emerald {
+    background: #0a1c38 !important;
+    border: 1.5px solid #4CB37C !important;
+    color: #f0fdf4 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+.chip-brand-emerald i { color: #4CB37C !important; }
+
+.chip-brand-lime {
+    background: #0a1c38 !important;
+    border: 1.5px solid #7AB944 !important;
+    color: #f7fee7 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+.chip-brand-lime i { color: #a3e635 !important; }
+
+.chip-brand-cyan {
+    background: #0a1c38 !important;
+    border: 1.5px solid #38bdf8 !important;
+    color: #f0f9ff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+.chip-brand-cyan i { color: #38bdf8 !important; }
+
+.chip-brand-amber {
+    background: #0a1c38 !important;
+    border: 1.5px solid #f59e0b !important;
+    color: #fefce8 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+.chip-brand-amber i { color: #fbbf24 !important; }
+
+/* 3. Tour Feature Cards (Walkthrough) - Solid Midnight Background */
+.tour-card-azure {
+    background: #0a1c38 !important;
+    border-left: 4px solid #0D81CA !important;
+}
+.tour-card-azure:hover {
+    background: #0e2448 !important;
+    border-left-color: #38bdf8 !important;
+    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(13, 129, 202, 0.25) !important;
+}
+.tour-card-azure .feature-icon-badge {
+    background: rgba(13, 129, 202, 0.18);
+    color: #38bdf8;
+}
+
+.tour-card-lime {
+    background: #0a1c38 !important;
+    border-left: 4px solid #7AB944 !important;
+}
+.tour-card-lime:hover {
+    background: #0e2448 !important;
+    border-left-color: #a3e635 !important;
+    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(122, 185, 68, 0.25) !important;
+}
+.tour-card-lime .feature-icon-badge {
+    background: rgba(122, 185, 68, 0.18);
+    color: #a3e635;
+}
+
+.tour-card-amber {
+    background: #0a1c38 !important;
+    border-left: 4px solid #f59e0b !important;
+}
+.tour-card-amber:hover {
+    background: #0e2448 !important;
+    border-left-color: #fbbf24 !important;
+    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(245, 158, 11, 0.25) !important;
+}
+.tour-card-amber .feature-icon-badge {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+}
+
+.tour-card-emerald {
+    background: #0a1c38 !important;
+    border-left: 4px solid #4CB37C !important;
+}
+.tour-card-emerald:hover {
+    background: #0e2448 !important;
+    border-left-color: #34d399 !important;
+    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(76, 179, 124, 0.25) !important;
+}
+.tour-card-emerald .feature-icon-badge {
+    background: rgba(76, 179, 124, 0.18);
+    color: #4CB37C;
+}
+
+.feature-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* 4. Pricing Cards (Constituent 4-Color Accents) - Solid Midnight Background */
+.pricing-card-azure {
+    background: #0a1c38 !important;
+    border-top: 4px solid #0D81CA !important;
+}
+.pricing-card-azure:hover {
+    background: #0e2448 !important;
+    border-color: #0D81CA !important;
+    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.3) !important;
+}
+.pricing-card-azure .pricing-cost {
+    color: #38bdf8 !important;
+}
+.pricing-card-azure .fa-check {
+    color: #0D81CA !important;
+}
+
+.pricing-card-emerald {
+    background: #0a1c38 !important;
+    border: 1.5px solid rgba(76, 179, 124, 0.5) !important;
+    border-top: 4px solid #4CB37C !important;
+}
+.pricing-card-emerald:hover {
+    background: #0e2448 !important;
+    border-color: #4CB37C !important;
+    box-shadow: 0 18px 40px rgba(76, 179, 124, 0.35) !important;
+}
+.pricing-card-emerald .pricing-cost {
+    color: #4CB37C !important;
+}
+.pricing-card-emerald .fa-check {
+    color: #4CB37C !important;
+}
+
+.pricing-card-lime {
+    background: #0a1c38 !important;
+    border-top: 4px solid #7AB944 !important;
+}
+.pricing-card-lime:hover {
+    background: #0e2448 !important;
+    border-color: #7AB944 !important;
+    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.3) !important;
+}
+.pricing-card-lime .pricing-cost {
+    color: #a3e635 !important;
+}
+.pricing-card-lime .fa-check {
+    color: #7AB944 !important;
+}
+
+.pricing-card-amber {
+    background: #0a1c38 !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+    border-top: 4px solid #f59e0b !important;
+}
+.pricing-card-amber:hover {
+    background: #0e2448 !important;
+    border-color: #f59e0b !important;
+    box-shadow: 0 18px 40px rgba(245, 158, 11, 0.35) !important;
+}
+.pricing-card-amber .pricing-cost {
+    color: #fbbf24 !important;
+}
+.pricing-card-amber .fa-check {
+    color: #f59e0b !important;
+}
+
+.pricing-card-cyan {
+    background: #0a1c38 !important;
+    border-top: 4px solid #38bdf8 !important;
+}
+.pricing-card-cyan:hover {
+    background: #0e2448 !important;
+    border-color: #38bdf8 !important;
+    box-shadow: 0 16px 36px rgba(56, 189, 248, 0.3) !important;
+}
+.pricing-card-cyan .pricing-cost {
+    color: #38bdf8 !important;
+}
+.pricing-card-cyan .fa-check {
+    color: #38bdf8 !important;
+}
+
+/* 5. Amenities Cards (Harmonized Logo-Constituent Color Themes) - Solid Midnight Background */
+.amenity-theme-azure {
+    background: #0a1c38 !important;
+    border-top: 3px solid #0D81CA !important;
+}
+.amenity-theme-azure .amenity-icon-glow {
+    background: rgba(13, 129, 202, 0.16);
+    color: #38bdf8;
+    border: 1px solid rgba(13, 129, 202, 0.4);
+}
+.amenity-theme-azure:hover {
+    background: #0e2448 !important;
+    border-color: rgba(13, 129, 202, 0.6) !important;
+    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important;
+}
+.amenity-theme-azure:hover .amenity-icon-glow {
+    background: #0D81CA;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(13, 129, 202, 0.55);
+}
+
+.amenity-theme-emerald {
+    background: #0a1c38 !important;
+    border-top: 3px solid #4CB37C !important;
+}
+.amenity-theme-emerald .amenity-icon-glow {
+    background: rgba(76, 179, 124, 0.16);
+    color: #4CB37C;
+    border: 1px solid rgba(76, 179, 124, 0.4);
+}
+.amenity-theme-emerald:hover {
+    background: #0e2448 !important;
+    border-color: rgba(76, 179, 124, 0.6) !important;
+    box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important;
+}
+.amenity-theme-emerald:hover .amenity-icon-glow {
+    background: #4CB37C;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(76, 179, 124, 0.55);
+}
+
+.amenity-theme-lime {
+    background: #0a1c38 !important;
+    border-top: 3px solid #7AB944 !important;
+}
+.amenity-theme-lime .amenity-icon-glow {
+    background: rgba(122, 185, 68, 0.16);
+    color: #a3e635;
+    border: 1px solid rgba(122, 185, 68, 0.4);
+}
+.amenity-theme-lime:hover {
+    background: #0e2448 !important;
+    border-color: rgba(122, 185, 68, 0.6) !important;
+    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important;
+}
+.amenity-theme-lime:hover .amenity-icon-glow {
+    background: #7AB944;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(122, 185, 68, 0.55);
+}
+
+.amenity-theme-amber {
+    background: #0a1c38 !important;
+    border-top: 3px solid #f59e0b !important;
+}
+.amenity-theme-amber .amenity-icon-glow {
+    background: rgba(245, 158, 11, 0.16);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+.amenity-theme-amber:hover {
+    background: #0e2448 !important;
+    border-color: rgba(245, 158, 11, 0.6) !important;
+    box-shadow: 0 16px 36px rgba(245, 158, 11, 0.25) !important;
+}
+.amenity-theme-amber:hover .amenity-icon-glow {
+    background: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.55);
+}
+
+.amenity-theme-cyan {
+    background: #0a1c38 !important;
+    border-top: 3px solid #38bdf8 !important;
+}
+.amenity-theme-cyan .amenity-icon-glow {
+    background: rgba(56, 189, 248, 0.16);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+.amenity-theme-cyan:hover {
+    background: #0e2448 !important;
+    border-color: rgba(56, 189, 248, 0.6) !important;
+    box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25) !important;
+}
+.amenity-theme-cyan:hover .amenity-icon-glow {
+    background: #38bdf8;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.55);
+}
+
+/* 6. SEO Pillar Cards (3 Cards = Azure, Emerald, Lime) - Solid Midnight Background */
+.seo-card-azure {
+    background: #0a1c38 !important;
+    border-top: 4px solid #0D81CA !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.seo-card-azure:hover {
+    background: #0e2448 !important;
+    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important;
+    transform: translateY(-4px);
+}
+.seo-card-azure .seo-pillar-icon {
+    color: #38bdf8;
+}
+
+.seo-card-emerald {
+    background: #0a1c38 !important;
+    border-top: 4px solid #4CB37C !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.seo-card-emerald:hover {
+    background: #0e2448 !important;
+    box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important;
+    transform: translateY(-4px);
+}
+.seo-card-emerald .seo-pillar-icon {
+    color: #4CB37C;
+}
+
+.seo-card-lime {
+    background: #0a1c38 !important;
+    border-top: 4px solid #7AB944 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.seo-card-lime:hover {
+    background: #0e2448 !important;
+    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important;
+    transform: translateY(-4px);
+}
+.seo-card-lime .seo-pillar-icon {
+    color: #a3e635;
+}
+
+/* 7. Pune Centres Network Cards */
+.location-card-azure {
+    border-top: 4px solid #0D81CA !important;
+    box-shadow: 0 12px 30px rgba(13, 129, 202, 0.15) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.location-card-azure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(13, 129, 202, 0.3) !important;
+}
+
+.location-card-emerald {
+    border-top: 4px solid #4CB37C !important;
+    box-shadow: 0 12px 30px rgba(76, 179, 124, 0.15) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.location-card-emerald:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(76, 179, 124, 0.3) !important;
+}
+
+.location-card-lime {
+    border-top: 3px solid rgba(122, 185, 68, 0.6) !important;
+    transition: transform 0.3s ease;
+}
+.location-card-lime:hover {
+    transform: translateY(-2px);
+}
+
+.location-card-cyan {
+    border-top: 3px solid rgba(56, 189, 248, 0.6) !important;
+    transition: transform 0.3s ease;
+}
+.location-card-cyan:hover {
+    transform: translateY(-2px);
+}
+
+/* 8. Savings Calculator Brand Accents */
+.calc-summary-card {
+    background: linear-gradient(145deg, rgba(14, 36, 72, 0.95) 0%, rgba(6, 17, 34, 0.98) 100%) !important;
+    border: 1.5px solid rgba(13, 129, 202, 0.35) !important;
+    border-top: 4px solid #0D81CA !important;
+}
+.calc-cost-azure {
+    color: #38bdf8 !important;
+}
+.calc-saved-emerald {
+    color: #4CB37C !important;
+}
+.calc-saved-lime {
+    color: #a3e635 !important;
 }

@@ -1,14 +1,21 @@
 :root {
-    /* Main Colors */
-    --primary: #3b82f6;
-    --primary-dark: #2563eb;
-    --primary-light: rgba(59, 130, 246, 0.1);
+    /* ScaleUp Logo Brand Colors */
+    --primary: #0D81CA;          /* ScaleUp Royal Azure Blue */
+    --primary-dark: #072B69;     /* ScaleUp Anchor Deep Navy */
+    --primary-light: rgba(13, 129, 202, 0.12);
+    --primary-glow: rgba(13, 129, 202, 0.35);
     
-    /* Dark Theme Colors */
-    --bg-primary: #0f172a;    /* Dark blue background */
-    --bg-secondary: #1e293b;  /* Slightly lighter blue */
-    --bg-card: #1e293b;       /* Card background */
-    --bg-hover: #2d3748;      /* Hover state color */
+    /* ScaleUp Logo Arrow Green Accents */
+    --accent-emerald: #4CB37C;   /* ScaleUp Growth Emerald */
+    --accent-lime: #7AB944;      /* ScaleUp Momentum Lime */
+    --brand-gradient: linear-gradient(135deg, #0D81CA 0%, #4CB37C 100%);
+    --brand-gradient-tri: linear-gradient(135deg, #072B69 0%, #0D81CA 50%, #4CB37C 100%);
+
+    /* Logo-Inspired Deep Midnight Navy Backgrounds */
+    --bg-primary: #061122;       /* Deep ScaleUp midnight navy */
+    --bg-secondary: #0a1c38;     /* Rich card & section base */
+    --bg-card: #0e2448;          /* Elevated card layer */
+    --bg-hover: #143564;         /* Hover state color */
     
     /* Text Colors */
     --text-primary: #f8fafc;   /* Almost white */
@@ -16,19 +23,30 @@
     --text-muted: #94a3b8;     /* Muted text */
     
     /* Border Colors */
-    --border-light: #334155;   /* Subtle borders */
-    --border-dark: #475569;    /* Darker borders */
+    --border-light: rgba(13, 129, 202, 0.2);   /* Subtle brand borders */
+    --border-dark: rgba(7, 43, 105, 0.55);     /* Deep navy borders */
+    --border-brand: rgba(13, 129, 202, 0.35);
     
     /* Shadow Effects */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 12px rgba(6, 17, 34, 0.5);
+    --shadow-lg: 0 10px 25px rgba(6, 17, 34, 0.7);
+    --shadow-brand: 0 8px 30px rgba(13, 129, 202, 0.25);
+    --shadow-green: 0 8px 25px rgba(76, 179, 124, 0.25);
     
     /* Additional Colors */
-    --success: #22c55e;
+    --success: #4CB37C;
     --danger: #ef4444;
     --warning: #f59e0b;
-    --info: #3b82f6;
+    --info: #0D81CA;
+
+    /* ScaleUp 4-Constituent System Tokens (Google-style brand harmony) */
+    --brand-azure: #0D81CA;
+    --brand-navy: #072B69;
+    --brand-emerald: #4CB37C;
+    --brand-lime: #7AB944;
+    --brand-cyan: #38bdf8;
+    --brand-bar: linear-gradient(90deg, #0D81CA 0%, #072B69 33%, #4CB37C 66%, #7AB944 100%);
 }
 
 /* Base Styles */
@@ -174,7 +192,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9));
+    background: linear-gradient(rgba(6, 17, 34, 0.85), rgba(7, 43, 105, 0.9));
 }
 
 /* Feature Cards */
@@ -286,7 +304,7 @@ body {
 }
 
 .gallery-overlay {
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(6, 17, 34, 0.85);
     position: absolute;
     inset: 0;
     display: flex;

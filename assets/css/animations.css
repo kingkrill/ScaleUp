@@ -571,7 +571,7 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
-    background: linear-gradient(125deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(125deg, #061122 0%, #0a1c38 100%);
 }
 
 /* Animated Gradient Spheres */
@@ -583,8 +583,8 @@
     height: 80vw;
     background: radial-gradient(
         circle,
-        rgba(59, 130, 246, 0.15) 0%,
-        rgba(37, 99, 235, 0.1) 30%,
+        rgba(13, 129, 202, 0.22) 0%,
+        rgba(7, 43, 105, 0.15) 30%,
         transparent 70%
     );
     border-radius: 50%;
@@ -600,8 +600,8 @@
     height: 60vw;
     background: radial-gradient(
         circle,
-        rgba(99, 102, 241, 0.15) 0%,
-        rgba(79, 70, 229, 0.1) 30%,
+        rgba(76, 179, 124, 0.18) 0%,
+        rgba(122, 185, 68, 0.12) 30%,
         transparent 70%
     );
     border-radius: 50%;
@@ -616,8 +616,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(13, 129, 202, 0.08) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(13, 129, 202, 0.08) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
     opacity: 0.5;
@@ -654,7 +654,7 @@
     bottom: 0;
     background: radial-gradient(
         circle at 50% 0%,
-        rgba(59, 130, 246, 0.15) 0%,
+        rgba(13, 129, 202, 0.2) 0%,
         transparent 60%
     );
     animation: glowPulse 8s ease-in-out infinite;
