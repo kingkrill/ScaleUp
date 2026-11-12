@@ -183,8 +183,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/main.css?v=5" rel="stylesheet">
+    <link href="assets/css/theme.css?v=6" rel="stylesheet">
+    <link href="assets/css/main.css?v=6" rel="stylesheet">
     <link href="assets/css/animations.css" rel="stylesheet">
 
     <!-- Antigravity Background & Unified Navbar Styles -->
@@ -212,41 +212,37 @@
             z-index: 1030;
         }
 
-        /* Animated Gradient Underline: Sleek 2.5px Executive Brand Stream (5s cycle) */
+        /* Animated Gradient Underline: 4px Multicolored Brand Stream Traveling Left-to-Right */
         .unified-navbar::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 2.5px !important;
-            background: linear-gradient(
+            height: 4px;
+            background-image: linear-gradient(
                 90deg,
                 #0D81CA 0%,
-                #38bdf8 25%,
-                #4CB37C 50%,
-                #7AB944 75%,
+                #38bdf8 20%,
+                #4CB37C 40%,
+                #7AB944 60%,
+                #f59e0b 80%,
                 #0D81CA 100%
-            ) !important;
-            background-size: 480px 100% !important;
-            animation: navbarEternalLoader 5s linear infinite !important;
-            box-shadow: 0 1px 6px rgba(13, 129, 202, 0.25);
+            );
+            background-size: 450px 100%;
+            background-repeat: repeat-x;
+            animation: navbarEternalLoader 2.2s linear infinite;
+            box-shadow: 0 2px 10px rgba(13, 129, 202, 0.45), 0 0 6px rgba(76, 179, 124, 0.35);
             z-index: 1035;
             pointer-events: none;
         }
 
         @keyframes navbarEternalLoader {
             0% {
-                background-position: 0 0;
+                background-position: 0px 0px;
             }
             100% {
-                background-position: 480px 0;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .unified-navbar::after {
-                animation: none !important;
+                background-position: 450px 0px;
             }
         }
 
@@ -831,30 +827,31 @@
         }
 
         /* =============================================================
-           AMENITIES (UNIFIED SOLID CARDS + BRAND AZURE STRUCTURE)
+           AMENITIES (COMPLEMENTARY DARK FOREST EMERALD + #4CB37C)
         ============================================================= */
         .amenities-animated-section {
-            background: #061122;
+            background: linear-gradient(180deg, #061c17 0%, #092921 50%, #061c17 100%) !important;
             position: relative;
             overflow: hidden;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+            border-top: 1px solid rgba(76, 179, 124, 0.25);
+            border-bottom: 1px solid rgba(76, 179, 124, 0.25);
         }
 
         .amenity-card-glass {
-            background: #0a1c38 !important;
-            border: 1px solid rgba(56, 189, 248, 0.16);
+            background: #0b3027 !important;
+            border: 1px solid rgba(76, 179, 124, 0.26) !important;
             border-radius: 18px;
             padding: 1.75rem 1.25rem;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 26px rgba(6, 17, 34, 0.5);
+            box-shadow: 0 10px 28px rgba(4, 18, 14, 0.55);
         }
         .amenity-card-glass:hover {
             transform: translateY(-5px);
-            background: #0e2448 !important;
-            border-color: rgba(13, 129, 202, 0.55);
-            box-shadow: 0 16px 36px rgba(6, 17, 34, 0.7);
+            background: #103f33 !important;
+            border-color: rgba(76, 179, 124, 0.65) !important;
+            box-shadow: 0 16px 36px rgba(4, 18, 14, 0.75);
         }
 
         .amenity-icon-glow {
@@ -867,15 +864,15 @@
             margin-bottom: 1rem;
             transition: all 0.25s ease;
             font-size: 1.45rem;
-            background: rgba(13, 129, 202, 0.16);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.28);
+            background: rgba(76, 179, 124, 0.16);
+            color: #4CB37C;
+            border: 1px solid rgba(76, 179, 124, 0.36);
         }
         .amenity-card-glass:hover .amenity-icon-glow {
-            background: #0D81CA;
-            color: #ffffff;
-            border-color: #0D81CA;
-            box-shadow: 0 0 18px rgba(13, 129, 202, 0.45);
+            background: #4CB37C;
+            color: #061c17;
+            border-color: #4CB37C;
+            box-shadow: 0 0 18px rgba(76, 179, 124, 0.48);
         }
 
         /* =============================================================
@@ -931,32 +928,40 @@
             vertical-align: middle;
         }
 
-        /* FAQ Accordion — Unified Solid #0a1c38 Cards */
+        /* FAQ Section — Distinct ScaleUp Deep Anchor Navy Band for Clear Page Division */
+        .faq-section-band {
+            background: linear-gradient(180deg, #0b2042 0%, #102c59 50%, #0b2042 100%) !important;
+            border-top: 1px solid rgba(56, 189, 248, 0.25);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        /* FAQ Accordion — Deep Midnight Cards Contrasting Against Anchor Navy Band */
         #scaleupFaqAccordion .accordion-item {
-            background: #0a1c38 !important;
-            border: 1px solid rgba(56, 189, 248, 0.16) !important;
+            background: #061329 !important;
+            border: 1px solid rgba(56, 189, 248, 0.22) !important;
             border-radius: 14px !important;
             margin-bottom: 0.85rem;
             overflow: hidden;
+            box-shadow: 0 10px 26px rgba(4, 12, 26, 0.45);
             transition: border-color 0.25s ease, background-color 0.25s ease;
         }
         #scaleupFaqAccordion .accordion-item:hover {
-            border-color: rgba(13, 129, 202, 0.55) !important;
+            border-color: rgba(56, 189, 248, 0.5) !important;
         }
         #scaleupFaqAccordion .accordion-button {
-            background: #0a1c38 !important;
+            background: #061329 !important;
             color: #f8fafc !important;
             padding: 1.15rem 1.35rem;
             box-shadow: none !important;
         }
         #scaleupFaqAccordion .accordion-button:not(.collapsed) {
-            background: #0e2448 !important;
+            background: #0a2042 !important;
             color: #38bdf8 !important;
         }
         #scaleupFaqAccordion .accordion-body {
-            background: #0a1c38 !important;
+            background: #061329 !important;
             color: #cbd5e1 !important;
-            border-top: 1px solid rgba(56, 189, 248, 0.12);
+            border-top: 1px solid rgba(56, 189, 248, 0.14);
             padding: 1.15rem 1.35rem;
         }
     </style>
@@ -1752,7 +1757,7 @@
     <section class="section-rhythm amenities-animated-section position-relative overflow-hidden" id="amenities">
         <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="eyebrow-badge mb-2"><i class="fas fa-check-double"></i> Everything You Need</span>
+                <span class="eyebrow-badge mb-2" style="background: rgba(76, 179, 124, 0.14); border-color: rgba(76, 179, 124, 0.36); color: #4CB37C;"><i class="fas fa-check-double"></i> Everything You Need</span>
                 <h2 class="display-6 fw-bold text-white mb-2">All-Inclusive Business Amenities</h2>
                 <p class="fs-5" style="color: #cbd5e1;">Zero hidden utility costs so you can focus 100% on scaling your business in Pune.</p>
             </div>
@@ -1962,7 +1967,7 @@
     <!-- =========================================================================
          FREQUENTLY ASKED QUESTIONS (SEO OPTIMIZED)
     ========================================================================= -->
-    <section class="section-rhythm position-relative overflow-hidden" id="faq" style="background-color: #061122;">
+    <section class="section-rhythm faq-section-band position-relative overflow-hidden" id="faq">
         <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
                 <span class="eyebrow-badge mb-2"><i class="fas fa-question-circle"></i> Clear Answers</span>
