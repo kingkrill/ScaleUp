@@ -3385,8 +3385,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================================================
-   STICKY MOBILE BOTTOM ACTION BAR (Direct Calls & WhatsApp CRO)
+   FLOATING QUICK DOCK & STICKY MOBILE BAR (Trial + Call + WhatsApp CRO)
 ========================================================================= */
+.floating-quick-dock .btn-dock-pill {
+    border-radius: 9999px;
+    padding: 0.52rem 1.05rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid #ffffff !important;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.floating-quick-dock .btn-dock-pill:hover {
+    transform: translateY(-2px);
+}
+.floating-quick-dock .btn-dock-trial {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    color: #061122 !important;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45) !important;
+}
+.floating-quick-dock .btn-dock-whatsapp {
+    background: linear-gradient(135deg, #4CB37C, #25D366) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(76, 179, 124, 0.45) !important;
+}
+.floating-quick-dock .btn-dock-call {
+    background: #0D81CA !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(13, 129, 202, 0.45) !important;
+}
+
 .mobile-sticky-bar {
     position: fixed;
     bottom: 0;
@@ -3401,14 +3432,44 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 16px;
     gap: 12px;
 }
+.mobile-sticky-bar.mobile-sticky-bar--with-trial {
+    padding: 8px 12px 10px;
+    flex-direction: column;
+    gap: 8px;
+}
+.mobile-sticky-bar .mobile-sticky-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.mobile-sticky-bar .btn-sticky-trial {
+    width: 100%;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: none;
+    color: #061122;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 9999px;
+    padding: 8px 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.mobile-sticky-bar .btn-sticky-trial:hover,
+.mobile-sticky-bar .btn-sticky-trial:active {
+    transform: translateY(-1px);
+    color: #061122;
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
+}
 .mobile-sticky-bar .btn-sticky-call {
     background: rgba(10, 28, 56, 0.85);
     border: 1px solid rgba(13, 129, 202, 0.5);
     color: #38bdf8;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     border-radius: 9999px;
-    padding: 10px 16px;
+    padding: 8px 14px;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -3422,10 +3483,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #4CB37C, #25D366);
     border: none;
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
     border-radius: 9999px;
-    padding: 10px 16px;
+    padding: 8px 14px;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(76, 179, 124, 0.4);
     transition: all 0.2s ease;
@@ -3438,7 +3499,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767.98px) {
     body {
-        padding-bottom: 70px !important;
+        padding-bottom: 102px !important;
     }
 }
 body.modal-open .mobile-sticky-bar {

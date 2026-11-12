@@ -240,8 +240,8 @@
                             </a>
                         </div>
                         <div class="col-12 mt-2">
-                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
-                                <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
+                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+                                <i class="fas fa-calendar-check me-1"></i> Book Free Trial
                             </button>
                         </div>
                         <div class="col-12 mt-2">
@@ -1332,7 +1332,7 @@
         }
 
         function selectDayPassOption() {
-            selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass');
+            selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial');
         }
 
         function openGalleryModal(imgSrc, caption) {
@@ -1391,24 +1391,33 @@
 
     <!-- Floating Quick Contact Dock -->
     <div class="floating-quick-dock d-none d-md-flex flex-column align-items-end gap-2" style="position: fixed; bottom: 25px; right: 25px; z-index: 1050;">
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(deccan-hub.html)" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #4CB37C; box-shadow: 0 8px 25px rgba(76, 179, 124, 0.4) !important;">
+        <button type="button" class="btn-dock-pill btn-dock-trial shadow-lg hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+            <i class="fas fa-ticket-alt fs-6"></i>
+            <span>Book Free Trial</span>
+        </button>
+        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(deccan-hub.html)" target="_blank" rel="noopener noreferrer" class="btn-dock-pill btn-dock-whatsapp shadow-lg hover-scale">
             <i class="fab fa-whatsapp fs-5"></i>
             <span>Chat on WhatsApp</span>
         </a>
-        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0D81CA; box-shadow: 0 8px 25px rgba(13, 129, 202, 0.4) !important;">
+        <a href="tel:+919822268333" class="btn-dock-pill btn-dock-call shadow-lg hover-scale">
             <i class="fas fa-phone-alt fs-6"></i>
             <span>Call 9822268333</span>
         </a>
     </div>
 
     <!-- Mobile Sticky Contact Bar (Visible only on mobile < 768px) -->
-    <div class="mobile-sticky-bar d-flex d-md-none align-items-center justify-content-between">
-        <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
-            <i class="fas fa-phone-alt me-2"></i> Call Now
-        </a>
-        <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'm%20interested%20in%20visiting%20the%20Deccan%20Hub%20Flagship%20Centre%20(KBC)." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
-            <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
-        </a>
+    <div class="mobile-sticky-bar mobile-sticky-bar--with-trial d-flex d-md-none align-items-stretch">
+        <button type="button" class="btn-sticky-trial d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+            <i class="fas fa-ticket-alt me-2"></i> Book Free Trial
+        </button>
+        <div class="mobile-sticky-row">
+            <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
+                <i class="fas fa-phone-alt me-2"></i> Call Now
+            </a>
+            <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'm%20interested%20in%20visiting%20the%20Deccan%20Hub%20Flagship%20Centre%20(KBC)." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
+                <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
+            </a>
+        </div>
     </div>
 </body>
 </html>

@@ -221,8 +221,8 @@
                             </a>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="#contactFormSection" class="btn btn-primary w-100 rounded-pill py-2 fw-semibold text-center">
-                                <i class="fas fa-calendar-check me-1"></i> Schedule Tour / Free Day Pass
+                            <a href="#contactFormSection" onclick="var w=document.getElementById('contactWorkspace');if(w)w.value='Free 1-Day Trial Pass';" class="btn btn-primary w-100 rounded-pill py-2 fw-semibold text-center">
+                                <i class="fas fa-calendar-check me-1"></i> Book Free Trial
                             </a>
                         </div>
                         <div class="col-12 mt-2">
@@ -374,7 +374,7 @@
                                 </div>
                                 <div class="col-12 mt-3">
                                     <button type="submit" id="contactSubmitBtn" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-lg fs-6">
-                                        <i class="fas fa-paper-plane me-2"></i> Confirm Visit &amp; Claim Free Day Pass
+                                        <i class="fas fa-paper-plane me-2"></i> Confirm Visit &amp; Book Free Trial
                                     </button>
                                     <p class="lead-consent-note mb-0 mt-2">
                                         By submitting, you agree to receive a call, WhatsApp, or email from ScaleUp CoWork regarding your workspace inquiry and accept our <a href="privacy-policy.html">Privacy Policy</a>. Your details are never sold to third parties.
@@ -718,24 +718,33 @@
 
     <!-- Floating Quick Contact Dock -->
     <div class="floating-quick-dock d-none d-md-flex flex-column align-items-end gap-2" style="position: fixed; bottom: 25px; right: 25px; z-index: 1050;">
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45) !important;">
+        <a href="#contactFormSection" onclick="var w=document.getElementById('contactWorkspace');if(w)w.value='Free 1-Day Trial Pass';setTimeout(function(){var n=document.getElementById('contactName');if(n)n.focus();},350);" class="btn-dock-pill btn-dock-trial shadow-lg hover-scale">
+            <i class="fas fa-ticket-alt fs-6"></i>
+            <span>Book Free Trial</span>
+        </a>
+        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn-dock-pill btn-dock-whatsapp shadow-lg hover-scale">
             <i class="fab fa-whatsapp fs-5"></i>
             <span>Chat on WhatsApp</span>
         </a>
-        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0284c7; box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45) !important;">
+        <a href="tel:+919822268333" class="btn-dock-pill btn-dock-call shadow-lg hover-scale">
             <i class="fas fa-phone-alt fs-6"></i>
             <span>Call 9822268333</span>
         </a>
     </div>
 
     <!-- Mobile Sticky Contact Bar (Visible only on mobile < 768px) -->
-    <div class="mobile-sticky-bar d-flex d-md-none align-items-center justify-content-between">
-        <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
-            <i class="fas fa-phone-alt me-2"></i> Call Now
+    <div class="mobile-sticky-bar mobile-sticky-bar--with-trial d-flex d-md-none align-items-stretch">
+        <a href="#contactFormSection" onclick="var w=document.getElementById('contactWorkspace');if(w)w.value='Free 1-Day Trial Pass';setTimeout(function(){var n=document.getElementById('contactName');if(n)n.focus();},350);" class="btn-sticky-trial d-flex align-items-center justify-content-center">
+            <i class="fas fa-ticket-alt me-2"></i> Book Free Trial
         </a>
-        <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'd%20like%20to%20get%20in%20touch%20regarding%20coworking%20options%20in%20Pune." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
-            <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
-        </a>
+        <div class="mobile-sticky-row">
+            <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
+                <i class="fas fa-phone-alt me-2"></i> Call Now
+            </a>
+            <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'd%20like%20to%20get%20in%20touch%20regarding%20coworking%20options%20in%20Pune." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
+                <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
+            </a>
+        </div>
     </div>
 </body>
 </html>

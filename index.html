@@ -959,31 +959,6 @@
             border-top: 1px solid rgba(56, 189, 248, 0.12);
             padding: 1.15rem 1.35rem;
         }
-
-        /* Floating Mobile Conversion Bar */
-        .floating-mobile-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(6, 17, 34, 0.97);
-            backdrop-filter: blur(16px);
-            padding: 0.65rem 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            z-index: 1040;
-            display: none;
-            box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.7);
-        }
-
-        @media (max-width: 991px) {
-            .floating-mobile-cta {
-                display: flex;
-                gap: 0.75rem;
-            }
-            body {
-                padding-bottom: 64px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -1071,8 +1046,8 @@
                             </a>
                         </div>
                         <div class="col-12 mt-2">
-                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
-                                <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
+                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+                                <i class="fas fa-calendar-check me-1"></i> Book Free Trial
                             </button>
                         </div>
                         <div class="col-12 mt-2">
@@ -1549,8 +1524,8 @@
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <div class="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
-                            <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
-                                <i class="fas fa-ticket-alt me-1"></i> Claim Free Day Pass
+                            <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+                                <i class="fas fa-ticket-alt me-1"></i> Book Free Trial
                             </button>
                             <a href="tel:+919822268333" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
                                 <i class="fas fa-phone-alt me-1"></i> 9822268333
@@ -2246,17 +2221,6 @@
         </div>
     </footer>
 
-    <!-- =========================================================================
-         MOBILE FLOATING BOTTOM ACTION BAR (Direct Calls & WhatsApp)
-    ========================================================================= -->
-    <div class="floating-mobile-cta">
-        <a href="tel:+919822268333" class="btn btn-primary w-50 rounded-pill fw-bold d-flex align-items-center justify-content-center">
-            <i class="fas fa-phone-alt me-2"></i> Call Now
-        </a>
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn btn-success w-50 rounded-pill fw-bold d-flex align-items-center justify-content-center">
-            <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
-        </a>
-    </div>
 
     <!-- =========================================================================
          BOOKING / INQUIRY MODAL
@@ -2350,24 +2314,33 @@
          FLOATING QUICK CONTACT DOCK (High-Conversion Lead Magnet for Desktop & Tablets)
     ========================================================================= -->
     <div class="floating-quick-dock d-none d-md-flex flex-column align-items-end gap-2" style="position: fixed; bottom: 25px; right: 25px; z-index: 1050;">
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: linear-gradient(135deg, #4CB37C, #25D366); box-shadow: 0 8px 25px rgba(76, 179, 124, 0.45) !important;">
+        <button type="button" class="btn-dock-pill btn-dock-trial shadow-lg hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+            <i class="fas fa-ticket-alt fs-6"></i>
+            <span>Book Free Trial</span>
+        </button>
+        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn-dock-pill btn-dock-whatsapp shadow-lg hover-scale">
             <i class="fab fa-whatsapp fs-5"></i>
             <span>Chat on WhatsApp</span>
         </a>
-        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0D81CA; box-shadow: 0 8px 25px rgba(13, 129, 202, 0.45) !important;">
+        <a href="tel:+919822268333" class="btn-dock-pill btn-dock-call shadow-lg hover-scale">
             <i class="fas fa-phone-alt fs-6"></i>
             <span>Call 9822268333</span>
         </a>
     </div>
 
     <!-- Mobile Sticky Contact Bar (Visible only on mobile < 768px) -->
-    <div class="mobile-sticky-bar d-flex d-md-none align-items-center justify-content-between">
-        <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
-            <i class="fas fa-phone-alt me-2"></i> Call Now
-        </a>
-        <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'd%20like%20to%20inquire%20about%20coworking%20spaces%20in%20Pune." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
-            <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
-        </a>
+    <div class="mobile-sticky-bar mobile-sticky-bar--with-trial d-flex d-md-none align-items-stretch">
+        <button type="button" class="btn-sticky-trial d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial')">
+            <i class="fas fa-ticket-alt me-2"></i> Book Free Trial
+        </button>
+        <div class="mobile-sticky-row">
+            <a href="tel:+919822268333" class="btn-sticky-call d-flex align-items-center justify-content-center flex-fill">
+                <i class="fas fa-phone-alt me-2"></i> Call Now
+            </a>
+            <a href="https://wa.me/919822268333?text=Hi%20ScaleUp%20team,%20I'd%20like%20to%20inquire%20about%20coworking%20spaces%20in%20Pune." target="_blank" rel="noopener noreferrer" class="btn-sticky-whatsapp d-flex align-items-center justify-content-center flex-fill">
+                <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp
+            </a>
+        </div>
     </div>
 
     <!-- Scripts -->
@@ -2607,7 +2580,7 @@
 
         // Pre-select Day Pass on Schedule Form
         function selectDayPassOption() {
-            selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass');
+            selectBookingPlan('Free 1-Day Trial Pass', 'Book Free Trial');
         }
 
         // Expand/Collapse Pune Workspace Comparison Guide (100% DOM preserved for SEO)
