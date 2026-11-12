@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="ScaleUp Co Work KBC - Premium coworking space in Deccan, Pune. 160+ seats, 15 cabins, 2 floors. Prime location, peaceful vibe, zero hidden costs.">
+    <meta name="description" content="ScaleUp CoWork KBC - Flagship coworking space in Deccan, Pune. 140+ seats, 10+ private cabins, 2 conference rooms across a two-floor campus. Zero hidden costs.">
     <meta name="theme-color" content="#061122">
     <meta name="color-scheme" content="dark">
     
@@ -21,12 +21,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://scaleupcowork.com/locations/deccan-hub.html">
     <meta property="og:title" content="ScaleUp KBC Deccan | Premium Coworking Flagship">
-    <meta property="og:description" content="ScaleUp Co Work KBC - Premium coworking space on Law College Road, Deccan, Pune. 160+ seats, 15 private cabins, 2 floors, 24/7 access, dual fiber, and dedicated parking.">
+    <meta property="og:description" content="ScaleUp CoWork KBC - Flagship coworking space on Law College Road, Deccan, Pune. 140+ seats, 10+ private cabins, 2 conference rooms, two-floor campus, 24/7 access & parking.">
     <meta property="og:image" content="https://scaleupcowork.com/assets/images/deccan-hub/firstfloorcoworking.jpeg">
     <meta property="og:site_name" content="ScaleUp Coworking">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ScaleUp KBC Deccan | Premium Coworking Flagship">
-    <meta name="twitter:description" content="ScaleUp Co Work KBC - Premium coworking space on Law College Road, Deccan, Pune. 160+ seats, 15 cabins, 2 conference rooms.">
+    <meta name="twitter:description" content="ScaleUp CoWork KBC - Flagship coworking space on Law College Road, Deccan, Pune. 140+ seats, 10+ private cabins, 2 conference rooms.">
     <meta name="twitter:image" content="https://scaleupcowork.com/assets/images/deccan-hub/firstfloorcoworking.jpeg">
 
     <!-- Schema.org JSON-LD -->
@@ -59,32 +59,34 @@
     }
     </script>
 
-    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 
     <!-- Theme Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="../assets/css/theme.css" rel="stylesheet">
-    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/theme.css?v=5" rel="stylesheet">
+    <link href="../assets/css/main.css?v=5" rel="stylesheet">
     <link href="../assets/css/animations.css" rel="stylesheet">
     
     <style>
-      html, body { overflow-x: hidden; }
+      html, body {
+          overflow-x: hidden;
+          background-color: #061122;
+      }
       body.modal-open { padding-right: 0 !important; }
       .workspace-card, .feature-card, .gallery-item img { will-change: transform; }
-      
-      /* Unified navbar styling loaded from main.css */
 
-      /* Walkthrough Video Container */
+      /* Walkthrough & Pantry Video Container */
       .walkthrough-video-wrapper {
           position: relative;
           border-radius: var(--border-radius-xl);
           overflow: hidden;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-          background: #000;
-          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 20px 44px rgba(6, 17, 34, 0.75);
+          background: #061122;
+          border: 1.5px solid rgba(56, 189, 248, 0.25);
       }
       .walkthrough-video-wrapper video {
           width: 100%;
@@ -94,34 +96,27 @@
           display: block;
       }
 
-      /* Custom Strikethrough for dark theme pricing */
-      .strikethrough {
-          text-decoration: line-through;
-          color: var(--text-muted);
-          font-size: 1.1rem;
-      }
-
-      /* Rounded corners for split images */
+      /* Rounded corners for split media */
       .split-image {
           border-radius: var(--border-radius-xl);
-          box-shadow: var(--shadow-lg);
+          box-shadow: 0 18px 40px rgba(6, 17, 34, 0.65);
           object-fit: cover;
           width: 100%;
           height: 100%;
-          min-height: 400px;
-          border: 1px solid rgba(255,255,255,0.05);
+          min-height: 360px;
+          border: 1px solid rgba(56, 189, 248, 0.16);
       }
 
-      /* Enhancing the grid for workspaces */
+      /* Workspace Grid */
       .workspace-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 2rem;
-          max-width: 1100px;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          max-width: 1200px;
           margin: 0 auto;
           justify-content: center;
       }
-      @media (min-width: 992px) { .workspace-grid { grid-template-columns: repeat(3, 1fr); } }
+      @media (min-width: 1200px) { .workspace-grid { grid-template-columns: repeat(4, 1fr); } }
 
       /* Hero Stats Row */
       .hero-stats-row {
@@ -129,23 +124,39 @@
           grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
           margin: 0 auto;
-          max-width: 800px;
+          max-width: 820px;
       }
       @media (min-width: 768px) {
           .hero-stats-row {
               grid-template-columns: repeat(4, 1fr);
           }
       }
-      
+
       /* Interactive Blueprint Nav */
       .nav-pills .nav-link {
-          color: var(--text-primary);
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.1);
+          color: #cbd5e1;
+          background: #0a1c38;
+          border: 1px solid rgba(56, 189, 248, 0.16);
       }
       .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-          color: #fff;
-          background-color: var(--primary);
+          color: #ffffff;
+          background-color: #0D81CA;
+          border-color: #0D81CA;
+      }
+
+      /* Modal Theme Consistency */
+      #bookingModal .modal-content {
+          background-color: #0a1c38 !important;
+          border: 1px solid rgba(56, 189, 248, 0.25) !important;
+      }
+      #bookingModal .form-control, #bookingModal .form-select {
+          background-color: #08162c !important;
+          border: 1px solid rgba(56, 189, 248, 0.22) !important;
+          color: #ffffff !important;
+      }
+      #bookingModal .form-control:focus, #bookingModal .form-select:focus {
+          border-color: #38bdf8 !important;
+          box-shadow: 0 0 0 0.2rem rgba(13, 129, 202, 0.25) !important;
       }
     </style>
 </head>
@@ -154,22 +165,20 @@
     
     <!-- =========================================================================
          UNIFIED HIGH-CONVERSION NAVBAR (Google Ads Recommended Top Strip)
-         Always Available & Fixed on Top While Viewer Scrolls
     ========================================================================= -->
     <nav class="navbar navbar-expand-xl fixed-top unified-navbar">
         <div class="container-fluid px-3 px-xl-4 px-xxl-5 d-flex align-items-center justify-content-between">
-            <!-- 1. Logo (ScaleUp branding linked to home) -->
             <a class="navbar-brand me-2 me-xl-4" href="../index.html" aria-label="ScaleUp Coworking Space Pune">
                 <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" class="logo-light">
             </a>
 
-            <!-- Mobile Action Icons (Quick Access without opening drawer) -->
+            <!-- Mobile Action Icons -->
             <div class="d-flex d-xl-none align-items-center gap-2">
-                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-circle p-2" title="WhatsApp">
+                <button type="button" class="btn btn-primary btn-sm rounded-pill px-2 py-1 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')" title="Book Tour">
+                    <i class="fas fa-calendar-check me-1"></i> Tour
+                </button>
+                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(Deccan%20Hub)" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-circle p-2" title="WhatsApp">
                     <i class="fab fa-whatsapp fs-6"></i>
-                </a>
-                <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill px-3 fw-bold" title="Call Now">
-                    <i class="fas fa-phone-alt me-1"></i> Call
                 </a>
                 <button class="navbar-toggler border-0 p-1 text-dark ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars fs-4 text-dark"></i>
@@ -186,10 +195,10 @@
                         <a class="nav-link" href="../index.html#walkthrough">Campus Tour</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#plans">Plans & Pricing</a>
+                        <a class="nav-link" href="#plans">Plans &amp; Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#location-map">Location</a>
+                        <a class="nav-link" href="#location-access">Location</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#amenities">Amenities</a>
@@ -211,14 +220,14 @@
                         </ul>
                     </li>
                     <li class="nav-item ms-xl-2 my-2 my-xl-0">
-                        <a class="btn-nav-book-tour text-decoration-none" href="../contact.html?location=deccan">
+                        <button type="button" class="btn-nav-book-tour" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')">
                             <i class="fas fa-calendar-check me-1"></i> Book a Tour
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 
                 <!-- Mobile Dropdown Quick Action Bar -->
-                <div class="mobile-quick-actions d-xl-none">
+                <div class="mobile-quick-actions d-xl-none mt-3 p-3 bg-light rounded-3">
                     <div class="row g-2">
                         <div class="col-6">
                             <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center">
@@ -226,49 +235,48 @@
                             </a>
                         </div>
                         <div class="col-6">
-                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(Deccan%20Hub)" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
                                 <i class="fab fa-whatsapp me-1"></i> WhatsApp
                             </a>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="../contact.html?location=deccan" class="btn btn-outline-info w-100 rounded-pill py-2 fw-semibold text-center">
+                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
                                 <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
-                            </a>
+                            </button>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light w-100 rounded-pill py-2 small fw-semibold text-center">
+                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-dark w-100 rounded-pill py-2 small fw-semibold text-center">
                                 <i class="fas fa-map-marker-alt text-danger me-1"></i> Deccan Hub Map (Dani Road, Deccan)
+                            </a>
+                        </div>
+                        <div class="col-12 mt-1 text-center">
+                            <a href="../privacy-policy.html" class="text-secondary small text-decoration-none fw-semibold">
+                                <i class="fas fa-shield-alt me-1"></i> Privacy Policy
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2, 3, 4. Desktop Google Ads Conversion Actions: Location, WhatsApp, Call -->
-            <div class="d-none d-xl-flex align-items-center gap-2 nav-actions-desktop">
-                <!-- Location Link (Deccan Hub Google Maps) -->
-                <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="nav-conversion-btn btn-nav-location" title="View Deccan Hub on Google Maps">
+            <!-- Desktop Conversion Actions -->
+            <div class="d-none d-xl-flex align-items-center gap-2 nav-actions-desktop flex-nowrap ms-xl-2">
+                <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="nav-conversion-btn btn-nav-location d-none d-xxl-inline-flex" title="View Deccan Hub on Google Maps">
                     <i class="fas fa-map-marker-alt text-danger"></i>
                     <span>Dani Rd, Deccan</span>
                 </a>
-
-                <!-- WhatsApp Link -->
-                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="nav-conversion-btn btn-nav-whatsapp" title="Chat on WhatsApp">
+                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(Deccan%20Hub)" target="_blank" rel="noopener noreferrer" class="nav-conversion-btn btn-nav-whatsapp" title="Chat on WhatsApp">
                     <i class="fab fa-whatsapp fs-6"></i>
                     <span>WhatsApp</span>
                 </a>
-
-                <!-- Call 📞 Link (Direct to 9822268333) -->
                 <a href="tel:+919822268333" class="nav-conversion-btn btn-nav-call" title="Call +91 98222 68333">
                     <i class="fas fa-phone-alt"></i>
-                    <span>+91 98222 68333</span>
+                    <span>98222 68333</span>
                 </a>
             </div>
         </div>
     </nav>
 
     <section class="hero-section position-relative d-flex align-items-center" style="min-height: 85vh; padding-top: 120px; overflow: hidden;">
-        <!-- Restored Dynamic Background -->
         <div class="dynamic-bg" style="opacity: 0.6;">
             <div class="gradient-sphere"></div>
             <div class="gradient-sphere-2"></div>
@@ -277,7 +285,6 @@
             <div class="glow-overlay"></div>
         </div>
         
-        <!-- Cross-fading Image Slider using your actual photos -->
         <div class="office-images-slider">
             <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/firstfloorcoworking.jpeg');"></div>
             <div class="image-slide" style="background-image: url('../assets/images/deccan-hub/cabinfront.jpeg');"></div>
@@ -292,38 +299,43 @@
         <div class="container position-relative z-2">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-lg-10">
-                        <div class="badge bg-primary mb-3 px-3 py-2 text-uppercase letter-spacing-1 rounded-pill"><i class="fas fa-crown text-warning me-1"></i> ScaleUp KBC Flagship — Law College Road</div>
+                        <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-3">
+                            <span class="status-pill-flagship"><i class="fas fa-crown"></i> ScaleUp KBC Flagship &mdash; Law College Road</span>
+                            <span class="status-pill-open"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> Open Now &bull; Two-Floor Campus</span>
+                        </div>
                         <h1 class="display-4 fw-bold text-white mb-3" style="line-height: 1.15;">ScaleUp CoWork KBC Prime Coworking Space in Pune</h1>
                         <p class="lead text-white mb-2 fw-semibold mx-auto" style="max-width: 820px; font-size: 1.25rem;">
                             Pune’s most prime location with affordable economically priced modern CoWorking ecosystem.
                         </p>
-                        <p class="text-light mb-4 opacity-75 fw-normal mx-auto" style="max-width: 760px; font-size: 1rem;">
-                            Offering premium plug-and-play CoWorking spaces dedicated desks, private office cabins, meeting/conference rooms and virtual office solutions in Shivajinagar, Pune with zero hidden utility costs.
+                        <p class="mb-4 fw-normal mx-auto" style="max-width: 760px; font-size: 1rem; color: #cbd5e1;">
+                            Offering premium plug-and-play CoWorking spaces, dedicated desks, 10+ private office cabins, 2 conference rooms, and virtual office solutions in Shivajinagar / Deccan, Pune with zero hidden utility costs.
                         </p>
                         
                         <div class="hero-stats-row mb-5">
-                            <div class="p-3 border rounded-3 bg-dark bg-opacity-75 h-100 text-center stat-tile-azure" style="backdrop-filter: blur(10px);">
+                            <div class="antigravity-stat-tile h-100 text-center">
                                 <h4 class="text-white fw-bold mb-1">140+</h4>
                                 <p class="small mb-0 text-uppercase fw-bold stat-label">Seats Capacity</p>
                             </div>
-                            <div class="p-3 border rounded-3 bg-dark bg-opacity-75 h-100 text-center stat-tile-emerald" style="backdrop-filter: blur(10px);">
+                            <div class="antigravity-stat-tile h-100 text-center">
                                 <h4 class="text-white fw-bold mb-1">10+</h4>
                                 <p class="small mb-0 text-uppercase fw-bold stat-label">Private Cabins</p>
                             </div>
-                            <div class="p-3 border rounded-3 bg-dark bg-opacity-75 h-100 text-center stat-tile-lime" style="backdrop-filter: blur(10px);">
+                            <div class="antigravity-stat-tile h-100 text-center">
                                 <h4 class="text-white fw-bold mb-1">2</h4>
                                 <p class="small mb-0 text-uppercase fw-bold stat-label">Conf. Rooms</p>
                             </div>
-                            <div class="p-3 border rounded-3 bg-dark bg-opacity-75 h-100 text-center stat-tile-navy" style="backdrop-filter: blur(10px);">
-                                <h4 class="text-white fw-bold mb-1"><i class="fas fa-mug-hot"></i></h4>
-                                <p class="small mb-0 text-uppercase fw-bold stat-label">Premium Beans</p>
+                            <div class="antigravity-stat-tile h-100 text-center">
+                                <h4 class="text-white fw-bold mb-1">2 Floors</h4>
+                                <p class="small mb-0 text-uppercase fw-bold stat-label">Campus Scale</p>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
-                            <a href="../contact.html?location=deccan-hub" class="btn btn-primary btn-lg rounded-pill px-5 shadow">
-                                Claim Launch Offer
-                                <i class="fas fa-arrow-right ms-2"></i>
+                            <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Book Deccan Hub Tour')">
+                                Schedule a Tour <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20claim%20the%20launch%20offer%20at%20ScaleUp%20Deccan%20Hub%20(deccan-hub.html)" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg rounded-pill px-4 fw-bold shadow">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp Now
                             </a>
                         </div>
                     </div>
@@ -332,78 +344,78 @@
         </div>
     </section>
 
-    <section class="py-5 border-bottom border-secondary bg-primary-dark fade-in" style="background-color: var(--bg-primary);">
-        <div class="container py-5">
+    <section class="section-rhythm fade-in" style="background-color: #061122; border-bottom: 1px solid rgba(56, 189, 248, 0.14);">
+        <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5 order-lg-2">
                     <div class="walkthrough-video-wrapper text-center mx-auto" style="max-width: 380px;">
-                        <video src="../assets/images/deccan-hub/Walkthrough.mp4" autoplay loop muted playsinline poster="../assets/images/deccan-hub/firstfloorcoworking.jpeg"></video>
+                        <video src="../assets/images/deccan-hub/Walkthrough.mp4" preload="metadata" controls autoplay loop muted playsinline poster="../assets/images/deccan-hub/firstfloorcoworking.jpeg"></video>
                     </div>
                 </div>
                 <div class="col-lg-7 order-lg-1">
-                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 text-uppercase letter-spacing-1 rounded-pill">Now Fully Open</span>
-                    <h2 class="display-5 fw-bold mb-4 text-white">Explore The First Floor of Our Two-Story Ecosystem</h2>
-                    <p class="text-muted fs-5 mb-4">Take a virtual stroll through our massive Deccan Hub. Spread across two expansive floors at the Kshitij Business Centre to bring you unparalleled scale and community.</p>
+                    <span class="status-pill-open mb-3"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> Open Now &bull; Two-Floor Campus</span>
+                    <h2 class="display-5 fw-bold mb-4 text-white">Explore The First Floor of Our Two-Floor Ecosystem</h2>
+                    <p class="fs-5 mb-4" style="color: #cbd5e1;">Take a virtual stroll through our flagship Deccan Hub. Spread across a two-floor campus at the Kshitij Business Centre to bring you unparalleled scale and community.</p>
                     
                     <ul class="list-unstyled mb-5">
                         <li class="d-flex align-items-center mb-3">
-                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
-                            <span class="text-light fs-5">Immaculate lighting and modern aesthetics</span>
+                            <i class="fas fa-check-circle fs-4 me-3" style="color: #4CB37C;"></i>
+                            <span class="fs-5" style="color: #cbd5e1;">Immaculate lighting and modern executive ergonomics</span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
-                            <span class="text-light fs-5">Spacious walkways and breathing room</span>
+                            <i class="fas fa-check-circle fs-4 me-3" style="color: #4CB37C;"></i>
+                            <span class="fs-5" style="color: #cbd5e1;">Spacious walkways, acoustic cabins, and 2 conference rooms</span>
                         </li>
                         <li class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-primary fs-4 me-3"></i>
-                            <span class="text-light fs-5">Two fully operational floors with 140+ seats & 10+ private cabins</span>
+                            <i class="fas fa-check-circle fs-4 me-3" style="color: #4CB37C;"></i>
+                            <span class="fs-5" style="color: #cbd5e1;">Two-Floor Campus with 140+ seats &amp; 10+ private cabins</span>
                         </li>
                     </ul>
 
-                    <a href="#plans" class="btn btn-outline-light btn-lg rounded-pill px-4">View Launch Pricing <i class="fas fa-chevron-down ms-2"></i></a>
+                    <a href="#plans" class="btn btn-outline-primary btn-lg rounded-pill px-4 fw-semibold">View Uniform Pricing <i class="fas fa-chevron-down ms-2"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 bg-dark border-bottom border-secondary fade-in">
-        <div class="container py-5">
+    <section class="section-rhythm fade-in" style="background-color: #08162c; border-bottom: 1px solid rgba(56, 189, 248, 0.14);">
+        <div class="container">
             <div class="text-center mb-5">
-                <span class="text-primary fw-bold text-uppercase letter-spacing-1 d-block mb-2">Campus Layout</span>
+                <span class="eyebrow-badge mb-2"><i class="fas fa-layer-group"></i> Campus Layout</span>
                 <h2 class="display-5 fw-bold text-white mb-3">Two Floors of Premium Workspace</h2>
-                <p class="text-muted fs-5 max-w-md mx-auto">Navigate through our meticulously planned ecosystems, designed to optimize your team's workflow and comfort.</p>
+                <p class="fs-5 mx-auto" style="max-width: 680px; color: #cbd5e1;">Navigate through our meticulously planned ecosystems, designed to optimize your team's workflow and comfort.</p>
             </div>
 
             <!-- Blueprint Tabs -->
             <style>
                 /* Interactive Blueprint Styles */
                 .interactive-blueprint {
-                    background: #0f172a;
+                    background: #08162c;
                     border-radius: 16px;
                     padding: 1.5rem;
-                    border: 1px solid rgba(255,255,255,0.1);
-                    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+                    border: 1px solid rgba(56, 189, 248, 0.16);
+                    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.45);
                 }
                 .bp-group { cursor: pointer; }
                 .bp-zone {
-                    fill: rgba(30, 41, 59, 0.8);
-                    stroke: #475569;
+                    fill: #0a1c38;
+                    stroke: rgba(56, 189, 248, 0.35);
                     stroke-width: 2;
-                    transition: all 0.3s ease;
+                    transition: all 0.25s ease;
                     stroke-linejoin: round;
                 }
                 .bp-group:hover .bp-zone, .bp-group.active .bp-zone {
-                    fill: rgba(59, 130, 246, 0.25);
-                    stroke: #3b82f6;
+                    fill: rgba(13, 129, 202, 0.28);
+                    stroke: #38bdf8;
                     stroke-width: 3;
                 }
                 .bp-text {
-                    fill: #94a3b8;
+                    fill: #cbd5e1;
                     font-weight: 600;
                     font-family: 'Inter', sans-serif;
                     font-size: 14px;
                     pointer-events: none;
-                    transition: all 0.3s ease;
+                    transition: all 0.25s ease;
                     text-anchor: middle;
                     dominant-baseline: middle;
                 }
@@ -412,7 +424,7 @@
                     font-size: 15px;
                 }
                 .blueprint-list-item {
-                    transition: all 0.3s ease;
+                    transition: all 0.25s ease;
                     border: 1px solid transparent;
                     border-radius: 12px;
                     padding: 12px 16px;
@@ -421,15 +433,15 @@
                     margin-right: -16px;
                 }
                 .blueprint-list-item:hover, .blueprint-list-item.active {
-                    background: rgba(59, 130, 246, 0.1);
-                    border-color: rgba(59, 130, 246, 0.3);
-                    transform: translateX(10px);
+                    background: #0e2448;
+                    border-color: rgba(13, 129, 202, 0.45);
+                    transform: translateX(8px);
                 }
                 .blueprint-list-item.active .text-white {
-                    color: #3b82f6 !important;
+                    color: #38bdf8 !important;
                 }
                 .blueprint-list-item.active i {
-                    transform: scale(1.1);
+                    transform: scale(1.08);
                 }
             </style>
 
@@ -446,12 +458,12 @@
             <div class="tab-content" id="floorPlanTabsContent">
                 <!-- Ground Floor Pane -->
                 <div class="tab-pane fade show active" id="ground-plan" role="tabpanel" aria-labelledby="ground-tab">
-                    <div class="row align-items-center g-5 bg-secondary p-4 rounded-4 border border-dark">
+                    <div class="row align-items-center g-5 p-4 rounded-4" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
                         <div class="col-lg-7">
                             <div class="interactive-blueprint w-100">
                                 <svg viewBox="0 0 800 500" class="w-100 h-100" style="min-height: 350px;">
                                     <!-- Background/Outer walls -->
-                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#334155" stroke-width="6" rx="8"/>
+                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#1e3a5f" stroke-width="6" rx="8"/>
                                     
                                     <!-- Washrooms -->
                                     <g class="bp-group" data-zone="washrooms">
@@ -498,45 +510,45 @@
                             <h3 class="fw-bold text-white mb-4">Ground Floor Highlights</h3>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="coworking">
-                                    <i class="fas fa-desktop text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-desktop fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Coworking Space</span>
-                                        <span class="text-muted small">Open Desks Near Pantry</span>
+                                        <span class="small" style="color: #94a3b8;">Open Desks Near Pantry</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="giant-cabin">
-                                    <i class="fas fa-door-open text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-door-open fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Giant Cabin</span>
-                                        <span class="text-muted small">Expansive Central Office Space</span>
+                                        <span class="small" style="color: #94a3b8;">Expansive Central Office Space</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="cabins">
-                                    <i class="fas fa-door-closed text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-door-closed fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">5 Private Cabins</span>
-                                        <span class="text-muted small">Configurations for 6-8 pax</span>
+                                        <span class="small" style="color: #94a3b8;">Configurations for 6-8 pax</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="conf">
-                                    <i class="fas fa-users text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-users fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Conference Room</span>
-                                        <span class="text-muted small">Spacious 11'9" x 9'7" Layout</span>
+                                        <span class="small" style="color: #94a3b8;">Spacious 11'9" x 9'7" Layout</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="pantry">
-                                    <i class="fas fa-coffee text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-coffee fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Pantry Area</span>
-                                        <span class="text-muted small">Refreshments & Coffee</span>
+                                        <span class="small" style="color: #94a3b8;">Refreshments &amp; Coffee</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center blueprint-list-item" data-zone="washrooms">
-                                    <i class="fas fa-restroom text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-restroom fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Washrooms</span>
-                                        <span class="text-muted small">Dedicated Restrooms</span>
+                                        <span class="small" style="color: #94a3b8;">Dedicated Restrooms</span>
                                     </div>
                                 </li>
                             </ul>
@@ -546,12 +558,12 @@
 
                 <!-- First Floor Pane -->
                 <div class="tab-pane fade" id="first-plan" role="tabpanel" aria-labelledby="first-tab">
-                    <div class="row align-items-center g-5 bg-secondary p-4 rounded-4 border border-dark">
+                    <div class="row align-items-center g-5 p-4 rounded-4" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
                         <div class="col-lg-7">
                             <div class="interactive-blueprint w-100">
                                 <svg viewBox="0 0 800 500" class="w-100 h-100" style="min-height: 350px;">
                                     <!-- Background/Outer walls -->
-                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#334155" stroke-width="6" rx="8"/>
+                                    <rect x="10" y="10" width="780" height="480" fill="none" stroke="#1e3a5f" stroke-width="6" rx="8"/>
                                     
                                     <!-- Washrooms Top Left & Right -->
                                     <g class="bp-group" data-zone="washrooms">
@@ -580,7 +592,7 @@
                                     <!-- Conf Room & Cabin 02 -->
                                     <g class="bp-group" data-zone="conf">
                                         <rect class="bp-zone" x="170" y="320" width="300" height="160" rx="6"/>
-                                        <text class="bp-text" x="320" y="400">Conf. Room & Cabin 02</text>
+                                        <text class="bp-text" x="320" y="400">Conf. Room &amp; Cabin 02</text>
                                     </g>
                                     
                                     <!-- Coworking Space -->
@@ -595,38 +607,38 @@
                             <h3 class="fw-bold text-white mb-4">First Floor Highlights</h3>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="coworking">
-                                    <i class="fas fa-desktop text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-desktop fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">71 Seats</span>
-                                        <span class="text-muted small">Spacious Dedicated Workstations</span>
+                                        <span class="small" style="color: #94a3b8;">Spacious Dedicated Workstations</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="cabins">
-                                    <i class="fas fa-door-closed text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-door-closed fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
-                                        <span class="text-white fw-bold d-block fs-5 transition">4 Private Cabins</span>
-                                        <span class="text-muted small">Premium enclosed team spaces</span>
+                                        <span class="text-white fw-bold d-block fs-5 transition">4+ Private Cabins</span>
+                                        <span class="small" style="color: #94a3b8;">Premium enclosed team spaces</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="conf">
-                                    <i class="fas fa-users text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-users fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Conference Room</span>
-                                        <span class="text-muted small">Executive 11' x 7'6" Layout</span>
+                                        <span class="small" style="color: #94a3b8;">Executive 11' x 7'6" Layout</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center mb-2 blueprint-list-item" data-zone="pantry">
-                                    <i class="fas fa-coffee text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-coffee fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Large Pantry</span>
-                                        <span class="text-muted small">Spacious 9'2" x 14'7" Refreshment Area</span>
+                                        <span class="small" style="color: #94a3b8;">Spacious 9'2" x 14'7" Refreshment Area</span>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center blueprint-list-item" data-zone="washrooms">
-                                    <i class="fas fa-restroom text-primary fs-4 me-3 w-30px text-center transition"></i>
+                                    <i class="fas fa-restroom fs-4 me-3 w-30px text-center transition" style="color: #38bdf8;"></i>
                                     <div>
                                         <span class="text-white fw-bold d-block fs-5 transition">Washrooms</span>
-                                        <span class="text-muted small">Multiple Restroom Facilities</span>
+                                        <span class="small" style="color: #94a3b8;">Multiple Restroom Facilities</span>
                                     </div>
                                 </li>
                             </ul>
@@ -673,38 +685,42 @@
         </div>
     </section>
 
-    <section class="py-5 fade-in" style="background-color: #b0b8c4;">
-        <div class="container py-5">
+    <section class="section-rhythm fade-in" style="background-color: #061122;">
+        <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 order-lg-2">
-                    <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="Peaceful Workspace" class="split-image border-0 shadow-lg">
+                    <div class="walkthrough-frame shadow-lg">
+                        <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="ScaleUp Deccan Hub Peaceful First Floor Workspace" class="split-image border-0 w-100">
+                    </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                    <span class="text-primary fw-bold text-uppercase letter-spacing-1 mb-2 d-block">The Oasis</span>
-                    <h2 class="display-5 fw-bold mb-4 text-black">The Perfect Blend of Connectivity and Calm</h2>
-                    <p class="text-dark fs-5 mb-5 fw-medium">Finding a workspace that is both centrally located and peaceful is rare—but we’ve nailed it.</p>
+                    <span class="eyebrow-badge mb-2"><i class="fas fa-leaf"></i> The Oasis</span>
+                    <h2 class="display-5 fw-bold mb-3 text-white">The Perfect Blend of Connectivity and Calm</h2>
+                    <p class="fs-5 mb-4" style="color: #cbd5e1;">Finding a workspace that is both centrally located and peaceful is rare &mdash; but we've nailed it at Kshitij Business Centre.</p>
                     
-                    <div class="d-flex mb-4 align-items-start">
-                        <div class="me-4 mt-1"><i class="fas fa-map-marker-alt fa-2x text-primary drop-shadow"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-black mb-2">Prime & Accessible</h4>
-                            <p class="text-dark fw-medium">Situated in Deccan, keeping you connected to the pulse of the city while tucked away from main road chaos.</p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Prime &amp; Accessible</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Situated off Dani Road / Law College Road in Deccan, keeping you connected to Central Pune while tucked away from main road chaos.</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="d-flex mb-4 align-items-start">
-                        <div class="me-4 mt-1"><i class="fas fa-car fa-2x text-primary drop-shadow"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-black mb-2">Ample Parking</h4>
-                            <p class="text-dark fw-medium">Say goodbye to parking woes. We offer spacious, dedicated parking for both 2-wheelers and 4-wheelers.</p>
+                        
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-car"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Dedicated 2 &amp; 4 Wheeler Parking</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Say goodbye to parking woes. We offer spacious, dedicated on-site parking for both 2-wheelers and 4-wheelers.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex align-items-start">
-                        <div class="me-4 mt-1"><i class="fas fa-store fa-2x text-primary drop-shadow"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-black mb-2">Neighborhood Conveniences</h4>
-                            <p class="text-dark fw-medium">Steps away from local cafes, tea shops, medical stores, groceries, a hospital, and a police station.</p>
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-store"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Neighborhood Conveniences</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Steps away from cafes, metro stations (Deccan Gymkhana, Garware College, Nal Stop), medical stores, and banking.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -712,38 +728,42 @@
         </div>
     </section>
 
-    <section class="py-5 bg-primary-dark fade-in" style="background-color: var(--bg-primary);">
-        <div class="container py-5">
+    <section class="section-rhythm fade-in" style="background-color: #08162c; border-top: 1px solid rgba(56, 189, 248, 0.14); border-bottom: 1px solid rgba(56, 189, 248, 0.14);">
+        <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <img src="../assets/images/deccan-hub/coffeemachine.jpeg" alt="Premium Pantry and Coffee" class="split-image">
+                    <div class="walkthrough-frame shadow-lg">
+                        <video src="../assets/images/deccan-hub/cafeteria.mp4" preload="metadata" controls autoplay muted loop playsinline poster="../assets/images/deccan-hub/coffeemachine.jpeg"></video>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <span class="text-primary fw-bold text-uppercase letter-spacing-1 mb-2 d-block">Plug & Play</span>
-                    <h2 class="display-5 fw-bold mb-4 text-white">Everything Taken Care Of. Just Focus.</h2>
-                    <p class="text-muted fs-5 mb-5">We handle the logistics so you can focus entirely on growing your business. No separate electricity bills or hidden maintenance fees.</p>
+                    <span class="eyebrow-badge mb-2"><i class="fas fa-plug"></i> Plug &amp; Play</span>
+                    <h2 class="display-5 fw-bold mb-3 text-white">Everything Taken Care Of. Just Focus.</h2>
+                    <p class="fs-5 mb-4" style="color: #cbd5e1;">We handle the logistics so you can focus entirely on growing your business. Zero separate electricity bills or hidden maintenance fees.</p>
                     
-                    <div class="d-flex mb-4">
-                        <div class="me-4"><i class="fas fa-network-wired fa-2x text-primary"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Tech-Ready Infrastructure</h4>
-                            <p class="text-muted">Blazing-fast high-speed internet with Static IP availability for seamless digital operations.</p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-network-wired"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Tech-Ready Infrastructure</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Blazing-fast dual fiber internet with Static IP availability and enterprise UPS power backup for seamless engineering &amp; client calls.</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="d-flex mb-4">
-                        <div class="me-4"><i class="fas fa-mug-hot fa-2x text-primary"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Proper Bean Coffee</h4>
-                            <p class="text-muted">Fuel your day with premium, freshly brewed bean coffee and unlimited tea in our fully equipped pantry featuring a fridge and microwave.</p>
+                        
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-mug-hot"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Freshly Brewed Bean Coffee</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Fuel your day with unlimited freshly brewed bean-to-cup coffee and assorted teas in our cafeteria lounge with refrigerator &amp; microwave.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex">
-                        <div class="me-4"><i class="fas fa-broom fa-2x text-primary"></i></div>
-                        <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Immaculate Environment</h4>
-                            <p class="text-muted">Spotless desks, pristine washrooms, regular housekeeping, and professional conference rooms.</p>
+                        <div class="p-3 rounded-4 d-flex align-items-start" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="feature-icon-badge me-3 flex-shrink-0"><i class="fas fa-broom"></i></div>
+                            <div>
+                                <h4 class="h6 fw-bold text-white mb-1">Immaculate Environment</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">Spotless desks, sanitized washrooms, daily housekeeping, and sound-damped conference rooms.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -751,231 +771,238 @@
         </div>
     </section>
 
-    <section id="plans" class="workspaces-section py-5 bg-secondary">
-        <div class="container py-5">
+    <section id="plans" class="section-rhythm workspaces-section" style="background-color: #061122;">
+        <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-danger mb-3 px-3 py-2 text-uppercase letter-spacing-1 shadow rounded-pill">🔥 Limited Time Launch Offer</span>
-                <h2 class="display-5 fw-bold text-white mb-3">Flexible Plans Tailored For You</h2>
-                <p class="lead text-muted max-w-md mx-auto">Experience the premium ScaleUp lifestyle for less. Introductory pricing is strictly limited to early adopters.</p>
+                <span class="eyebrow-badge mb-2"><i class="fas fa-gem"></i> Clear &amp; Transparent Pricing</span>
+                <h2 class="display-5 fw-bold text-white mb-2">Uniform Workspace Plans &amp; Pricing</h2>
+                <p class="fs-5 mx-auto" style="max-width: 700px; color: #cbd5e1;">Straightforward uniform pricing matching our entire Pune network &mdash; zero hidden electricity, AC, or maintenance charges.</p>
             </div>
 
-            <div class="workspace-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="uniform-pricing-grid">
                 <!-- 1. Day Pass -->
-                <div class="workspace-card pricing-card-azure bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">Day Pass</h3>
-                        <p class="text-muted small mb-4">Instant plug-and-play access for travelers & freelancers.</p>
-                        
-                        <div class="price text-white mb-3 display-5 fw-bold pricing-cost">₹590 <span class="fs-6 fw-normal text-muted">/day</span></div>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-speed Wi-Fi internet</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Unlimited bean-to-cup coffee & tea</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Flexible ergonomic workstation</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Full pantry & lounge access</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20a%20Day%20Pass%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <div class="pricing-plan-card">
+                    <h3 class="fw-bold text-white mb-1 fs-4">Day Pass</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">Instant plug-and-play access for travelers &amp; freelancers.</p>
+                    <div class="pricing-cost">₹590 <span class="pricing-cost-unit">/ day</span></div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed Wi-Fi internet</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited bean-to-cup coffee &amp; tea</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Flexible ergonomic workstation</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full pantry &amp; café lounge access</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Day Pass', 'Book a Day Pass (₹590/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Day Pass
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20a%20Day%20Pass%20(%E2%82%B9590%2Fday)%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 2. Dedicated Cowork Desk -->
-                <div class="workspace-card pricing-card-emerald bg-primary-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift" style="transform: scale(1.03); z-index: 2; background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);">
-                    <div class="position-absolute top-0 start-50 translate-middle-x bg-primary text-white px-3 py-1 rounded-bottom fw-bold text-uppercase" style="font-size: 0.75rem;">Most Popular</div>
-                    <div class="mt-3">
-                        <h3 class="fw-bold text-white mb-1">Dedicated Cowork Desk</h3>
-                        <p class="text-primary small mb-3">Your dedicated workspace with secure storage.</p>
-                        
-                        <div class="price mb-2 display-5 fw-bold pricing-cost">₹7,950 <span class="fs-6 fw-normal text-muted">/seat /month</span></div>
-                        <div class="mb-3">
-                             <span class="badge bg-success text-white fw-bold"><i class="fas fa-tags me-1"></i> Special deals on 2+ desks</span>
-                        </div>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">1 Reserved desk in shared collaborative zone</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light fw-bold text-white">24/7 access & zero hidden utility costs</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Personal storage locker</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Conference room hours included</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Fresh bean coffee & high-speed backup</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold shadow"><i class="fas fa-phone-alt me-1"></i> Call to Reserve</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20a%20Dedicated%20Desk%20at%20Deccan%20Hub" class="btn btn-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <!-- 2. Dedicated Cowork Desk (Azure Featured) -->
+                <div class="pricing-plan-card pricing-card-featured-blue">
+                    <div class="badge text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: #0D81CA; box-shadow: 0 4px 12px rgba(13, 129, 202, 0.35);">MOST POPULAR</div>
+                    <h3 class="fw-bold text-white mb-1 fs-4">Dedicated Cowork Desk</h3>
+                    <p class="small mb-2" style="color: #cbd5e1;">Your permanent personal workspace with secure storage.</p>
+                    <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit">/ seat / month</span></div>
+                    <div class="mb-2"><span class="status-pill-open"><i class="fas fa-tags"></i> Special deals on 2+ desks</span></div>
+
+                    <ul class="list-unstyled my-3 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 1 Reserved desk in shared collaborative zone</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 biometric access &amp; zero hidden utility costs</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Personal lockable storage locker</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Conference room hours included</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Fresh bean coffee &amp; high-speed UPS backup</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold shadow" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Reserve Dedicated Desk (₹7,950/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Desk
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20a%20Dedicated%20Desk%20(%E2%82%B97%2C950%2Fmo)%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 3. Hybrid Cowork -->
-                <div class="workspace-card pricing-card-lime bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">Hybrid Cowork</h3>
-                        <p class="text-muted small mb-4">Flexible arrangement for hybrid workers & teams.</p>
-                        
-                        <div class="price text-white mb-3 display-5 fw-bold pricing-cost">₹5,850 <span class="fs-6 fw-normal text-muted">/seat /month</span></div>
-                        <p class="text-info small mb-3"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</p>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">12 days access across the month</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-speed dual fiber internet</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Full pantry, tea & bean coffee</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Discounted meeting room booking</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Call Now</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20Hybrid%20Cowork%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <div class="pricing-plan-card">
+                    <h3 class="fw-bold text-white mb-1 fs-4">Hybrid Cowork</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">Flexible arrangement for hybrid workers &amp; teams.</p>
+                    <div class="pricing-cost">₹5,850 <span class="pricing-cost-unit">/ seat / month</span></div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 12 days access anytime across the month</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed dual fiber internet</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full pantry, tea &amp; bean coffee</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Discounted meeting room booking</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Hybrid Desk', 'Book Hybrid Cowork (₹5,850/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Hybrid Plan
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20Hybrid%20Cowork%20(%E2%82%B95%2C850%2Fmo)%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 4. Private Office -->
-                <div class="workspace-card pricing-card-amber bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div class="position-absolute top-0 end-0 m-3">
-                        <span class="badge bg-warning text-dark rounded-pill">15+ Cabins</span>
-                    </div>
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">Private Office</h3>
-                        <p class="text-muted small mb-4">Acoustically sound, private enclosed suites.</p>
-                        
-                        <div class="price text-white mb-3 display-5 fw-bold pricing-cost">₹10,900 <span class="fs-6 fw-normal text-muted">/seat /month</span></div>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Enclosed, lockable team cabins</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">24/7 access with private security</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">All-inclusive electricity, AC & housekeeping</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Executive conference room allocation</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Custom layout options for 4 to 25+ seats</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-warning w-100 rounded-pill fw-bold text-dark"><i class="fas fa-phone-alt me-1"></i> Call for Cabin Deal</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20a%20Private%20Office%20Cabin%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <!-- 4. Private Office Cabin (Flagship Warm Amber Tier) -->
+                <div class="pricing-plan-card pricing-card-amber highlight-amber">
+                    <div class="badge text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: #f59e0b;">10+ CABINS &bull; FLAGSHIP</div>
+                    <h3 class="fw-bold text-white mb-1 fs-4">Private Office Cabin</h3>
+                    <p class="small mb-2" style="color: #cbd5e1;">Acoustically sound, lockable enclosed suites.</p>
+                    <div class="pricing-cost">₹10,900 <span class="pricing-cost-unit">/ seat / month</span></div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Enclosed, lockable team cabins</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access with biometric security</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> All-inclusive electricity, AC &amp; housekeeping</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Executive conference room allocation</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Custom layout options for 4 to 30+ seats</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn w-100 rounded-pill fw-bold text-dark" style="background: #f59e0b; border: none;" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Private Office', 'Book Private Cabin Suite (₹10,900/seat)')">
+                            <i class="fas fa-crown me-1"></i> Book Private Cabin
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20a%20Private%20Office%20Cabin%20(%E2%82%B910%2C900%2Fseat)%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 5. Meeting Space -->
-                <div class="workspace-card pricing-card-azure bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">Meeting Space</h3>
-                        <p class="text-muted small mb-4">On-demand hourly collaboration space.</p>
-                        
-                        <div class="price text-white mb-3 display-5 fw-bold pricing-cost">₹150 <span class="fs-6 fw-normal text-muted">/seat /hour</span></div>
-                        <p class="text-warning small mb-3"><i class="fas fa-users me-1"></i> Minimum 4 seats booking</p>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-res display screen & HDMI setup</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Glass whiteboards & markers</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-speed Wi-Fi for video conferencing</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Complimentary refreshments</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Book Hourly</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20Meeting%20Space%20by%20the%20hour%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <!-- 5. Meeting Space (Hourly) -->
+                <div class="pricing-plan-card">
+                    <h3 class="fw-bold text-white mb-1 fs-4">Meeting Space</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">On-demand hourly collaboration space.</p>
+                    <div class="pricing-cost">₹150 <span class="pricing-cost-unit">/ seat / hour</span></div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-users me-1"></i> Minimum 4 seats booking</div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-res display screen &amp; HDMI setup</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Glass whiteboards &amp; markers</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed Wi-Fi for video conferencing</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Complimentary refreshments</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Meeting Space (Hourly)', 'Book Hourly Meeting Space (₹150/seat/hr)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Hourly
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20Meeting%20Space%20by%20the%20hour%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 6. 4 Seater Meeting Room -->
-                <div class="workspace-card pricing-card-emerald bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">4-Seater Meeting Room</h3>
-                        <p class="text-muted small mb-4">Dedicated room for team reviews & client pitches.</p>
-                        
-                        <div class="price text-white mb-3 display-5 fw-bold pricing-cost">₹3,900 <span class="fs-6 fw-normal text-muted">/day</span></div>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Full day access for up to 4 people</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">4K Presentation display</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Ergonomic chairs & air conditioning</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Beverages and pantry service</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Reserve Room</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%204%20Seater%20Meeting%20Room%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <!-- 6. 4-Seater Meeting Room -->
+                <div class="pricing-plan-card">
+                    <h3 class="fw-bold text-white mb-1 fs-4">4-Seater Meeting Room</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">Dedicated room for team reviews &amp; client pitches.</p>
+                    <div class="pricing-cost">₹3,900 <span class="pricing-cost-unit">/ full day</span></div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full day access for up to 4 people</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 4K Presentation display</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Ergonomic chairs &amp; air conditioning</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Beverages and pantry service</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('4-Seater Meeting Room', 'Reserve 4-Seater Meeting Room (₹3,900/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Room
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%204-Seater%20Meeting%20Room%20(%E2%82%B93%2C900%2Fday)%20at%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 7. 9 Seater Meeting Room -->
-                <div class="workspace-card pricing-card-lime bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">9-Seater Boardroom</h3>
-                        <p class="text-muted small mb-4">Executive conference room for boards & seminars.</p>
-                        
-                        <div class="price text-white mb-1 display-5 fw-bold pricing-cost">₹7,950 <span class="fs-6 fw-normal text-muted">/day</span></div>
-                        <p class="text-info small mb-3"><i class="fas fa-clock me-1"></i> Half-day available at ₹4,500</p>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Spacious 9-person conference table</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Large presentation monitor & webcams</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">High-speed dual internet lines</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Dedicated reception & catering support</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Reserve Boardroom</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%209%20Seater%20Meeting%20Room%20at%20Deccan%20Hub" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+                <!-- 7. 9-Seater Boardroom -->
+                <div class="pricing-plan-card">
+                    <h3 class="fw-bold text-white mb-1 fs-4">9-Seater Boardroom</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">Executive conference room for boards &amp; seminars.</p>
+                    <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit">/ day</span></div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-clock me-1"></i> Half-day available at ₹4,500</div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Spacious 9-person conference table</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Large presentation monitor &amp; webcams</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed dual internet lines</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated reception &amp; hospitality support</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('9-Seater Boardroom', 'Reserve 9-Seater Boardroom (₹7,950/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Boardroom
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%209-Seater%20Boardroom%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 8. Virtual Office -->
-                <div class="workspace-card pricing-card-cyan bg-dark rounded-4 p-4 border shadow-lg d-flex flex-column h-100 position-relative hover-lift">
-                    <div>
-                        <h3 class="fw-bold text-white mb-1">Virtual Office</h3>
-                        <p class="text-muted small mb-4">Prestigious Pune business registration address.</p>
-                        
-                        <div class="price text-white mb-1 display-5 fw-bold">₹2,970 <span class="fs-6 fw-normal text-muted">/month</span></div>
-                        <p class="text-warning small mb-3"><i class="fas fa-info-circle me-1"></i> Paid annually in advance only</p>
-                        
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">GST & ROC registration address</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Mail handling & courier forwarding</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Front-desk visitor management</span></li>
-                            <li class="mb-2 d-flex"><i class="fas fa-check-circle text-primary mt-1 me-3"></i> <span class="text-light">Member rates on conference rooms</span></li>
-                        </ul>
+                <div class="pricing-plan-card">
+                    <div class="mb-2"><span class="eyebrow-badge"><i class="fas fa-certificate"></i> Launch Offer Included</span></div>
+                    <h3 class="fw-bold text-white mb-1 fs-4">Virtual Office</h3>
+                    <p class="small mb-2" style="color: #94a3b8;">Prestigious Pune business registration address.</p>
+                    <div class="pricing-cost">₹2,970 <span class="pricing-cost-unit">/ month*</span></div>
+                    <div class="small mb-2" style="color: #94a3b8;">*Paid annually in advance. Add-on packs for Company &amp; GST Registration.</div>
+
+                    <div class="p-2 mb-3 rounded-3 small" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.25); color: #cbd5e1;">
+                        <i class="fas fa-gift me-1" style="color: #38bdf8;"></i> <strong style="color: #38bdf8;">Launch Offer:</strong> Complimentary Logo &amp; Name Display worth <strong class="text-white">₹9,900 / year</strong>!
                     </div>
-                    <div class="d-flex gap-2 mt-auto">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Get Virtual Office</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20Virtual%20Office%20services%20in%20Pune" class="btn btn-outline-success rounded-pill px-3"><i class="fab fa-whatsapp"></i></a>
+
+                    <ul class="list-unstyled my-3 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> GST &amp; ROC registration address</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Mail handling &amp; courier forwarding</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Front-desk visitor management</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Member rates on conference rooms</li>
+                    </ul>
+
+                    <div class="d-flex gap-2 mt-auto pt-2">
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Virtual Office', 'Get Virtual Office (₹2,970/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Get Virtual Office
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20Virtual%20Office%20services%20(%E2%82%B92%2C970%2Fmo)%20at%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-5">
-                 <p class="text-muted fs-6 mb-0">We also offer highly flexible <strong>Weekly Passes</strong>, Long-Term <strong>Yearly Agreements</strong>, and <strong>Virtual Office</strong> Solutions for remote businesses.</p>
+                 <p class="fs-6 mb-0" style="color: #94a3b8;">We also offer flexible <strong class="text-white">Weekly Passes</strong>, <strong class="text-white">Free 1-Day Trial Passes</strong>, and tailored multi-seat agreements for scaling teams.</p>
             </div>
         </div>
     </section>
 
-    <section class="location-section py-5 fade-in">
-        <div class="container py-4">
+    <section id="location-access" class="section-rhythm location-section fade-in" style="background-color: #08162c; border-top: 1px solid rgba(56, 189, 248, 0.14);">
+        <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5">
                     <div class="location-info">
-                        <h2 class="display-6 fw-bold text-white mb-4">Location & Access</h2>
-                        <div class="location-detail mb-4 p-4 bg-secondary rounded-4 border border-dark">
-                            <h4 class="text-primary h5 mb-3"><i class="fas fa-map-marker-alt me-2"></i> Address</h4>
-                            <p class="mb-1 text-white fs-5 fw-bold">ScaleUp CoWork</p>
-                            <p class="mb-1 text-light">Kshitij Business Centre, Dani Road, Next to ICICI bank,</p>
-                            <p class="mb-1 text-muted">Law College Road, Deccan, Pune 411004</p>
-                            <p class="mb-3 text-white"><i class="fas fa-phone-alt text-primary me-2"></i> <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold">9822268333</a></p>
-                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" class="btn btn-outline-primary rounded-pill mt-2" target="_blank" rel="noopener noreferrer">
+                        <span class="eyebrow-badge mb-2"><i class="fas fa-map-pin"></i> Central Pune Flagship</span>
+                        <h2 class="display-6 fw-bold text-white mb-4">Location &amp; Operating Hours</h2>
+                        <div class="location-detail mb-4 p-4 rounded-4" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.18);">
+                            <h4 class="h5 mb-3 fw-bold" style="color: #38bdf8;"><i class="fas fa-map-marker-alt me-2"></i> Address</h4>
+                            <p class="mb-1 text-white fs-5 fw-bold">ScaleUp CoWork &mdash; Deccan Hub</p>
+                            <p class="mb-1" style="color: #cbd5e1;">Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank,</p>
+                            <p class="mb-3" style="color: #94a3b8;">Law College Road, Deccan, Pune 411004</p>
+                            <p class="mb-3 text-white"><i class="fas fa-phone-alt me-2" style="color: #38bdf8;"></i> <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold">+91 98222 68333</a></p>
+                            <div class="p-3 rounded-3 mb-3 small" style="background: #08162c; border: 1px solid rgba(76, 179, 124, 0.25); color: #cbd5e1;">
+                                <div class="fw-bold text-white mb-1"><i class="fas fa-clock me-1" style="color: #4CB37C;"></i> Operating Hours</div>
+                                <div><strong class="text-white">Member Access:</strong> 24/7 (Biometric)</div>
+                                <div><strong class="text-white">Front Desk &amp; Tours:</strong> Mon&ndash;Sat, 9:00 AM &ndash; 7:00 PM</div>
+                            </div>
+                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" class="btn btn-outline-primary rounded-pill" target="_blank" rel="noopener noreferrer">
                                 Open in Google Maps <i class="fas fa-external-link-alt ms-2"></i>
                             </a>
                         </div>
                         <div class="location-detail">
                             <h4 class="text-white h5 mb-3">Strategic Benefits</h4>
-                            <ul class="list-unstyled text-muted">
-                                <li class="mb-3 d-flex"><i class="fas fa-map-marker-alt me-3 text-primary mt-1"></i> <span>Heart of Deccan's commercial district</span></li>
-                                <li class="mb-3 d-flex"><i class="fas fa-train me-3 text-primary mt-1"></i> <span>Walking distance to Deccan Metro Station</span></li>
-                                <li class="mb-3 d-flex"><i class="fas fa-road me-3 text-primary mt-1"></i> <span>Seamless connectivity to FC Road</span></li>
+                            <ul class="list-unstyled" style="color: #cbd5e1;">
+                                <li class="mb-3 d-flex"><i class="fas fa-map-marker-alt me-3 mt-1" style="color: #38bdf8;"></i> <span>Heart of Deccan's commercial district</span></li>
+                                <li class="mb-3 d-flex"><i class="fas fa-train me-3 mt-1" style="color: #38bdf8;"></i> <span>Walking distance to Deccan, Garware &amp; Nal Stop Metro Stations</span></li>
+                                <li class="mb-3 d-flex"><i class="fas fa-road me-3 mt-1" style="color: #38bdf8;"></i> <span>Seamless connectivity to FC Road, JM Road &amp; Prabhat Road</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="location-map rounded-4 overflow-hidden border border-secondary shadow-lg">
+                    <div class="location-map rounded-4 overflow-hidden shadow-lg" style="border: 1px solid rgba(56, 189, 248, 0.25);">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2384!2d73.831518!3d18.516584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb85f099723%3A0xfb056cc46501d239!2sScaleUp%20CoWork%20KBC%20Deccan%20HUB!5e0!3m2!1sen!2sin!4v1742122626002!5m2!1sen!2sin"
                             width="100%" 
@@ -992,59 +1019,60 @@
         </div>
     </section>
 
-    <section class="gallery-section py-5 bg-secondary fade-in">
-        <div class="container py-4">
+    <section class="section-rhythm gallery-section fade-in" style="background-color: #061122;">
+        <div class="container">
             <div class="text-center mb-5">
+                <span class="eyebrow-badge mb-2"><i class="fas fa-images"></i> Photo Tour</span>
                 <h2 class="display-6 fw-bold text-white mb-2">Workspace Gallery</h2>
-                <p class="text-muted">Take a peek at our modern coworking ecosystem.</p>
+                <p style="color: #cbd5e1;">Take a peek at our two-floor Deccan Hub coworking ecosystem.</p>
             </div>
             <div class="row g-4">
                 <!-- Row 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/firstfloorcoworking.jpeg', 'First Floor Coworking Setup')">
-                        <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="Workspace Setup" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/firstfloorcoworking.jpeg', 'First Floor Coworking Setup')">
+                        <img src="../assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="First Floor Coworking Workspace Setup" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">First Floor Setup</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabinfront.jpeg', 'Premium Private Cabin Front')">
-                        <img src="../assets/images/deccan-hub/cabinfront.jpeg" alt="Private Cabin" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/cabinfront.jpeg', 'Premium Private Cabin Front')">
+                        <img src="../assets/images/deccan-hub/cabinfront.jpeg" alt="Private Cabin Glass Front" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">Cabin Front View</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabinside.jpeg', 'Premium Private Cabin Interior')">
-                        <img src="../assets/images/deccan-hub/cabinside.jpeg" alt="Private Cabin Inside" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/cabinside.jpeg', 'Premium Private Cabin Interior')">
+                        <img src="../assets/images/deccan-hub/cabinside.jpeg" alt="Private Cabin Interior" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">Cabin Interior</span>
                         </div>
                     </div>
                 </div>
                 <!-- Row 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/largecabin.jpeg', 'Large Team Enclosure')">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/largecabin.jpeg', 'Large Team Enclosure')">
                         <img src="../assets/images/deccan-hub/largecabin.jpeg" alt="Large Team Cabin" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">Large Team Suite</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/meetingroom.jpeg', 'Professional Meeting Space')">
-                        <img src="../assets/images/deccan-hub/meetingroom.jpeg" alt="Meeting Room" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/meetingroom.jpeg', 'Professional Meeting Space')">
+                        <img src="../assets/images/deccan-hub/meetingroom.jpeg" alt="Meeting Room at Deccan Hub" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">Meeting Room</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item rounded-4 overflow-hidden border border-dark shadow-sm position-relative" onclick="openGalleryModal('../assets/images/deccan-hub/cabin2.jpeg', 'Additional Private Space')">
-                        <img src="../assets/images/deccan-hub/cabin2.jpeg" alt="Cabin Option 2" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(15,23,42,0.8); opacity: 0; transition: opacity 0.3s;">
+                    <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative" style="border: 1px solid rgba(56, 189, 248, 0.16);" onclick="openGalleryModal('../assets/images/deccan-hub/cabin2.jpeg', 'Additional Private Space')">
+                        <img src="../assets/images/deccan-hub/cabin2.jpeg" alt="Private Cabin Variant" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(6, 17, 34, 0.82); opacity: 0; transition: opacity 0.3s;">
                             <span class="text-white fw-bold">Private Cabin Variant</span>
                         </div>
                     </div>
@@ -1053,18 +1081,25 @@
         </div>
     </section>
 
-    <section class="cta-section py-5 bg-primary text-white">
-        <div class="container py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
-                    <h2 class="display-6 fw-bold mb-3 text-white">Ready to claim your launch offer?</h2>
-                    <p class="lead mb-0 text-white opacity-75">Join our vibrant community and enjoy premium amenities in our newest campus.</p>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <a href="../contact.html?location=deccan-hub" class="btn btn-light btn-lg rounded-pill px-5 text-primary fw-bold shadow">
-                        Book a Tour Now
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+    <section class="section-rhythm" style="background-color: #08162c;">
+        <div class="container">
+            <div class="p-4 p-md-5 rounded-4 shadow-lg" style="background: #0a1c38; border: 1px solid rgba(13, 129, 202, 0.45);">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <span class="status-pill-open mb-2"><i class="fas fa-ticket-alt"></i> Complimentary 1-Day Trial Available</span>
+                        <h2 class="display-6 fw-bold mb-2 text-white">Ready to Tour ScaleUp Deccan Hub?</h2>
+                        <p class="lead mb-0" style="color: #cbd5e1;">Book a guided walk-through with our community team or lock your seat at uniform pricing.</p>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex flex-column flex-sm-row flex-lg-column gap-2 justify-content-center">
+                            <button type="button" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Book Deccan Hub Tour')">
+                                <i class="fas fa-calendar-check me-2"></i> Book a Tour Now
+                            </button>
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20would%20like%20to%20book%20a%20tour%20at%20ScaleUp%20Deccan%20Hub%20(deccan-hub.html)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-4 fw-bold">
+                                <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1073,68 +1108,131 @@
     <!-- Brand Accent Line -->
     <div class="brand-stripe"></div>
 
-    <footer class="footer bg-dark text-white pt-5">
+    <footer class="footer text-white pt-5" style="background-color: #061122; border-top: 1px solid rgba(56, 189, 248, 0.16);">
         <div class="container py-4">
-            <div class="row g-4 border-bottom border-secondary pb-5">
+            <div class="row g-4 pb-5" style="border-bottom: 1px solid rgba(56, 189, 248, 0.16);">
                 <div class="col-lg-4">
                     <img src="../assets/images/logo-light.png" alt="ScaleUp Logo" height="40" class="mb-4">
-                    <p class="text-muted mb-4">Experience modern coworking at its finest with our state-of-the-art facilities and vibrant community in the heart of Pune.</p>
+                    <p class="small mb-4" style="color: #cbd5e1;">Experience modern coworking at its finest with 140+ seats, 10+ private cabins, 2 conference rooms, and vibrant community in the heart of Deccan, Pune.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white bg-secondary p-2 rounded-circle" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="tel:+919822268333" class="btn btn-outline-primary btn-sm rounded-pill"><i class="fas fa-phone-alt me-1"></i> +91 98222 68333</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h5 class="mb-4 text-white">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="../index.html#features" class="text-muted text-decoration-none hover-white">Features</a></li>
-                        <li class="mb-2"><a href="../index.html#plans" class="text-muted text-decoration-none hover-white">Plans</a></li>
-                        <li class="mb-2"><a href="../index.html#amenities" class="text-muted text-decoration-none hover-white">Amenities</a></li>
-                        <li class="mb-2"><a href="../contact.html" class="text-muted text-decoration-none hover-white">Contact Us</a></li>
+                    <h5 class="mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../index.html" class="text-decoration-none" style="color: #94a3b8;">Home</a></li>
+                        <li class="mb-2"><a href="#plans" class="text-decoration-none" style="color: #94a3b8;">Uniform Pricing</a></li>
+                        <li class="mb-2"><a href="../contact.html?location=deccan-hub" class="text-decoration-none" style="color: #94a3b8;">Contact Us</a></li>
+                        <li class="mb-2"><a href="../privacy-policy.html" class="text-decoration-none" style="color: #38bdf8;">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h5 class="mb-4 text-white">Contact Info</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li class="mb-3">
-                            <i class="fas fa-phone me-2 text-primary"></i> +91 98222 68333
+                    <h5 class="mb-3 text-white">Contact &amp; Hours</h5>
+                    <ul class="list-unstyled small" style="color: #cbd5e1;">
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2" style="color: #38bdf8;"></i>
+                            <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold">+91 98222 68333</a>
                         </li>
-                        <li class="mb-3">
-                            <i class="fas fa-envelope me-2 text-primary"></i> scaleup.cowork@gmail.com
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2" style="color: #38bdf8;"></i>
+                            <a href="mailto:scaleup.cowork@gmail.com" class="text-decoration-none" style="color: #cbd5e1;">scaleup.cowork@gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-clock me-2" style="color: #38bdf8;"></i>
+                            <span><strong class="text-white">Member Access:</strong> 24/7 (Biometric)<br><span style="color: #94a3b8;">Front Desk &amp; Tours: Mon&ndash;Sat, 9:00 AM &ndash; 7:00 PM</span></span>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h5 class="mb-4 text-white">Locations</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li class="mb-3">
-                            <a href="deccan-hub.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Deccan Hub</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="law-college-office.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Law College Road</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="baner-office.html" class="text-muted text-decoration-none"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Baner Center</a>
-                        </li>
+                    <h5 class="mb-3 text-white">Flagship Address</h5>
+                    <p class="small mb-2" style="color: #cbd5e1;">
+                        <i class="fas fa-map-marker-alt me-2" style="color: #38bdf8;"></i>
+                        Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank &ndash; Law College Road, Deccan, Pune 411004
+                    </p>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-1"><a href="law-college-office.html" class="text-decoration-none" style="color: #94a3b8;">Law College Road Centre</a></li>
+                        <li><a href="baner-office.html" class="text-decoration-none" style="color: #94a3b8;">Baner Center (Leased)</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="row pt-4 pb-3">
+            <div class="row pt-4 pb-3 align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="text-muted mb-0">© 2026 ScaleUp Coworking. All rights reserved.</p>
+                    <p class="mb-0 small" style="color: #94a3b8;">&copy; 2026 ScaleUp Coworking Spaces. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0 small">
+                    <a href="../privacy-policy.html" class="text-decoration-none me-3" style="color: #38bdf8;">Privacy Policy</a>
+                    <span style="color: #94a3b8;">ScaleUp Deccan Hub &bull; Pune</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Booking / Inquiry Modal (Unified Lead Capture + Google Ads Consent) -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-white rounded-4 shadow-lg" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.28);">
+                <div class="modal-header" style="border-bottom: 1px solid rgba(56, 189, 248, 0.16);">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-calendar-check fs-4 me-2" style="color: #38bdf8;"></i>
+                        <h5 class="modal-title fw-bold" id="bookingModalLabel">Book Deccan Hub Tour</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="p-3 rounded-3 text-center mb-3" style="background: #08162c; border: 1px solid rgba(13, 129, 202, 0.35);">
+                        <div class="small mb-2" style="color: #cbd5e1;">Need immediate availability or team pricing?</div>
+                        <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill fw-bold px-3">
+                            <i class="fas fa-phone-alt me-1"></i> Direct Call: 9822268333
+                        </a>
+                    </div>
+
+                    <form id="scheduleForm" onsubmit="handleQuickSubmit(event)">
+                        <div class="mb-3">
+                            <label for="leadName" class="form-label small" style="color: #cbd5e1;">Full Name *</label>
+                            <input type="text" class="form-control text-white" id="leadName" required placeholder="Your Name" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="leadPhone" class="form-label small" style="color: #cbd5e1;">Phone Number *</label>
+                            <input type="tel" class="form-control text-white" id="leadPhone" required placeholder="+91 98..." style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="leadWorkspace" class="form-label small" style="color: #cbd5e1;">Interested Workspace *</label>
+                            <select class="form-select text-white" id="leadWorkspace" required style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
+                                <option value="Free 1-Day Trial Pass">Free 1-Day Trial Pass (₹0 Trial)</option>
+                                <option value="Deccan Hub Dedicated Desk" selected>Dedicated Cowork Desk (₹7,950/mo)</option>
+                                <option value="Deccan Hub Private Office">Private Office Cabin (₹10,900/seat)</option>
+                                <option value="Deccan Hub Hybrid Desk">Hybrid Cowork 12 Days (₹5,850/mo)</option>
+                                <option value="Deccan Hub Day Pass">Day Pass (₹590/day)</option>
+                                <option value="Meeting Space (Hourly)">Meeting Space Hourly (₹150/seat/hr)</option>
+                                <option value="4-Seater Meeting Room">4-Seater Meeting Room (₹3,900/day)</option>
+                                <option value="9-Seater Boardroom">9-Seater Boardroom (₹7,950/day or ₹4,500 half-day)</option>
+                                <option value="Virtual Office">Virtual Office with Launch Offer (₹2,970/mo)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="visitDate" class="form-label small" style="color: #cbd5e1;">Preferred Visit Date</label>
+                            <input type="date" class="form-control text-white" id="visitDate" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold" id="submitLeadBtn">
+                            Submit &amp; Request Callback
+                        </button>
+                        <p class="lead-consent-note mb-0">
+                            By submitting this form, you agree to our <a href="../privacy-policy.html">Privacy Policy</a> and consent to receive a call, WhatsApp message, or email from ScaleUp CoWork regarding your workspace inquiry.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Back to Top -->
-    <button id="backToTop" class="btn btn-primary rounded-circle shadow position-fixed bottom-0 end-0 m-4" style="display: none; width: 45px; height: 45px; z-index: 1000;">
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow position-fixed bottom-0 end-0 m-4" style="display: none; width: 45px; height: 45px; z-index: 1000;" aria-label="Back to Top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -1142,7 +1240,7 @@
     
     <!-- Custom Gallery Modal -->
     <div id="galleryModal" class="custom-gallery-modal" style="display:none;">
-        <span class="gallery-modal-close" onclick="closeGalleryModal()">×</span>
+        <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
         <div class="gallery-modal-content">
             <img class="gallery-modal-img" id="galleryModalImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Full Image">
             <div class="gallery-modal-caption" id="galleryModalCaption"></div>
@@ -1159,7 +1257,7 @@
             width: 100vw;
             height: 100vh;
             overflow: auto;
-            background: rgba(15,23,42,0.95);
+            background: rgba(6, 17, 34, 0.95);
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -1182,7 +1280,7 @@
             max-height: 70vh;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-            background: #222a36;
+            background: #0a1c38;
         }
         .gallery-modal-caption {
             color: #fff;
@@ -1191,7 +1289,8 @@
             text-align: left;
             max-width: 300px;
             padding: 1.5rem 1rem;
-            background: rgba(30,41,59,0.85);
+            background: #0a1c38;
+            border: 1px solid rgba(56, 189, 248, 0.25);
             border-radius: 12px;
         }
         .gallery-modal-close {
@@ -1218,6 +1317,24 @@
     </style>
 
     <script>
+        function selectBookingPlan(planValue, headingText) {
+            const select = document.getElementById('leadWorkspace');
+            if (select && planValue) {
+                const match = Array.from(select.options).find(opt => opt.value === planValue);
+                if (match) {
+                    select.value = planValue;
+                }
+            }
+            const modalTitle = document.getElementById('bookingModalLabel');
+            if (modalTitle && headingText) {
+                modalTitle.textContent = headingText;
+            }
+        }
+
+        function selectDayPassOption() {
+            selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass');
+        }
+
         function openGalleryModal(imgSrc, caption) {
             var modal = document.getElementById('galleryModal');
             var modalImg = document.getElementById('galleryModalImg');
@@ -1243,25 +1360,23 @@
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('mouseenter', () => {
                 const overlay = item.querySelector('.gallery-overlay');
-                if(overlay) overlay.style.opacity = '1';
+                if (overlay) overlay.style.opacity = '1';
             });
             item.addEventListener('mouseleave', () => {
                 const overlay = item.querySelector('.gallery-overlay');
-                if(overlay) overlay.style.opacity = '0';
+                if (overlay) overlay.style.opacity = '0';
             });
         });
 
-        // Scroll to top visibility
-        window.onscroll = function() {
-            var backToTop = document.getElementById("backToTop");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTop.style.display = "block";
-            } else {
-                backToTop.style.display = "none";
-            }
-        };
-        // Sticky Navbar scroll listener
+        // Scroll to top visibility & click handler
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
         window.addEventListener('scroll', function() {
+            if (backToTopBtn) {
+                backToTopBtn.style.display = (window.scrollY > 100) ? 'block' : 'none';
+            }
             const navbar = document.querySelector('.unified-navbar');
             if (navbar) {
                 if (window.scrollY > 40) {
@@ -1272,14 +1387,15 @@
             }
         });
     </script>
+    <script src="../assets/js/lead-capture.js"></script>
 
     <!-- Floating Quick Contact Dock -->
     <div class="floating-quick-dock d-none d-md-flex flex-column align-items-end gap-2" style="position: fixed; bottom: 25px; right: 25px; z-index: 1050;">
-        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45) !important;">
+        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20KBC%20Deccan%20(deccan-hub.html)" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #4CB37C; box-shadow: 0 8px 25px rgba(76, 179, 124, 0.4) !important;">
             <i class="fab fa-whatsapp fs-5"></i>
             <span>Chat on WhatsApp</span>
         </a>
-        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0284c7; box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45) !important;">
+        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-3 py-2 shadow-lg fw-bold d-flex align-items-center gap-2 border border-2 border-white hover-scale" style="background: #0D81CA; box-shadow: 0 8px 25px rgba(13, 129, 202, 0.4) !important;">
             <i class="fas fa-phone-alt fs-6"></i>
             <span>Call 9822268333</span>
         </a>

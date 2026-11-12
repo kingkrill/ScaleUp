@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /leads.html
 
 Sitemap: https://scaleupcowork.com/sitemap.xml

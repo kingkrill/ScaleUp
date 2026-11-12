@@ -1,52 +1,54 @@
 :root {
-    /* ScaleUp Logo Brand Colors */
+    /* ScaleUp Logo Brand Colors (30% Structural Brand) */
     --primary: #0D81CA;          /* ScaleUp Royal Azure Blue */
     --primary-dark: #072B69;     /* ScaleUp Anchor Deep Navy */
-    --primary-light: rgba(13, 129, 202, 0.12);
+    --primary-light: rgba(13, 129, 202, 0.14);
     --primary-glow: rgba(13, 129, 202, 0.35);
+    --brand-cyan: #38bdf8;       /* Crisp Cyan Structural Highlight */
     
-    /* ScaleUp Logo Arrow Green Accents */
-    --accent-emerald: #4CB37C;   /* ScaleUp Growth Emerald */
-    --accent-lime: #7AB944;      /* ScaleUp Momentum Lime */
+    /* ScaleUp Semantic Accent & High-Intent Conversion Colors (10%) */
+    --accent-emerald: #4CB37C;   /* Positive status, checkmarks, WhatsApp, savings */
+    --accent-lime: #7AB944;      /* Calculator positive metrics & momentum */
+    --accent-amber: #f59e0b;     /* Flagship / Featured Tier & 4.9★ ratings only */
     --brand-gradient: linear-gradient(135deg, #0D81CA 0%, #4CB37C 100%);
     --brand-gradient-tri: linear-gradient(135deg, #072B69 0%, #0D81CA 50%, #4CB37C 100%);
 
-    /* Logo-Inspired Deep Midnight Navy Backgrounds */
-    --bg-primary: #061122;       /* Deep ScaleUp midnight navy */
-    --bg-secondary: #0a1c38;     /* Rich card & section base */
-    --bg-card: #0e2448;          /* Elevated card layer */
-    --bg-hover: #143564;         /* Hover state color */
+    /* 60% Executive Deep Midnight Surfaces */
+    --bg-primary: #061122;       /* Primary page canvas */
+    --bg-secondary: #08162c;     /* Alternating section canvas */
+    --bg-card: #0a1c38;          /* Solid card surface */
+    --bg-hover: #0e2448;         /* Elevated card hover surface */
     
-    /* Text Colors */
-    --text-primary: #f8fafc;   /* Almost white */
-    --text-secondary: #cbd5e1; /* Light gray */
-    --text-muted: #94a3b8;     /* Muted text */
+    /* High-Contrast WCAG AA Typography */
+    --text-primary: #f8fafc;     /* Headings & key figures */
+    --text-secondary: #cbd5e1;   /* Body copy inside #0a1c38 cards */
+    --text-muted: #94a3b8;       /* Sub-labels & captions (WCAG AA compliant) */
     
-    /* Border Colors */
-    --border-light: rgba(13, 129, 202, 0.2);   /* Subtle brand borders */
-    --border-dark: rgba(7, 43, 105, 0.55);     /* Deep navy borders */
-    --border-brand: rgba(13, 129, 202, 0.35);
+    /* Unified Border System (No Rainbow Borders) */
+    --border-light: rgba(56, 189, 248, 0.16);  /* Default subtle card border */
+    --border-hover: rgba(13, 129, 202, 0.55);  /* Card hover elevation border */
+    --border-dark: rgba(30, 58, 95, 0.85);     /* #1e3a5f fallback / subtle border */
+    --border-brand: rgba(56, 189, 248, 0.28);
     
     /* Shadow Effects */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 12px rgba(6, 17, 34, 0.5);
-    --shadow-lg: 0 10px 25px rgba(6, 17, 34, 0.7);
-    --shadow-brand: 0 8px 30px rgba(13, 129, 202, 0.25);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 24px rgba(6, 17, 34, 0.55);
+    --shadow-lg: 0 14px 36px rgba(6, 17, 34, 0.72);
+    --shadow-brand: 0 10px 30px rgba(13, 129, 202, 0.25);
     --shadow-green: 0 8px 25px rgba(76, 179, 124, 0.25);
     
-    /* Additional Colors */
+    /* Additional Semantic Tokens */
     --success: #4CB37C;
     --danger: #ef4444;
     --warning: #f59e0b;
     --info: #0D81CA;
 
-    /* ScaleUp 4-Constituent System Tokens (Google-style brand harmony) */
+    /* ScaleUp Constituent System Tokens */
     --brand-azure: #0D81CA;
     --brand-navy: #072B69;
     --brand-emerald: #4CB37C;
     --brand-lime: #7AB944;
-    --brand-cyan: #38bdf8;
-    --brand-bar: linear-gradient(90deg, #0D81CA 0%, #072B69 33%, #4CB37C 66%, #7AB944 100%);
+    --brand-bar: linear-gradient(90deg, #0D81CA 0%, #38bdf8 30%, #4CB37C 65%, #7AB944 100%);
 }
 
 /* Base Styles */
@@ -160,13 +162,14 @@ body {
 }
 
 .btn-outline-primary {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: rgba(56, 189, 248, 0.55);
+    color: #38bdf8;
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary);
-    color: white;
+    border-color: var(--primary);
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -247,9 +250,14 @@ body {
     border-color: var(--border-light);
 }
 
-/* Utilities */
+/* Utilities & Dark Surface Contrast Enforcement */
 .text-muted {
-    color: var(--text-muted) !important;
+    color: #94a3b8 !important;
+}
+.unified-navbar .text-muted,
+.unified-navbar .dropdown-header.text-muted,
+.unified-navbar .dropdown-item.text-muted {
+    color: #64748b !important;
 }
 
 .border-light {
@@ -282,18 +290,18 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
 }
 
 .footer a {
-    color: var(--text-secondary);
+    color: #94a3b8;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: var(--primary);
+    color: #38bdf8;
 }
 
 /* Gallery */

@@ -184,7 +184,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/main.css?v=4" rel="stylesheet">
+    <link href="assets/css/main.css?v=5" rel="stylesheet">
     <link href="assets/css/animations.css" rel="stylesheet">
 
     <!-- Antigravity Background & Unified Navbar Styles -->
@@ -212,26 +212,25 @@
             z-index: 1030;
         }
 
-        /* Animated Gradient Underline: 4px Eternal Loading Bar Stream */
+        /* Animated Gradient Underline: Sleek 2.5px Executive Brand Stream (5s cycle) */
         .unified-navbar::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 4px !important;
+            height: 2.5px !important;
             background: linear-gradient(
                 90deg,
                 #0D81CA 0%,
-                #38bdf8 20%,
-                #4CB37C 40%,
-                #7AB944 60%,
-                #f59e0b 80%,
+                #38bdf8 25%,
+                #4CB37C 50%,
+                #7AB944 75%,
                 #0D81CA 100%
             ) !important;
-            background-size: 450px 100% !important;
-            animation: navbarEternalLoader 2s linear infinite !important;
-            box-shadow: 0 2px 10px rgba(13, 129, 202, 0.45), 0 0 5px rgba(76, 179, 124, 0.35);
+            background-size: 480px 100% !important;
+            animation: navbarEternalLoader 5s linear infinite !important;
+            box-shadow: 0 1px 6px rgba(13, 129, 202, 0.25);
             z-index: 1035;
             pointer-events: none;
         }
@@ -241,13 +240,13 @@
                 background-position: 0 0;
             }
             100% {
-                background-position: 450px 0;
+                background-position: 480px 0;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
             .unified-navbar::after {
-                animation: none;
+                animation: none !important;
             }
         }
 
@@ -581,8 +580,7 @@
         /* Solid Stat Tile with Rich Midnight Background */
         .antigravity-stat-tile {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.3);
-            border-top: 3px solid #0D81CA;
+            border: 1px solid rgba(56, 189, 248, 0.16);
             border-radius: 14px;
             padding: 1rem 0.75rem;
             text-align: center;
@@ -590,40 +588,33 @@
             box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5);
         }
         .antigravity-stat-tile:hover {
-            transform: translateY(-4px);
-            border-color: rgba(76, 179, 124, 0.6);
-            border-top-color: #4CB37C;
-            box-shadow: 0 14px 32px rgba(13, 129, 202, 0.35);
+            transform: translateY(-3px);
+            border-color: rgba(13, 129, 202, 0.55);
+            box-shadow: 0 14px 32px rgba(6, 17, 34, 0.65);
             background: #0e2448 !important;
         }
 
         /* Gradient Headline */
         .text-gradient {
-            background: linear-gradient(135deg, #0D81CA 0%, #38bdf8 45%, #4CB37C 100%);
+            background: linear-gradient(135deg, #0D81CA 0%, #38bdf8 55%, #4CB37C 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Flagship Badge */
+        /* Flagship Badge (10% Warm Amber Reserved for Flagship Callout) */
         .badge-flagship-pulse {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.05));
-            border: 1px solid rgba(245, 158, 11, 0.5);
+            background: rgba(245, 158, 11, 0.14);
+            border: 1px solid rgba(245, 158, 11, 0.55);
             color: #fbbf24;
-            padding: 0.4rem 1.1rem;
+            padding: 0.4rem 1.05rem;
             border-radius: 9999px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.5px;
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
-            animation: pulse-subtle 3s infinite;
+            box-shadow: 0 0 14px rgba(245, 158, 11, 0.15);
             max-width: 100%;
-        }
-
-        @keyframes pulse-subtle {
-            0%, 100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.2); }
-            50% { box-shadow: 0 0 22px rgba(245, 158, 11, 0.45); }
         }
 
         @media (max-width: 576px) {
@@ -641,12 +632,12 @@
         }
 
         /* =============================================================
-           ANIMATED BACKGROUND 1: CAMPUS TOUR (ARCHITECTURAL BLUEPRINT GRID)
+           SECTION 2: CAMPUS TOUR (ARCHITECTURAL BLUEPRINT GRID)
         ============================================================= */
         .walkthrough-animated-section {
-            background: radial-gradient(circle at 85% 20%, rgba(13, 129, 202, 0.22) 0%, rgba(7, 43, 105, 0.5) 45%, #061122 80%), #061122;
-            border-top: 1px solid rgba(13, 129, 202, 0.25);
-            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
+            background: radial-gradient(circle at 85% 20%, rgba(13, 129, 202, 0.16) 0%, rgba(8, 22, 44, 0.5) 45%, #061122 80%), #08162c;
+            border-top: 1px solid rgba(56, 189, 248, 0.14);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
             position: relative;
             overflow: hidden;
         }
@@ -655,12 +646,12 @@
             position: absolute;
             inset: 0;
             background-image: 
-                linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+                linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
             background-size: 38px 38px;
             pointer-events: none;
             z-index: 0;
-            animation: blueprintPan 40s linear infinite;
+            animation: blueprintPan 45s linear infinite;
         }
 
         @keyframes blueprintPan {
@@ -673,9 +664,9 @@
             top: -100px;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.8) 50%, transparent 100%);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.9), 0 0 50px rgba(56, 189, 248, 0.4);
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.65) 50%, transparent 100%);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.7);
             animation: laserSweep 9s ease-in-out infinite;
             pointer-events: none;
             z-index: 1;
@@ -683,8 +674,8 @@
 
         @keyframes laserSweep {
             0%, 100% { top: -20px; opacity: 0; }
-            15% { opacity: 0.85; }
-            85% { opacity: 0.85; }
+            15% { opacity: 0.8; }
+            85% { opacity: 0.8; }
             95% { top: 100%; opacity: 0; }
         }
 
@@ -692,12 +683,11 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(13, 129, 202, 0.25) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(13, 129, 202, 0.18) 0%, transparent 70%);
             border-radius: 50%;
             top: 5%;
             right: -8%;
             filter: blur(55px);
-            animation: floatGlow1 12s ease-in-out infinite alternate;
             pointer-events: none;
             z-index: 0;
         }
@@ -706,31 +696,21 @@
             position: absolute;
             width: 420px;
             height: 420px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
             border-radius: 50%;
             bottom: -10%;
             left: 2%;
             filter: blur(50px);
-            animation: floatGlow2 14s ease-in-out infinite alternate;
             pointer-events: none;
             z-index: 0;
         }
 
-        @keyframes floatGlow1 {
-            0% { transform: translateY(0px) scale(1); }
-            100% { transform: translateY(-40px) scale(1.15); }
-        }
-        @keyframes floatGlow2 {
-            0% { transform: translateY(0px) scale(1); }
-            100% { transform: translateY(35px) scale(1.12); }
-        }
-
         .walkthrough-frame {
-            border-radius: 22px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(56, 189, 248, 0.3);
-            border: 2px solid rgba(56, 189, 248, 0.35);
-            background: #000;
+            box-shadow: 0 22px 52px rgba(0, 0, 0, 0.75), 0 0 24px rgba(13, 129, 202, 0.22);
+            border: 1.5px solid rgba(56, 189, 248, 0.28);
+            background: #061122;
             position: relative;
             z-index: 2;
         }
@@ -744,8 +724,8 @@
 
         .tour-feature-card {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.25);
-            border-left: 4px solid #0D81CA;
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            border-left: 3px solid #0D81CA;
             border-radius: 14px;
             padding: 1rem 1.25rem;
             margin-bottom: 1rem;
@@ -754,19 +734,18 @@
         }
         .tour-feature-card:hover {
             background: #0e2448 !important;
-            border-color: rgba(76, 179, 124, 0.4);
-            border-left-color: #4CB37C;
-            transform: translateX(6px);
-            box-shadow: 0 12px 28px rgba(6, 17, 34, 0.6), 0 0 20px rgba(13, 129, 202, 0.2);
+            border-color: rgba(13, 129, 202, 0.55);
+            border-left-color: #38bdf8;
+            transform: translateX(4px);
+            box-shadow: 0 12px 28px rgba(6, 17, 34, 0.65);
         }
 
         /* =============================================================
-           PLANS & PRICING (TONED DOWN, COHESIVE, ELEGANT DARK THEME)
+           PLANS & PRICING (EXECUTIVE 60-30-10 HIERARCHY)
         ============================================================= */
         .pricing-animated-section {
-            background: radial-gradient(circle at 50% 10%, rgba(13, 129, 202, 0.18) 0%, rgba(7, 43, 105, 0.45) 50%, #061122 85%), #061122;
-            border-top: 1px solid rgba(13, 129, 202, 0.2);
-            border-bottom: 1px solid rgba(13, 129, 202, 0.2);
+            background: radial-gradient(circle at 50% 10%, rgba(13, 129, 202, 0.14) 0%, rgba(8, 22, 44, 0.45) 50%, #061122 85%), #061122;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
             position: relative;
             overflow: hidden;
         }
@@ -775,17 +754,16 @@
             position: absolute;
             inset: 0;
             background-image: 
-                radial-gradient(rgba(147, 197, 253, 0.06) 1px, transparent 1px);
+                radial-gradient(rgba(147, 197, 253, 0.05) 1px, transparent 1px);
             background-size: 32px 32px;
             pointer-events: none;
             z-index: 0;
             opacity: 0.35;
         }
 
-        /* Uniform Pricing Cards (Unified, Sleek Glassmorphism) */
         .uniform-pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
             gap: 1.5rem;
             position: relative;
             z-index: 2;
@@ -793,7 +771,7 @@
 
         .pricing-plan-card {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.16);
             border-radius: 18px;
             padding: 2rem 1.6rem;
             display: flex;
@@ -805,42 +783,18 @@
         }
 
         .pricing-plan-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(13, 129, 202, 0.45);
-            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.7);
+            transform: translateY(-5px);
+            border-color: rgba(13, 129, 202, 0.55);
+            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.75);
             background: #0e2448 !important;
-        }
-
-        /* Subtle, Toned-Down Highlight for Dedicated Desk */
-        .pricing-plan-card.highlight-blue {
-            background: #0a1c38 !important;
-            border: 1.5px solid rgba(13, 129, 202, 0.8) !important;
-            box-shadow: 0 12px 30px rgba(6, 17, 34, 0.6), 0 0 15px rgba(13, 129, 202, 0.2);
-        }
-        .pricing-plan-card.highlight-blue:hover {
-            background: #0e2448 !important;
-            border-color: #0D81CA !important;
-            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.8), 0 0 20px rgba(13, 129, 202, 0.35);
-        }
-
-        /* Subtle, Toned-Down Highlight for Private Office Suite */
-        .pricing-plan-card.highlight-amber {
-            background: #0a1c38 !important;
-            border: 1.5px solid rgba(245, 158, 11, 0.8) !important;
-            box-shadow: 0 12px 30px rgba(6, 17, 34, 0.6), 0 0 15px rgba(245, 158, 11, 0.15);
-        }
-        .pricing-plan-card.highlight-amber:hover {
-            background: #0e2448 !important;
-            border-color: #f59e0b !important;
-            box-shadow: 0 18px 40px rgba(6, 17, 34, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
         }
 
         .pricing-cost {
-            font-size: 2.25rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            color: #ffffff;
+            color: #f8fafc;
             line-height: 1;
-            margin: 1rem 0 0.5rem;
+            margin: 0.9rem 0 0.5rem;
         }
 
         .pricing-cost-unit {
@@ -850,20 +804,19 @@
         }
 
         /* =============================================================
-           ANIMATED BACKGROUND 3: LOCATION (SATELLITE RADAR PULSE)
+           LOCATION (SATELLITE RADAR PULSE)
         ============================================================= */
         .location-animated-section {
-            background: radial-gradient(circle at 20% 50%, rgba(13, 129, 202, 0.22) 0%, rgba(7, 43, 105, 0.5) 45%, #061122 85%), #061122;
+            background: radial-gradient(circle at 20% 50%, rgba(13, 129, 202, 0.16) 0%, rgba(8, 22, 44, 0.5) 45%, #061122 85%), #08162c;
             position: relative;
             overflow: hidden;
-            border-top: 1px solid rgba(13, 129, 202, 0.25);
-            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
         }
 
         .radar-ping-ring {
             position: absolute;
             border-radius: 50%;
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             pointer-events: none;
             animation: radarWave 6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
         }
@@ -872,99 +825,95 @@
         .radar-ring-3 { width: 650px; height: 650px; top: 5%; left: -3%; animation-delay: 4s; }
 
         @keyframes radarWave {
-            0% { transform: scale(0.3); opacity: 0.8; }
-            80% { opacity: 0.2; }
+            0% { transform: scale(0.3); opacity: 0.7; }
+            80% { opacity: 0.15; }
             100% { transform: scale(1.3); opacity: 0; }
         }
 
         /* =============================================================
-           AMENITIES: TASTEFULLY COLORFUL YET SOPHISTICATED CARDS
+           AMENITIES (UNIFIED SOLID CARDS + BRAND AZURE STRUCTURE)
         ============================================================= */
         .amenities-animated-section {
-            background: linear-gradient(180deg, #061122 0%, #0a1c38 50%, #061122 100%);
+            background: #061122;
             position: relative;
             overflow: hidden;
-            border-top: 1px solid rgba(13, 129, 202, 0.2);
-            border-bottom: 1px solid rgba(13, 129, 202, 0.2);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
         }
 
         .amenity-card-glass {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.16);
             border-radius: 18px;
             padding: 1.75rem 1.25rem;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 28px rgba(6, 17, 34, 0.5);
+            box-shadow: 0 10px 26px rgba(6, 17, 34, 0.5);
         }
         .amenity-card-glass:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             background: #0e2448 !important;
+            border-color: rgba(13, 129, 202, 0.55);
             box-shadow: 0 16px 36px rgba(6, 17, 34, 0.7);
         }
 
         .amenity-icon-glow {
-            width: 58px;
-            height: 58px;
+            width: 56px;
+            height: 56px;
             border-radius: 16px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            font-size: 1.5rem;
+            transition: all 0.25s ease;
+            font-size: 1.45rem;
+            background: rgba(13, 129, 202, 0.16);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.28);
+        }
+        .amenity-card-glass:hover .amenity-icon-glow {
+            background: #0D81CA;
+            color: #ffffff;
+            border-color: #0D81CA;
+            box-shadow: 0 0 18px rgba(13, 129, 202, 0.45);
         }
 
-        /* ScaleUp Constituent Color Accents for Amenities (Google-style card accents) */
-        .amenity-theme-azure { border-top: 3px solid #0D81CA !important; }
-        .amenity-theme-azure .amenity-icon-glow { background: rgba(13, 129, 202, 0.16); color: #38bdf8; border: 1px solid rgba(13, 129, 202, 0.4); }
-        .amenity-theme-azure:hover { border-color: rgba(13, 129, 202, 0.6) !important; box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important; }
-        .amenity-theme-azure:hover .amenity-icon-glow { background: #0D81CA; color: #ffffff; box-shadow: 0 0 20px rgba(13, 129, 202, 0.55); }
-
-        .amenity-theme-emerald { border-top: 3px solid #4CB37C !important; }
-        .amenity-theme-emerald .amenity-icon-glow { background: rgba(76, 179, 124, 0.16); color: #4CB37C; border: 1px solid rgba(76, 179, 124, 0.4); }
-        .amenity-theme-emerald:hover { border-color: rgba(76, 179, 124, 0.6) !important; box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important; }
-        .amenity-theme-emerald:hover .amenity-icon-glow { background: #4CB37C; color: #ffffff; box-shadow: 0 0 20px rgba(76, 179, 124, 0.55); }
-
-        .amenity-theme-lime { border-top: 3px solid #7AB944 !important; }
-        .amenity-theme-lime .amenity-icon-glow { background: rgba(122, 185, 68, 0.16); color: #a3e635; border: 1px solid rgba(122, 185, 68, 0.4); }
-        .amenity-theme-lime:hover { border-color: rgba(122, 185, 68, 0.6) !important; box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important; }
-        .amenity-theme-lime:hover .amenity-icon-glow { background: #7AB944; color: #ffffff; box-shadow: 0 0 20px rgba(122, 185, 68, 0.55); }
-
-        .amenity-theme-amber { border-top: 3px solid #f59e0b !important; }
-        .amenity-theme-amber .amenity-icon-glow { background: rgba(245, 158, 11, 0.16); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
-        .amenity-theme-amber:hover { border-color: rgba(245, 158, 11, 0.6) !important; box-shadow: 0 16px 36px rgba(245, 158, 11, 0.25) !important; }
-        .amenity-theme-amber:hover .amenity-icon-glow { background: #f59e0b; color: #ffffff; box-shadow: 0 0 20px rgba(245, 158, 11, 0.55); }
-
-        .amenity-theme-cyan { border-top: 3px solid #38bdf8 !important; }
-        .amenity-theme-cyan .amenity-icon-glow { background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
-        .amenity-theme-cyan:hover { border-color: rgba(56, 189, 248, 0.6) !important; box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25) !important; }
-        .amenity-theme-cyan:hover .amenity-icon-glow { background: #38bdf8; color: #ffffff; box-shadow: 0 0 20px rgba(56, 189, 248, 0.55); }
-
         /* =============================================================
-           SEO AUTHORITY PILLAR SECTION
+           SEO AUTHORITY PILLAR SECTION (SCANNABLE + ZERO SEO LOSS)
         ============================================================= */
         .seo-authority-section {
-            background: radial-gradient(circle at 50% 10%, rgba(13, 129, 202, 0.2) 0%, rgba(7, 43, 105, 0.45) 50%, #061122 85%), #061122;
-            border-top: 1px solid rgba(13, 129, 202, 0.25);
-            border-bottom: 1px solid rgba(13, 129, 202, 0.25);
+            background: #08162c;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.14);
             position: relative;
             overflow: hidden;
         }
 
         .seo-content-card {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.25);
+            border: 1px solid rgba(56, 189, 248, 0.16);
             border-radius: 18px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 15px 35px rgba(6, 17, 34, 0.6);
+            padding: 1.85rem;
+            box-shadow: 0 12px 30px rgba(6, 17, 34, 0.55);
+        }
+
+        .seo-guide-collapsible {
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.35s ease;
+        }
+        .seo-guide-collapsible.is-collapsed {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .seo-guide-collapsible.is-expanded {
+            max-height: 2400px;
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .seo-comparison-table {
             background: #0a1c38 !important;
-            border: 1px solid rgba(13, 129, 202, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.16);
             border-radius: 18px;
             overflow: hidden;
         }
@@ -973,13 +922,42 @@
             color: #38bdf8;
             font-weight: 700;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid rgba(13, 129, 202, 0.35);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.22);
         }
         .seo-comparison-table td {
             padding: 1rem 1.25rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             color: #cbd5e1;
             vertical-align: middle;
+        }
+
+        /* FAQ Accordion — Unified Solid #0a1c38 Cards */
+        #scaleupFaqAccordion .accordion-item {
+            background: #0a1c38 !important;
+            border: 1px solid rgba(56, 189, 248, 0.16) !important;
+            border-radius: 14px !important;
+            margin-bottom: 0.85rem;
+            overflow: hidden;
+            transition: border-color 0.25s ease, background-color 0.25s ease;
+        }
+        #scaleupFaqAccordion .accordion-item:hover {
+            border-color: rgba(13, 129, 202, 0.55) !important;
+        }
+        #scaleupFaqAccordion .accordion-button {
+            background: #0a1c38 !important;
+            color: #f8fafc !important;
+            padding: 1.15rem 1.35rem;
+            box-shadow: none !important;
+        }
+        #scaleupFaqAccordion .accordion-button:not(.collapsed) {
+            background: #0e2448 !important;
+            color: #38bdf8 !important;
+        }
+        #scaleupFaqAccordion .accordion-body {
+            background: #0a1c38 !important;
+            color: #cbd5e1 !important;
+            border-top: 1px solid rgba(56, 189, 248, 0.12);
+            padding: 1.15rem 1.35rem;
         }
 
         /* Floating Mobile Conversion Bar */
@@ -1027,10 +1005,10 @@
 
             <!-- Mobile Action Icons (Quick Access without opening drawer) -->
             <div class="d-flex d-xl-none align-items-center gap-2">
-                <button type="button" class="btn btn-primary btn-sm rounded-pill px-2 py-1 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" title="Book Tour">
+                <button type="button" class="btn btn-primary btn-sm rounded-pill px-2 py-1 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')" title="Book Tour">
                     <i class="fas fa-calendar-check me-1"></i> Tour
                 </button>
-                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-circle p-2" title="WhatsApp">
+                <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub%20(scaleupcowork.com)" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-circle p-2" title="WhatsApp">
                     <i class="fab fa-whatsapp fs-6"></i>
                 </a>
                 <button class="navbar-toggler border-0 p-1 text-dark ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -1073,7 +1051,7 @@
                         </ul>
                     </li>
                     <li class="nav-item ms-xl-2 my-2 my-xl-0">
-                        <button type="button" class="btn-nav-book-tour" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        <button type="button" class="btn-nav-book-tour" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')">
                             <i class="fas fa-calendar-check me-1"></i> Book a Tour
                         </button>
                     </li>
@@ -1088,18 +1066,23 @@
                             </a>
                         </div>
                         <div class="col-6">
-                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold text-center">
                                 <i class="fab fa-whatsapp me-1"></i> WhatsApp
                             </a>
                         </div>
                         <div class="col-12 mt-2">
-                            <button type="button" class="btn btn-info text-white w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            <button type="button" class="btn btn-primary w-100 rounded-pill py-2 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
                                 <i class="fas fa-calendar-check me-1"></i> Book a Tour / Claim Day Pass
                             </button>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light text-white w-100 rounded-pill py-2 small fw-semibold text-center">
+                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-dark w-100 rounded-pill py-2 small fw-semibold text-center">
                                 <i class="fas fa-map-marker-alt text-danger me-1"></i> Deccan Hub Map (Dani Road, Deccan)
+                            </a>
+                        </div>
+                        <div class="col-12 mt-1 text-center">
+                            <a href="privacy-policy.html" class="text-secondary small text-decoration-none fw-semibold">
+                                <i class="fas fa-shield-alt me-1"></i> Privacy Policy
                             </a>
                         </div>
                     </div>
@@ -1120,7 +1103,7 @@
                     <span>WhatsApp</span>
                 </a>
 
-                <!-- Call 📞 Link (Direct to 9822268333) -->
+                <!-- Call Link (Direct to 9822268333) -->
                 <a href="tel:+919822268333" class="nav-conversion-btn btn-nav-call" title="Call +91 98222 68333">
                     <i class="fas fa-phone-alt"></i>
                     <span>98222 68333</span>
@@ -1160,24 +1143,26 @@
         <div class="container hero-container-content position-relative">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 text-center text-lg-start">
-                    <!-- Glowing Flagship Badge -->
-                    <div class="badge-flagship-pulse mb-3">
-                        <i class="fas fa-crown me-2"></i> FLAGSHIP CENTRE NOW OPEN • DECCAN HUB
+                    <!-- Flagship & Google Rating Badges -->
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-3 justify-content-center justify-content-lg-start">
+                        <div class="badge-flagship-pulse">
+                            <i class="fas fa-crown me-2"></i> FLAGSHIP CENTRE NOW OPEN &bull; DECCAN HUB
+                        </div>
+                        <span class="status-pill-flagship">
+                            <i class="fas fa-star"></i> 4.9&starf; Google Rating (168 Reviews)
+                        </span>
                     </div>
 
                     <!-- SEO Optimized Headline -->
                     <h1 class="display-4 fw-extrabold text-white mb-3" style="line-height: 1.15;">
                         ScaleUp CoWork KBC Prime <span class="text-gradient">Coworking Space</span> in Pune
                     </h1>
-                    
-                    <!-- Exact Address Subtitle -->
-                    
 
                     <!-- Scannable Hero Highlights -->
                     <p class="text-white fs-5 fw-semibold mb-2" style="line-height: 1.45;">
                         Pune’s most prime location with affordable economically priced modern CoWorking ecosystem.
                     </p>
-                    <p class="text-light opacity-90 fs-6 fw-normal mb-3" style="line-height: 1.6; max-width: 720px;">
+                    <p class="fs-6 fw-normal mb-3" style="line-height: 1.6; max-width: 720px; color: #cbd5e1;">
                         Offering premium plug-and-play CoWorking spaces dedicated desks, private office cabins, meeting/conference rooms and virtual office solutions in Shivajinagar, Pune with zero hidden utility costs.
                     </p>
 
@@ -1185,24 +1170,24 @@
                         <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
                             <i class="fas fa-subway me-1"></i> Walking distance to 3 Metro (Garware College, Deccan, Nal Stop SNDT)
                         </span>
-                        <span class="badge chip-brand-lime px-3 py-2 rounded-pill small">
+                        <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
                             <i class="fas fa-bolt me-1"></i> High-Quality UPS Backup
                         </span>
-                        <span class="badge chip-brand-emerald px-3 py-2 rounded-pill small">
+                        <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
                             <i class="fas fa-users me-1"></i> Business networking with Vibrant community
                         </span>
-                        <span class="badge chip-brand-cyan px-3 py-2 rounded-pill small">
+                        <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
                             <i class="fas fa-shield-alt me-1"></i> Minimum 3 months refundable deposit
                         </span>
                         <span class="badge chip-brand-emerald px-3 py-2 rounded-pill small">
                             <i class="fas fa-receipt me-1"></i> Zero Hidden Utility Costs
                         </span>
-                        <span class="badge chip-brand-amber px-3 py-2 rounded-pill small">
+                        <span class="badge chip-brand-azure px-3 py-2 rounded-pill small">
                             <i class="fas fa-mug-hot me-1"></i> Fresh Artisan Coffee
                         </span>
                     </div>
 
-                    <!-- Antigravity Solid Stat Tiles (Constituent 4-Color Theme) -->
+                    <!-- Unified Solid Stat Tiles -->
                     <div class="row g-2 mb-4 text-start">
                         <div class="col-6 col-md-3">
                             <div class="antigravity-stat-tile stat-tile-azure">
@@ -1232,22 +1217,19 @@
 
                     <!-- Lead Generation Call-to-Actions -->
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start pt-2">
-                        <!-- Direct Call Button -->
                         <a href="tel:+919822268333" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow-lg d-inline-flex align-items-center">
                             <i class="fas fa-phone-alt me-2"></i> Call +91 98222 68333
                         </a>
-                        <!-- WhatsApp Link -->
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg rounded-pill px-4 fw-bold shadow-lg d-inline-flex align-items-center">
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Deccan%20Hub%20(Hero%20Inquiry)" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg rounded-pill px-4 fw-bold shadow-lg d-inline-flex align-items-center">
                             <i class="fab fa-whatsapp me-2 fs-5"></i> Chat on WhatsApp
                         </a>
-                        <!-- Schedule Visit -->
-                        <button class="btn btn-outline-light btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        <button type="button" class="btn btn-outline-light btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')">
                             <i class="fas fa-calendar-check me-2"></i> Schedule Visit
                         </button>
                     </div>
 
-                    <div class="mt-3 text-muted small">
-                        <i class="fas fa-check-circle text-success me-1"></i> Instant Confirmation • No Brokerage • Walking distance to 3 Metro (Garware College, Deccan, Nal Stop SNDT)
+                    <div class="mt-3 small" style="color: #94a3b8;">
+                        <i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Instant Confirmation &bull; No Brokerage &bull; Walking distance to 3 Metro (Garware College, Deccan, Nal Stop SNDT)
                     </div>
                 </div>
 
@@ -1256,7 +1238,7 @@
                     <div class="position-relative">
                         <div class="walkthrough-frame shadow-lg position-relative overflow-hidden" id="heroGalleryCard" style="cursor: pointer;" title="Click to view full photo">
                             <img id="heroShowcaseImg" src="assets/images/deccan-hub/firstfloorcoworking.jpeg" alt="ScaleUp CoWork Deccan Hub Pune" class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 4/3; transition: opacity 0.4s ease-in-out;">
-                            <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-3 px-2 py-1 rounded-pill small border border-secondary shadow-sm" id="heroPhotoLabel" style="font-size: 0.72rem; backdrop-filter: blur(4px); z-index: 2;">
+                            <span class="badge text-white position-absolute top-0 end-0 m-3 px-2 py-1 rounded-pill small shadow-sm" id="heroPhotoLabel" style="font-size: 0.72rem; background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.35); z-index: 2;">
                                 <i class="fas fa-camera text-info me-1"></i> Deccan Hub
                             </span>
                         </div>
@@ -1269,80 +1251,76 @@
     <!-- =========================================================================
          CAMPUS TOUR: WALKTHROUGH VIDEO & TWO-STORY ECOSYSTEM
     ========================================================================= -->
-    <!-- =========================================================================
-         CAMPUS TOUR: WALKTHROUGH VIDEO & TWO-STORY ECOSYSTEM
-         Animated Architectural Laser & Blueprint Grid Background
-    ========================================================================= -->
-    <section class="py-5 walkthrough-animated-section position-relative overflow-hidden" id="walkthrough">
+    <section class="section-rhythm walkthrough-animated-section position-relative overflow-hidden" id="walkthrough">
         <!-- Animated Background Elements -->
         <div class="blueprint-grid"></div>
         <div class="scanline-laser"></div>
         <div class="glow-orb-blue"></div>
         <div class="glow-orb-cyan"></div>
 
-        <div class="container py-4 position-relative" style="z-index: 2;">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 order-lg-2">
                     <div class="walkthrough-frame">
-                        <video src="assets/images/deccan-hub/Walkthrough.mp4" controls autoplay muted loop playsinline poster="assets/images/deccan-hub/firstfloorcoworking.jpeg"></video>
+                        <video src="assets/images/deccan-hub/Walkthrough.mp4" preload="metadata" controls autoplay muted loop playsinline poster="assets/images/deccan-hub/firstfloorcoworking.jpeg"></video>
                     </div>
                 </div>
 
                 <div class="col-lg-6 order-lg-1">
-                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 text-uppercase fw-bold rounded-pill shadow-sm">
-                        <i class="fas fa-crown me-1"></i> Fully Operational • Ready to Move In
+                    <span class="status-pill-open mb-3">
+                        <i class="fas fa-circle" style="font-size: 0.55rem;"></i> Open Now &bull; Ready to Move In
                     </span>
                     <h2 class="display-6 fw-bold text-white mb-3">Explore Our Two-Floor Coworking Ecosystem at KBC Deccan</h2>
-                    <p class="text-light opacity-75 fs-5 mb-4">
+                    <p class="fs-5 mb-4" style="color: #cbd5e1;">
                         Tired of noisy coffee shops and inflexible commercial leases? ScaleUp Deccan Hub at Kshitij Business Centre is Pune's leading high-focus environment for startups, remote tech teams, and scaling enterprises.
                     </p>
 
                     <div class="tour-feature-list mb-4">
-                        <div class="tour-feature-card tour-card-azure">
+                        <div class="tour-feature-card">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-layer-group"></i></div>
                                 <div>
-                                    <strong class="text-white">Expansive Workspaces & 15+ Private Cabins:</strong>
-                                    <span class="text-light opacity-75 d-block small">Spacious walkways, ergonomic chairs, and customizable team suites for 4 to 30+ members.</span>
+                                    <strong class="text-white">Expansive Two-Floor Campus &amp; 10+ Private Cabins:</strong>
+                                    <span class="d-block small" style="color: #cbd5e1;">140+ ergonomic seats, spacious walkways, 2 conference rooms, and customizable team suites for 4 to 30+ members.</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tour-feature-card tour-card-lime">
+                        <div class="tour-feature-card">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-bolt"></i></div>
                                 <div>
-                                    <strong class="text-white">Dual High-Speed Fiber Internet & Static IP:</strong>
-                                    <span class="text-light opacity-75 d-block small">Zero downtime with high-quality UPS power backup and tech-ready connectivity for software development.</span>
+                                    <strong class="text-white">Dual High-Speed Fiber Internet &amp; Static IP:</strong>
+                                    <span class="d-block small" style="color: #cbd5e1;">Zero downtime with high-quality UPS power backup and tech-ready connectivity for software development.</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tour-feature-card tour-card-amber">
+                        <div class="tour-feature-card">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-mug-hot"></i></div>
                                 <div>
-                                    <strong class="text-white">Unlimited Fresh Bean-to-Cup Coffee & Café Lounge:</strong>
-                                    <span class="text-light opacity-75 d-block small">Artisan bean-to-cup coffee machines, assorted teas, refrigerator, and microwave in our large lounge.</span>
+                                    <strong class="text-white">Unlimited Fresh Bean-to-Cup Coffee &amp; Café Lounge:</strong>
+                                    <span class="d-block small" style="color: #cbd5e1;">Artisan bean-to-cup coffee machines, assorted teas, refrigerator, and microwave in our large lounge.</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tour-feature-card tour-card-emerald">
+                        <div class="tour-feature-card">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-badge me-3 mt-1"><i class="fas fa-parking"></i></div>
                                 <div>
-                                    <strong class="text-white">Dedicated 2-Wheeler & 4-Wheeler Parking:</strong>
-                                    <span class="text-light opacity-75 d-block small">Hassle-free parking right on campus in central Deccan — rare for prime Pune commercial locations.</span>
+                                    <strong class="text-white">Dedicated 2-Wheeler &amp; 4-Wheeler Parking:</strong>
+                                    <span class="d-block small" style="color: #cbd5e1;">Hassle-free parking right on campus in central Deccan &mdash; rare for prime Pune commercial locations.</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow">
-                            <i class="fas fa-phone-alt me-1"></i> Call 9822268333 for Center Visit
-                        </a>
+                        <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule a Centre Visit')">
+                            <i class="fas fa-calendar-check me-1"></i> Schedule a Tour
+                        </button>
                         <a href="#plans" class="btn btn-outline-light rounded-pill px-4 py-2">
                             View Pricing Plans <i class="fas fa-chevron-down ms-1"></i>
                         </a>
@@ -1354,210 +1332,224 @@
 
     <!-- =========================================================================
          UNIFORM PRICING SECTION ACROSS EVERY CENTER
-         Animated Cosmic Nebula & Floating Cyber Matrix Background
     ========================================================================= -->
-    <section class="py-5 pricing-animated-section position-relative overflow-hidden" id="plans">
-        <!-- Animated Background Elements -->
+    <section class="section-rhythm pricing-animated-section position-relative overflow-hidden" id="plans">
         <div class="pricing-cyber-matrix"></div>
 
-        <div class="container py-4 position-relative" style="z-index: 2;">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="badge bg-primary mb-2 px-3 py-1 rounded-pill shadow-sm">
-                    <i class="fas fa-gem me-1"></i> Clear & Transparent Pricing
+                <span class="eyebrow-badge mb-2">
+                    <i class="fas fa-gem"></i> Clear &amp; Transparent Pricing
                 </span>
-                <h2 class="display-5 fw-bold text-white mb-2">Uniform Workspace Plans & Pricing</h2>
-                <p class="text-light opacity-75 fs-5 max-w-md mx-auto" style="max-width: 720px;">
+                <h2 class="display-5 fw-bold text-white mb-2">Uniform Workspace Plans &amp; Pricing</h2>
+                <p class="fs-5 mx-auto" style="max-width: 720px; color: #cbd5e1;">
                     Straightforward uniform pricing across our entire Pune network. Choose your ideal <strong>coworking space in Pune</strong>, private office cabin, meeting room, or virtual office with zero hidden maintenance fees.
                 </p>
             </div>
 
             <div class="uniform-pricing-grid">
                 <!-- 1. Day Pass -->
-                <div class="pricing-plan-card pricing-card-azure">
+                <div class="pricing-plan-card">
                     <h3 class="fw-bold text-white mb-1 fs-4">Day Pass</h3>
-                    <p class="text-muted small mb-2">Ideal for freelancers, travelers & single-day sprints</p>
+                    <p class="small mb-2" style="color: #94a3b8;">Ideal for freelancers, travelers &amp; single-day sprints</p>
                     <div class="pricing-cost">₹590 <span class="pricing-cost-unit">/ day</span></div>
-                    
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Flexible unreserved ergonomic seating</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed Wi-Fi internet access</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited fresh bean coffee & tea</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full pantry & café lounge access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited fresh bean coffee &amp; tea</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full pantry &amp; café lounge access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20a%20Day%20Pass%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Day Pass', 'Book a Day Pass (₹590/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Day Pass
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20a%20Day%20Pass%20(%E2%82%B9590%2Fday)%20at%20ScaleUp%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 2. Dedicated Cowork Desk -->
-                <div class="pricing-plan-card pricing-card-emerald">
-                    <div class="badge text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: linear-gradient(135deg, #4CB37C, #25D366); box-shadow: 0 4px 12px rgba(76, 179, 124, 0.4);">MOST POPULAR</div>
+                <!-- 2. Dedicated Cowork Desk (Azure Popular Highlight) -->
+                <div class="pricing-plan-card pricing-card-featured-blue">
+                    <div class="badge text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: #0D81CA; box-shadow: 0 4px 12px rgba(13, 129, 202, 0.35);">MOST POPULAR</div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Dedicated Cowork Desk</h3>
-                    <p class="text-light opacity-75 small mb-2">Your permanent personal workspace with storage</p>
-                    <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
-                    <div class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 mb-2 py-1"><i class="fas fa-tags me-1"></i> Special deals on 2+ desks</div>
+                    <p class="small mb-2" style="color: #cbd5e1;">Your permanent personal workspace with storage</p>
+                    <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit">/ seat / month</span></div>
+                    <div class="mb-2"><span class="status-pill-open"><i class="fas fa-tags"></i> Special deals on 2+ desks</span></div>
 
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+                    <ul class="list-unstyled my-3 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated permanent reserved desk</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access & zero hidden electricity costs</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access &amp; zero hidden electricity costs</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Personal lockable storage locker</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Meeting room credits included monthly</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Static IP option & dual internet backup</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Static IP option &amp; dual internet backup</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-success w-100 rounded-pill fw-bold shadow" style="background: linear-gradient(135deg, #4CB37C, #25D366); border: none;"><i class="fas fa-phone-alt me-1"></i> Call to Reserve</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20reserve%20a%20Dedicated%20Cowork%20Desk%20at%20KBC%20Deccan" class="btn btn-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold shadow" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Reserve Dedicated Desk (₹7,950/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Desk
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20reserve%20a%20Dedicated%20Cowork%20Desk%20(%E2%82%B97%2C950%2Fmo)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 3. Hybrid Cowork -->
-                <div class="pricing-plan-card pricing-card-lime">
+                <div class="pricing-plan-card">
                     <h3 class="fw-bold text-white mb-1 fs-4">Hybrid Cowork</h3>
-                    <p class="text-muted small mb-2">Designed for hybrid teams & flexible schedules</p>
+                    <p class="small mb-2" style="color: #94a3b8;">Designed for hybrid teams &amp; flexible schedules</p>
                     <div class="pricing-cost">₹5,850 <span class="pricing-cost-unit">/ seat / month</span></div>
-                    <div class="text-light opacity-75 small mb-2 fw-semibold" style="color: #a3e635 !important;"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-calendar-check me-1"></i> Valid for 12 days a month</div>
 
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 12 days access anytime across the month</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Ergonomic workstations & power sockets</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Ergonomic workstations &amp; power sockets</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed dual fiber internet</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited hot coffee & tea pantry access</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Unlimited hot coffee &amp; tea pantry access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Call to Book</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20Hybrid%20Cowork%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Hybrid Desk', 'Book Hybrid Cowork (₹5,850/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Hybrid Plan
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20Hybrid%20Cowork%20(%E2%82%B95%2C850%2Fmo)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 4. Private Office -->
-                <div class="pricing-plan-card pricing-card-amber">
-                    <div class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold">EXECUTIVE SUITE</div>
+                <!-- 4. Private Office Cabin (Flagship Warm Amber Tier) -->
+                <div class="pricing-plan-card pricing-card-amber highlight-amber">
+                    <div class="badge text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill small fw-bold" style="background: #f59e0b;">FLAGSHIP &bull; EXECUTIVE SUITE</div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Private Office Cabin</h3>
-                    <p class="text-light opacity-75 small mb-2">Secure lockable cabins for teams of 4 to 30+</p>
-                    <div class="pricing-cost">₹10,900 <span class="pricing-cost-unit text-light">/ seat / month</span></div>
-                    
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+                    <p class="small mb-2" style="color: #cbd5e1;">Secure lockable cabins for teams of 4 to 30+</p>
+                    <div class="pricing-cost">₹10,900 <span class="pricing-cost-unit">/ seat / month</span></div>
+
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Fully furnished enclosed private suite</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 24/7 access with biometric security</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> All utilities, air conditioning & cleaning included</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> All utilities, air conditioning &amp; cleaning included</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Executive meeting room allocation</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Company branding on cabin door</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-warning text-dark w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Call for Cabin Deal</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20a%20Private%20Office%20Cabin%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn w-100 rounded-pill fw-bold text-dark" style="background: #f59e0b; border: none;" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Private Office', 'Inquire Private Cabin Suite (₹10,900/seat)')">
+                            <i class="fas fa-crown me-1"></i> Book Private Cabin
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20inquiring%20about%20a%20Private%20Office%20Cabin%20(%E2%82%B910%2C900%2Fseat)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 5. Meeting Space (Hourly) -->
-                <div class="pricing-plan-card pricing-card-azure">
+                <div class="pricing-plan-card">
                     <h3 class="fw-bold text-white mb-1 fs-4">Meeting Space</h3>
-                    <p class="text-muted small mb-2">On-demand hourly rooms for pitches & reviews</p>
+                    <p class="small mb-2" style="color: #94a3b8;">On-demand hourly rooms for pitches &amp; reviews</p>
                     <div class="pricing-cost">₹150 <span class="pricing-cost-unit">/ seat / hour</span></div>
-                    <div class="text-warning small mb-2"><i class="fas fa-users me-1"></i> Minimum 4 seats booking</div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-users me-1"></i> Minimum 4 seats booking</div>
 
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-definition presentation TV & HDMI</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Whiteboards, markers & stationery</li>
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-definition presentation TV &amp; HDMI</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Whiteboards, markers &amp; stationery</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> High-speed video conference internet</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Complimentary coffee & tea service</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Complimentary coffee &amp; tea service</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Book Hourly</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20Meeting%20Space%20hourly%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Meeting Space (Hourly)', 'Book Hourly Meeting Space (₹150/seat/hr)')">
+                            <i class="fas fa-calendar-check me-1"></i> Book Hourly
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20Meeting%20Space%20hourly%20(%E2%82%B9150%2Fseat%2Fhr)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 6. 4-Seater Meeting Room -->
-                <div class="pricing-plan-card pricing-card-emerald">
+                <div class="pricing-plan-card">
                     <h3 class="fw-bold text-white mb-1 fs-4">4-Seater Meeting Room</h3>
-                    <p class="text-muted small mb-2">Private room for interviews, audits & discussions</p>
+                    <p class="small mb-2" style="color: #94a3b8;">Private room for interviews, audits &amp; discussions</p>
                     <div class="pricing-cost">₹3,900 <span class="pricing-cost-unit">/ full day</span></div>
 
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Full day private access for up to 4 guests</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> 4K presentation display screen</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Sound-damped acoustic privacy</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Reception support & visitor greeting</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Reception support &amp; visitor greeting</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Reserve Room</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%204%20Seater%20Meeting%20Room%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('4-Seater Meeting Room', 'Reserve 4-Seater Meeting Room (₹3,900/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Room
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%204-Seater%20Meeting%20Room%20(%E2%82%B93%2C900%2Fday)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- 7. 9-Seater Executive Room -->
-                <div class="pricing-plan-card pricing-card-lime">
+                <!-- 7. 9-Seater Boardroom -->
+                <div class="pricing-plan-card">
                     <h3 class="fw-bold text-white mb-1 fs-4">9-Seater Boardroom</h3>
-                    <p class="text-muted small mb-2">Executive conference room for client presentations</p>
+                    <p class="small mb-2" style="color: #94a3b8;">Executive conference room for client presentations</p>
                     <div class="pricing-cost">₹7,950 <span class="pricing-cost-unit">/ day</span></div>
-                    <div class="text-info small mb-2"><i class="fas fa-clock me-1"></i> Half-day available at ₹4,500</div>
+                    <div class="small mb-2 fw-semibold" style="color: #38bdf8;"><i class="fas fa-clock me-1"></i> Half-day available at ₹4,500</div>
 
-                    <ul class="list-unstyled my-4 flex-grow-1 text-light small">
+                    <ul class="list-unstyled my-4 flex-grow-1 small" style="color: #cbd5e1;">
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Executive boardroom table for 9 participants</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Large presentation monitor & conference setup</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Large presentation monitor &amp; conference setup</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Half day (₹4,500) or Full day (₹7,950) options</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated tea, coffee & hospitality support</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Dedicated tea, coffee &amp; hospitality support</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Reserve Boardroom</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%209%20Seater%20Boardroom%20at%20KBC%20Deccan" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('9-Seater Boardroom', 'Reserve 9-Seater Boardroom (₹7,950/day)')">
+                            <i class="fas fa-calendar-check me-1"></i> Reserve Boardroom
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20want%20to%20book%20the%209-Seater%20Boardroom%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <!-- 8. Virtual Office -->
-                <div class="pricing-plan-card pricing-card-cyan">
-                    <div class="badge bg-warning text-dark mb-2 py-1 px-3 rounded-pill fw-bold"><i class="fas fa-certificate me-1"></i> LAUNCH OFFER INCLUDED</div>
+                <div class="pricing-plan-card">
+                    <div class="mb-2"><span class="eyebrow-badge"><i class="fas fa-certificate"></i> Launch Offer Included</span></div>
                     <h3 class="fw-bold text-white mb-1 fs-4">Virtual Office</h3>
-                    <p class="text-muted small mb-2">Prestigious Pune business registration address</p>
+                    <p class="small mb-2" style="color: #94a3b8;">Prestigious Pune business registration address</p>
                     <div class="pricing-cost">₹2,970 <span class="pricing-cost-unit">/ month*</span></div>
-                    <div class="text-light opacity-75 small mb-2">*Charged Annually. Add-on packs for Company and GST Registration</div>
+                    <div class="small mb-2" style="color: #94a3b8;">*Charged Annually. Add-on packs for Company and GST Registration</div>
 
-                    <div class="p-2 mb-3 rounded-3 bg-primary bg-opacity-15 border border-primary border-opacity-30 small text-info">
-                        <i class="fas fa-gift text-warning me-1"></i> <strong>Launch Offer:</strong> Complimentary Logo & Name Display worth <strong>₹9,900 / year</strong>!
+                    <div class="p-2 mb-3 rounded-3 small" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.25); color: #cbd5e1;">
+                        <i class="fas fa-gift me-1" style="color: #38bdf8;"></i> <strong style="color: #38bdf8;">Launch Offer:</strong> Complimentary Logo &amp; Name Display worth <strong class="text-white">₹9,900 / year</strong>!
                     </div>
 
-                    <ul class="list-unstyled my-3 flex-grow-1 text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Prime commercial address for GST & ROC in Pune</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Professional mail receiving & courier handling</li>
-                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Front desk client greeting & reception representation</li>
+                    <ul class="list-unstyled my-3 flex-grow-1 small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Prime commercial address for GST &amp; ROC in Pune</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Professional mail receiving &amp; courier handling</li>
+                        <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Front desk client greeting &amp; reception representation</li>
                         <li class="mb-2 d-flex"><i class="fas fa-check me-2 mt-1"></i> Exclusive discounted physical conference room access</li>
                     </ul>
 
                     <div class="d-flex gap-2 mt-auto pt-2">
-                        <a href="tel:+919822268333" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="fas fa-phone-alt me-1"></i> Get Virtual Office</a>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20the%20Virtual%20Office%20Launch%20Offer%20at%20KBC%20Deccan%20(₹2970/mo%20+%20Logo%20Display)" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Virtual Office', 'Get Virtual Office (₹2,970/mo)')">
+                            <i class="fas fa-calendar-check me-1"></i> Get Virtual Office
+                        </button>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20the%20Virtual%20Office%20Launch%20Offer%20(%E2%82%B92%2C970%2Fmo%20%2B%20Logo%20Display)%20at%20Deccan%20Hub%20(Homepage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success rounded-pill px-3" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- High-Conversion Lead Magnet: Free 1-Day Trial Pass (Wired to Schedule Visit Form) -->
-            <div class="free-day-pass-banner mt-5 p-4 rounded-4 position-relative overflow-hidden shadow-lg border" style="background: linear-gradient(135deg, rgba(7, 43, 105, 0.45) 0%, rgba(6, 17, 34, 0.95) 100%); border-color: rgba(13, 129, 202, 0.35) !important;">
+            <!-- High-Conversion Lead Magnet: Free 1-Day Trial Pass -->
+            <div class="free-day-pass-banner mt-5 p-4 rounded-4 position-relative overflow-hidden shadow-lg" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.25);">
                 <div class="brand-stripe position-absolute top-0 start-0"></div>
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8">
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill">
-                                <i class="fas fa-gift me-1"></i> SPECIAL TRIAL
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                            <span class="status-pill-open">
+                                <i class="fas fa-ticket-alt"></i> Complimentary 1-Day Trial
                             </span>
-                            <span class="text-info small fw-semibold"><i class="fas fa-fire me-1"></i> Complimentary Day Pass at Deccan Hub</span>
+                            <span class="small fw-semibold" style="color: #38bdf8;">Available at Deccan Hub &bull; Zero Deposit</span>
                         </div>
                         <h3 class="h4 text-white fw-bold mb-2">Experience ScaleUp Deccan Hub Free for 1 Full Day</h3>
-                        <p class="text-light opacity-75 mb-0 small">
-                            Experience our ultra-fast dual fiber Wi-Fi, ergonomic workstations, silent cabins, and unlimited artisan bean coffee before committing. Sign up below to claim your complimentary pass. Zero deposit, zero credit card required.
+                        <p class="mb-0 small" style="color: #cbd5e1;">
+                            Experience our ultra-fast dual fiber Wi-Fi, ergonomic workstations, silent cabins, and unlimited artisan bean coffee before committing. Claim your complimentary pass below &mdash; zero deposit, zero credit card required.
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <div class="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
-                            <button type="button" class="btn btn-warning text-dark rounded-pill px-4 py-2 fw-bold shadow hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectDayPassOption()">
+                            <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow hover-scale" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass')">
                                 <i class="fas fa-ticket-alt me-1"></i> Claim Free Day Pass
                             </button>
                             <a href="tel:+919822268333" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
@@ -1568,26 +1560,26 @@
                 </div>
             </div>
 
-            <!-- Interactive Workspace Savings Calculator (Comprehensive Traditional Breakdown) -->
-            <div class="calculator-container mt-5 p-4 p-md-5 rounded-4 border shadow-lg position-relative overflow-hidden" style="background: #0a1c38 !important; border-color: rgba(13, 129, 202, 0.35) !important;">
+            <!-- Interactive Workspace Savings Calculator -->
+            <div class="calculator-container mt-5 p-4 p-md-5 rounded-4 shadow-lg position-relative overflow-hidden" style="background: #0a1c38 !important; border: 1px solid rgba(56, 189, 248, 0.22) !important;">
                 <div class="brand-stripe position-absolute top-0 start-0"></div>
                 <div class="text-center mb-4">
-                    <span class="badge chip-brand-azure px-3 py-1 rounded-pill mb-2"><i class="fas fa-calculator me-1"></i> Comprehensive Cost Comparison</span>
+                    <span class="eyebrow-badge mb-2"><i class="fas fa-calculator"></i> Comprehensive Cost Comparison</span>
                     <h3 class="h3 text-white fw-bold mb-2">Calculate Your Team's Monthly Workspace Savings</h3>
-                    <p class="text-light opacity-75 small max-w-md mx-auto" style="max-width: 650px;">
+                    <p class="small mx-auto" style="max-width: 650px; color: #cbd5e1;">
                         Traditional commercial leases in Central Pune force you to pay for interiors, maintenance, housekeeping, electricity, AC, internet, and pantry separately. See how ScaleUp's all-inclusive pricing eliminates overhead.
                     </p>
                 </div>
 
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-7">
-                        <div class="p-4 rounded-4 bg-dark bg-opacity-60 border border-secondary mb-3">
+                        <div class="p-4 rounded-4 mb-3" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.16);">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <label for="calcTeamSize" class="text-white fw-bold mb-0">Select Team Size (Seats):</label>
                                 <span class="badge fs-6 px-3 py-1 rounded-pill" style="background: #0D81CA; color: white;" id="calcTeamDisplay">6 Seats</span>
                             </div>
                             <input type="range" class="form-range" min="1" max="40" value="6" id="calcTeamSize">
-                            <div class="d-flex justify-content-between text-muted small mt-1">
+                            <div class="d-flex justify-content-between small mt-1" style="color: #94a3b8;">
                                 <span>1 Seat (Solo)</span>
                                 <span>10 Seats (Core)</span>
                                 <span>25+ Seats (Team)</span>
@@ -1595,7 +1587,7 @@
                             </div>
                         </div>
 
-                        <div class="p-4 rounded-4 bg-dark bg-opacity-60 border border-secondary mb-3">
+                        <div class="p-4 rounded-4 mb-3" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.16);">
                             <label class="text-white fw-bold mb-2 d-block">Select Workspace Type:</label>
                             <div class="row g-2">
                                 <div class="col-6">
@@ -1606,7 +1598,7 @@
                                 </div>
                                 <div class="col-6">
                                     <input type="radio" class="btn-check" name="calcPlanType" id="calcTypePrivate" value="private">
-                                    <label class="btn btn-outline-success w-100 py-2 small fw-bold" style="border-color: #4CB37C; color: #4CB37C;" for="calcTypePrivate">
+                                    <label class="btn btn-outline-primary w-100 py-2 small fw-bold" for="calcTypePrivate">
                                         Private Cabin (₹10,900)
                                     </label>
                                 </div>
@@ -1614,34 +1606,34 @@
                         </div>
 
                         <!-- Traditional Office Hidden Expenses Factored In -->
-                        <div class="p-3 rounded-4 bg-dark bg-opacity-40 border border-secondary border-opacity-50">
-                            <div class="text-muted small fw-bold text-uppercase mb-2"><i class="fas fa-receipt text-warning me-1"></i> Factored Traditional Office Overheads (Pune Commercial Rates):</div>
-                            <div class="row g-2 text-light small" style="font-size: 0.82rem;">
-                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Interior fit-out & furniture amortization</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Building maintenance & CAM charges</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Commercial AC & electricity consumption</div>
+                        <div class="p-3 rounded-4" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.16);">
+                            <div class="small fw-bold text-uppercase mb-2" style="color: #38bdf8;"><i class="fas fa-receipt me-1"></i> Factored Traditional Office Overheads (Pune Commercial Rates):</div>
+                            <div class="row g-2 small" style="font-size: 0.82rem; color: #cbd5e1;">
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Interior fit-out &amp; furniture amortization</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Building maintenance &amp; CAM charges</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Commercial AC &amp; electricity consumption</div>
                                 <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Dedicated daily housekeeping staff</div>
                                 <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Dual high-speed business fiber internet</div>
-                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> & pantry hospitality services</div>
+                                <div class="col-sm-6"><i class="fas fa-check-circle me-1" style="color: #4CB37C;"></i> Café &amp; pantry hospitality services</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
                         <div class="p-4 rounded-4 text-center shadow-lg calc-summary-card">
-                            <div class="text-muted small text-uppercase fw-semibold mb-1">ScaleUp All-Inclusive Monthly Cost</div>
-                            <div class="h2 text-white fw-extrabold mb-3 calc-cost-azure" id="calcScaleupCost">₹47,700 <span class="fs-6 text-muted fw-normal">/ month</span></div>
+                            <div class="small text-uppercase fw-semibold mb-1" style="color: #94a3b8;">ScaleUp All-Inclusive Monthly Cost</div>
+                            <div class="h2 fw-extrabold mb-3 calc-cost-azure" id="calcScaleupCost">₹47,700 <span class="fs-6 fw-normal" style="color: #94a3b8;">/ month</span></div>
 
-                            <div class="d-flex justify-content-between text-light small py-2 border-top border-secondary opacity-85">
-                                <span>Traditional Rent + All Hidden Overheads:</span>
+                            <div class="d-flex justify-content-between small py-2" style="color: #cbd5e1; border-top: 1px solid rgba(56, 189, 248, 0.16);">
+                                <span>Traditional Rent + Overheads:</span>
                                 <span class="text-decoration-line-through text-danger fw-bold" id="calcTradCost">₹84,000 / mo</span>
                             </div>
-                            <div class="d-flex justify-content-between text-light small py-2 border-top border-secondary opacity-85">
-                                <span>Interior Fit-Out & Deposit Saved:</span>
+                            <div class="d-flex justify-content-between small py-2" style="color: #cbd5e1; border-top: 1px solid rgba(56, 189, 248, 0.16);">
+                                <span>Interior Fit-Out &amp; Deposit Saved:</span>
                                 <span class="fw-bold calc-saved-emerald" id="calcDepositSaved">₹3,50,000+</span>
                             </div>
 
-                            <div class="d-flex justify-content-between align-items-center py-2 px-3 my-3 rounded-3 bg-dark border" style="border-color: rgba(122, 185, 68, 0.4) !important;">
+                            <div class="d-flex justify-content-between align-items-center py-2 px-3 my-3 rounded-3" style="background: #061122; border: 1px solid rgba(76, 179, 124, 0.45);">
                                 <span class="text-white small fw-bold">Net Monthly Overhead Saved:</span>
                                 <span class="h4 fw-bold mb-0 calc-saved-lime" id="calcSavings">₹36,300 / mo (43%)</span>
                             </div>
@@ -1649,18 +1641,18 @@
                             <a href="https://wa.me/919822268333?text=Hi%2C%20I%20used%20the%20savings%20calculator%20for%206%20seats%20and%20want%20to%20lock%20in%20pricing" id="calcCtaWhatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 rounded-pill py-2 fw-bold mb-2 shadow" style="background: linear-gradient(135deg, #4CB37C, #25D366); border: none;">
                                 <i class="fab fa-whatsapp me-1"></i> Lock In Proposal on WhatsApp
                             </a>
-                            <a href="tel:+919822268333" class="btn btn-outline-primary w-100 rounded-pill py-2 small fw-bold">
-                                <i class="fas fa-phone-alt me-1"></i> Call 9822268333 to Finalize
-                            </a>
+                            <button type="button" class="btn btn-outline-primary w-100 rounded-pill py-2 small fw-bold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule Tour & Lock Custom Quote')">
+                                <i class="fas fa-calendar-check me-1"></i> Schedule Tour &amp; Quote
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <div class="p-3 bg-dark bg-opacity-75 rounded-4 border border-secondary d-inline-block backdrop-blur" style="backdrop-filter: blur(12px);">
+                <div class="p-3 rounded-4 d-inline-block" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
                     <span class="text-white me-2">Need a custom enterprise floor or customized office suite in Pune?</span>
-                    <a href="tel:+919822268333" class="text-primary fw-bold text-decoration-underline">Call our sales head directly at +91 98222 68333</a>
+                    <a href="tel:+919822268333" class="fw-bold text-decoration-underline" style="color: #38bdf8;">Call our sales head directly at +91 98222 68333</a>
                 </div>
             </div>
         </div>
@@ -1668,59 +1660,68 @@
 
     <!-- =========================================================================
          EXACT DECCAN HUB LOCATION & GOOGLE MAPS
-         Animated Satellite Radar Pulse Background
     ========================================================================= -->
-    <section class="py-5 location-animated-section position-relative overflow-hidden" id="location-map">
-        <!-- Animated Radar Ping Rings -->
+    <section class="section-rhythm location-animated-section position-relative overflow-hidden" id="location-map">
         <div class="radar-ping-ring radar-ring-1"></div>
         <div class="radar-ping-ring radar-ring-2"></div>
         <div class="radar-ping-ring radar-ring-3"></div>
 
-        <div class="container py-4 position-relative" style="z-index: 2;">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-5">
-                    <span class="badge bg-primary mb-2 shadow-sm"><i class="fas fa-location-arrow me-1"></i> Prime Central Pune Hub</span>
-                    <h2 class="display-6 fw-bold text-white mb-3">Location & Connectivity</h2>
-                    <p class="text-light opacity-75 fs-5 mb-4">
-                        Situated at the Kshitij Business Centre (KBC) on Dani Road, Next to ICICI bank - Law College Road, connecting you directly to Deccan Gymkhana, FC Road, BMCC, and Prabhat Road.
+                    <span class="eyebrow-badge mb-2"><i class="fas fa-location-arrow"></i> Prime Central Pune Hub</span>
+                    <h2 class="display-6 fw-bold text-white mb-3">Location &amp; Connectivity</h2>
+                    <p class="fs-5 mb-4" style="color: #cbd5e1;">
+                        Situated at the Kshitij Business Centre (KBC) on Dani Road, Next to ICICI Bank &ndash; Law College Road, connecting you directly to Deccan Gymkhana, FC Road, BMCC, and Prabhat Road.
                     </p>
 
-                    <div class="p-4 bg-dark bg-opacity-80 rounded-4 border border-primary border-opacity-50 mb-4 shadow-lg backdrop-blur" style="backdrop-filter: blur(14px);">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 px-3 py-1 rounded-pill small">
-                                <span class="spinner-grow spinner-grow-sm me-1" style="width: 8px; height: 8px;"></span> Live Flagship Hub
+                    <div class="p-4 rounded-4 mb-4 shadow-lg" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.22);">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                            <span class="status-pill-open">
+                                <i class="fas fa-circle" style="font-size: 0.5rem;"></i> Open Now &bull; Live Flagship Hub
                             </span>
-                            <span class="text-light small"><i class="fas fa-clock text-primary me-1"></i> 24/7 Access for Members</span>
+                            <span class="status-pill-flagship">
+                                <i class="fas fa-star"></i> 4.9&starf; (168)
+                            </span>
                         </div>
-                        <h4 class="text-primary h6 mb-1"><i class="fas fa-map-marker-alt text-danger me-2"></i> Official Pune Center Address</h4>
-                        <p class="text-white mb-1 fs-5 fw-bold">ScaleUp CoWork</p>
-                        <p class="text-light mb-1">Kshitij Business Centre, Dani Road, Next to ICICI bank,</p>
-                        <p class="text-muted mb-3">Law College Road, Deccan, Pune 411004</p>
-                        <p class="text-white mb-3">
-                            <i class="fas fa-phone-alt text-primary me-2"></i> 
-                            <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold fs-5">9822268333</a>
+                        <h4 class="h6 mb-1" style="color: #38bdf8;"><i class="fas fa-map-marker-alt text-danger me-2"></i> Official Pune Center Address</h4>
+                        <p class="text-white mb-1 fs-5 fw-bold">ScaleUp CoWork &mdash; Deccan Hub (Flagship)</p>
+                        <p class="mb-1" style="color: #cbd5e1;">Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank,</p>
+                        <p class="mb-3" style="color: #94a3b8;">Law College Road, Deccan, Pune, Maharashtra 411004</p>
+                        <p class="small mb-3" style="color: #cbd5e1;">
+                            <i class="fas fa-clock me-2" style="color: #38bdf8;"></i>
+                            <strong>Member Access:</strong> 24/7 (Biometric) &nbsp;|&nbsp; <strong>Front Desk &amp; Tours:</strong> Mon&ndash;Sat, 9:00 AM &ndash; 7:00 PM
                         </p>
-                        
-                        <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow">
-                            <i class="fas fa-directions me-2"></i> Open in Google Maps
-                        </a>
+                        <p class="text-white mb-3">
+                            <i class="fas fa-phone-alt me-2" style="color: #38bdf8;"></i>
+                            <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold fs-5">+91 98222 68333</a>
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow">
+                                <i class="fas fa-directions me-2"></i> Open in Google Maps
+                            </a>
+                            <button type="button" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Book Visit to Deccan Hub')">
+                                <i class="fas fa-calendar-check me-1"></i> Book Visit
+                            </button>
+                        </div>
                     </div>
 
-                    <ul class="list-unstyled text-light small">
-                        <li class="mb-2 d-flex"><i class="fas fa-subway text-primary me-2 mt-1"></i> <span><strong>Walking distance to 3 Metro Stations:</strong> Deccan Gymkhana Metro, Chhatrapati Sambhaji Udyan Metro, and Garware College Metro Station for effortless citywide connectivity</span></li>
-                        <li class="mb-2 d-flex"><i class="fas fa-parking text-primary me-2 mt-1"></i> <span>Dedicated on-site 2-wheeler and 4-wheeler parking on campus</span></li>
-                        <li class="mb-2 d-flex"><i class="fas fa-map-pin text-primary me-2 mt-1"></i> <span>Prime Central Pune location on Dani Road beside ICICI Bank - Law College Road, Deccan</span></li>
+                    <ul class="list-unstyled small" style="color: #cbd5e1;">
+                        <li class="mb-2 d-flex"><i class="fas fa-subway me-2 mt-1" style="color: #38bdf8;"></i> <span><strong>Walking distance to 3 Metro Stations:</strong> Deccan Gymkhana Metro, Chhatrapati Sambhaji Udyan Metro, and Garware College Metro Station for effortless citywide connectivity</span></li>
+                        <li class="mb-2 d-flex"><i class="fas fa-parking me-2 mt-1" style="color: #38bdf8;"></i> <span>Dedicated on-site 2-wheeler and 4-wheeler parking on campus</span></li>
+                        <li class="mb-2 d-flex"><i class="fas fa-map-pin me-2 mt-1" style="color: #38bdf8;"></i> <span>Prime Central Pune location on Dani Road beside ICICI Bank - Law College Road, Deccan</span></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-7">
-                    <div class="rounded-4 overflow-hidden border border-primary border-opacity-40 shadow-lg position-relative">
-                        <iframe 
+                    <div class="rounded-4 overflow-hidden shadow-lg position-relative" style="border: 1px solid rgba(56, 189, 248, 0.25);">
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2384!2d73.831518!3d18.516584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb85f099723%3A0xfb056cc46501d239!2sScaleUp%20CoWork%20KBC%20Deccan%20HUB!5e0!3m2!1sen!2sin!4v1742122626002!5m2!1sen!2sin"
-                            width="100%" 
-                            height="420" 
-                            style="border:0; filter: invert(90%) hue-rotate(180deg);" 
-                            allowfullscreen="" 
+                            width="100%"
+                            height="420"
+                            style="border:0; filter: invert(90%) hue-rotate(180deg);"
+                            allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                             title="ScaleUp Deccan Hub Google Map">
@@ -1730,9 +1731,9 @@
             </div>
 
             <!-- Workspace Photo Gallery (Clickable Lightbox) -->
-            <div class="text-center mb-4 pt-4 border-top border-secondary">
+            <div class="text-center mb-4 pt-4" style="border-top: 1px solid rgba(56, 189, 248, 0.14);">
                 <h3 class="fw-bold text-white mb-1">Deccan Hub Photo Gallery</h3>
-                <p class="text-light opacity-75 small">Click any photo below to inspect actual coworking spaces & executive cabins at KBC Deccan</p>
+                <p class="small" style="color: #94a3b8;">Click any photo below to inspect actual coworking spaces &amp; executive cabins at KBC Deccan</p>
             </div>
 
             <div class="row g-3">
@@ -1772,71 +1773,70 @@
 
     <!-- =========================================================================
          AMENITIES SECTION
-         Animated Geometric Cyber Grid & Glowing Cards
     ========================================================================= -->
-    <section class="py-5 amenities-animated-section position-relative overflow-hidden" id="amenities">
-        <div class="container py-4 position-relative" style="z-index: 2;">
+    <section class="section-rhythm amenities-animated-section position-relative overflow-hidden" id="amenities">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="badge bg-primary mb-2 px-3 py-1 rounded-pill shadow-sm"><i class="fas fa-check-double me-1"></i> Everything You Need</span>
+                <span class="eyebrow-badge mb-2"><i class="fas fa-check-double"></i> Everything You Need</span>
                 <h2 class="display-6 fw-bold text-white mb-2">All-Inclusive Business Amenities</h2>
-                <p class="text-light opacity-75 fs-5">Zero hidden utility costs so you can focus 100% on scaling your business in Pune.</p>
+                <p class="fs-5" style="color: #cbd5e1;">Zero hidden utility costs so you can focus 100% on scaling your business in Pune.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-azure h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-wifi"></i></div>
                         <h4 class="h6 text-white mb-1">Dual Fiber Wi-Fi</h4>
-                        <p class="text-light opacity-75 small mb-0">High-speed dual internet with static IP options</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">High-speed dual internet with static IP options</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-amber h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-mug-hot"></i></div>
-                        <h4 class="h6 text-white mb-1">Bean Coffee & Tea</h4>
-                        <p class="text-light opacity-75 small mb-0">Unlimited freshly ground artisan bean brews</p>
+                        <h4 class="h6 text-white mb-1">Bean Coffee &amp; Tea</h4>
+                        <p class="small mb-0" style="color: #cbd5e1;">Unlimited freshly ground artisan bean brews</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-lime h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-bolt"></i></div>
                         <h4 class="h6 text-white mb-1">High-Quality UPS Backup</h4>
-                        <p class="text-light opacity-75 small mb-0">Continuous uninterrupted UPS power backup for zero downtime</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">Continuous uninterrupted UPS power backup for zero downtime</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-emerald h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-parking"></i></div>
                         <h4 class="h6 text-white mb-1">Spacious Parking</h4>
-                        <p class="text-light opacity-75 small mb-0">Ample dedicated 2 & 4 wheeler slots on campus</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">Ample dedicated 2 &amp; 4 wheeler slots on campus</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-azure h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-users"></i></div>
                         <h4 class="h6 text-white mb-1">Meeting Rooms</h4>
-                        <p class="text-light opacity-75 small mb-0">4K displays, whiteboards & video conferencing</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">4K displays, whiteboards &amp; video conferencing</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-emerald h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-shield-alt"></i></div>
                         <h4 class="h6 text-white mb-1">24/7 Security</h4>
-                        <p class="text-light opacity-75 small mb-0">Biometric access control & round-the-clock CCTV</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">Biometric access control &amp; round-the-clock CCTV</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-lime h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-broom"></i></div>
                         <h4 class="h6 text-white mb-1">Vibrant Community</h4>
-                        <p class="text-light opacity-75 small mb-0">Sanitized workstations, clean restrooms & cafe</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">Sanitized workstations, clean restrooms &amp; café</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 text-center">
-                    <div class="amenity-card-glass amenity-theme-cyan h-100">
+                    <div class="amenity-card-glass h-100">
                         <div class="amenity-icon-glow"><i class="fas fa-network-wired"></i></div>
                         <h4 class="h6 text-white mb-1">Static IP Support</h4>
-                        <p class="text-light opacity-75 small mb-0">Secure enterprise VPN & dev firewall setup</p>
+                        <p class="small mb-0" style="color: #cbd5e1;">Secure enterprise VPN &amp; dev firewall setup</p>
                     </div>
                 </div>
             </div>
@@ -1845,78 +1845,90 @@
 
     <!-- =========================================================================
          SEO AUTHORITY PILLAR GUIDE: COWORKING SPACES IN PUNE & MEETING ROOMS
-         Comprehensive Semantic Content Targeting Search Intent
     ========================================================================= -->
-    <section class="py-5 seo-authority-section position-relative" id="pune-coworking-guide">
-        <div class="container py-4 position-relative" style="z-index: 2;">
+    <section class="section-rhythm seo-authority-section position-relative" id="pune-coworking-guide">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="badge bg-primary mb-2 px-3 py-1 rounded-pill shadow-sm">
-                    <i class="fas fa-award me-1"></i> Pune Workspace Knowledge Hub
+                <span class="eyebrow-badge mb-2">
+                    <i class="fas fa-award"></i> Pune Workspace Knowledge Hub
                 </span>
-                <h2 class="display-6 fw-bold text-white mb-2">Premier Coworking Space in Pune – ScaleUp CoWork Deccan Hub</h2>
-                <p class="text-light opacity-75 fs-5 max-w-md mx-auto" style="max-width: 760px;">
+                <h2 class="display-6 fw-bold text-white mb-2">Premier Coworking Space in Pune &ndash; ScaleUp CoWork Deccan Hub</h2>
+                <p class="fs-5 mx-auto" style="max-width: 760px; color: #cbd5e1;">
                     Whether you are searching for <strong>coworking spaces near me</strong> in Pune, on-demand <strong>meeting rooms</strong>, executive <strong>conferences rooms</strong>, or an official <strong>virtual office in Pune</strong>, explore why ScaleUp is chosen by 150+ scaling businesses.
                 </p>
             </div>
 
             <div class="row g-4">
-                <!-- SEO Pillar 1: Royal Azure Blue -->
+                <!-- SEO Pillar 1 -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card seo-card-azure h-100">
+                    <div class="seo-content-card h-100 d-flex flex-column">
                         <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-building"></i></div>
-                        <h3 class="h5 text-white fw-bold mb-3">Coworking Space in Pune – Deccan, Law College & FC Road</h3>
-                        <p class="text-light opacity-75 small mb-3">
-                            Finding the right <strong>coworking space in Pune</strong> is critical for productivity and recruitment. Located at Kshitij Business Centre (KBC) on Dani Road, Next to ICICI bank - Law College Road, ScaleUp offers an unbeatable strategic address.
+                        <h3 class="h5 text-white fw-bold mb-3">Coworking Space in Pune &ndash; Deccan, Law College &amp; FC Road</h3>
+                        <p class="small mb-3" style="color: #cbd5e1;">
+                            Finding the right <strong>coworking space in Pune</strong> is critical for productivity and recruitment. Located at Kshitij Business Centre (KBC) on Dani Road, Next to ICICI Bank - Law College Road, ScaleUp offers an unbeatable strategic address.
                         </p>
-                        <p class="text-light opacity-75 small mb-4">
+                        <p class="small mb-4" style="color: #cbd5e1;">
                             Ideal for freelancers seeking flexible <strong>coworking spaces</strong>, high-growth startups needing dedicated desks at ₹7,950/month, and enterprise teams requiring private office suites at ₹10,900/seat/month with zero capital expenditure.
                         </p>
-                        <a href="tel:+919822268333" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold">
-                            <i class="fas fa-phone-alt me-1"></i> Inquire Desks: 9822268333
-                        </a>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Inquire Dedicated Desks (₹7,950/mo)')">
+                                <i class="fas fa-calendar-check me-1"></i> Inquire Desks
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- SEO Pillar 2: Growth Emerald Green -->
+                <!-- SEO Pillar 2 -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card seo-card-emerald h-100">
+                    <div class="seo-content-card h-100 d-flex flex-column">
                         <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-handshake"></i></div>
-                        <h3 class="h5 text-white fw-bold mb-3">On-Demand Meeting Rooms & Conference Rooms in Pune</h3>
-                        <p class="text-light opacity-75 small mb-3">
+                        <h3 class="h5 text-white fw-bold mb-3">On-Demand Meeting Rooms &amp; Conference Rooms in Pune</h3>
+                        <p class="small mb-3" style="color: #cbd5e1;">
                             Need a professional venue to host investors, conduct client pitches, or interview talent? Our <strong>meeting rooms</strong> and executive <strong>conferences rooms</strong> in Pune are fully equipped with 4K interactive presentation screens, high-speed Wi-Fi, and beverage service.
                         </p>
-                        <p class="text-light opacity-75 small mb-4">
+                        <p class="small mb-4" style="color: #cbd5e1;">
                             Book hourly meeting space from ₹150/seat/hour (min 4 seats), a 4-seater meeting room for ₹3,900/day, or our flagship 9-seater boardroom for ₹7,950/day (₹4,500 half day).
                         </p>
-                        <a href="tel:+919822268333" class="btn btn-outline-success btn-sm rounded-pill fw-semibold" style="border-color: #4CB37C; color: #4CB37C;">
-                            <i class="fas fa-calendar-check me-1"></i> Book Meeting Room
-                        </a>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('9-Seater Boardroom', 'Book Meeting / Conference Room')">
+                                <i class="fas fa-calendar-check me-1"></i> Book Meeting Room
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- SEO Pillar 3: Momentum Lime Green -->
+                <!-- SEO Pillar 3 -->
                 <div class="col-lg-4">
-                    <div class="seo-content-card seo-card-lime h-100">
+                    <div class="seo-content-card h-100 d-flex flex-column">
                         <div class="seo-pillar-icon fs-3 mb-3"><i class="fas fa-stamp"></i></div>
-                        <h3 class="h5 text-white fw-bold mb-3">Official Virtual Offices in Pune for GST & ROC Compliance</h3>
-                        <p class="text-light opacity-75 small mb-3">
+                        <h3 class="h5 text-white fw-bold mb-3">Official Virtual Offices in Pune for GST &amp; ROC Compliance</h3>
+                        <p class="small mb-3" style="color: #cbd5e1;">
                             Establishing a corporate presence in Maharashtra? Our <strong>virtual offices in Pune</strong> offer a legitimate prime commercial address at Deccan Hub for just ₹2,970/month (paid annually in advance).
                         </p>
-                        <p class="text-light opacity-75 small mb-4">
+                        <p class="small mb-4" style="color: #cbd5e1;">
                             Complete documentation provided including NOC, electricity bill utility proof, and rent agreement required for official GST registration and Ministry of Corporate Affairs (MCA) ROC company setup.
                         </p>
-                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20need%20a%20Virtual%20Office%20in%20Pune%20for%20GST" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill fw-semibold">
-                            <i class="fab fa-whatsapp me-1"></i> Virtual Office WhatsApp
-                        </a>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/919822268333?text=Hi%2C%20I%20need%20a%20Virtual%20Office%20in%20Pune%20for%20GST%20at%20Deccan%20Hub%20(Homepage%20Guide)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill fw-semibold">
+                                <i class="fab fa-whatsapp me-1"></i> Virtual Office WhatsApp
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Toggle Button for Full Comparison Table (100% DOM preserved, cleaner mobile scroll) -->
+            <div class="text-center mt-4">
+                <button type="button" id="togglePuneGuideBtn" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold" aria-expanded="false" aria-controls="puneGuideExpandable">
+                    <i class="fas fa-book-open me-2"></i> Read Full Pune Workspace Guide &amp; Cost Comparison <i class="fas fa-chevron-down ms-2" id="togglePuneGuideChevron"></i>
+                </button>
+            </div>
+
             <!-- SEO Comparison Table: Coworking vs Traditional Lease -->
-            <div class="mt-5">
-                <div class="text-center mb-4">
+            <div id="puneGuideExpandable" class="seo-guide-collapsible is-collapsed mt-4">
+                <div class="text-center mb-4 pt-2">
                     <h3 class="h4 text-white fw-bold">Coworking Space vs. Traditional Commercial Lease in Pune</h3>
-                    <p class="text-light opacity-75 small">See how ScaleUp CoWork KBC Deccan saves up to 60% on monthly overheads</p>
+                    <p class="small" style="color: #94a3b8;">See how ScaleUp CoWork KBC Deccan saves up to 60% on monthly overheads</p>
                 </div>
 
                 <div class="table-responsive seo-comparison-table shadow-lg">
@@ -1930,43 +1942,43 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-lock text-primary me-2"></i> Security Deposit</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> Minimum 3 months refundable deposit</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-lock me-2" style="color: #38bdf8;"></i> Security Deposit</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> Minimum 3 months refundable deposit</td>
                                 <td class="text-danger"><i class="fas fa-times-circle me-1"></i> 6 to 10 months locked up capital</td>
                             </tr>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-couch text-primary me-2"></i> Interior Fit-Out & Furniture</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> ₹0 (Plug-and-play ergonomic setups ready)</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-couch me-2" style="color: #38bdf8;"></i> Interior Fit-Out &amp; Furniture</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> ₹0 (Plug-and-play ergonomic setups ready)</td>
                                 <td class="text-danger"><i class="fas fa-times-circle me-1"></i> ₹1,500 - ₹3,000 / sq. ft. upfront cost</td>
                             </tr>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-bolt text-primary me-2"></i> Commercial Electricity, AC & UPS Backup</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> 100% Included in monthly fee</td>
-                                <td class="text-danger"><i class="fas fa-times-circle me-1"></i> ₹25,000 - ₹75,000+ separate commercial electricity & UPS bills</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-bolt me-2" style="color: #38bdf8;"></i> Commercial Electricity, AC &amp; UPS Backup</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> 100% Included in monthly fee</td>
+                                <td class="text-danger"><i class="fas fa-times-circle me-1"></i> ₹25,000 - ₹75,000+ separate commercial electricity &amp; UPS bills</td>
                             </tr>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-wifi text-primary me-2"></i> High-Speed Dual Internet</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> Included with static IP support</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-wifi me-2" style="color: #38bdf8;"></i> High-Speed Dual Internet</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> Included with static IP support</td>
                                 <td class="text-danger"><i class="fas fa-times-circle me-1"></i> High enterprise monthly ISP contracts</td>
                             </tr>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-coffee text-primary me-2"></i> Artisan Bean Coffee & Housekeeping</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> Unlimited daily service included</td>
-                                <td class="text-danger"><i class="fas fa-times-circle me-1"></i> Separate pantry, cleaning & staff expenses</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-coffee me-2" style="color: #38bdf8;"></i> Artisan Bean Coffee &amp; Housekeeping</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> Unlimited daily service included</td>
+                                <td class="text-danger"><i class="fas fa-times-circle me-1"></i> Separate pantry, cleaning &amp; staff expenses</td>
                             </tr>
                             <tr>
-                                <td class="fw-semibold text-white"><i class="fas fa-sync-alt text-primary me-2"></i> Lease Flexibility</td>
-                                <td class="text-success fw-bold"><i class="fas fa-check-circle me-1"></i> Scale up or down seats anytime</td>
+                                <td class="fw-semibold text-white"><i class="fas fa-sync-alt me-2" style="color: #38bdf8;"></i> Lease Flexibility</td>
+                                <td class="fw-bold" style="color: #4CB37C;"><i class="fas fa-check-circle me-1"></i> Scale up or down seats anytime</td>
                                 <td class="text-danger"><i class="fas fa-times-circle me-1"></i> Rigid 3 to 5 year lock-in agreements</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="text-center mt-4">
-                    <a href="tel:+919822268333" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg">
-                        <i class="fas fa-phone-alt me-2"></i> Schedule Tour & Lock Direct Pricing: 9822268333
-                    </a>
+                <div class="text-center mt-4 pb-2">
+                    <button type="button" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="selectBookingPlan('Deccan Hub Dedicated Desk', 'Schedule Tour & Lock Direct Pricing')">
+                        <i class="fas fa-calendar-check me-2"></i> Schedule Tour &amp; Lock Direct Pricing
+                    </button>
                 </div>
             </div>
         </div>
@@ -1975,40 +1987,40 @@
     <!-- =========================================================================
          FREQUENTLY ASKED QUESTIONS (SEO OPTIMIZED)
     ========================================================================= -->
-    <section class="py-5 bg-dark position-relative overflow-hidden" id="faq">
-        <div class="container py-4 position-relative" style="z-index: 2;">
+    <section class="section-rhythm position-relative overflow-hidden" id="faq" style="background-color: #061122;">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="badge bg-primary mb-2 px-3 py-1 rounded-pill shadow-sm"><i class="fas fa-question-circle me-1"></i> Clear Answers</span>
+                <span class="eyebrow-badge mb-2"><i class="fas fa-question-circle"></i> Clear Answers</span>
                 <h2 class="display-6 fw-bold text-white mb-2">Frequently Asked Questions</h2>
-                <p class="text-light opacity-75 fs-5">Common queries regarding our coworking spaces in Pune, meeting rooms, and virtual offices.</p>
+                <p class="fs-5" style="color: #cbd5e1;">Common queries regarding our coworking spaces in Pune, meeting rooms, and virtual offices.</p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="accordion accordion-flush" id="scaleupFaqAccordion">
                         <!-- FAQ 1 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingOne">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
                                     Why is ScaleUp KBC Deccan the best coworking space in Pune?
                                 </button>
                             </h3>
                             <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
-                                    ScaleUp Deccan Hub is located at Kshitij Business Centre, Dani Road, Next to ICICI bank - Law College Road, Deccan, Central Pune 411004. We offer two expansive floors with 140+ seats, 10+ private cabins, 2 conference rooms, dual-fiber internet, high-quality UPS power backup, unlimited artisan bean-to-cup coffee, meeting rooms, and rare dedicated 2-wheeler and 4-wheeler parking. It is walking distance from three Pune Metro stations (Deccan Gymkhana, Sambhaji Udyan, and Garware College).
+                                <div class="accordion-body">
+                                    ScaleUp Deccan Hub is located at Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank &ndash; Law College Road, Deccan, Pune 411004. We offer two expansive floors with 140+ seats, 10+ private cabins, 2 conference rooms, dual-fiber internet, high-quality UPS power backup, unlimited artisan bean-to-cup coffee, meeting rooms, and dedicated 2-wheeler and 4-wheeler parking within walking distance of Pune Metro stations.
                                 </div>
                             </div>
                         </div>
 
                         <!-- FAQ 2 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingTwo">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
                                     What are the rates for meeting rooms and conference rooms in Pune?
                                 </button>
                             </h3>
                             <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
+                                <div class="accordion-body">
                                     Our meeting rooms in Pune are available with transparent uniform pricing:
                                     <ul class="mt-2 mb-2">
                                         <li><strong>Hourly Meeting Space:</strong> ₹150 per seat per hour (minimum 4 seats)</li>
@@ -2021,65 +2033,65 @@
                         </div>
 
                         <!-- FAQ 3 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingThree">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-                                    How does the Virtual Office in Pune service work for GST & ROC?
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    How does the Virtual Office in Pune service work for GST &amp; ROC?
                                 </button>
                             </h3>
                             <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
+                                <div class="accordion-body">
                                     Price starts from ₹2,970 per month (paid annually in advance). Add-on packs for Company and GST Registration. This provides an official commercial address for company ROC registration and GST registration, professional mail and package handling, client greeting at reception, and member-discounted access to physical meeting rooms. All necessary utility bills, NOC, and agreements are provided promptly.
                                 </div>
                             </div>
                         </div>
 
                         <!-- FAQ 4 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingFour">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
                                     How do I find coworking spaces near me in Pune with reserved parking?
                                 </button>
                             </h3>
                             <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
-                                    ScaleUp Deccan Hub at Kshitij Business Centre (KBC) on Law College Road, Dani Road features ample on-site 2-wheeler and 4-wheeler parking. It is centrally accessible from Deccan Gymkhana, FC Road, BMCC, Model Colony, Prabhat Road, and Kothrud, making it the most accessible coworking space near you in Central Pune.
+                                <div class="accordion-body">
+                                    ScaleUp Deccan Hub at Kshitij Business Centre (KBC) on Dani Road, Law College Road features dedicated on-site 2-wheeler and 4-wheeler parking. It is centrally accessible from Deccan Gymkhana, FC Road, BMCC, Model Colony, Prabhat Road, and Kothrud, making it the most accessible coworking space near you in Central Pune.
                                 </div>
                             </div>
                         </div>
 
                         <!-- FAQ 5 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingFive">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
                                     Are there any hidden maintenance, electricity, or utility charges?
                                 </button>
                             </h3>
                             <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
+                                <div class="accordion-body">
                                     None at all. All desk and private cabin pricing includes 100% electricity consumption, air conditioning, high-speed dual Wi-Fi, daily housekeeping, security, and artisan bean-to-cup coffee. What you see is what you pay.
                                 </div>
                             </div>
                         </div>
 
                         <!-- FAQ 6 -->
-                        <div class="accordion-item bg-dark bg-opacity-75 border border-secondary rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <div class="accordion-item shadow-sm">
                             <h3 class="accordion-header" id="faqHeadingSix">
-                                <button class="accordion-button bg-dark bg-opacity-75 text-white collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
                                     Is 24/7 access available for dedicated desks and private office cabins?
                                 </button>
                             </h3>
                             <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#scaleupFaqAccordion">
-                                <div class="accordion-body text-light opacity-85">
-                                    Yes! Dedicated Cowork Desk and Private Office members at ScaleUp enjoy 24/7 biometric access to cater to international clients, US/UK timezones, and night shifts, backed by continuous security and high-quality UPS power backup.
+                                <div class="accordion-body">
+                                    Yes! Dedicated Cowork Desk and Private Office members at ScaleUp enjoy 24/7 biometric access to cater to international clients, US/UK timezones, and night shifts, backed by continuous security and high-quality UPS power backup. Front desk and guided tours operate Mon&ndash;Sat, 9:00 AM &ndash; 7:00 PM.
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center mt-4">
-                        <span class="text-light opacity-75">Have a specific custom workspace requirement?</span>
-                        <a href="tel:+919822268333" class="text-primary fw-bold ms-2"><i class="fas fa-phone-alt me-1"></i> Speak to our Team at 9822268333</a>
+                        <span style="color: #cbd5e1;">Have a specific custom workspace requirement?</span>
+                        <a href="tel:+919822268333" class="fw-bold ms-2" style="color: #38bdf8;"><i class="fas fa-phone-alt me-1"></i> Speak to our Team at 9822268333</a>
                     </div>
                 </div>
             </div>
@@ -2089,65 +2101,69 @@
     <!-- =========================================================================
          ALL SCALEUP CENTERS IN PUNE
     ========================================================================= -->
-    <section class="py-5 bg-dark position-relative overflow-hidden border-top border-secondary" id="locations">
-        <div class="container py-4 position-relative" style="z-index: 2;">
+    <section class="section-rhythm position-relative overflow-hidden" id="locations" style="background-color: #08162c; border-top: 1px solid rgba(56, 189, 248, 0.14);">
+        <div class="container position-relative" style="z-index: 2;">
             <div class="text-center mb-5">
-                <span class="badge bg-primary mb-2 px-3 py-1 rounded-pill shadow-sm"><i class="fas fa-map-marked-alt me-1"></i> Network of Locations</span>
+                <span class="eyebrow-badge mb-2"><i class="fas fa-map-marked-alt"></i> Network of Locations</span>
                 <h2 class="display-6 fw-bold text-white mb-2">Our Pune Centres</h2>
-                <p class="text-light opacity-75 fs-5">Strategically situated across Pune's prime commercial corridors.</p>
+                <p class="fs-5" style="color: #cbd5e1;">Strategically situated across Pune's prime commercial corridors.</p>
             </div>
 
             <div class="row g-4">
-                <!-- Center 1: Deccan Hub (Flagship - Royal Azure Blue) -->
+                <!-- Center 1: Deccan Hub (Flagship) -->
                 <div class="col-lg-6">
-                    <div class="p-4 bg-dark rounded-4 border location-card-azure h-100 shadow-lg position-relative">
-                        <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill fw-bold"><i class="fas fa-crown text-warning me-1"></i> FLAGSHIP • OPEN</span>
-                        <h3 class="h4 text-white fw-bold mb-1">Deccan Hub</h3>
-                        <p class="text-primary small mb-3"><i class="fas fa-map-marker-alt me-1"></i> Kshitij Business Centre, Dani Road, Next to ICICI bank - Law College Road, Deccan, Pune 411004</p>
-                        <p class="text-light opacity-75 small mb-4">Our premier flagship center spanning two floors with 160+ seats, 15+ cabins, conference rooms, high-speed dual Wi-Fi, and ample 2 & 4 wheeler parking.</p>
-                        <div class="d-flex gap-2">
+                    <div class="p-4 rounded-4 h-100 shadow-lg position-relative d-flex flex-column" style="background: #0a1c38; border: 1px solid rgba(13, 129, 202, 0.45);">
+                        <div class="mb-2">
+                            <span class="status-pill-flagship"><i class="fas fa-crown"></i> FLAGSHIP &bull; OPEN</span>
+                        </div>
+                        <h3 class="h4 text-white fw-bold mb-1">ScaleUp Deccan Hub</h3>
+                        <p class="small mb-3" style="color: #38bdf8;"><i class="fas fa-map-marker-alt me-1"></i> Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank &ndash; Law College Road, Deccan, Pune 411004</p>
+                        <p class="small mb-4 flex-grow-1" style="color: #cbd5e1;">Our flagship two-floor campus featuring 140+ seats, 10+ private cabins, 2 conference rooms, high-speed dual Wi-Fi, UPS backup, and ample 2 &amp; 4 wheeler parking.</p>
+                        <div class="d-flex gap-2 mt-auto">
                             <a href="locations/deccan-hub.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-semibold">Center Details</a>
                             <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill w-100 fw-bold"><i class="fas fa-phone-alt me-1"></i> Call 9822268333</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center 2: Law College Road (Growth Emerald Green) -->
+                <!-- Center 2: Law College Road -->
                 <div class="col-lg-6">
-                    <div class="p-4 bg-dark rounded-4 border location-card-emerald h-100 shadow-lg position-relative">
-                        <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill fw-bold">ACTIVE • NEW</span>
+                    <div class="p-4 rounded-4 h-100 shadow-lg position-relative d-flex flex-column" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.16);">
+                        <div class="mb-2">
+                            <span class="status-pill-open"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> ACTIVE &bull; OPEN</span>
+                        </div>
                         <h3 class="h4 text-white fw-bold mb-1">Law College Road Centre</h3>
-                        <p class="text-success small mb-3"><i class="fas fa-map-marker-alt me-1"></i> 456 Law College Road, Erandwane, Pune</p>
-                        <p class="text-light opacity-75 small mb-4">Boutique modern layout with panoramic views, cafe lounge, dedicated workstations, private cabins, and meeting rooms.</p>
-                        <div class="d-flex gap-2">
-                            <a href="locations/law-college-office.html" class="btn btn-outline-success btn-sm rounded-pill w-100 fw-semibold" style="border-color: #4CB37C; color: #4CB37C;">Center Details</a>
+                        <p class="small mb-3" style="color: #38bdf8;"><i class="fas fa-map-marker-alt me-1"></i> 456 Law College Road, Erandwane, Pune</p>
+                        <p class="small mb-4 flex-grow-1" style="color: #cbd5e1;">Boutique modern layout with panoramic views, cafe lounge, dedicated workstations, private cabins, and meeting rooms.</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="locations/law-college-office.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-semibold">Center Details</a>
                             <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill w-100 fw-bold"><i class="fas fa-phone-alt me-1"></i> Call 9822268333</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center 3: Baner (Momentum Lime Green) -->
+                <!-- Center 3: Baner -->
                 <div class="col-lg-6">
-                    <div class="p-3 bg-dark rounded-4 border location-card-lime opacity-85">
+                    <div class="p-3 rounded-4" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.14);">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h4 class="h6 text-white mb-0">Baner Centre - Golden Empire</h4>
-                                <small class="text-muted">Baner Main Road, Pune</small>
+                                <small style="color: #94a3b8;">Baner Main Road, Pune</small>
                             </div>
-                            <span class="badge bg-secondary">100% Leased</span>
+                            <a href="locations/baner-office.html" class="badge text-decoration-none" style="background: #1e3a5f; color: #cbd5e1;">100% Leased</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center 4: Deccan Office (Sky Cyan) -->
+                <!-- Center 4: Deccan Office -->
                 <div class="col-lg-6">
-                    <div class="p-3 bg-dark rounded-4 border location-card-cyan opacity-85">
+                    <div class="p-3 rounded-4" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.14);">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h4 class="h6 text-white mb-0">Deccan Gymkhana Centre</h4>
-                                <small class="text-muted">FC Road / Deccan, Pune</small>
+                                <small style="color: #94a3b8;">FC Road / Deccan, Pune</small>
                             </div>
-                            <span class="badge bg-secondary">100% Leased</span>
+                            <a href="locations/deccan-office.html" class="badge text-decoration-none" style="background: #1e3a5f; color: #cbd5e1;">100% Leased</a>
                         </div>
                     </div>
                 </div>
@@ -2161,54 +2177,56 @@
     <!-- =========================================================================
          FOOTER
     ========================================================================= -->
-    <footer class="footer bg-dark text-white pt-5 border-top border-secondary">
+    <footer class="footer text-white pt-5" style="background-color: #061122; border-top: 1px solid rgba(56, 189, 248, 0.16);">
         <div class="container py-4">
-            <div class="row g-4 border-bottom border-secondary pb-5">
+            <div class="row g-4 pb-5" style="border-bottom: 1px solid rgba(56, 189, 248, 0.16);">
                 <div class="col-lg-4">
                     <img src="assets/images/logo-light.png" alt="ScaleUp Logo" height="48" class="mb-4">
-                    <p class="text-muted mb-4">
+                    <p class="mb-4 small" style="color: #cbd5e1;">
                         Pune's premier coworking and shared workspace network. Plug-and-play dedicated desks, private office suites, meeting rooms, and virtual office addresses.
                     </p>
                     <div class="d-flex gap-3">
                         <a href="tel:+919822268333" class="btn btn-outline-primary btn-sm rounded-pill"><i class="fas fa-phone-alt me-1"></i> 9822268333</a>
-                        <a href="https://wa.me/919822268333" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
+                        <a href="https://wa.me/919822268333?text=Hi%2C%20I%20am%20interested%20in%20ScaleUp%20Coworking%20Space%20Pune" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
                     </div>
                 </div>
 
                 <div class="col-lg-2">
                     <h5 class="mb-3 text-white">Quick Links</h5>
-                    <ul class="list-unstyled text-muted small">
-                        <li class="mb-2"><a href="#hero" class="text-muted text-decoration-none hover-white">Deccan Hub</a></li>
-                        <li class="mb-2"><a href="#plans" class="text-muted text-decoration-none hover-white">Workspace Pricing</a></li>
-                        <li class="mb-2"><a href="#walkthrough" class="text-muted text-decoration-none hover-white">Campus Walkthrough</a></li>
-                        <li class="mb-2"><a href="#amenities" class="text-muted text-decoration-none hover-white">Amenities</a></li>
-                        <li class="mb-2"><a href="#faq" class="text-muted text-decoration-none hover-white">FAQ</a></li>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#hero" class="text-decoration-none" style="color: #94a3b8;">Deccan Hub</a></li>
+                        <li class="mb-2"><a href="#plans" class="text-decoration-none" style="color: #94a3b8;">Workspace Pricing</a></li>
+                        <li class="mb-2"><a href="#walkthrough" class="text-decoration-none" style="color: #94a3b8;">Campus Walkthrough</a></li>
+                        <li class="mb-2"><a href="#amenities" class="text-decoration-none" style="color: #94a3b8;">Amenities</a></li>
+                        <li class="mb-2"><a href="#faq" class="text-decoration-none" style="color: #94a3b8;">FAQ</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none" style="color: #94a3b8;">Contact Us</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html" class="text-decoration-none" style="color: #38bdf8;">Privacy Policy</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3">
                     <h5 class="mb-3 text-white">Direct Contact</h5>
-                    <ul class="list-unstyled text-muted small">
+                    <ul class="list-unstyled small" style="color: #cbd5e1;">
                         <li class="mb-2">
-                            <i class="fas fa-phone me-2 text-primary"></i>
-                            <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold">9822268333</a>
+                            <i class="fas fa-phone me-2" style="color: #38bdf8;"></i>
+                            <a href="tel:+919822268333" class="text-white text-decoration-none fw-bold">+91 98222 68333</a>
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-2 text-primary"></i>
-                            <a href="mailto:scaleup.cowork@gmail.com" class="text-muted text-decoration-none">scaleup.cowork@gmail.com</a>
+                            <i class="fas fa-envelope me-2" style="color: #38bdf8;"></i>
+                            <a href="mailto:scaleup.cowork@gmail.com" class="text-decoration-none" style="color: #cbd5e1;">scaleup.cowork@gmail.com</a>
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-clock me-2 text-primary"></i>
-                            Mon - Sat: 9:00 AM - 7:00 PM (24/7 for members)
+                            <i class="fas fa-clock me-2" style="color: #38bdf8;"></i>
+                            <span><strong class="text-white">Member Access:</strong> 24/7 (Biometric)<br><span style="color: #94a3b8;">Front Desk &amp; Tours: Mon&ndash;Sat, 9:00 AM &ndash; 7:00 PM</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3">
                     <h5 class="mb-3 text-white">Flagship Center</h5>
-                    <p class="text-muted small mb-2">
-                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                        ScaleUp CoWork, Kshitij Business Centre, Dani Road, Next to ICICI bank - Law College Road, Deccan, Pune 411004
+                    <p class="small mb-2" style="color: #cbd5e1;">
+                        <i class="fas fa-map-marker-alt me-2" style="color: #38bdf8;"></i>
+                        ScaleUp CoWork, Kshitij Business Centre (KBC), Dani Road, Next to ICICI Bank &ndash; Law College Road, Deccan, Pune 411004
                     </p>
                     <a href="https://maps.app.goo.gl/nuiS6VmpdhbvZ8a5A?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-2">
                         <i class="fas fa-directions me-1"></i> Google Maps Route
@@ -2216,12 +2234,13 @@
                 </div>
             </div>
 
-            <div class="row pt-4 pb-3">
+            <div class="row pt-4 pb-3 align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="text-muted mb-0 small">© 2026 ScaleUp Coworking Spaces. All rights reserved.</p>
+                    <p class="mb-0 small" style="color: #94a3b8;">&copy; 2026 ScaleUp Coworking Spaces. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                    <span class="text-muted small">Designed for Speed, High-Intent Conversion & SEO</span>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 small">
+                    <a href="privacy-policy.html" class="text-decoration-none me-3" style="color: #38bdf8;">Privacy Policy</a>
+                    <span style="color: #94a3b8;">ScaleUp CoWork Pune &bull; Deccan Hub</span>
                 </div>
             </div>
         </div>
@@ -2244,18 +2263,18 @@
     ========================================================================= -->
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark border-secondary text-white rounded-4 shadow-lg">
-                <div class="modal-header border-secondary">
+            <div class="modal-content text-white rounded-4 shadow-lg" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.28);">
+                <div class="modal-header" style="border-bottom: 1px solid rgba(56, 189, 248, 0.16);">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-calendar-check text-primary fs-4 me-2"></i>
+                        <i class="fas fa-calendar-check fs-4 me-2" style="color: #38bdf8;"></i>
                         <h5 class="modal-title fw-bold" id="bookingModalLabel">Schedule a Centre Visit</h5>
                     </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
                     <!-- Quick Direct Call Suggestion Banner -->
-                    <div class="p-3 bg-primary bg-opacity-20 border border-primary rounded-3 text-center mb-3">
-                        <div class="small text-white mb-1">Want instant response & immediate seat booking?</div>
+                    <div class="p-3 rounded-3 text-center mb-3" style="background: #08162c; border: 1px solid rgba(13, 129, 202, 0.35);">
+                        <div class="small mb-2" style="color: #cbd5e1;">Want instant response &amp; immediate seat booking?</div>
                         <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill fw-bold px-3">
                             <i class="fas fa-phone-alt me-1"></i> Direct Call: 9822268333
                         </a>
@@ -2263,36 +2282,41 @@
 
                     <form id="scheduleForm" onsubmit="handleQuickSubmit(event)">
                         <div class="mb-3">
-                            <label for="leadName" class="form-label small text-muted">Full Name *</label>
-                            <input type="text" class="form-control bg-secondary border-dark text-white" id="leadName" required placeholder="Your Name">
+                            <label for="leadName" class="form-label small" style="color: #cbd5e1;">Full Name *</label>
+                            <input type="text" class="form-control text-white" id="leadName" required placeholder="Your Name" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
                         </div>
 
                         <div class="mb-3">
-                            <label for="leadPhone" class="form-label small text-muted">Phone Number *</label>
-                            <input type="tel" class="form-control bg-secondary border-dark text-white" id="leadPhone" required placeholder="+91 98...">
+                            <label for="leadPhone" class="form-label small" style="color: #cbd5e1;">Phone Number *</label>
+                            <input type="tel" class="form-control text-white" id="leadPhone" required placeholder="+91 98..." style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
                         </div>
 
                         <div class="mb-3">
-                            <label for="leadWorkspace" class="form-label small text-muted">Interested Workspace *</label>
-                            <select class="form-select bg-secondary border-dark text-white" id="leadWorkspace" required>
+                            <label for="leadWorkspace" class="form-label small" style="color: #cbd5e1;">Interested Workspace *</label>
+                            <select class="form-select text-white" id="leadWorkspace" required style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
                                 <option value="Free 1-Day Trial Pass">Free 1-Day Trial Pass (₹0 Trial)</option>
                                 <option value="Deccan Hub Dedicated Desk" selected>Dedicated Cowork Desk (₹7,950/mo)</option>
                                 <option value="Deccan Hub Private Office">Private Office Cabin (₹10,900/seat)</option>
                                 <option value="Deccan Hub Hybrid Desk">Hybrid Cowork 12 Days (₹5,850/mo)</option>
                                 <option value="Deccan Hub Day Pass">Day Pass (₹590/day)</option>
-                                <option value="Meeting Room">Meeting Space / Conference Room</option>
+                                <option value="Meeting Space (Hourly)">Meeting Space Hourly (₹150/seat/hr)</option>
+                                <option value="4-Seater Meeting Room">4-Seater Meeting Room (₹3,900/day)</option>
+                                <option value="9-Seater Boardroom">9-Seater Boardroom (₹7,950/day or ₹4,500 half-day)</option>
                                 <option value="Virtual Office">Virtual Office with Launch Offer (₹2,970/mo)</option>
                             </select>
                         </div>
 
                         <div class="mb-4">
-                            <label for="visitDate" class="form-label small text-muted">Preferred Visit Date</label>
-                            <input type="date" class="form-control bg-secondary border-dark text-white" id="visitDate">
+                            <label for="visitDate" class="form-label small" style="color: #cbd5e1;">Preferred Visit Date</label>
+                            <input type="date" class="form-control text-white" id="visitDate" style="background: #08162c; border: 1px solid rgba(56, 189, 248, 0.22);">
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold" id="submitLeadBtn">
-                            Submit & Request Callback
+                            Submit &amp; Request Callback
                         </button>
+                        <p class="lead-consent-note mb-0">
+                            By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and consent to receive a call, WhatsApp message, or email from ScaleUp CoWork regarding your workspace inquiry.
+                        </p>
                     </form>
                 </div>
             </div>
@@ -2304,16 +2328,16 @@
     ========================================================================= -->
     <div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark border-secondary text-white rounded-4 shadow-lg overflow-hidden">
-                <div class="modal-header border-secondary py-2 px-3">
+            <div class="modal-content text-white rounded-4 shadow-lg overflow-hidden" style="background: #0a1c38; border: 1px solid rgba(56, 189, 248, 0.28);">
+                <div class="modal-header py-2 px-3" style="border-bottom: 1px solid rgba(56, 189, 248, 0.16);">
                     <h6 class="modal-title fw-bold text-truncate" id="galleryModalLabel">Workspace Photograph</h6>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 text-center bg-black d-flex align-items-center justify-content-center" style="min-height: 350px;">
                     <img id="galleryModalImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="ScaleUp Coworking Pune" class="img-fluid" style="max-height: 75vh; width: auto; object-fit: contain;">
                 </div>
-                <div class="modal-footer border-secondary py-2 px-3 justify-content-between">
-                    <span class="text-muted small" id="galleryModalCaption">ScaleUp Deccan Hub</span>
+                <div class="modal-footer py-2 px-3 justify-content-between" style="border-top: 1px solid rgba(56, 189, 248, 0.16);">
+                    <span class="small" style="color: #94a3b8;" id="galleryModalCaption">ScaleUp Deccan Hub</span>
                     <a href="tel:+919822268333" class="btn btn-primary btn-sm rounded-pill fw-bold px-3">
                         <i class="fas fa-phone-alt me-1"></i> Book a Tour
                     </a>
@@ -2566,17 +2590,48 @@
             }
         }
 
-        // Pre-select Day Pass on Schedule Form
-        function selectDayPassOption() {
+        // Pre-select Workspace Plan & Title inside Booking Modal
+        function selectBookingPlan(planValue, headingText) {
             const select = document.getElementById('leadWorkspace');
-            if (select) {
-                select.value = 'Free 1-Day Trial Pass';
+            if (select && planValue) {
+                const match = Array.from(select.options).find(opt => opt.value === planValue);
+                if (match) {
+                    select.value = planValue;
+                }
             }
             const modalTitle = document.getElementById('bookingModalLabel');
-            if (modalTitle) {
-                modalTitle.innerHTML = '<i class="fas fa-ticket-alt text-warning me-2"></i> Claim Free 1-Day Pass';
+            if (modalTitle && headingText) {
+                modalTitle.textContent = headingText;
             }
         }
+
+        // Pre-select Day Pass on Schedule Form
+        function selectDayPassOption() {
+            selectBookingPlan('Free 1-Day Trial Pass', 'Claim Free 1-Day Pass');
+        }
+
+        // Expand/Collapse Pune Workspace Comparison Guide (100% DOM preserved for SEO)
+        (function() {
+            const toggleBtn = document.getElementById('togglePuneGuideBtn');
+            const guideContainer = document.getElementById('puneGuideExpandable');
+            const chevron = document.getElementById('togglePuneGuideChevron');
+            if (!toggleBtn || !guideContainer) return;
+
+            toggleBtn.addEventListener('click', function() {
+                const isCollapsed = guideContainer.classList.contains('is-collapsed');
+                if (isCollapsed) {
+                    guideContainer.classList.remove('is-collapsed');
+                    guideContainer.classList.add('is-expanded');
+                    toggleBtn.setAttribute('aria-expanded', 'true');
+                    if (chevron) chevron.style.transform = 'rotate(180deg)';
+                } else {
+                    guideContainer.classList.remove('is-expanded');
+                    guideContainer.classList.add('is-collapsed');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    if (chevron) chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        })();
 
         // Random & Cycling Deccan Hub Gallery Showcase for Hero Section
         (function() {

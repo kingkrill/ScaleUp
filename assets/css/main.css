@@ -1484,26 +1484,31 @@ h1, h2, h3, h4, h5, h6 {
         padding: 12px;
     }
 }
-/* Contact Page Styles */
+/* Contact Page Styles (Executive 60-30-10 Dark Surface) */
 .contact-section {
-    padding-top: 120px;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 69, 0, 0.1) 0%,
-        rgba(147, 51, 234, 0.15) 25%,
-        rgba(34, 197, 94, 0.1) 50%,
-        rgba(239, 68, 68, 0.15) 75%,
-        rgba(249, 115, 22, 0.1) 100%
-    );
+    padding: 120px 0 72px;
+    background: radial-gradient(circle at 20% 10%, rgba(13, 129, 202, 0.14) 0%, rgba(8, 22, 44, 0.6) 45%, #061122 85%), #061122;
+}
+
+@media (max-width: 767.98px) {
+    .contact-section {
+        padding: 104px 0 48px;
+    }
 }
 
 .contact-info-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0a1c38;
+    border: 1px solid rgba(56, 189, 248, 0.16);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 12px 30px rgba(6, 17, 34, 0.55);
+}
+
+.contact-info-card:hover {
+    background: #0e2448;
+    border-color: rgba(13, 129, 202, 0.55);
 }
 
 .contact-item {
@@ -1513,38 +1518,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-item i {
-    font-size: 1.5rem;
-    color: var(--primary);
+    font-size: 1.4rem;
+    color: #38bdf8;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
 }
 
 .contact-item h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    color: #f8fafc;
 }
 
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
 }
 
 .contact-method-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0a1c38;
+    border: 1px solid rgba(56, 189, 248, 0.16);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 1.75rem 1.5rem;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 26px rgba(6, 17, 34, 0.5);
 }
 
 .contact-method-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    background: #0e2448;
+    border-color: rgba(13, 129, 202, 0.55);
+    box-shadow: 0 16px 34px rgba(6, 17, 34, 0.7);
 }
 
-.contact-method-card i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
+.contact-method-card p {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.contact-method-card i.method-icon {
+    font-size: 2.1rem;
+    color: #38bdf8;
+    margin-bottom: 0.9rem;
 }
 
 .social-link {
@@ -3255,39 +3275,27 @@ h1, h2, h3, h4, h5, h6 {
 .btn-nav-whatsapp {
     background: linear-gradient(135deg, #4CB37C, #25D366);
     color: #ffffff !important;
-    box-shadow: 0 2px 8px rgba(76, 179, 124, 0.35);
+    border: 1px solid #4CB37C;
+    box-shadow: 0 2px 8px rgba(76, 179, 124, 0.3);
 }
 .btn-nav-whatsapp:hover {
     background: linear-gradient(135deg, #3ea56f, #20b85c);
     color: #ffffff !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(76, 179, 124, 0.45);
+    box-shadow: 0 4px 12px rgba(76, 179, 124, 0.42);
 }
 
 .btn-nav-call {
     background: #0D81CA;
     color: #ffffff !important;
-    border: 1px solid #16a34a;
-    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
-}
-.btn-nav-whatsapp:hover {
-    background: #16a34a;
-    color: #ffffff !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
-}
-
-.btn-nav-call {
-    background: #0284c7;
-    color: #ffffff !important;
-    border: 1px solid #0369a1;
-    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+    border: 1px solid #072B69;
+    box-shadow: 0 2px 8px rgba(13, 129, 202, 0.28);
 }
 .btn-nav-call:hover {
-    background: #0369a1;
+    background: #072B69;
     color: #ffffff !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    box-shadow: 0 4px 12px rgba(7, 43, 105, 0.38);
 }
 
 @keyframes pulse-glow-nav {
@@ -3438,37 +3446,93 @@ body.modal-open .mobile-sticky-bar {
 }
 
 /* =========================================================================
-   SCALEUP 4-COLOR CONSTITUENT ELEMENT ACCENTS (GOOGLE-INSPIRED HARMONY)
-   Tasteful, subtle, and high-conversion without being an eyesore
+   SCALEUP 60-30-10 EXECUTIVE COLOR ARCHITECTURE
+   60%: #061122 / #08162c canvas + #0a1c38 solid cards (#0e2448 hover)
+   30%: #0D81CA / #38bdf8 structural brand (eyebrows, icons, sliders, outlines)
+   10%: Semantic Accents — Amber #f59e0b (Flagship/4.9★) & Emerald #4CB37C / Lime #7AB944 (Open/Checkmarks/Savings/WhatsApp)
 ========================================================================= */
 
-/* Brand Accent Stripe (Google-style multi-color bar) */
+/* Section Rhythm Consistency (72px desktop / 48px mobile) */
+.section-rhythm {
+    padding: 72px 0 !important;
+}
+@media (max-width: 767.98px) {
+    .section-rhythm {
+        padding: 48px 0 !important;
+    }
+}
+
+/* Standardized Eyebrow Badge (30% Brand Structure) */
+.eyebrow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.42rem 0.95rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: rgba(13, 129, 202, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.34);
+    color: #38bdf8;
+}
+
+/* Semantic Status Pills (10% Growth Emerald / Flagship Amber) */
+.status-pill-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.32rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    background: rgba(76, 179, 124, 0.16);
+    border: 1px solid rgba(76, 179, 124, 0.48);
+    color: #4CB37C;
+}
+
+.status-pill-flagship {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    background: rgba(245, 158, 11, 0.16);
+    border: 1px solid rgba(245, 158, 11, 0.55);
+    color: #fbbf24;
+}
+
+/* Brand Accent Stripe */
 .brand-stripe {
     height: 3px;
-    background: linear-gradient(90deg, #0D81CA 0%, #072B69 33%, #4CB37C 66%, #7AB944 100%);
+    background: linear-gradient(90deg, #0D81CA 0%, #38bdf8 35%, #4CB37C 70%, #7AB944 100%);
     width: 100%;
 }
 
-/* Animated Gradient Underline: 4px Eternal Loading Bar Stream */
+/* Animated Gradient Underline: Sleek 2.5px Executive Brand Stream (5s cycle) */
 .unified-navbar::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 4px !important;
+    height: 2.5px !important;
     background: linear-gradient(
         90deg,
         #0D81CA 0%,
-        #38bdf8 20%,
-        #4CB37C 40%,
-        #7AB944 60%,
-        #f59e0b 80%,
+        #38bdf8 25%,
+        #4CB37C 50%,
+        #7AB944 75%,
         #0D81CA 100%
     ) !important;
-    background-size: 450px 100% !important;
-    animation: navbarEternalLoader 2s linear infinite !important;
-    box-shadow: 0 2px 10px rgba(13, 129, 202, 0.45), 0 0 5px rgba(76, 179, 124, 0.35);
+    background-size: 480px 100% !important;
+    animation: navbarEternalLoader 5s linear infinite !important;
+    box-shadow: 0 1px 6px rgba(13, 129, 202, 0.25);
     z-index: 1035;
     pointer-events: none;
 }
@@ -3478,173 +3542,109 @@ body.modal-open .mobile-sticky-bar {
         background-position: 0 0;
     }
     100% {
-        background-position: 450px 0;
+        background-position: 480px 0;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .unified-navbar::after {
-        animation: none;
+        animation: none !important;
     }
 }
 
-/* 1. Hero Stat Tiles with 4 Constituent Color Identity - Solid Midnight Background */
-.stat-tile-azure {
-    border: 1px solid rgba(13, 129, 202, 0.35) !important;
-    border-top: 3px solid #0D81CA !important;
-    background: #0a1c38 !important;
+/* Unified Solid Card Typography Contrast (WCAG AA) */
+.card-body-copy {
+    color: #cbd5e1 !important;
 }
-.stat-tile-azure .stat-label {
+.card-sub-caption {
+    color: #94a3b8 !important;
+}
+
+/* 1. Hero Stat Tiles — Unified Surface & Subtle Azure Border */
+.antigravity-stat-tile,
+.stat-tile-azure,
+.stat-tile-emerald,
+.stat-tile-lime,
+.stat-tile-navy {
+    background: #0a1c38 !important;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5);
+}
+.stat-tile-azure .stat-label,
+.stat-tile-emerald .stat-label,
+.stat-tile-lime .stat-label,
+.stat-tile-navy .stat-label {
     color: #38bdf8 !important;
 }
-.stat-tile-azure:hover {
-    border-color: #0D81CA !important;
-    background: #0e2448 !important;
-    box-shadow: 0 12px 28px rgba(13, 129, 202, 0.35) !important;
-    transform: translateY(-4px);
-}
-
-.stat-tile-emerald {
-    border: 1px solid rgba(76, 179, 124, 0.35) !important;
-    border-top: 3px solid #4CB37C !important;
-    background: #0a1c38 !important;
-}
-.stat-tile-emerald .stat-label {
-    color: #4CB37C !important;
-}
-.stat-tile-emerald:hover {
-    border-color: #4CB37C !important;
-    background: #0e2448 !important;
-    box-shadow: 0 12px 28px rgba(76, 179, 124, 0.35) !important;
-    transform: translateY(-4px);
-}
-
-.stat-tile-lime {
-    border: 1px solid rgba(122, 185, 68, 0.35) !important;
-    border-top: 3px solid #7AB944 !important;
-    background: #0a1c38 !important;
-}
-.stat-tile-lime .stat-label {
-    color: #a3e635 !important;
-}
-.stat-tile-lime:hover {
-    border-color: #7AB944 !important;
-    background: #0e2448 !important;
-    box-shadow: 0 12px 28px rgba(122, 185, 68, 0.35) !important;
-    transform: translateY(-4px);
-}
-
-.stat-tile-navy {
-    border: 1px solid rgba(56, 189, 248, 0.35) !important;
-    border-top: 3px solid #38bdf8 !important;
-    background: #0a1c38 !important;
-}
-.stat-tile-navy .stat-label {
-    color: #7dd3fc !important;
-}
+.antigravity-stat-tile:hover,
+.stat-tile-azure:hover,
+.stat-tile-emerald:hover,
+.stat-tile-lime:hover,
 .stat-tile-navy:hover {
-    border-color: #38bdf8 !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
     background: #0e2448 !important;
-    box-shadow: 0 12px 28px rgba(56, 189, 248, 0.35) !important;
-    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(13, 129, 202, 0.22) !important;
+    transform: translateY(-3px);
 }
 
-/* 2. Hero Feature Pills / Chips - Solid Midnight with Crisp Border Accents */
-.chip-brand-azure {
-    background: #0a1c38 !important;
-    border: 1.5px solid #0D81CA !important;
-    color: #e0f2fe !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-.chip-brand-azure i { color: #38bdf8 !important; }
-
-.chip-brand-emerald {
-    background: #0a1c38 !important;
-    border: 1.5px solid #4CB37C !important;
-    color: #f0fdf4 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-.chip-brand-emerald i { color: #4CB37C !important; }
-
-.chip-brand-lime {
-    background: #0a1c38 !important;
-    border: 1.5px solid #7AB944 !important;
-    color: #f7fee7 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-.chip-brand-lime i { color: #a3e635 !important; }
-
-.chip-brand-cyan {
-    background: #0a1c38 !important;
-    border: 1.5px solid #38bdf8 !important;
-    color: #f0f9ff !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-.chip-brand-cyan i { color: #38bdf8 !important; }
-
+/* 2. Hero Feature Pills / Chips — Unified #0a1c38 Surface & Azure Icon */
+.chip-brand-azure,
+.chip-brand-emerald,
+.chip-brand-lime,
+.chip-brand-cyan,
 .chip-brand-amber {
     background: #0a1c38 !important;
-    border: 1.5px solid #f59e0b !important;
-    color: #fefce8 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(56, 189, 248, 0.24) !important;
+    color: #cbd5e1 !important;
+    box-shadow: 0 2px 8px rgba(6, 17, 34, 0.4) !important;
 }
-.chip-brand-amber i { color: #fbbf24 !important; }
-
-/* 3. Tour Feature Cards (Walkthrough) - Solid Midnight Background */
-.tour-card-azure {
-    background: #0a1c38 !important;
-    border-left: 4px solid #0D81CA !important;
+.chip-brand-azure i,
+.chip-brand-cyan i {
+    color: #38bdf8 !important;
 }
-.tour-card-azure:hover {
-    background: #0e2448 !important;
-    border-left-color: #38bdf8 !important;
-    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(13, 129, 202, 0.25) !important;
+.chip-brand-emerald i,
+.chip-brand-lime i {
+    color: #4CB37C !important;
 }
-.tour-card-azure .feature-icon-badge {
-    background: rgba(13, 129, 202, 0.18);
-    color: #38bdf8;
+.chip-brand-amber i {
+    color: #fbbf24 !important;
 }
 
-.tour-card-lime {
-    background: #0a1c38 !important;
-    border-left: 4px solid #7AB944 !important;
-}
-.tour-card-lime:hover {
-    background: #0e2448 !important;
-    border-left-color: #a3e635 !important;
-    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(122, 185, 68, 0.25) !important;
-}
-.tour-card-lime .feature-icon-badge {
-    background: rgba(122, 185, 68, 0.18);
-    color: #a3e635;
-}
-
-.tour-card-amber {
-    background: #0a1c38 !important;
-    border-left: 4px solid #f59e0b !important;
-}
-.tour-card-amber:hover {
-    background: #0e2448 !important;
-    border-left-color: #fbbf24 !important;
-    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(245, 158, 11, 0.25) !important;
-}
-.tour-card-amber .feature-icon-badge {
-    background: rgba(245, 158, 11, 0.18);
-    color: #fbbf24;
-}
-
+/* 3. Tour Feature Cards (Walkthrough) — Unified #0a1c38 + Azure/Cyan Structure */
+.tour-feature-card,
+.tour-card-azure,
+.tour-card-lime,
+.tour-card-amber,
 .tour-card-emerald {
     background: #0a1c38 !important;
-    border-left: 4px solid #4CB37C !important;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    border-left: 3px solid #0D81CA !important;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(6, 17, 34, 0.5);
 }
+.tour-feature-card:hover,
+.tour-card-azure:hover,
+.tour-card-lime:hover,
+.tour-card-amber:hover,
 .tour-card-emerald:hover {
     background: #0e2448 !important;
-    border-left-color: #34d399 !important;
-    box-shadow: 0 10px 25px rgba(6, 17, 34, 0.5), 0 0 20px rgba(76, 179, 124, 0.25) !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
+    border-left-color: #38bdf8 !important;
+    transform: translateX(4px);
+    box-shadow: 0 12px 28px rgba(6, 17, 34, 0.65) !important;
 }
+.tour-card-azure .feature-icon-badge,
+.tour-card-lime .feature-icon-badge,
+.tour-card-amber .feature-icon-badge,
 .tour-card-emerald .feature-icon-badge {
-    background: rgba(76, 179, 124, 0.18);
-    color: #4CB37C;
+    background: rgba(13, 129, 202, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    color: #38bdf8;
 }
 
 .feature-icon-badge {
@@ -3654,279 +3654,233 @@ body.modal-open .mobile-sticky-bar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
+    background: rgba(13, 129, 202, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    color: #38bdf8;
 }
 
-/* 4. Pricing Cards (Constituent 4-Color Accents) - Solid Midnight Background */
-.pricing-card-azure {
-    background: #0a1c38 !important;
-    border-top: 4px solid #0D81CA !important;
+.walkthrough-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.75), 0 0 24px rgba(13, 129, 202, 0.22);
+    border: 1.5px solid rgba(56, 189, 248, 0.28);
+    background: #061122;
+    position: relative;
+    z-index: 2;
 }
-.pricing-card-azure:hover {
+.walkthrough-frame video,
+.walkthrough-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Override legacy rainbow gradients on workspaces-section */
+.workspaces-section {
+    background: #061122 !important;
+    background-image: none !important;
+}
+
+/* Shared 4-column responsive Pricing Grid */
+.uniform-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* 4. Pricing Cards — 60% #0a1c38 Surface, 30% Azure Structure, 10% Amber Flagship + Emerald Checkmarks */
+.pricing-plan-card,
+.workspace-card,
+.pricing-card-azure,
+.pricing-card-emerald,
+.pricing-card-lime,
+.pricing-card-cyan {
+    background: #0a1c38 !important;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    border-radius: 18px;
+    padding: 2rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(6, 17, 34, 0.6);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pricing-cost {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1;
+    margin: 0.85rem 0 0.5rem;
+}
+.pricing-cost-unit {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94a3b8;
+}
+.pricing-plan-card:hover,
+.workspace-card:hover,
+.pricing-card-azure:hover,
+.pricing-card-emerald:hover,
+.pricing-card-lime:hover,
+.pricing-card-cyan:hover {
     background: #0e2448 !important;
-    border-color: #0D81CA !important;
-    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.3) !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(6, 17, 34, 0.75) !important;
 }
-.pricing-card-azure .pricing-cost {
-    color: #38bdf8 !important;
-}
-.pricing-card-azure .fa-check {
-    color: #0D81CA !important;
+.pricing-card-azure .pricing-cost,
+.pricing-card-emerald .pricing-cost,
+.pricing-card-lime .pricing-cost,
+.pricing-card-cyan .pricing-cost {
+    color: #f8fafc !important;
 }
 
-.pricing-card-emerald {
+/* Popular Desk Structural Outline Highlight (30% Azure) */
+.pricing-card-featured-blue {
     background: #0a1c38 !important;
-    border: 1.5px solid rgba(76, 179, 124, 0.5) !important;
-    border-top: 4px solid #4CB37C !important;
+    border: 1.5px solid rgba(13, 129, 202, 0.65) !important;
 }
-.pricing-card-emerald:hover {
+.pricing-card-featured-blue:hover {
     background: #0e2448 !important;
-    border-color: #4CB37C !important;
-    box-shadow: 0 18px 40px rgba(76, 179, 124, 0.35) !important;
-}
-.pricing-card-emerald .pricing-cost {
-    color: #4CB37C !important;
-}
-.pricing-card-emerald .fa-check {
-    color: #4CB37C !important;
+    border-color: #38bdf8 !important;
 }
 
-.pricing-card-lime {
+/* Flagship / Executive Suite Tier Highlight (10% Warm Amber Reserved Strictly for Flagship) */
+.pricing-card-amber,
+.pricing-plan-card.highlight-amber,
+.workspace-card.pricing-card-amber {
     background: #0a1c38 !important;
-    border-top: 4px solid #7AB944 !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.65) !important;
+    box-shadow: 0 14px 34px rgba(6, 17, 34, 0.72), 0 0 22px rgba(245, 158, 11, 0.12) !important;
 }
-.pricing-card-lime:hover {
-    background: #0e2448 !important;
-    border-color: #7AB944 !important;
-    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.3) !important;
-}
-.pricing-card-lime .pricing-cost {
-    color: #a3e635 !important;
-}
-.pricing-card-lime .fa-check {
-    color: #7AB944 !important;
-}
-
-.pricing-card-amber {
-    background: #0a1c38 !important;
-    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
-    border-top: 4px solid #f59e0b !important;
-}
-.pricing-card-amber:hover {
+.pricing-card-amber:hover,
+.pricing-plan-card.highlight-amber:hover,
+.workspace-card.pricing-card-amber:hover {
     background: #0e2448 !important;
     border-color: #f59e0b !important;
-    box-shadow: 0 18px 40px rgba(245, 158, 11, 0.35) !important;
+    box-shadow: 0 18px 42px rgba(6, 17, 34, 0.8), 0 0 24px rgba(245, 158, 11, 0.22) !important;
 }
 .pricing-card-amber .pricing-cost {
     color: #fbbf24 !important;
 }
-.pricing-card-amber .fa-check {
-    color: #f59e0b !important;
+
+/* Semantic Included Amenity Checkmarks across ALL cards (Growth Emerald #4CB37C) */
+.pricing-plan-card .fa-check,
+.pricing-plan-card .fa-check-circle,
+.workspace-card .fa-check,
+.workspace-card .fa-check-circle {
+    color: #4CB37C !important;
 }
 
-.pricing-card-cyan {
-    background: #0a1c38 !important;
-    border-top: 4px solid #38bdf8 !important;
-}
-.pricing-card-cyan:hover {
-    background: #0e2448 !important;
-    border-color: #38bdf8 !important;
-    box-shadow: 0 16px 36px rgba(56, 189, 248, 0.3) !important;
-}
-.pricing-card-cyan .pricing-cost {
-    color: #38bdf8 !important;
-}
-.pricing-card-cyan .fa-check {
-    color: #38bdf8 !important;
-}
-
-/* 5. Amenities Cards (Harmonized Logo-Constituent Color Themes) - Solid Midnight Background */
-.amenity-theme-azure {
-    background: #0a1c38 !important;
-    border-top: 3px solid #0D81CA !important;
-}
-.amenity-theme-azure .amenity-icon-glow {
-    background: rgba(13, 129, 202, 0.16);
-    color: #38bdf8;
-    border: 1px solid rgba(13, 129, 202, 0.4);
-}
-.amenity-theme-azure:hover {
-    background: #0e2448 !important;
-    border-color: rgba(13, 129, 202, 0.6) !important;
-    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important;
-}
-.amenity-theme-azure:hover .amenity-icon-glow {
-    background: #0D81CA;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(13, 129, 202, 0.55);
-}
-
-.amenity-theme-emerald {
-    background: #0a1c38 !important;
-    border-top: 3px solid #4CB37C !important;
-}
-.amenity-theme-emerald .amenity-icon-glow {
-    background: rgba(76, 179, 124, 0.16);
-    color: #4CB37C;
-    border: 1px solid rgba(76, 179, 124, 0.4);
-}
-.amenity-theme-emerald:hover {
-    background: #0e2448 !important;
-    border-color: rgba(76, 179, 124, 0.6) !important;
-    box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important;
-}
-.amenity-theme-emerald:hover .amenity-icon-glow {
-    background: #4CB37C;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(76, 179, 124, 0.55);
-}
-
-.amenity-theme-lime {
-    background: #0a1c38 !important;
-    border-top: 3px solid #7AB944 !important;
-}
-.amenity-theme-lime .amenity-icon-glow {
-    background: rgba(122, 185, 68, 0.16);
-    color: #a3e635;
-    border: 1px solid rgba(122, 185, 68, 0.4);
-}
-.amenity-theme-lime:hover {
-    background: #0e2448 !important;
-    border-color: rgba(122, 185, 68, 0.6) !important;
-    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important;
-}
-.amenity-theme-lime:hover .amenity-icon-glow {
-    background: #7AB944;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(122, 185, 68, 0.55);
-}
-
-.amenity-theme-amber {
-    background: #0a1c38 !important;
-    border-top: 3px solid #f59e0b !important;
-}
-.amenity-theme-amber .amenity-icon-glow {
-    background: rgba(245, 158, 11, 0.16);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.4);
-}
-.amenity-theme-amber:hover {
-    background: #0e2448 !important;
-    border-color: rgba(245, 158, 11, 0.6) !important;
-    box-shadow: 0 16px 36px rgba(245, 158, 11, 0.25) !important;
-}
-.amenity-theme-amber:hover .amenity-icon-glow {
-    background: #f59e0b;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.55);
-}
-
+/* 5. Amenities Cards — Unified #0a1c38 Surface + 30% Azure/Cyan Icon Discipline */
+.amenity-card-glass,
+.amenity-theme-azure,
+.amenity-theme-emerald,
+.amenity-theme-lime,
+.amenity-theme-amber,
 .amenity-theme-cyan {
     background: #0a1c38 !important;
-    border-top: 3px solid #38bdf8 !important;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    border-radius: 18px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 26px rgba(6, 17, 34, 0.5);
 }
-.amenity-theme-cyan .amenity-icon-glow {
-    background: rgba(56, 189, 248, 0.16);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.4);
-}
+.amenity-card-glass:hover,
+.amenity-theme-azure:hover,
+.amenity-theme-emerald:hover,
+.amenity-theme-lime:hover,
+.amenity-theme-amber:hover,
 .amenity-theme-cyan:hover {
     background: #0e2448 !important;
-    border-color: rgba(56, 189, 248, 0.6) !important;
-    box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25) !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(6, 17, 34, 0.7) !important;
 }
+.amenity-theme-azure .amenity-icon-glow,
+.amenity-theme-emerald .amenity-icon-glow,
+.amenity-theme-lime .amenity-icon-glow,
+.amenity-theme-amber .amenity-icon-glow,
+.amenity-theme-cyan .amenity-icon-glow {
+    background: rgba(13, 129, 202, 0.16) !important;
+    color: #38bdf8 !important;
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+.amenity-theme-azure:hover .amenity-icon-glow,
+.amenity-theme-emerald:hover .amenity-icon-glow,
+.amenity-theme-lime:hover .amenity-icon-glow,
+.amenity-theme-amber:hover .amenity-icon-glow,
 .amenity-theme-cyan:hover .amenity-icon-glow {
-    background: #38bdf8;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.55);
+    background: #0D81CA !important;
+    color: #ffffff !important;
+    border-color: #0D81CA !important;
+    box-shadow: 0 0 18px rgba(13, 129, 202, 0.45) !important;
 }
 
-/* 6. SEO Pillar Cards (3 Cards = Azure, Emerald, Lime) - Solid Midnight Background */
-.seo-card-azure {
-    background: #0a1c38 !important;
-    border-top: 4px solid #0D81CA !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-.seo-card-azure:hover {
-    background: #0e2448 !important;
-    box-shadow: 0 16px 36px rgba(13, 129, 202, 0.25) !important;
-    transform: translateY(-4px);
-}
-.seo-card-azure .seo-pillar-icon {
-    color: #38bdf8;
-}
-
-.seo-card-emerald {
-    background: #0a1c38 !important;
-    border-top: 4px solid #4CB37C !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-.seo-card-emerald:hover {
-    background: #0e2448 !important;
-    box-shadow: 0 16px 36px rgba(76, 179, 124, 0.25) !important;
-    transform: translateY(-4px);
-}
-.seo-card-emerald .seo-pillar-icon {
-    color: #4CB37C;
-}
-
+/* 6. SEO Pillar Cards — Unified Solid #0a1c38 + Subtle Borders */
+.seo-content-card,
+.seo-card-azure,
+.seo-card-emerald,
 .seo-card-lime {
     background: #0a1c38 !important;
-    border-top: 4px solid #7AB944 !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 12px 30px rgba(6, 17, 34, 0.55);
 }
+.seo-content-card:hover,
+.seo-card-azure:hover,
+.seo-card-emerald:hover,
 .seo-card-lime:hover {
     background: #0e2448 !important;
-    box-shadow: 0 16px 36px rgba(122, 185, 68, 0.25) !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
+    box-shadow: 0 16px 36px rgba(6, 17, 34, 0.7) !important;
     transform: translateY(-4px);
 }
+.seo-card-azure .seo-pillar-icon,
+.seo-card-emerald .seo-pillar-icon,
 .seo-card-lime .seo-pillar-icon {
-    color: #a3e635;
+    color: #38bdf8 !important;
 }
 
-/* 7. Pune Centres Network Cards */
+/* 7. Pune Centres Network Cards — Unified #0a1c38 + Semantic Flagship/Open Signals */
+.location-card-azure,
+.location-card-emerald,
+.location-card-lime,
+.location-card-cyan {
+    background: #0a1c38 !important;
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
 .location-card-azure {
-    border-top: 4px solid #0D81CA !important;
-    box-shadow: 0 12px 30px rgba(13, 129, 202, 0.15) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-color: rgba(245, 158, 11, 0.45) !important;
 }
 .location-card-azure:hover {
+    background: #0e2448 !important;
+    border-color: rgba(245, 158, 11, 0.75) !important;
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(13, 129, 202, 0.3) !important;
+    box-shadow: 0 18px 36px rgba(6, 17, 34, 0.7) !important;
 }
-
-.location-card-emerald {
-    border-top: 4px solid #4CB37C !important;
-    box-shadow: 0 12px 30px rgba(76, 179, 124, 0.15) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.location-card-emerald:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(76, 179, 124, 0.3) !important;
-}
-
-.location-card-lime {
-    border-top: 3px solid rgba(122, 185, 68, 0.6) !important;
-    transition: transform 0.3s ease;
-}
-.location-card-lime:hover {
-    transform: translateY(-2px);
-}
-
-.location-card-cyan {
-    border-top: 3px solid rgba(56, 189, 248, 0.6) !important;
-    transition: transform 0.3s ease;
-}
+.location-card-emerald:hover,
+.location-card-lime:hover,
 .location-card-cyan:hover {
-    transform: translateY(-2px);
+    background: #0e2448 !important;
+    border-color: rgba(13, 129, 202, 0.55) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(6, 17, 34, 0.65) !important;
 }
 
-/* 8. Savings Calculator Brand Accents */
+/* 8. Savings Calculator Brand & Semantic Accents */
 .calc-summary-card {
-    background: linear-gradient(145deg, rgba(14, 36, 72, 0.95) 0%, rgba(6, 17, 34, 0.98) 100%) !important;
-    border: 1.5px solid rgba(13, 129, 202, 0.35) !important;
-    border-top: 4px solid #0D81CA !important;
+    background: #08162c !important;
+    border: 1px solid rgba(56, 189, 248, 0.24) !important;
+    box-shadow: 0 14px 32px rgba(6, 17, 34, 0.65);
 }
 .calc-cost-azure {
     color: #38bdf8 !important;
@@ -3935,5 +3889,64 @@ body.modal-open .mobile-sticky-bar {
     color: #4CB37C !important;
 }
 .calc-saved-lime {
-    color: #a3e635 !important;
+    color: #7AB944 !important;
+}
+
+/* Interactive Range Slider (30% Brand Structure) */
+.form-range::-webkit-slider-runnable-track {
+    background-color: rgba(56, 189, 248, 0.22);
+    border-radius: 9999px;
+    height: 0.45rem;
+}
+.form-range::-webkit-slider-thumb {
+    background-color: #0D81CA;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 10px rgba(13, 129, 202, 0.5);
+}
+.form-range::-moz-range-track {
+    background-color: rgba(56, 189, 248, 0.22);
+    border-radius: 9999px;
+    height: 0.45rem;
+}
+.form-range::-moz-range-thumb {
+    background-color: #0D81CA;
+    border: 2px solid #38bdf8;
+}
+
+/* 9. Semantic Primary / Outline Button Overrides on Dark Surfaces */
+.btn-outline-primary {
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: #0D81CA !important;
+    border-color: #0D81CA !important;
+    color: #ffffff !important;
+}
+.btn-outline-success {
+    color: #4CB37C !important;
+    border-color: rgba(76, 179, 124, 0.55) !important;
+}
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    background-color: #4CB37C !important;
+    border-color: #4CB37C !important;
+    color: #ffffff !important;
+}
+
+/* Lead Form Consent Micro-Copy */
+.lead-consent-note {
+    color: #94a3b8;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    margin-top: 0.65rem;
+    text-align: center;
+}
+.lead-consent-note a {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+.lead-consent-note a:hover {
+    color: #7dd3fc;
 }
